@@ -207,6 +207,7 @@
   .opt-say { font-size: .9rem; color: var(--muted); }
   .opt-say b { color: var(--ink); }
   .opt-note { font-size: .85rem; color: var(--muted); font-style: italic; margin-top: 2px; }
+  .fb .also { font-size: .9rem; margin: 8px 0 0; opacity: .85; }
   .opt-usage { font-size: .88rem; line-height: 1.45; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
   .opt-usage b { display: block; font-size: .78rem; color: var(--muted); margin-bottom: 2px; }
   .eg { position: relative; background: var(--stone); border-left: 3px solid var(--ochre); border-radius: 0 12px 12px 0; padding: 10px 44px 10px 12px; margin-top: 10px; }
@@ -888,13 +889,32 @@
   var score = { right: 0, total: 0, streak: 0, best: +store.get("bestStreak", "0") };
   var $qEn = document.getElementById("qEn"), $qPick = document.getElementById("qPick"), $qType = document.getElementById("qType"),
       $qAns = document.getElementById("qAns"), $qFb = document.getElementById("qFb"), $qNext = document.getElementById("qNext");
+  // Test sentences: everyday sentences from data/test-sentences.txt (English | Scots | other right answers ; … | word to look up)
+  var testSentences = [];
+  function parseTestSentences(txt) {
+    testSentences = [];
+    txt.split(/\r?\n/).forEach(function (l) {
+      if (!l.trim() || l.charAt(0) === "#") return;
+      var p = l.split("|").map(function (x) { return x.trim(); });
+      if (p.length < 2 || !p[0] || !p[1]) return;
+      testSentences.push({ en: p[0], sc: p[1], alts: (p[2] || "").split(";").map(function (x) { return x.trim(); }).filter(Boolean), look: p[3] || "" });
+    });
+  }
   function testPool() {
+    if (testSentences.length >= 4) return testSentences;
     var out = [];
     entries.forEach(function (e) {
       var ex = splitExample(e.example);
       if (ex && ex.en && ex.sc && ex.sc !== ex.en && !isOld(e)) out.push({ sc: ex.sc, en: ex.en, e: e });
     });
     return out;
+  }
+  function lookGroup(w) {          // the dictionary entry for a Scots or English word
+    if (!w) return null;
+    var k = norm(w), hit = groupByKey[k];
+    if (hit) return hit;
+    for (var i = 0; i < groups.length; i++) if (groups[i].items.some(function (it) { return norm(it.s) === k; })) return groups[i];
+    return null;
   }
   function simplify(s) { return norm(s).replace(/[’'`]/g, "").replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim(); }
   function closeness(a, b) {     // 1 = identical
@@ -942,11 +962,12 @@
     answered = true; score.total++;
     if (ok) { score.right++; score.streak++; if (score.streak > score.best) { score.best = score.streak; store.set("bestStreak", String(score.best)); } }
     else score.streak = 0;
-    var g = groupByKey[norm(qCur.e.en)];
+    var g = qCur.e ? groupByKey[norm(qCur.e.en)] : lookGroup(qCur.look);
     $qFb.className = "fb " + (ok ? "ok" : "no");
     $qFb.innerHTML = "<p><b>" + (ok ? (close ? "Close enough – richt!" : "Richt!") : "No quite.") + "</b></p>" +
       '<div class="eg"><div class="eg-sc">' + esc(qCur.sc) + '</div><div class="eg-en">' + esc(qCur.en) + "</div>" +
       '<button class="say small" type="button" data-say="' + esc(qCur.sc) + '" aria-label="Hear it">' + SPEAKER + "</button></div>" +
+      (qCur.alts && qCur.alts.length ? '<p class="also">Also right: ' + qCur.alts.map(esc).join(" · ") + "</p>" : "") +
       (g ? '<button type="button" class="chip" data-open="' + esc(g.key) + '"><span>' + esc(g.first.s) + "</span> " + esc(g.en) + "</button>" : "");
     $qNext.hidden = false;
     renderScore();
@@ -962,7 +983,7 @@
   });
   document.getElementById("qCheck").addEventListener("click", function () {
     if (answered || !$qAns.value.trim()) return;
-    var c = closeness($qAns.value, qCur.sc);
+    var c = [qCur.sc].concat(qCur.alts || []).reduce(function (best, x) { return Math.max(best, closeness($qAns.value, x)); }, 0);
     finish(c >= 0.85, c < 1);
   });
   $qAns.addEventListener("keydown", function (ev) { if (ev.key === "Enter") { ev.preventDefault(); document.getElementById("qCheck").click(); } });
@@ -1461,6 +1482,8 @@
   fetch("data/phrase-rules.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; })
     .then(function (r) { loadPhraseRules(r || {}); return fetch("data/scots-dictionary.json", { cache: "no-cache" }); })
     .then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { buildJsonIndex(d); translate(); }).catch(function () {});
+  fetch("data/test-sentences.txt", { cache: "no-cache" }).then(function (r) { return r.ok ? r.text() : ""; })
+    .then(function (t) { parseTestSentences(t); if (testSentences.length >= 4) nextQuestion(); }).catch(function () {});
   fetch("data/usage-notes.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { usageNotes = m || {}; if ($dlgWord.open) renderDetail(); }).catch(function () {});
   fetch("meanings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { meanings = m || {}; if (norm($q.value)) renderList(); }).catch(function () {});
   fetch("words.txt", { cache: "no-cache" })
