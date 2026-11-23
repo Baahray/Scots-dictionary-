@@ -1457,9 +1457,9 @@
     "cross_references": [
       "dae",
       "wirth",
-      "dee",
       "stushie",
-      "steer"
+      "steer",
+      "dee"
     ]
   },
   {
@@ -6743,8 +6743,8 @@
     "example_en": "That was a brave thing to do.",
     "cross_references": [
       "gallus",
-      "crouse",
-      "stoot"
+      "stoot",
+      "crouse"
     ]
   },
   {
@@ -10487,7 +10487,9 @@
       "snell",
       "jeelin",
       "cauldrife",
-      "chitter"
+      "chitter",
+      "oorlich",
+      "nippit"
     ]
   },
   {
@@ -10537,7 +10539,9 @@
       "cauld",
       "snell",
       "jeelin",
-      "chitter"
+      "chitter",
+      "oorlich",
+      "nippit"
     ]
   },
   {
@@ -13407,9 +13411,9 @@
     "example_en": "A bruise on his shin.",
     "cross_references": [
       "snod",
-      "trig",
       "dunt",
-      "clour"
+      "clour",
+      "trig"
     ]
   },
   {
@@ -15690,10 +15694,10 @@
     "cross_references": [
       "fashious",
       "scunner",
-      "cark",
-      "kauch",
       "ail",
-      "pilget"
+      "pilget",
+      "cark",
+      "kauch"
     ]
   },
   {
@@ -18149,8 +18153,8 @@
       "bauld",
       "impident",
       "coorse",
-      "crouse",
-      "stoot"
+      "stoot",
+      "crouse"
     ]
   },
   {
@@ -18489,8 +18493,8 @@
       "guid",
       "unco",
       "verra",
-      "fair",
-      "awfy"
+      "awfy",
+      "fair"
     ]
   },
   {
@@ -18829,8 +18833,8 @@
       "gowk",
       "dafty",
       "donnert",
-      "stupit",
-      "daft"
+      "daft",
+      "stupit"
     ]
   },
   {
@@ -27691,8 +27695,8 @@
     "example_scots": "Nae bother.",
     "example_en": "No trouble.",
     "cross_references": [
-      "no",
-      "naw"
+      "naw",
+      "no"
     ]
   },
   {
@@ -33591,8 +33595,8 @@
       "ding",
       "clour",
       "dunch",
-      "scone",
-      "touk"
+      "touk",
+      "scone"
     ]
   },
   {
@@ -34139,11 +34143,11 @@
     "example_en": "You're looking very smart.",
     "cross_references": [
       "dink",
+      "redd",
       "trig",
       "cosie",
       "bien",
-      "cozie",
-      "redd"
+      "cozie"
     ]
   },
   {
@@ -39237,8 +39241,8 @@
       "dowie",
       "disjaskit",
       "dool",
-      "waefu",
-      "dule"
+      "dule",
+      "waefu"
     ]
   },
   {
@@ -39854,8 +39858,8 @@
     "example_scots": "Gey wat last nicht.",
     "example_en": "Very drunk last night.",
     "cross_references": [
-      "weet",
-      "dampt"
+      "dampt",
+      "weet"
     ]
   },
   {

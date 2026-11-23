@@ -6,7 +6,7 @@ I'm going home. | Ah'm gaun hame. | Am gawn hame. | hame
 What are you doing? | Whit ur ye daein? | Whit ye daein? | daein
 Are you all right? | Ur ye awright? | You awright? | awright
 I'm exhausted. | Ah'm wabbit. | Ah'm pure wabbit.; Am wabbit. | wabbit
-It's freezing today. | It's Baltic the day. | It's jeelin the day.; It's freezin the day. | the day
+It's freezing today. | It's jeelin the day. | It's Baltic the day.; It's richt cauld the day.; It's pure jeelin the day.; It's freezin the day. | jeelin
 It's raining again. | It's rainin again. | It's pishin doon again.; It's chuckin it doon again. | rain
 The weather's horrible today. | It's dreich the day. | It's mingin the day.; It's bowfin the day. | dreich
 I'm soaked. | Ah'm drookit. | Am drookit. | drookit
@@ -20,8 +20,8 @@ That's disgusting. | That's mingin. | That's bowfin.; That's boggin. | mingin
 The children are playing outside. | The weans are playin ootside. | The weans ur playin ootside. | wean
 The baby's crying. | The wean's greetin. | The baby's greetin. | greet
 Stop crying. | Stop greetin. | Stop yer greetin. | greet
-I'm starving. | Ah'm starvin. | Am starvin. | starvin
-I feel sick. | Ah feel no well. | Ah feel seek.; That gies me the boak. | boak
+I'm starving. | Ah'm stervin. | Ah'm starvin.; Am stervin. | sterve
+I feel sick. | Ah feel seek. | Ah'm no weel.; Ah'm gonnae boak.; That gies me the boak. | boak
 Give me that. | Gies that. | Gie's that.; Gimme that. | gies
 Give me a drink of water. | Gies a drap ae watter. | Gies a drink ae watter. | watter
 I'm going to the shops. | Ah'm gaun tae the shoaps. | Am gawn tae the shoaps.; Ah'm gaun fur the messages. | messages
@@ -84,7 +84,7 @@ She's a real gossip. | She's a right blether. | She's an awfy blether. | blether
 That's a lot of money. | That's a lot ae money. | That's a loat ae money.; That's a fair bit ae money. | money
 I've got no money. | Ah've goat nae money. | Ah'm skint. | skint
 I'm broke. | Ah'm skint. | Ah'm brassic. | skint
-It's really cold. | It's pure freezin. | It's Baltic.; It's jeelin. | jeelin
+It's really cold. | It's richt cauld. | It's richt cawld.; It's pure cauld.; It's awfy cauld.; It's gey cauld.; It's Baltic.; It's jeelin. | cauld
 It's really warm today. | It's roastin the day. | It's pure roastin the day. | roastin
 The house is a mess. | The hoose is a midden. | The hoose is a coup.; The hoose is in a guddle. | midden
 Tidy your room. | Tidy yer room. | Redd up yer room. | redd
@@ -147,3 +147,9 @@ He's got it in his pocket. | He's goat it in his poakit. | Ae's goat it in 'eis 
 I've got it. | Ah've goat it. | Av goat it.; Ah've goat it noo. | goat
 He was there. | He wis there. | Ae wis there.; E wis therr. | wis
 Give it to him. | Gie it tae him. | Gie it tae 'im.; Gie 'im it. | gie
+I'm shivering. | Ah'm chitterin. | Ah'm chitterin wi the cauld.; Am chitterin. | chitter
+There's a biting wind today. | There's a snell wind the day. | It's a snell wind the day. | snell
+I really feel the cold. | Ah'm awfy cauldrife. | Ah'm richt cauldrife.; Ah feel the cauld. | cauldrife
+It's cold outside. | It's cauld ootside. | It's cawld oot.; It's cauld oot there. | cauld
+Close the door, it's cold. | Shut the door, it's cauld. | Shut the door, it's Baltic.; Shut that door, it's freezin. | cauld
+My hands are freezing. | Ma hauns are jeelin. | Ma hauns ur jeelin.; Ma hauns ur freezin. | jeelin

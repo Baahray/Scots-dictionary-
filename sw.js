@@ -1,6 +1,6 @@
 // Offline support: always try the network first (so edits to words.txt show up),
 // fall back to the saved copy when there's no signal.
-const CACHE = "scots-dictionary-v20";
+const CACHE = "scots-dictionary-v21";
 const FILES = ["./", "index.html", "words.txt", "topics.txt", "meanings.json", "data/usage-notes.json", "data/phrase-rules.json", "data/test-sentences.txt", "data/scots-dictionary.json", "manifest.json", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
