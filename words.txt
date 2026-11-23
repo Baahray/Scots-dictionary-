@@ -408,7 +408,7 @@ glance | glisk, keek | glisk, keek
 gleam | glent | glent
 go | gang, gae | gang, gay
 goes | gangs, gaes | gangs, gays
-going | gaun | gawn
+going | gaun, gon | gawn, gon | gon – Glasgow
 going to | gonnae | gon-ay
 gone | gane | gayn
 good | guid, gid | gid, gid

@@ -373,7 +373,7 @@
     entries.forEach(function (e) {
       if (/[()\/]/.test(e.en)) return;           // skip "row (line)" style entries – too ambiguous in a sentence
       var k = tokenizeWords(e.en).join(" ");
-      if (!k) return;
+      if (!k || k.indexOf(" ") >= 0) return;   // single English words only, so "going to the house" isn't read as "gonnae"
       if (!dict.en[k]) { dict.en[k] = e.scots.slice(); maxLen.en = Math.max(maxLen.en, k.split(" ").length); }
       e.scots.forEach(function (s) {
         var sk = tokenizeWords(s).join(" ");
