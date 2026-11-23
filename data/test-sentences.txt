@@ -140,3 +140,10 @@ What time is it? | Whit time is it? | Whit's the time? | whit
 It's half past two. | It's hauf two. | It's hauf past two. | hauf
 Just now. | The noo. | Right noo. | the noo
 In a minute. | In a meenit. | In a wee minute.; In a minute. | meenit
+He had it in his hand. | He hud it in his haun. | Ae hud it in 'eis hawn.; Ae hid it in 'eis hawn.; He hid it in his haun.; E hud it in 'is haun.; He hud it in his hawn. | haun
+She had it in her bag. | She hud it in her bag. | She hid it in her bag.; She hud it in 'er bag. | hud
+I had my dinner. | Ah hud ma dinner. | Ah hid ma dinner.; Ah've hud ma dinner. | hud
+He's got it in his pocket. | He's goat it in his poakit. | Ae's goat it in 'eis poakit.; He's goat it in 'is pocket. | goat
+I've got it. | Ah've goat it. | Av goat it.; Ah've goat it noo. | goat
+He was there. | He wis there. | Ae wis there.; E wis therr. | wis
+Give it to him. | Gie it tae him. | Gie it tae 'im.; Gie 'im it. | gie
