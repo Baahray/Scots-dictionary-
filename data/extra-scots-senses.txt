@@ -32,3 +32,6 @@ dozen | dozent | Verb | Everyday/Spoken | General Scots | stupefy | To daze or s
 weird | wierd | Noun | Traditional/Literary | General Scots | fate | Fate, destiny (dree yer weird = suffer your fate). | Old English wyrd. | Dree yer weird. | Put up with your lot.
 worry | | Verb | Everyday/Spoken | General Scots | choke | To choke, strangle. | Old English wyrgan. | He worried on a bane. | He choked on a bone.
 gate | gait | Noun | Traditional/Literary | General Scots | way | A way, road or street. | Old Norse gata. | Gang yer ain gate. | Go your own way.
+thon | | Determiner | Everyday/Spoken | West Central/Glasgow | that over there | That or those (over there, at a distance from both speaker and listener). | A Scots blend of "that" and "yon". | Thon wumman ower there's ma auntie. | That woman over there is my aunt.
+thon | | Pronoun | Everyday/Spoken | West Central/Glasgow | that one there | That one (over there). | A Scots blend of "that" and "yon". | Thon's the hoose. | That's the house over there.
+yonner | | Adverb | Everyday/Spoken | General Scots | yonder (over there) | Over there, in that place. | From yon, like English yonder. | It's ower yonner by the trees. | It's over there by the trees.

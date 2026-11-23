@@ -207,6 +207,8 @@
   .opt-say { font-size: .9rem; color: var(--muted); }
   .opt-say b { color: var(--ink); }
   .opt-note { font-size: .85rem; color: var(--muted); font-style: italic; margin-top: 2px; }
+  .opt-usage { font-size: .88rem; line-height: 1.45; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+  .opt-usage b { display: block; font-size: .78rem; color: var(--muted); margin-bottom: 2px; }
   .eg { position: relative; background: var(--stone); border-left: 3px solid var(--ochre); border-radius: 0 12px 12px 0; padding: 10px 44px 10px 12px; margin-top: 10px; }
   .eg-sc { font: 600 1.05rem/1.35 var(--display); }
   .eg-en { font-size: .88rem; color: var(--muted); margin-top: 2px; }
@@ -554,7 +556,7 @@
 
   function words(s) { return norm(s).replace(/[^a-z' -]/g, " ").split(/[\s-]+/).filter(Boolean); }
   /* Topics (topics.txt) and similar meanings (meanings.json, from WordNet) */
-  var topics = [], topicById = {}, meanings = {};
+  var topics = [], topicById = {}, meanings = {}, usageNotes = {};
   function parseTopics(txt) {
     topics = []; topicById = {};
     txt.split(/\r?\n/).forEach(function (l) {
@@ -800,7 +802,8 @@
       '<button class="say" type="button" data-say="' + esc(it.say) + '" data-plain="1" aria-label="Hear ' + esc(it.s) + '">' + SPEAKER + "</button></div>" +
       '<div class="opt-say">Say: <b>' + esc(it.say) + "</b></div>" +
       (note ? '<div class="opt-note">' + esc(note) + "</div>" : "") +
-      (it.firstOfLine ? egHtml(it.e.example) : "") + "</div>";
+      (it.firstOfLine ? egHtml(it.e.example) : "") +
+      (usageNotes[norm(it.s)] ? '<div class="opt-usage"><b>How to use it</b> ' + esc(usageNotes[norm(it.s)]) + "</div>" : "") + "</div>";
   }
   function renderDetail() {
     var g = groupByKey[openKey];
@@ -1314,6 +1317,7 @@
     if (!testStarted) { testStarted = true; setTestMode(testMode); }
   }
   fetch("topics.txt", { cache: "no-cache" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) { parseTopics(t); buildTopics(); if (norm($q.value)) renderList(); }).catch(function () {});
+  fetch("data/usage-notes.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { usageNotes = m || {}; if ($dlgWord.open) renderDetail(); }).catch(function () {});
   fetch("meanings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { meanings = m || {}; if (norm($q.value)) renderList(); }).catch(function () {});
   fetch("words.txt", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })

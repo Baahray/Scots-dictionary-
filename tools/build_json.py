@@ -494,7 +494,9 @@ def rank(h):                                       # which spelling leads: on th
     regs = {r for e in es for r in e["register"]}; rgns = {r for e in es for r in e["region"]}
     return (h in CHECKED, h in EXTRA_HEADS, "Everyday/Spoken" in regs, "General Scots" in rgns or "West Central/Glasgow" in rgns,
             "Archaic" not in regs, -len(h), h)
+NO_MERGE = {"thon", "yon", "thir", "thae", "yonner", "ee", "ei", "yers", "yer"}   # separate words, not spellings of each other
 def union(a, b, lead=None):
+    if a in NO_MERGE or b in NO_MERGE: return
     ra, rb = find(a), find(b)
     if ra == rb: return
     if lead is None: lead = ra if rank(ra) >= rank(rb) else rb
@@ -571,6 +573,50 @@ for e in merged:
     if e["headword"].lower() in OLD_WORDS:
         e["register"] = ["Archaic"] + [r for r in e["register"] if r not in ("Archaic", "Everyday/Spoken")]
 
+# register: every entry gets one. Hand-checked everyday words are Everyday/Spoken; regional words are spoken words
+# of their area; anything else is mainly met in writing and older speech.
+REGION_FIX = {"thae": ["General Scots"]}
+for e in merged:
+    if e["headword"].lower() in REGION_FIX: e["region"] = REGION_FIX[e["headword"].lower()]
+    if not e["register"]:
+        hl = e["headword"].lower()
+        if hl in CHECKED: e["register"] = ["Everyday/Spoken"]
+        elif any(r != "General Scots" for r in e["region"]): e["register"] = ["Everyday/Spoken"]
+        else: e["register"] = ["Traditional/Literary"]
+
+# usage notes: hand-written ones (data/usage-notes.txt), otherwise a note built from the entry's own facts
+HAND_NOTES = {}
+for l in open(os.path.join(HERE, "usage-notes.txt"), encoding="utf-8"):
+    if l.startswith("#") or " | " not in l: continue
+    h, n = l.rstrip("\n").split(" | ", 1)
+    HAND_NOTES[h.strip().lower()] = n.strip()
+REGION_SAY = {"West Central/Glasgow": "Glasgow and the West", "East/Mid": "Edinburgh, Fife and the Lothians",
+              "Doric/North East": "the North East (Doric)", "Borders": "the Borders (South Scots)", "Insular": "Shetland and Orkney"}
+def built_note(e):
+    out = []
+    rg = [REGION_SAY[r] for r in e["region"] if r in REGION_SAY]
+    reg = e["register"]
+    if "Archaic" in reg:
+        out.append("An old word, no longer in everyday use – you'll meet it in older writing, songs and place names rather than in conversation.")
+    elif rg:
+        out.append("Mainly heard in " + " and ".join(rg) + "; speakers elsewhere may not know it, so use it with people from there or explain it.")
+    elif "Modern/Colloquial" in reg:
+        out.append("Informal, modern speech – fine with friends, out of place in formal writing.")
+    elif "Traditional/Literary" in reg:
+        out.append("Mostly found in traditional writing, poems and older speech; it can sound old-fashioned in everyday chat.")
+    else:
+        out.append("Used in everyday Scots speech.")
+    if re.search(r"\(rude\)|rude", e["definition"]):
+        out.append("Rude – keep it for close friends, not polite company.")
+    if " " in e["headword"] and e["pos"] == "Idiom":
+        out.append("A set phrase: keep the words together as they are.")
+    vs = [v for v in e["variants"] if " " not in v][:3]
+    if vs:
+        out.append("Other spellings: " + ", ".join(vs) + ".")
+    return " ".join(out)
+for e in merged:
+    e["usage_notes"] = HAND_NOTES.get(e["headword"].lower()) or built_note(e)
+
 # a spelling that is a headword of its own is not listed as a variant of another word
 heads_now = {e["headword"].lower() for e in merged}
 for e in merged:
@@ -606,11 +652,20 @@ for e in merged:
             seen.add(r.lower()); out.append(r)
     e["cross_references"] = out[:10]
 
-order = ["headword", "variants", "ipa", "phonetic", "pos", "register", "region", "etymology", "definition",
+order = ["headword", "variants", "ipa", "phonetic", "pos", "register", "region", "etymology", "definition", "usage_notes",
          "example_scots", "example_en", "cross_references"]
 merged.sort(key=lambda x: (x["headword"].lower().lstrip("'"), x["pos"]))
 data = [{k: e[k] for k in order} for e in merged]
 json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+# compact lookup for the app's word card: Scots word (headword or spelling) -> usage note
+un = {}
+for h, n in HAND_NOTES.items(): un[h] = n               # also covers hand-checked words outside the dataset
+for e in data:
+    un[e["headword"].lower()] = e["usage_notes"]
+for e in data:
+    for v in e["variants"]:
+        un.setdefault(v.lower(), e["usage_notes"])
+json.dump(un, open(os.path.join(HERE, "usage-notes.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("entries:", len(data), "| merged spellings:", sum(len(e["_members"]) - 1 for e in merged), "| not yet written:", len(not_written))
 print("dropped:", dict(dropped))
 print("with example:", sum(1 for d in data if d["example_scots"]), "| with cross-refs:", sum(1 for d in data if d["cross_references"]),
