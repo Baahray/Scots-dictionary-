@@ -1,0 +1,34 @@
+# Words Scots shares with English, kept ONLY for their own Scots meanings. All writing here is original.
+# headword | variants | pos | register | region | gloss | definition | etymology | example_scots | example_en
+black | | Adverb | Everyday/Spoken | General Scots | utterly | Used before a word to make it stronger: utterly, completely (mostly with affrontit). | Old English blæc; the intensifying use is Scots. | Ah wis black affrontit. | I was utterly mortified.
+black | | Adjective | Everyday/Spoken | General Scots | filthy | Very dirty, grimy. | Old English blæc. | Yer hauns are black! | Your hands are filthy!
+black affrontit | | Idiom | Everyday/Spoken | General Scots | mortified | Completely mortified, ashamed beyond words. | Black 'utterly' + affrontit 'shamed', from French affronter. | She wis black affrontit at the wean. | She was mortified by the child.
+affrontit | | Adjective | Everyday/Spoken | General Scots | embarrassed | Embarrassed, ashamed, shown up. | From French affronter 'to face, insult'. | Ah wis that affrontit. | I was so embarrassed.
+fair | | Adverb | Everyday/Spoken | General Scots | completely | Completely, really, truly (before a word, to strengthen it). | Old English fæger; the strengthening use is Scots. | Ah'm fair puggled. | I'm completely worn out.
+clean | | Adverb | Everyday/Spoken | General Scots | completely | Completely, totally. | Old English clæne; much commoner in Scots in this sense. | He's clean daft. | He's completely mad.
+close | | Noun | Everyday/Spoken | General Scots | tenement entry | The shared passage and stairway into a tenement; a narrow lane between buildings. | From French clos 'enclosed'. | Wait in the close. | Wait in the entry.
+press | | Noun | Everyday/Spoken | General Scots | cupboard | A cupboard, especially one built into the wall. | From French presse. | It's in the press. | It's in the cupboard.
+piece | | Noun | Everyday/Spoken | General Scots | sandwich | A sandwich or packed snack. | From French piece. | A jeely piece. | A jam sandwich.
+messages | | Noun | Everyday/Spoken | General Scots | shopping | The shopping; errands to the shops. | From message 'errand'. | Ah'm gaun fur the messages. | I'm going for the shopping.
+wife | | Noun | Everyday/Spoken | General Scots | woman | Any woman, married or not. | Old English wif 'woman'. | Thon auld wife next door. | That old woman next door.
+coup | cowp | Verb | Everyday/Spoken | General Scots | tip over | To tip over, overturn, fall over. | Origin uncertain. | Ye'll coup yer tea. | You'll spill your tea.
+coup | cowp | Noun | Everyday/Spoken | General Scots | rubbish tip | A rubbish dump; a messy place. | From the verb coup. | This room's a coup. | This room's a tip.
+first-fit | | Verb | Everyday/Spoken | General Scots | first-foot | To be the first visitor over the door after midnight at New Year. | First + fit 'foot'. | Wha's first-fittin us? | Who's first-footing us?
+links | | Noun | Traditional/Literary | General Scots | dunes | Sandy ground by the shore, often used for golf. | Old English hlinc 'ridge'. | A walk on the links. | A walk on the dunes.
+messages | | Noun | Everyday/Spoken | General Scots | errands | Errands. | From message 'errand'. | Rin a message fur me. | Run an errand for me.
+bucket | | Noun | Everyday/Spoken | West Central/Glasgow | bin | A rubbish bin. | From bucket. | Pit it in the bucket. | Put it in the bin.
+but | | Noun | Traditional/Literary | General Scots | outer room | The outer room of a two-roomed cottage (the but an ben). | Old English butan 'outside'. | Bide in the but. | Wait in the front room.
+but | | Preposition | Traditional/Literary | General Scots | without | Outside of; without. | Old English butan 'outside'. | But the hoose. | Outside the house.
+bit | | Adjective | Everyday/Spoken | General Scots | wee | Little (before a noun). | From bit 'piece'. | A bit lassie. | A little girl.
+air | | Adverb | Archaic | Doric/North East | early | Early. | Old English ær. | Up air the morn. | Up early tomorrow.
+air-yesterday | | Noun | Archaic | General Scots | day before yesterday | The day before yesterday. | Air 'early' + yesterday. | It wis air-yesterday. | It was the day before yesterday.
+again | | Preposition | Everyday/Spoken | General Scots | against | Against; opposite. | Old English ongean. | Lean it again the wa. | Lean it against the wall.
+again | | Conjunction | Everyday/Spoken | General Scots | by the time | By the time that, ready for when. | Old English ongean. | Hae it done again he comes. | Have it done by the time he comes.
+agent | | Noun | Traditional/Literary | General Scots | solicitor | A solicitor (law agent). | Latin agens. | Speak tae yer agent. | Speak to your solicitor.
+bud | bood | Verb | Everyday/Spoken | Doric/North East | had to | Must, had to. | Reduced form of behoved. | He bud gang. | He had to go.
+ca | caw | Verb | Everyday/Spoken | General Scots | drive, knock | To call; to drive, push or knock. | Old Norse kalla. | Ca canny. | Go carefully.
+fa | faw | Verb | Everyday/Spoken | General Scots | fall | To fall. | Scots form of fall. | Dinnae fa. | Don't fall.
+dozen | dozent | Verb | Everyday/Spoken | General Scots | stupefy | To daze or stupefy; (dozent) dopey. | Old Norse dúsa 'doze'. | He's fair dozent. | He's completely dopey.
+weird | wierd | Noun | Traditional/Literary | General Scots | fate | Fate, destiny (dree yer weird = suffer your fate). | Old English wyrd. | Dree yer weird. | Put up with your lot.
+worry | | Verb | Everyday/Spoken | General Scots | choke | To choke, strangle. | Old English wyrgan. | He worried on a bane. | He choked on a bone.
+gate | gait | Noun | Traditional/Literary | General Scots | way | A way, road or street. | Old Norse gata. | Gang yer ain gate. | Go your own way.

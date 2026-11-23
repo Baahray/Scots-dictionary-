@@ -68,19 +68,21 @@ To put a word in a topic, add `topic: id` to the note of its line in `words.txt`
 
 ## Structured dataset (`data/scots-dictionary.json`)
 
-Every authentic Scots entry from the Wiktionary file (via kaikki.org), as JSON:
+1,740 Scots headwords, built from every row of the Wiktionary file (via kaikki.org), as JSON:
 
 ```
 headword, variants, ipa, phonetic, pos, register, region, etymology, definition, example_scots, example_en, cross_references
 ```
 
-- **Kept:** genuine Scots words and idioms. **Left out:** names, symbols, numbers, contractions, grammar forms (past tense of…), English words used with their English meaning, made-up respellings of English, and slurs.
+- **Original writing:** every definition, origin note and example sentence was written for this dictionary (`data/original-content.txt`). Nothing is copied from another dictionary; the source file only supplied which words exist.
+- **Kept:** genuine Scots words and idioms. **Left out:** names, symbols, numbers, contractions, grammar forms, English words used with their English meaning, general British/American slang, made-up respellings of English, and slurs. Rows checked by hand and left out are marked `DROP`.
+- **Shared with English:** words like *black*, *fair*, *clean*, *close*, *press* and *piece* appear only for their Scots meanings (*black affrontit*, *fair puggled*, a *jeely piece*) – see `data/extra-scots-senses.txt`.
+- **Variants:** different spellings of one word are grouped under one headword (*frae, thrae* → *fae*; *nihin, nithin* → *naething*), and the parts of speech of one word are combined in one entry.
 - **phonetic:** CAPITALS = stress; `a` as in cat, `aw` as in law/braw, `o` as in clock, `oo` as in hoose, `kh` as in loch, `'` = Glasgow glottal stop (e.g. `WAT-tur / WA'-ur`). Words in the app's word list use its checked pronunciations; the rest are generated from the spelling, so treat them – and the broad IPA – as a guide, not gospel.
-- **register / region:** from Wiktionary's labels (archaic, Shetland, South Scots…) and the app's notes; *General Scots* when nothing more specific is known.
-- **example_scots / example_en / cross_references:** from the app's examples, topics and shared meanings.
-- **etymology:** empty – the source file has none.
+- **register / region:** from the source labels (archaic, Shetland, South Scots…) and the app's notes; *General Scots* when nothing more specific is known.
+- **etymology:** short origin notes; "Origin uncertain." where it isn't known.
 
-The app itself still reads `words.txt`. Rebuild the JSON with `python3 tools/build_json.py <kaikki-scots.tsv> words.txt topics.txt data/scots-dictionary.json` (needs `wordfreq` and `nltk` with WordNet).
+The app reads `words.txt`; its last section ("More Scots words") is generated from the dataset, and edits made in the app are kept when it is rebuilt. Rebuild both with `python3 tools/build_json.py <kaikki-scots.tsv> words.txt topics.txt data/scots-dictionary.json --words` (needs `wordfreq` and `nltk` with WordNet).
 
 ## Sources and credits
 

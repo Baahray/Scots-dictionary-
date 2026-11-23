@@ -334,7 +334,7 @@ for l in open(WORDS, encoding="utf-8"):
         if not in_wikt and (len(scots_here) == 1 or "topic:" in note):
             curated_note.setdefault(k, note)
         ex_words = re.findall(r"[a-z']+", ex.lower())
-        if ex and k not in curated_ex and (k in ex_words or any(w.startswith(k) for w in ex_words)):
+        if ex and not in_wikt and k not in curated_ex and (k in ex_words or any(w.startswith(k) for w in ex_words)):
             curated_ex[k] = ex
         m = re.search(r"topic:\s*([a-z-]+)", note)
         if m:
@@ -390,36 +390,249 @@ for head, forms, pos, senses in rows:
         "cross_references": [],
     }
 
-# cross references: same core meaning, or same topic in the app
-by_gloss = defaultdict(list)
+# ---------------------------------------------------------------- original writing
+# Every definition, origin note and example comes from data/original-content.txt (written for this dictionary),
+# never from the source file. Rows marked DROP were checked by hand and left out. Rows not yet written are left out.
+import os, subprocess
+HERE = os.path.dirname(os.path.abspath(OUT))
+orig = {}
+for l in open(os.path.join(HERE, "original-content.txt"), encoding="utf-8"):
+    if l.startswith("#") or not l.strip():
+        continue
+    p = [x.strip() for x in l.rstrip("\n").split(" | ")]
+    orig[(p[0].lower(), p[1])] = p[2:]
+not_written = []
+for key in list(entries):
+    e = entries[key]
+    o = orig.get((e["headword"].lower(), e["pos"]))
+    if o is None:
+        not_written.append(e["headword"]); del entries[key]; continue
+    if o[0] == "DROP":
+        dropped["checked by hand: not Scots"] += 1; del entries[key]; continue
+    gl, df, et, exs, exe = (o + [""] * 5)[:5]
+    e["_gloss"], e["_defs"], e["etymology"] = gl, [df], et
+    if not e["example_scots"]:
+        e["example_scots"], e["example_en"] = exs, exe
+
+# words Scots shares with English, kept only for their own Scots meanings
+for l in open(os.path.join(HERE, "extra-scots-senses.txt"), encoding="utf-8"):
+    if l.startswith("#") or not l.strip():
+        continue
+    h, var, pos, reg, rgn, gl, df, et, exs, exe = [x.strip() for x in l.rstrip("\n").split("|")]
+    key = (h.lower(), pos)
+    if key in entries:
+        e = entries[key]
+        if df not in e["_defs"]: e["_defs"].append(df)
+        continue
+    phon, ipa = pronounce(h)
+    if h.lower() in curated_say:
+        phon = stress_say(curated_say[h.lower()], h, phon)
+        if phon.split(" / ")[0].lower().replace("-", "") != h.lower().replace("-", ""): ipa = say_ipa(phon)
+    entries[key] = {"headword": h, "variants": [v.strip() for v in var.split(",") if v.strip()], "ipa": ipa, "phonetic": phon,
+                    "pos": pos, "register": [reg], "region": [rgn], "etymology": et, "_defs": [df], "_gloss": gl,
+                    "example_scots": exs, "example_en": exe, "cross_references": []}
+
+# changes made in the app to the word list's Wiktionary section ("Edit: … → …" commits): keep them
+user_lines = {}
+try:
+    log = subprocess.run(["git", "-C", os.path.dirname(os.path.abspath(WORDS)), "log", "--reverse", "--grep=^Edit", "-p",
+                          "--unified=0", "--format=format:@@COMMIT", "--", "words.txt"], capture_output=True, text=True).stdout
+    for chunk in log.split("@@COMMIT"):
+        minus = [x[1:] for x in chunk.splitlines() if x.startswith("-") and not x.startswith("---") and "Wiktionary" in x]
+        plus = [x[1:] for x in chunk.splitlines() if x.startswith("+") and not x.startswith("+++")]
+        for a, b in zip(minus, plus):
+            old = a.split("|")[1].strip().lower(); user_lines[old] = b
+except Exception:
+    pass
+for old, line in user_lines.items():
+    p = [x.strip() for x in line.split("|")]
+    for e in entries.values():
+        if e["headword"].lower() == old:
+            e["variants"] = [e["headword"]] + e["variants"]
+            e["headword"] = p[1].split(",")[0].strip()
+            if len(p) > 2 and p[2]: e["phonetic"] = p[2].split(",")[0].strip()
+
+# hand-set sounds for words the spelling rules get wrong (stress in CAPITALS, ' = Glasgow glottal stop)
+SAY_FIX = {"ye": ("yee", "/ji/"), "messages": ("MES-sij-iz", "/ˈmɛsɪdʒɪz/"), "again": ("a-GEN", "/əˈɡɛn/"),
+           "agent": ("AY-jent", "/ˈedʒənt/"), "black affrontit": ("blak a-FRUN-tit", "/blak əˈfrʌntɪt/"),
+           "dozen": ("DOZ-un", "/ˈdɔzən/"), "worry": ("WUR-ree", "/ˈwʌri/"), "bucket": ("BUK-it / BUK-i'", "/ˈbʌkɪt/"),
+           "air-yesterday": ("ayr YES-tur-day", "/er ˈjɛstərde/"), "first-fit": ("FURST-fit", "/ˈfʌrstfɪt/"),
+           "ca": ("kaw", "/kɑː/")}
+
+SAY_FIX.update({"abye": ("a-BY", "/əˈbae/"), "acre-a-bung": ("AY-kur-a-bung", "/ˈekərəbʌŋ/"), "aesomeness": ("AY-sum-nis", "/ˈesʌmnɪs/"),
+    "afore": ("a-FORE", "/əˈfor/"), "aforetimes": ("a-FORE-tymz", "/əˈfortaemz/"), "aftwhiles": ("AFT-whylz", "/ˈaftʍaelz/"),
+    "ance": ("anss", "/ans/"), "ance errand": ("anss ER-rand", "/ans ˈɛrənd/"), "arrie": ("AR-ree", "/ˈari/"),
+    "ballion": ("BAL-yun", "/ˈbaljən/"), "beguess": ("bee-GESS", "/bɪˈɡɛs/"), "belly-flaucht": ("BEL-lee-flawkht", "/ˈbɛliflɑːxt/"),
+    "benty": ("BEN-tee", "/ˈbɛnti/"), "'bootgates": ("BOOT-gayts", "/ˈbutɡets/"), "collogue": ("ko-LOHG", "/kəˈloɡ/"),
+    "corbie messinger": ("KOR-bee MES-sin-jur", "/ˈkɔrbi ˈmɛsɪndʒər/"), "donnered": ("DON-nurd", "/ˈdɔnərd/"),
+    "dree one's weird": ("dree wunz weerd", "/dri wʌnz wird/"), "eddication": ("ed-dee-KAY-shun", "/ɛdɪˈkeʃən/"),
+    "forbye": ("for-BY", "/fɔrˈbae/"), "guesten": ("GEST-en", "/ˈɡɛstən/"), "gullion": ("GUL-yun", "/ˈɡʌljən/"),
+    "hamespun": ("HAYM-spun", "/ˈhemspʌn/"), "hellicat": ("HEL-lee-kat", "/ˈhɛlɪkat/"), "hellisom": ("HEL-lee-sum", "/ˈhɛlɪsəm/"),
+    "ithergates": ("ITH-ur-gayts", "/ˈɪðərɡets/"), "lang acre": ("lang AY-kur", "/laŋ ˈekər/"), "mallivoag": ("MAL-lee-vohg", "/ˈmalivoɡ/"),
+    "menseless": ("MENSS-liss", "/ˈmɛnsləs/"), "mirligoes": ("MIR-lee-gohz", "/ˈmɪrliɡoz/"), "on one's groof": ("on wunz groof", "/ɔn wʌnz ɡruf/"),
+    "preses": ("PREE-seez", "/ˈprisiz/"), "prettikin": ("PRET-tee-kin / PRE'-ee-kin", "/ˈprɛtɪkɪn/"),
+    "rickle o banes": ("RIK-ul o baynz", "/ˈrɪkəl o benz/"), "sassenach": ("SAS-sen-akh", "/ˈsasənax/"),
+    "whiffinger": ("WHIF-fin-jur", "/ˈʍɪfɪndʒər/"), "whiles": ("whylz", "/ʍaelz/"), "whilk": ("whilk", "/ʍɪlk/")})
+
+# ---------------------------------------------------------------- merge spelling variants into one headword
+def gl_close(a, b):
+    a, b = a.lower(), b.lower()
+    return a == b or a in b.split("; ") or b in a.split("; ")
+
+groups = {}                                       # headword -> list of entries (one per part of speech)
 for e in entries.values():
-    by_gloss[e["_gloss"]].append(e["headword"])
+    groups.setdefault(e["headword"].lower(), []).append(e)
+parent = {h: h for h in groups}
+def find(h):
+    while parent[h] != h:
+        parent[h] = parent[parent[h]]; h = parent[h]
+    return h
+def rank(h):                                       # which spelling leads: on the hand-checked list, everyday, mainstream
+    es = groups[h]
+    regs = {r for e in es for r in e["register"]}; rgns = {r for e in es for r in e["region"]}
+    return (h in CHECKED, "Everyday/Spoken" in regs, "General Scots" in rgns or "West Central/Glasgow" in rgns,
+            "Archaic" not in regs, -len(h), h)
+def union(a, b, lead=None):
+    ra, rb = find(a), find(b)
+    if ra == rb: return
+    if lead is None: lead = ra if rank(ra) >= rank(rb) else rb
+    other = rb if lead == ra else ra
+    parent[other] = lead
+FORM = re.compile(r"^(?:Variant of|Reduced form of|(?:Southern Scots|Shetland|Borders|Glasgow|North East) form of)\s+([a-z'-]+(?: [a-z'-]+)*)\.?$", re.I)
+for h, es in groups.items():
+    for e in es:
+        m = FORM.match(e["etymology"])
+        if m and m.group(1).lower() in groups and m.group(1).lower() != h:
+            t = m.group(1).lower()
+            if any(gl_close(e["_gloss"], x["_gloss"]) or e["_gloss"].lower() in x["_defs"][0].lower() for x in groups[t]):
+                union(h, t, lead=find(t))
+        for v in e["variants"]:
+            v = v.lower()
+            if v in groups and v != h and any(gl_close(e["_gloss"], x["_gloss"]) for x in groups[v]):
+                union(h, v)
+by_gloss0 = defaultdict(list)
+for h, es in groups.items():
+    if " " in h: continue
+    for e in es: by_gloss0[(e["_gloss"].lower(), e["pos"])].append(h)
+for (g, pos), hs in by_gloss0.items():
+    hs = sorted(set(hs))
+    for i, a in enumerate(hs):
+        for b in hs[i + 1:]:
+            if difflib.SequenceMatcher(None, a, b).ratio() >= 0.75 and a[0] == b[0]:
+                union(a, b)
+
+clusters = defaultdict(list)
+for h in groups:
+    clusters[find(h)].append(h)
+
+merged = []
+POS_ORDER = ["Noun", "Verb", "Adjective", "Adverb", "Pronoun", "Determiner", "Preposition", "Conjunction", "Numeral", "Interjection", "Idiom"]
+for lead, members in clusters.items():
+    members = [lead] + sorted((m for m in members if m != lead), key=lambda m: rank(m), reverse=True)
+    senses = []                                   # (pos, gloss, definition, ex_sc, ex_en)
+    variants, regs, rgns, ety, form_ety = [], [], [], "", ""
+    for m in members:
+        for e in sorted(groups[m], key=lambda e: POS_ORDER.index(e["pos"]) if e["pos"] in POS_ORDER else 99):
+            for d in e["_defs"]:
+                if not any(s[0] == e["pos"] and (gl_close(s[1], e["_gloss"]) or s[2] == d) for s in senses):
+                    senses.append((e["pos"], e["_gloss"], d, e["example_scots"], e["example_en"]))
+            if m == lead:
+                for r in e["register"]:
+                    if r not in regs: regs.append(r)
+                for r in e["region"]:
+                    if r not in rgns: rgns.append(r)
+            if (not ety or ety.startswith("Origin uncertain")) and e["etymology"] and not FORM.match(e["etymology"]):
+                ety = e["etymology"]
+            if m == lead and not form_ety and FORM.match(e["etymology"]):
+                form_ety = e["etymology"]
+            for v in [e["headword"]] + e["variants"]:
+                if v.lower() != lead and v.lower() not in [x.lower() for x in variants]:
+                    variants.append(v)
+    first = groups[lead][0]
+    pos_list = []
+    for s in senses:
+        if s[0] not in pos_list: pos_list.append(s[0])
+    if len(pos_list) > 1 and len({s[2] for s in senses}) > 1:
+        definition = " ".join(f"({p.lower()}) " + "; ".join(s[2].rstrip(".") for s in senses if s[0] == p) + "." for p in pos_list)
+    else:
+        definition = "; ".join(dict.fromkeys(s[2].rstrip(".") for s in senses)) + "."
+    ex = next((s for s in senses if s[3]), None)
+    merged.append({"headword": first["headword"], "variants": variants[:10], "ipa": first["ipa"], "phonetic": first["phonetic"],
+                   "pos": " / ".join(pos_list), "register": regs, "region": rgns or ["General Scots"],
+                   "etymology": (form_ety if (not ety or ety.startswith("Origin uncertain")) and form_ety else ety) or "Origin uncertain.", "definition": definition,
+                   "example_scots": ex[3] if ex else "", "example_en": ex[4] if ex else "",
+                   "cross_references": [], "_senses": senses, "_members": members})
+
+# a spelling that is a headword of its own is not listed as a variant of another word
+heads_now = {e["headword"].lower() for e in merged}
+for e in merged:
+    e["variants"] = [v for v in e["variants"] if v.lower() not in heads_now]
+    fix = SAY_FIX.get(e["headword"].lower())
+    if fix:
+        e["phonetic"], e["ipa"] = fix
+
+# ---------------------------------------------------------------- cross references
+by_gloss = defaultdict(list)
+for e in merged:
+    for s in e["_senses"]:
+        by_gloss[s[1].lower()].append(e["headword"])
 by_topic = defaultdict(list)
 for k, ts in topic_of.items():
     for t in ts:
         by_topic[t].append(k)
-heads_lower = {e["headword"].lower(): e["headword"] for e in entries.values()}
-for e in entries.values():
-    refs = [h for h in by_gloss[e["_gloss"]] if h != e["headword"]]
-    for t in topic_of.get(e["headword"].lower(), ()):
-        refs += [heads_lower.get(w, w) for w in by_topic[t] if w != e["headword"].lower()]
-    for en in curated_en.get(e["headword"].lower(), ()):     # other Scots words for the same English in the app
+lead_of = {}
+for e in merged:
+    for m in e["_members"]: lead_of[m] = e["headword"]
+for e in merged:
+    hl = e["headword"].lower()
+    refs = [h for s in e["_senses"] for h in by_gloss[s[1].lower()]]
+    for t in topic_of.get(hl, ()):
+        refs += [lead_of.get(w, w) for w in by_topic[t]]
+    for en in curated_en.get(hl, ()):
         for k, ens in curated_en.items():
-            if en in ens and k != e["headword"].lower() and " " not in k:
-                refs.append(heads_lower.get(k, k))
-    seen, out = set(), []
+            if en in ens and " " not in k:
+                refs.append(lead_of.get(k, k))
+    seen, out = {hl} | {v.lower() for v in e["variants"]}, []
     for r in refs:
-        if r.lower() not in seen and r.lower() != e["headword"].lower():
+        if r.lower() not in seen:
             seen.add(r.lower()); out.append(r)
     e["cross_references"] = out[:10]
-    e["definition"] = "; ".join(e.pop("_defs"))
-    del e["_gloss"]
 
 order = ["headword", "variants", "ipa", "phonetic", "pos", "register", "region", "etymology", "definition",
          "example_scots", "example_en", "cross_references"]
-data = sorted(({k: e[k] for k in order} for e in entries.values()), key=lambda x: (x["headword"].lower().lstrip("'"), x["pos"]))
+merged.sort(key=lambda x: (x["headword"].lower().lstrip("'"), x["pos"]))
+data = [{k: e[k] for k in order} for e in merged]
 json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-print("entries:", len(data))
+print("entries:", len(data), "| merged spellings:", sum(len(e["_members"]) - 1 for e in merged), "| not yet written:", len(not_written))
 print("dropped:", dict(dropped))
 print("with example:", sum(1 for d in data if d["example_scots"]), "| with cross-refs:", sum(1 for d in data if d["cross_references"]),
       "| with variants:", sum(1 for d in data if d["variants"]))
+
+# ---------------------------------------------------------------- the app's word list: rewrite its Wiktionary section
+if "--words" in sys.argv:
+    HEAD = "# ---------- More Scots words from Wiktionary"
+    lines = open(WORDS, encoding="utf-8").read().split("\n")
+    cut = next(i for i, l in enumerate(lines) if l.startswith(HEAD))
+    keep_lines = lines[:cut]
+    while keep_lines and not keep_lines[-1].strip(): keep_lines.pop()
+    user_by_head = {[x.strip() for x in l.split("|")][1].split(",")[0].strip().lower(): l for l in user_lines.values()}
+    def tidy(s): return s.replace("|", "/").strip()
+    out, done_user = [], set()
+    for e in merged:
+        hl = e["headword"].lower()
+        if hl in CHECKED: continue                 # already in the hand-checked list above
+        if hl in user_by_head:
+            if hl not in done_user: out.append(user_by_head[hl]); done_user.add(hl)
+            continue
+        vs = []
+        words = [e["headword"]] + vs
+        says = [e["phonetic"].split(" / ")[0]] + [pronounce(v)[0] for v in vs]
+        tags_ = [r for r in e["region"] if r != "General Scots"] + [r for r in e["register"] if r != "Everyday/Spoken"]
+        for pos, gl, d, xs, xe in e["_senses"]:
+            note = " – ".join([("phrase – " if " " in e["headword"] else "") + pos.lower()] + tags_ +
+                              ([e["etymology"].rstrip(".")] if e["etymology"] and not e["etymology"].startswith("Origin uncertain") else []))
+            ex = f"{xs} ({xe})" if xs else ""
+            out.append(" | ".join([tidy(gl), ", ".join(tidy(w) for w in words), ", ".join(tidy(s) for s in says), tidy(note), tidy(ex)]))
+    text = "\n".join(keep_lines + ["", HEAD + " (word list via kaikki.org, CC BY-SA 4.0; meanings, origins and examples written for this dictionary) ----------"] + out) + "\n"
+    open(WORDS, "w", encoding="utf-8").write(text)
+    print("word list lines in Wiktionary section:", len(out))
