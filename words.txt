@@ -257,7 +257,6 @@ death | deith, daith | deeth, daith
 deceive | begowk | begowk
 hollow (in land) | howe | howe
 devil | deil | deel
-did | done | done | "Ah done it" – Glasgow
 didn't | didnae, didna | did-nay, did-na
 die | dee | dee
 died | dee'd | deed
@@ -411,7 +410,7 @@ go | gang, gae | gang, gay
 goes | gangs, gaes | gangs, gays
 going | gaun | gawn
 going to | gonnae | gon-ay
-gone | gane, went | gayn, went | "he's went" – Glasgow
+gone | gane | gayn
 good | guid, gid | gid, gid
 good-looking | weel-faured | weel-fawred
 goose | guse | guse
@@ -964,7 +963,7 @@ weight | wecht | wekht
 well | weel | weel
 well-off | bien, weel-aff | bien, weel-aff
 went | gaed | gayd
-were | wur, wis | wur, wiz
+were | wur | wur
 weren't | wurnae | wur-nay
 west | wast | wast
 wet | weet, wat | weet, wat
