@@ -59,7 +59,7 @@ arm | airm | erm
 armful | oxterfu | oxterfoo
 armpit | oxter | ox-ter
 around | aroon, roon | a-roon, roon
-ashamed | affrontit | affrontit | "black affrontit" = mortified
+ashamed | affrontit | a-frun-tit | "black affrontit" = mortified
 ask | speir | speer
 asleep | sleepin | sleepin
 at all | ava | a-vaw | "nae money ava" = no money at all
@@ -1025,3 +1025,104 @@ your | yer | yer
 you're | ye're, yer | yer, yer
 yourself | yersel | yer-sel
 yourselves | yersels | yer-sels
+
+# ---------- ADDED (sorted on the site) ----------
+gooseberry | grozet | groz-it
+onion | ingan, ingin | ing-an, ing-in
+cheese (whole) | kebbuck | keb-uk | old
+griddle | girdle | gir-dul
+thirst | drouth | drooth
+mashed potatoes and turnip | clapshot | clapshot | Orkney
+bread roll (Aberdeen) | butterie, rowie | but-er-ee, row-ee | NE
+small amount | pickle | pik-ul | "a wee pickle" = a little bit
+tasteless | wersh | wersh
+sink (kitchen) | jawbox | jawbox | Glasgow
+downpour | plump, blatter | plump, blatter
+shower (of rain) | shooer | shoo-er
+cloud | clud | clud
+broken rainbow | watergaw | wat-er-gaw
+drought | drouth | drooth
+fist | nieve | neev
+hip | hench | hench
+brain | harns | harns
+freckle | ferntickle | fern-tik-ul
+pimple | plook | plook
+spotty | plooky | ploo-kee
+pillow | cod | cod
+latch | sneck | sneck
+doorstep | doorstane | door-stayn
+clothes line | claes-line | clayz-line
+slippers | baffies | baf-eez
+trainers | sannies | san-eez | Glasgow
+scarf | gravat | grav-at
+nightdress (child's) | goonie | goo-nee
+stranger | ootlin | oot-lin
+worthless little person | nyaff | nyaff | Glasgow
+young hooligan | ned | ned | Glasgow
+teacher | dominie | dom-in-ee | old
+favourite pub | howff | howf
+embarrassed | affrontit | a-frun-tit
+worried | fashed | fashed
+lonely | lanesome | layn-sum
+content | contentit | con-ten-tit
+sulky | dorty | dor-tee | old
+confused | bumbazed | bum-bayzd
+astonished | dumfoonert | dum-foo-nert
+surprised | dumfoonert | dum-foo-nert
+longing | langin | langin
+grief | dool | dool
+chubby | sonsie | son-see
+sticky | claggy | klag-ee
+sparrow | spug, sprug | spug, sprug
+seagull | maw, sea-maw | maw, see-maw
+wren | wran | wran
+earwig | forkietail, forkie | for-kee-tayl, for-kee | forkie – Glasgow
+caterpillar | oobit, hairy-oobit | oo-bit, hair-ee-oo-bit
+butterfly | butterflee | but-er-flee
+salmon | saumon | saw-mon
+trout | troot | troot
+rat | rattan, ratton | rat-an, rat-on
+bullock | stot | stot
+birch | birk | birk
+oak | aik | aik
+thistle | thrissle, thristle | thris-ul, thris-ul
+dock (plant) | docken | dok-en
+stream | burn | burn
+valley | glen, strath | glen, strath
+pebble | chuckie, chuckie-stane | chuk-ee, chuk-ee-stayn | Glasgow
+sand | saun | sawn
+yawn | gant | gant
+burp | rift | rift
+giggle | keckle | kek-ul
+wait | bide | bide
+owe | awe | aw
+finish | feenish | fee-nish
+tag (chasing game) | tig | tig
+Christmas | Yule | yool
+New Year's Eve | Hogmanay | hog-ma-nay
+Halloween | Hallae'en | hal-ay-een
+chatter | yatter | yat-er
+whine | yammer | yam-er
+swindle | pauchle | pawkh-ul
+tremble | trummle | trum-ul
+shudder | grue | groo
+sniff | snoke | snoke
+prod | prog | prog
+tumble | tummle | tum-ul
+spin | birl | birl
+whirl | birl | birl
+swim | soom | soom
+bathe (in the sea) | dook | dook
+iron (clothes) | airn | ern
+tear | rive | rive
+crush | birze | birz
+squeeze | birze | birz
+spend | ware | wair | old
+joke | baur | bawr
+healthy | hale | hayl
+nimble | souple | soo-pul
+golden | gowden | gow-den
+gold | gowd | gowd
+scaredy-cat | feartie | feer-tee
+moaning person | greetin-face | greet-in-face | Glasgow
+coffin | kist | kist
