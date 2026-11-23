@@ -1004,7 +1004,7 @@ worn out | forfochen, wabbit | for-fokh-en, wab-it
 worry | fash | fash |  | Dinnae fash. (Don't worry.)
 worse | waur | wawr |  | It's waur than Ah thocht. (It's worse than I thought.)
 worst | warst | warst
-would | wid, wad | wid, wad |  | Wid ye like a cuppa? (Would you like a cuppa?)
+would | wid, wad | wid, wad |  | Wid ye like a cup o tea? (Would you like a cup of tea?)
 wouldn't | widnae, wouldnae | wid-nay, wood-nay |  | Ah widnae dae that. (I wouldn't do that.)
 wrap up warm | hap | hap
 wrestle | warstle | warstle
@@ -1300,7 +1300,7 @@ whine, howl (like a dog) | yammer | yam-er | verb – topic: crying | The dug wi
 sob | sab | sab | verb & noun – topic: crying | She wis sabbin her hert oot. (She was sobbing her heart out.)
 grumble | grummle | grum-ul | verb – topic: crying | Quit grummlin an get on wi it. (Stop grumbling and get on with it.)
 someone who's always moaning | greetin-face | greet-in-face | noun – Glasgow – topic: crying | Cheer up, greetin-face! (Cheer up, misery guts!)
-chat, talk at length | blether | bleth-er | verb & noun – topic: talking | We had a guid blether ower a cuppa. (We had a good chat over a cup of tea.)
+chat, talk at length | blether | bleth-er | verb & noun – topic: talking | We had a guid blether ower a cup o tea. (We had a good chat over a cup of tea.)
 news, friendly chat | crack | crak | noun – topic: talking | Whit's the crack? (What's the news? / How's things?)
 chatter, natter | yatter | yat-er | verb & noun – topic: talking | Stop yatterin an listen. (Stop chattering and listen.)
 gossip (what people say) | clash | clash | noun & verb – topic: talking | Dinnae listen tae their clash. (Don't listen to their gossip.)
@@ -2331,7 +2331,7 @@ marble hole | kypie | KEE-pee | noun – Doric/North East – North East; origin
 starving | kyte-clung | keet klung | adjective – Archaic – Kyte + clung | Kyte-clung efter the walk. (Starving after the walk.)
 appear | kyth | keeth | verb – Archaic – From Old English cyþan | The sun kythed. (The sun came out.)
 tummy | kytie | KEE-tee | noun – Traditional/Literary – Kyte + -ie | A sair kytie. (A sore tummy.)
-revive | kyucker | KYUK-ur | verb – Insular – Shetland word; origin uncertain | A cuppa'll kyucker ye. (A cup of tea will revive you.)
+revive | kyucker | KYUK-ur | verb – Insular – Shetland word; origin uncertain | A cup o tea'll kyucker ye. (A cup of tea will revive you.)
 untidy | kyufset | KYUF-set | adjective – Insular – Shetland word; origin uncertain | A kyufset room. (An untidy room.)
 policeman (slang) | labdick | LAB-dik | noun – East/Mid – East slang; origin uncertain | The labdicks are here. (The police are here.)
 lustreless | lacklicht | LAK-likht | noun – Archaic – Traditional/Literary – Lack + licht 'light' | Lacklicht een. (Dull eyes.)

@@ -1312,7 +1312,7 @@ kyte | Noun | belly | The belly. | Origin uncertain. | A fu kyte. | A full belly
 kyte-clung | Adjective | starving | Hollow-bellied, starved. | Kyte + clung. | Kyte-clung efter the walk. | Starving after the walk.
 kyth | Verb | appear | To appear; to show itself. | From Old English cyþan. | The sun kythed. | The sun came out.
 kytie | Noun | tummy | The belly. | Kyte + -ie. | A sair kytie. | A sore tummy.
-kyucker | Verb | revive | To revive. | Shetland word; origin uncertain. | A cuppa'll kyucker ye. | A cup of tea will revive you.
+kyucker | Verb | revive | To revive. | Shetland word; origin uncertain. | A cup o tea'll kyucker ye. | A cup of tea will revive you.
 kyufset | Adjective | untidy | Untidy. | Shetland word; origin uncertain. | A kyufset room. | An untidy room.
 labdick | Noun | policeman (slang) | A policeman. | East slang; origin uncertain. | The labdicks are here. | The police are here.
 lacklicht | Noun | lustreless | Without light; dull. | Lack + licht 'light'. | Lacklicht een. | Dull eyes.
@@ -1399,7 +1399,7 @@ mairry | Verb | marry | To marry. | Scots form of marry. | They're gettin mairri
 maist | Adjective | most | Most; chief. | From Old English mæst. | Maist folk. | Most people.
 maistlins | Adverb | mostly | Almost; mostly. | Maist + -lins. | Maistlins done. | Almost done.
 maistly | Adverb | mostly | Mostly; almost. | Maist + -ly. | Maistly rain. | Mostly rain.
-mak | Verb | make | To make. | Scots form of make. | Mak a cuppa. | Make a cup of tea.
+mak | Verb | make | To make. | Scots form of make. | Mak a cup o tea. | Make a cup of tea.
 mallivoag | Verb | sort out | To sort out or put in order. | Shetland word, probably from Norn (Old Norse). | Mallivoag the nets. | Sort out the nets.
 mankit | Adjective | maimed; exhausted | Maimed or disfigured; worn out. | From Latin mancus 'maimed'. | Fair mankit efter the hill. | Worn out after the hill.
 mathe | Noun | maggot | A grub, maggot or earthworm. | From Old Norse maðkr. | Mathes in the meat. | Maggots in the meat.

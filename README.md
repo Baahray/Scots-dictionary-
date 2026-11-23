@@ -66,12 +66,23 @@ To put a word in a topic, add `topic: id` to the note of its line in `words.txt`
 
 `meanings.json` links English words with similar meanings so search can find related entries. It's made from [WordNet](https://wordnet.princeton.edu/) (Princeton University, free licence) and rebuilt when the word list changes a lot.
 
+## Translator rules (`data/phrase-rules.json`)
+
+English → Scots translation works in this order, Glasgow / West Central speech by default:
+
+1. **Phrase rules** – multi-word patterns checked first, with look-ahead slots. `give me a drink of {drink}` gives *gies a drap ae watter* for water, *gies a dram* for whisky, *gies a swally* for booze, *gies a drink ae ginger* for juice or pop, *gies a mug ae tea* for tea, and *gies a drink ae …* for anything else.
+2. **Single-word choices** (`words`) – e.g. of → *ae*, find → *fun*, round → *roon*, through → *throu*, above → *abune*, give me → *gies*.
+3. **The word list** (`words.txt`), with Glasgow lines preferred.
+4. **The dictionary's English keywords** (`data/scots-dictionary.json`), e.g. archway → *pend*.
+
+Words in `never_use` (cuppa, shoosh, yon…) are never given. To add an idiom, add a rule to `rules`: rules are tried top to bottom, so put specific patterns above general ones.
+
 ## Structured dataset (`data/scots-dictionary.json`)
 
 1,745 Scots headwords, built from every row of the Wiktionary file (via kaikki.org), as JSON:
 
 ```
-headword, variants, ipa, phonetic, pos, register, region, etymology, definition, usage_notes, example_scots, example_en, cross_references
+headword, variants, ipa, phonetic, pos, register, region, etymology, definition, keywords, usage_notes, example_scots, example_en, cross_references
 ```
 
 - **Original writing:** every definition, origin note and example sentence was written for this dictionary (`data/original-content.txt`). Nothing is copied from another dictionary; the source file only supplied which words exist.

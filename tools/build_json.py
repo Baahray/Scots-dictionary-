@@ -652,7 +652,15 @@ for e in merged:
             seen.add(r.lower()); out.append(r)
     e["cross_references"] = out[:10]
 
-order = ["headword", "variants", "ipa", "phonetic", "pos", "register", "region", "etymology", "definition", "usage_notes",
+# keywords: the short English meanings, for the translator and search (e.g. archway -> pend)
+for e in merged:
+    kw = []
+    for sense in e["_senses"]:
+        for k in re.split(r"[;,]", re.sub(r"\([^)]*\)", "", sense[1])):
+            k = k.strip().lower()
+            if k and k not in kw: kw.append(k)
+    e["keywords"] = kw
+order = ["headword", "variants", "ipa", "phonetic", "pos", "register", "region", "etymology", "definition", "keywords", "usage_notes",
          "example_scots", "example_en", "cross_references"]
 merged.sort(key=lambda x: (x["headword"].lower().lstrip("'"), x["pos"]))
 data = [{k: e[k] for k in order} for e in merged]

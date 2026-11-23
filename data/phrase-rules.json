@@ -1,0 +1,273 @@
+{
+  "about": "English → Scots translator rules (Glasgow / West Central by default). Rules are tried in order, before word-by-word translation; the first one that matches wins, so put specific patterns above general ones. In 'match', {name} is a slot that takes one to three words. 'cases' pick an answer from what is in the slot; 'otherwise' is used when no case fits, and {name} in it is replaced by the slot, translated. A rule with just 'say' replaces the words as they are. 'words' are single-word choices that beat the word list. 'never_use' words are never given as a translation.",
+  "never_use": [
+    "cuppa",
+    "shoosh",
+    "snout",
+    "yon"
+  ],
+  "slot_stops": [
+    "please",
+    "and",
+    "now",
+    "mate",
+    "pal",
+    "but",
+    "thanks",
+    "then"
+  ],
+  "rules": [
+    {
+      "name": "Asking for a drink",
+      "match": [
+        "give me a drink of {drink}",
+        "gimme a drink of {drink}",
+        "can i get a drink of {drink}",
+        "can i have a drink of {drink}",
+        "could i get a drink of {drink}",
+        "could i have a drink of {drink}",
+        "give us a drink of {drink}"
+      ],
+      "cases": [
+        {
+          "when": [
+            "water"
+          ],
+          "say": "gies a drap ae watter"
+        },
+        {
+          "when": [
+            "whisky",
+            "whiskey",
+            "scotch"
+          ],
+          "say": "gies a dram"
+        },
+        {
+          "when": [
+            "alcohol",
+            "booze",
+            "liquor",
+            "drink"
+          ],
+          "say": "gies a swally"
+        },
+        {
+          "when": [
+            "juice",
+            "soda",
+            "pop",
+            "fizzy drink",
+            "fizzy juice",
+            "lemonade",
+            "cola",
+            "coke"
+          ],
+          "say": "gies a drink ae ginger"
+        },
+        {
+          "when": [
+            "tea"
+          ],
+          "say": "gies a mug ae tea"
+        }
+      ],
+      "otherwise": "gies a drink ae {drink}"
+    },
+    {
+      "name": "That thing over there",
+      "match": [
+        "that {thing} over there",
+        "that {thing} over yonder",
+        "those {thing} over there"
+      ],
+      "otherwise": "that {thing} ower there"
+    },
+    {
+      "name": "Over there",
+      "match": [
+        "over there",
+        "over yonder",
+        "yonder"
+      ],
+      "say": "ower there"
+    },
+    {
+      "name": "Give me",
+      "match": [
+        "give me",
+        "gimme",
+        "give us"
+      ],
+      "say": "gies"
+    },
+    {
+      "name": "Going to a place",
+      "match": [
+        "going to the",
+        "going to a",
+        "going to my",
+        "going to your",
+        "going to his",
+        "going to her",
+        "going to our"
+      ],
+      "say": "gaun tae",
+      "keep_last": true
+    },
+    {
+      "name": "Going to (do something)",
+      "match": [
+        "going to",
+        "gonna"
+      ],
+      "say": "gonnae"
+    },
+    {
+      "name": "Don't know",
+      "match": [
+        "i don't know",
+        "i dont know",
+        "i do not know"
+      ],
+      "say": "Ah dinnae ken"
+    },
+    {
+      "name": "Will you not",
+      "match": [
+        "will you not",
+        "would you not",
+        "please don't"
+      ],
+      "say": "gonnae no"
+    },
+    {
+      "name": "Be quiet",
+      "match": [
+        "be quiet",
+        "shut up",
+        "keep quiet"
+      ],
+      "say": "haud yer wheesht"
+    },
+    {
+      "name": "A lot of",
+      "match": [
+        "a lot of",
+        "lots of"
+      ],
+      "say": "loads ae"
+    },
+    {
+      "name": "Out of",
+      "match": [
+        "out of"
+      ],
+      "say": "oot ae"
+    },
+    {
+      "name": "Cup of tea",
+      "match": [
+        "cup of tea",
+        "a cup of tea"
+      ],
+      "say": "a cup ae tea"
+    },
+    {
+      "name": "Right now",
+      "match": [
+        "right now",
+        "just now"
+      ],
+      "say": "the noo"
+    },
+    {
+      "name": "Today / tonight / tomorrow",
+      "match": [
+        "today"
+      ],
+      "say": "the day"
+    },
+    {
+      "match": [
+        "tonight"
+      ],
+      "say": "the nicht"
+    },
+    {
+      "match": [
+        "tomorrow"
+      ],
+      "say": "the morra"
+    },
+    {
+      "name": "You (more than one)",
+      "match": [
+        "you all",
+        "you lot",
+        "you guys",
+        "all of you"
+      ],
+      "say": "yous"
+    }
+  ],
+  "words": {
+    "of": "ae",
+    "find": "fun",
+    "found": "fun",
+    "round": "roon",
+    "around": "roon",
+    "through": "throu",
+    "above": "abune",
+    "over": "ower",
+    "from": "fae",
+    "with": "wae",
+    "give": "gie",
+    "gave": "gied",
+    "given": "gied",
+    "yonder": "ower there",
+    "can": "kin",
+    "were": "wur",
+    "going": "gaun",
+    "my": "ma",
+    "myself": "masel",
+    "yourself": "yersel",
+    "your": "yer",
+    "out": "oot",
+    "about": "aboot",
+    "house": "hoose",
+    "down": "doon",
+    "now": "noo",
+    "don't": "dinnae",
+    "dont": "dinnae",
+    "didn't": "didnae",
+    "can't": "cannae",
+    "cant": "cannae",
+    "won't": "willnae",
+    "isn't": "isnae",
+    "wasn't": "wisnae",
+    "doesn't": "disnae",
+    "couldn't": "couldnae",
+    "wouldn't": "widnae",
+    "shouldn't": "shouldnae",
+    "haven't": "huvnae",
+    "have": "huv",
+    "to": "tae",
+    "yes": "aye",
+    "small": "wee",
+    "little": "wee",
+    "child": "wean",
+    "children": "weans",
+    "kids": "weans",
+    "what": "whit",
+    "i": "Ah",
+    "i'm": "Ah'm",
+    "i'll": "Ah'll",
+    "i've": "Ah've",
+    "i'd": "Ah'd",
+    "mum": "maw",
+    "mummy": "mammy",
+    "dad": "da",
+    "daddy": "daddy"
+  }
+}

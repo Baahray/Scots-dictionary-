@@ -984,7 +984,11 @@
       if (/[()\/]/.test(e.en)) return;           // skip "row (line)" style entries – too ambiguous in a sentence
       var k = tokenizeWords(e.en).join(" ");
       if (!k || k.indexOf(" ") >= 0) return;   // single English words only, so "going to the house" isn't read as "gonnae"
-      if (!dict.en[k] && !isOld(e)) { dict.en[k] = e.scots.slice(); maxLen.en = Math.max(maxLen.en, k.split(" ").length); }
+      if (!isOld(e)) {
+        if (!dict.en[k]) dict.en[k] = e.scots.slice();
+        else if (/glasgow/i.test(e.note)) dict.en[k] = e.scots.concat(dict.en[k].filter(function (x) { return e.scots.indexOf(x) < 0; }));   // Glasgow form first
+        maxLen.en = Math.max(maxLen.en, k.split(" ").length);
+      }
       e.scots.forEach(function (s) {
         var sk = tokenizeWords(s).join(" ");
         if (!sk) return;
@@ -1011,8 +1015,144 @@
     return { toks: toks, tail: text.slice(last) };
   }
 
+  /* English → Scots: phrase rules first (data/phrase-rules.json), then single-word choices, then the word list,
+     then the dictionary JSON's English keywords (data/scots-dictionary.json). */
+  var PR = { rules: [], words: {}, never: {}, stops: {} }, jsonIndex = {}, jsonMax = 1;
+  function loadPhraseRules(r) {
+    PR = { rules: [], words: {}, never: {}, stops: {} };
+    (r.never_use || []).forEach(function (w) { PR.never[norm(w)] = 1; });
+    (r.slot_stops || []).forEach(function (w) { PR.stops[norm(w)] = 1; });
+    Object.keys(r.words || {}).forEach(function (k) { PR.words[norm(k)] = r.words[k]; });
+    (r.rules || []).forEach(function (rule) {
+      (rule.match || []).forEach(function (m) {
+        var pat = tokenizeWords(m).map(function (t) { var s = /^\{(\w+)\}$/.exec(t); return s ? { slot: s[1] } : { lit: t }; });
+        if (pat.length) PR.rules.push({ pat: pat, rule: rule });
+      });
+    });
+  }
+  function buildJsonIndex(data) {
+    var tmp = {};
+    jsonIndex = {}; jsonMax = 1;
+    (data || []).forEach(function (e) {
+      var reg = e.register || [], rgn = e.region || [];
+      if (reg.indexOf("Archaic") >= 0 || /\brude\b/i.test(e.definition || "")) return;
+      if (PR.never[norm(e.headword)]) return;
+      var score = (reg.indexOf("Everyday/Spoken") >= 0 ? 3 : reg.indexOf("Modern/Colloquial") >= 0 ? 2 : 0) +
+        (rgn.indexOf("West Central/Glasgow") >= 0 ? 2 : rgn.indexOf("General Scots") >= 0 ? 1 : -2);
+      (e.keywords || []).forEach(function (k) {
+        var key = tokenizeWords(k).join(" ");
+        if (!key || key.split(" ").length > 3) return;
+        (tmp[key] = tmp[key] || []).push({ s: e.headword, score: score });
+        jsonMax = Math.max(jsonMax, key.split(" ").length);
+      });
+    });
+    Object.keys(tmp).forEach(function (k) {
+      jsonIndex[k] = tmp[k].sort(function (a, b) { return b.score - a.score; }).map(function (x) { return x.s; })
+        .filter(function (s, i, arr) { return arr.indexOf(s) === i; }).slice(0, 4);
+    });
+  }
+  function joinedOk(toks, i, n) {        // words i..i+n-1 are only separated by spaces
+    for (var j = 1; j < n; j++) if (!/^\s+$/.test(toks[i + j].gap)) return false;
+    return true;
+  }
+  function keyOf(toks, i, n) { return toks.slice(i, i + n).map(function (t) { return norm(t.word); }).join(" "); }
+  function caseFor(rule, val) {
+    var cs = rule.cases || [];
+    for (var c = 0; c < cs.length; c++) if (cs[c].when.some(function (w) { return norm(w) === val; })) return cs[c];
+    return null;
+  }
+  function matchPat(toks, pat, pi, ti, to, slots, rule) {
+    if (pi === pat.length) return { end: ti, slots: slots };
+    var p = pat[pi];
+    if (ti >= to || (pi > 0 && !/^\s+$/.test(toks[ti].gap))) return null;
+    if (p.lit) return norm(toks[ti].word) === p.lit ? matchPat(toks, pat, pi + 1, ti + 1, to, slots, rule) : null;
+    var last = pi === pat.length - 1, maxN = 0;
+    while (maxN < 3 && ti + maxN < to && (maxN === 0 || /^\s+$/.test(toks[ti + maxN].gap)) && !PR.stops[norm(toks[ti + maxN].word)]) maxN++;
+    if (!maxN) return null;
+    var order = [];
+    if (last) {   // at the end: prefer a length that names one of the cases, else take every word up to a stop
+      for (var n = maxN; n >= 1; n--) if (caseFor(rule, keyOf(toks, ti, n))) order.push(n);
+      order.push(maxN);
+    } else for (n = 1; n <= maxN; n++) order.push(n);
+    for (var k = 0; k < order.length; k++) {
+      var s2 = Object.assign({}, slots); s2[p.slot] = { i: ti, n: order[k] };
+      var r = matchPat(toks, pat, pi + 1, ti + order[k], to, s2, rule);
+      if (r) return r;
+    }
+    return null;
+  }
+  function plainEN(toks, i, n) {
+    return enSegments(toks, i, i + n).map(function (sg, k) { return (k ? sg.gap : "") + sg.alts[0]; }).join("");
+  }
+  function applyRule(toks, i, to) {
+    for (var r = 0; r < PR.rules.length; r++) {
+      var R = PR.rules[r], m = matchPat(toks, R.pat, 0, i, to, {}, R.rule);
+      if (!m) continue;
+      var rule = R.rule, out, end = m.end, slotNames = Object.keys(m.slots);
+      if (rule.say) {
+        out = rule.say;
+        if (rule.keep_last) end--;
+      } else {
+        var c = slotNames.length === 1 && caseFor(rule, keyOf(toks, m.slots[slotNames[0]].i, m.slots[slotNames[0]].n));
+        out = c ? c.say : (rule.otherwise || "").replace(/\{(\w+)\}/g, function (_, nm) {
+          var sl = m.slots[nm]; return sl ? plainEN(toks, sl.i, sl.n) : "";
+        });
+      }
+      return { n: end - i, alts: [out], rule: true };
+    }
+    return null;
+  }
+  function okAlts(list) { return (list || []).filter(function (s) { return !PR.never[norm(s)]; }); }
+  function lookupEN(toks, i, to) {
+    var max = Math.min(Math.max(maxLen.en, jsonMax), to - i);
+    for (var n = max; n >= 1; n--) {
+      if (!joinedOk(toks, i, n)) continue;
+      var key = keyOf(toks, i, n), alts = [];
+      if (n === 1 && PR.words[key]) alts.push(PR.words[key]);
+      okAlts(dict.en[key]).forEach(function (s) { if (alts.indexOf(s) < 0) alts.push(s); });
+      okAlts(jsonIndex[key]).forEach(function (s) { if (alts.indexOf(s) < 0) alts.push(s); });
+      if (!alts.length && n === 1 && key.length > 3 && /[^s']s$/.test(key)) {          // plural: hooses, weans
+        var sg = key.slice(0, -1), base = (PR.words[sg] ? [PR.words[sg]] : []).concat(okAlts(dict.en[sg]), okAlts(jsonIndex[sg]));
+        alts = base.filter(function (s, k, a) { return a.indexOf(s) === k && !/\s/.test(s); }).map(function (s) { return s + "s"; });
+      }
+      if (alts.length) return { n: n, alts: alts };
+    }
+    return null;
+  }
+  function enSegments(toks, from, to) {
+    var segs = [], i = from;
+    while (i < to) {
+      var hit = applyRule(toks, i, to) || lookupEN(toks, i, to);
+      if (hit && hit.n > 0) {
+        segs.push({ i: i, gap: toks[i].gap, orig: toks.slice(i, i + hit.n).map(function (t) { return t.word; }).join(" "), alts: hit.alts, rule: hit.rule });
+        i += hit.n;
+      } else {
+        segs.push({ i: i, gap: toks[i].gap, orig: toks[i].word, alts: [toks[i].word], same: true });
+        i++;
+      }
+    }
+    return segs;
+  }
+  function translateEN() {
+    var L = lex($src.value), segs = enSegments(L.toks, 0, L.toks.length), html = "", plain = "";
+    segs.forEach(function (sg) {
+      html += esc(sg.gap); plain += sg.gap;
+      var c = (choice[sg.i] || 0) % sg.alts.length, word = sg.alts[c];
+      if (!sg.same && !/^Ah\b/.test(word)) word = matchCase(sg.orig.split(" ")[0], word);
+      if (sg.i === 0 || /[.!?]\s*$/.test(plain.trimEnd())) word = word.charAt(0).toUpperCase() + word.slice(1);
+      html += sg.alts.length > 1
+        ? '<span class="w" role="button" tabindex="0" data-i="' + sg.i + '" title="Tap for another option (' + (c + 1) + " of " + sg.alts.length + ')">' + esc(word) + "</span>"
+        : esc(word);
+      plain += word;
+    });
+    html += esc(L.tail); plain += L.tail;
+    $dst.innerHTML = html;
+    $dst.dataset.plain = plain;
+  }
+
   function translate() {
     var text = $src.value;
+    if (text.trim() && trDir === "en") { translateEN(); return; }
     if (!text.trim()) { $dst.innerHTML = '<span class="placeholder">Your translation shows here</span>'; $dst.dataset.plain = ""; return; }
     var L = lex(text), toks = L.toks, d = dict[trDir], max = maxLen[trDir];
     var html = "", plain = "", i = 0;
@@ -1317,6 +1457,9 @@
     if (!testStarted) { testStarted = true; setTestMode(testMode); }
   }
   fetch("topics.txt", { cache: "no-cache" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) { parseTopics(t); buildTopics(); if (norm($q.value)) renderList(); }).catch(function () {});
+  fetch("data/phrase-rules.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; })
+    .then(function (r) { loadPhraseRules(r || {}); return fetch("data/scots-dictionary.json", { cache: "no-cache" }); })
+    .then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { buildJsonIndex(d); translate(); }).catch(function () {});
   fetch("data/usage-notes.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { usageNotes = m || {}; if ($dlgWord.open) renderDetail(); }).catch(function () {});
   fetch("meanings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { meanings = m || {}; if (norm($q.value)) renderList(); }).catch(function () {});
   fetch("words.txt", { cache: "no-cache" })
