@@ -2,7 +2,7 @@
 
 An English ⇄ Scots dictionary, Scots words only, with a Glasgow flavour. You can search it, flip it between English → Scots and Scots → English, and it still works offline once you've saved it to your phone.
 
-**Live site:** https://baahray.github.io/scots-dictionary-/
+**Live site:** https://baahray.github.io/Scots-dictionary-/
 
 ## Adding or fixing words
 
