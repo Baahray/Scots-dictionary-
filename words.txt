@@ -86,7 +86,8 @@ busy | thrang
 # ---------- C ----------
 cabbage | kail
 call | cry | "whit dae ye cry it?" = what do you call it?
-can't | cannae
+can | kin | "Aye, A kin dae that"
+can't | cannae, canna
 careful | canny
 cattle | kye
 chat | blether
@@ -227,7 +228,7 @@ house | hoose
 how | hoo
 
 # ---------- I ----------
-I | Ah
+I | Ah, A
 I'm | Ah'm
 I'm not | Ah'm no
 I will | Ah'll
