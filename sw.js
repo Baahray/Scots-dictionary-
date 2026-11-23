@@ -1,6 +1,6 @@
 // Offline support: always try the network first (so edits to words.txt show up),
 // fall back to the saved copy when there's no signal.
-const CACHE = "scots-dictionary-v7";
+const CACHE = "scots-dictionary-v9";
 const FILES = ["./", "index.html", "words.txt", "manifest.json", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
@@ -17,6 +17,11 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  // Only the site's own files and its fonts – never GitHub API calls (they carry your key)
+  const url = new URL(e.request.url);
+  const ours = url.origin === self.location.origin;
+  const font = /^(fonts\.googleapis\.com|fonts\.gstatic\.com)$/.test(url.hostname);
+  if (!ours && !font) return;
   e.respondWith(
     fetch(e.request)
       .then((res) => {

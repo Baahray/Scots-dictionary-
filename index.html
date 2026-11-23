@@ -48,7 +48,10 @@
     padding-top: env(safe-area-inset-top); }
   .masthead { max-width: 680px; margin: 0 auto; padding: 14px 20px 12px; display: flex; align-items: baseline; gap: 10px; }
   .masthead h1 { margin: 0; font: 800 1.9rem/1 var(--display); letter-spacing: -0.02em; }
-  .masthead p { margin: 0; font-size: .9rem; opacity: .75; }
+  .masthead p { margin: 0; font-size: .9rem; opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .hbtn { margin-left: auto; align-self: center; border: 1.5px solid rgba(255,255,255,.45); background: transparent; color: #fff;
+    border-radius: 10px; padding: 6px 12px; font-weight: 600; font-size: .85rem; cursor: pointer; }
+  .hbtn[aria-pressed="true"] { background: var(--ochre); border-color: var(--ochre); color: #1b1b1b; }
   .tiles { height: 22px; position: relative;
     background:
       linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0) 45%, rgba(0,0,0,.12)),
@@ -60,7 +63,7 @@
   .panel[hidden] { display: none; }
 
   .search { position: sticky; top: calc(env(safe-area-inset-top) + 82px); z-index: 5; background: var(--stone); padding: 16px 0 10px; display: flex; gap: 8px; }
-  .field { flex: 1; display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1.5px solid var(--line);
+  .field { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1.5px solid var(--line);
     border-radius: 14px; padding: 0 12px; }
   .field:focus-within { border-color: var(--green-2); }
   .field svg { flex: none; color: var(--muted); }
@@ -76,7 +79,39 @@
   .entry .sl { grid-column: 1; font-size: .9rem; color: var(--muted); }
   .entry .sl b { color: var(--ink); font-weight: 600; letter-spacing: .01em; }
   .entry .note { grid-column: 1; font-size: .85rem; color: var(--muted); font-style: italic; }
-  .entry .say { grid-column: 2; grid-row: 1 / span 4; }
+  .entry .acts { grid-column: 2; grid-row: 1 / span 4; display: flex; align-items: center; }
+  .edit { width: 40px; height: 40px; border-radius: 50%; border: 0; background: transparent; color: var(--muted); display: grid; place-items: center; cursor: pointer; }
+  .edit:active { background: var(--hl); }
+  .add { flex: none; width: 48px; border: 0; background: var(--green); color: #fff; border-radius: 14px; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+  .add[hidden] { display: none; }
+  dialog { border: 0; border-radius: 20px; padding: 0; width: min(520px, calc(100vw - 24px)); background: var(--surface); color: var(--ink);
+    box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+  dialog::backdrop { background: rgba(10,25,20,.55); }
+  .dlg { padding: 20px; }
+  .dlg h2 { font: 800 1.35rem/1.2 var(--display); margin: 0 0 8px; }
+  .dlg p, .dlg ol { color: var(--muted); font-size: .92rem; margin: 0 0 12px; }
+  .dlg ol { padding-left: 20px; }
+  .dlg ol li { margin-bottom: 4px; }
+  .dlg a { color: var(--green-2); }
+  @media (prefers-color-scheme: dark) { .dlg a { color: var(--scots); } }
+  .dlg label { display: block; font-weight: 600; font-size: .85rem; margin: 12px 0 4px; }
+  .dlg label small { font-weight: 400; color: var(--muted); }
+  .dlg input { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; background: var(--stone); color: var(--ink);
+    font-size: 1rem; padding: 10px 12px; outline: none; }
+  .dlg input:focus { border-color: var(--green-2); }
+  .dlg .row { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .dlg .row .grow { flex: 1; }
+  .btn { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 16px; font-weight: 600; cursor: pointer; }
+  .btn.primary { background: var(--green); border-color: var(--green); color: #fff; }
+  .btn.danger { color: #b3261e; border-color: transparent; padding-left: 4px; padding-right: 4px; }
+  @media (prefers-color-scheme: dark) { .btn.danger { color: #ff8a80; } }
+  .btn:disabled { opacity: .5; }
+  .msg { min-height: 1.3em; font-size: .9rem; margin-top: 10px; }
+  .msg.err { color: #b3261e; }
+  @media (prefers-color-scheme: dark) { .msg.err { color: #ff8a80; } }
+  .toast { position: fixed; left: 50%; bottom: calc(var(--tabh) + env(safe-area-inset-bottom) + 14px); transform: translateX(-50%);
+    background: var(--ink); color: var(--stone); padding: 10px 16px; border-radius: 12px; font-weight: 600; font-size: .9rem; z-index: 30; }
+  .toast[hidden] { display: none; }
   mark { background: var(--hl); color: inherit; border-radius: 3px; }
 
   .say { width: 40px; height: 40px; border-radius: 50%; border: 0; background: transparent; color: var(--green-2); display: grid; place-items: center; cursor: pointer; }
@@ -138,7 +173,7 @@
 </head>
 <body>
 <header>
-  <div class="masthead"><h1>Scots</h1><p>Glasgow pocket dictionary</p></div>
+  <div class="masthead"><h1>Scots</h1><p>Glasgow pocket dictionary</p><button class="hbtn" id="editBtn" type="button" aria-pressed="false">Edit</button></div>
   <div class="tiles" aria-hidden="true"></div>
 </header>
 
@@ -151,6 +186,7 @@
         <input id="q" type="search" placeholder="Search English or Scots" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search">
       </label>
       <button class="swap" id="swap" type="button" aria-label="Switch dictionary direction">EN → SC</button>
+      <button class="add" id="addBtn" type="button" aria-label="Add a word" title="Add a word" hidden>+</button>
     </div>
     <nav class="az" id="az" aria-label="Jump to letter"></nav>
     <div class="meta" id="count"></div>
@@ -188,6 +224,60 @@
     <p class="voice-note" id="voiceNote">The play buttons use your phone's built-in voice. On an iPhone, a Scottish voice gives the best result: Settings → Accessibility → Spoken Content → Voices → English → Fiona (Scotland).</p>
   </section>
 </main>
+
+<!-- Connect / unlock -->
+<dialog id="dlgKey"><form class="dlg" method="dialog" id="keyForm">
+  <h2 id="keyTitle">Turn on editing</h2>
+  <div id="keySetup">
+    <p>Editing saves your changes straight to the word list on your GitHub. It needs a key from GitHub, made once:</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new access token</a> and sign in.</li>
+      <li>Name it <b>Scots app</b>. Set an expiry you're happy with.</li>
+      <li>Under <b>Repository access</b>, choose <b>Only select repositories</b> → <b>Scots-dictionary-</b>.</li>
+      <li>Under <b>Permissions</b> → <b>Repository permissions</b>, set <b>Contents</b> to <b>Read and write</b>.</li>
+      <li>Tap <b>Generate token</b>, copy it, and paste it below.</li>
+    </ol>
+    <label for="keyToken">GitHub key</label>
+    <input id="keyToken" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="github_pat_…">
+    <label for="keyPass1">Choose a password <small>(asked each time you edit)</small></label>
+    <input id="keyPass1" type="password" autocomplete="new-password">
+    <label for="keyPass2">Type the password again</label>
+    <input id="keyPass2" type="password" autocomplete="new-password">
+  </div>
+  <div id="keyUnlock" hidden>
+    <p>Enter your password to edit the word list.</p>
+    <label for="keyPass">Password</label>
+    <input id="keyPass" type="password" autocomplete="current-password">
+  </div>
+  <div class="msg" id="keyMsg" role="status"></div>
+  <div class="row">
+    <button class="btn danger" type="button" id="keyForget" hidden>Remove key</button>
+    <span class="grow"></span>
+    <button class="btn" type="button" id="keyCancel">Cancel</button>
+    <button class="btn primary" type="submit" id="keyOk">Turn on editing</button>
+  </div>
+</form></dialog>
+
+<!-- Add / edit a word -->
+<dialog id="dlgEdit"><form class="dlg" method="dialog" id="editForm">
+  <h2 id="editTitle">Edit word</h2>
+  <label for="fEn">English</label>
+  <input id="fEn" autocomplete="off" required>
+  <label for="fSc">Scots <small>(several? separate with commas – the first is used when translating)</small></label>
+  <input id="fSc" autocomplete="off" autocapitalize="off" required>
+  <label for="fSay">How to say it <small>(one per Scots word, same order)</small></label>
+  <input id="fSay" autocomplete="off" autocapitalize="off">
+  <label for="fNote">Note <small>(optional – e.g. Glasgow, old)</small></label>
+  <input id="fNote" autocomplete="off">
+  <div class="msg" id="editMsg" role="status"></div>
+  <div class="row">
+    <button class="btn danger" type="button" id="editDelete">Delete word</button>
+    <span class="grow"></span>
+    <button class="btn" type="button" id="editCancel">Cancel</button>
+    <button class="btn primary" type="submit" id="editSave">Save</button>
+  </div>
+</form></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
 
 <nav class="tabs" role="tablist" aria-label="Sections">
   <div class="inner">
@@ -282,7 +372,7 @@
       var say = (p[2] || "").split(",").map(function (s) { return s.trim(); });
       var note = p.slice(3).join("|").trim();
       scots.forEach(function (s, i) { if (!say[i]) say[i] = s; });
-      if (en && scots.length) out.push({ en: en, scots: scots, say: say.slice(0, scots.length), note: note });
+      if (en && scots.length) out.push({ en: en, scots: scots, say: say.slice(0, scots.length), note: note, raw: line });
     });
     return out;
   }
@@ -295,7 +385,7 @@
   function rows() {
     if (mode === "en") return entries.map(function (e) {
       var sl = []; e.say.forEach(function (x) { if (sl.indexOf(x) < 0) sl.push(x); });
-      return { top: e.en, main: e.scots.join(", "), sayLine: sl.join(", "), speak: e.say[0], note: e.note, search: [e.en].concat(e.scots), key: e.en };
+      return { top: e.en, main: e.scots.join(", "), sayLine: sl.join(", "), speak: e.say[0], note: e.note, search: [e.en].concat(e.scots), key: e.en, idx: entries.indexOf(e) };
     });
     var map = {};
     entries.forEach(function (e) {
@@ -339,7 +429,8 @@
       return '<li class="entry"><span class="en">' + hl(r.top, q) + '</span><span class="sc">' + hl(r.main, q) + "</span>" +
         '<span class="sl">Say: <b>' + esc(r.sayLine) + "</b></span>" +
         (r.note ? '<span class="note">' + esc(r.note) + "</span>" : "") +
-        '<button class="say" type="button" data-say="' + esc(r.speak) + '" data-plain="1" aria-label="Hear ' + esc(r.main) + '">' + SPEAKER + "</button></li>";
+        '<span class="acts">' + (editing && r.idx != null ? '<button class="edit" type="button" data-edit="' + r.idx + '" aria-label="Edit ' + esc(r.top) + '">' + PENCIL + "</button>" : "") +
+        '<button class="say" type="button" data-say="' + esc(r.speak) + '" data-plain="1" aria-label="Hear ' + esc(r.main) + '">' + SPEAKER + "</button></span></li>";
     }
     var html = "", used = {};
     if (q) html = '<ul class="entries">' + list.map(li).join("") + "</ul>";
@@ -489,10 +580,218 @@
   }).join("");
   if (!("speechSynthesis" in window)) document.getElementById("voiceNote").textContent = "This browser can't play speech, so the play buttons won't make a sound here.";
 
+
+  /* ---------------- Editing (saves to GitHub) ---------------- */
+  var PENCIL = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>';
+  var REPO = "Baahray/Scots-dictionary-", FILE = "words.txt", BRANCH = "main";
+  var API = "https://api.github.com/repos/" + REPO + "/contents/" + FILE;
+  var editing = false, token = null;
+  var $editBtn = document.getElementById("editBtn"), $addBtn = document.getElementById("addBtn");
+  var $dlgKey = document.getElementById("dlgKey"), $dlgEdit = document.getElementById("dlgEdit");
+  var $toast = document.getElementById("toast");
+
+  function toast(msg) {
+    $toast.textContent = msg; $toast.hidden = false;
+    clearTimeout(toast.t); toast.t = setTimeout(function () { $toast.hidden = true; }, 2600);
+  }
+  function openDlg(d) { if (d.showModal) d.showModal(); else d.setAttribute("open", ""); }
+  function closeDlg(d) { if (d.close) d.close(); else d.removeAttribute("open"); }
+
+  // The GitHub key is kept on this phone only, locked with your password (PBKDF2 + AES-GCM).
+  var enc = new TextEncoder(), dec = new TextDecoder();
+  function b64(buf) {
+    var s = "", a = new Uint8Array(buf);
+    for (var i = 0; i < a.length; i += 0x8000) s += String.fromCharCode.apply(null, a.subarray(i, i + 0x8000));
+    return btoa(s);
+  }
+  function unb64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  function deriveKey(pass, salt) {
+    return crypto.subtle.importKey("raw", enc.encode(pass), "PBKDF2", false, ["deriveKey"]).then(function (k) {
+      return crypto.subtle.deriveKey({ name: "PBKDF2", salt: salt, iterations: 250000, hash: "SHA-256" }, k,
+        { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+    });
+  }
+  function lockToken(tok, pass) {
+    var salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+    return deriveKey(pass, salt)
+      .then(function (k) { return crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, k, enc.encode(tok)); })
+      .then(function (ct) { store.set("ghKey", JSON.stringify({ s: b64(salt), i: b64(iv), c: b64(ct) })); });
+  }
+  function unlockToken(pass) {
+    var box = null;
+    try { box = JSON.parse(store.get("ghKey", "null")); } catch (e) {}
+    if (!box) return Promise.reject(new Error("nokey"));
+    return deriveKey(pass, unb64(box.s))
+      .then(function (k) { return crypto.subtle.decrypt({ name: "AES-GCM", iv: unb64(box.i) }, k, unb64(box.c)); })
+      .then(function (pt) { return dec.decode(pt); }, function () { throw new Error("badpass"); });
+  }
+
+  // GitHub file access
+  function gh(method, body) {
+    return fetch(API + (method === "GET" ? "?ref=" + BRANCH + "&t=" + Date.now() : ""), {
+      method: method, cache: "no-store",
+      headers: { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" },
+      body: body ? JSON.stringify(body) : undefined
+    }).then(function (r) {
+      if (r.ok) return r.json();
+      var e = new Error("gh" + r.status); e.status = r.status; throw e;
+    });
+  }
+  function getFile() {
+    return gh("GET").then(function (j) { return { sha: j.sha, text: dec.decode(unb64(j.content.replace(/\n/g, ""))) }; });
+  }
+  // change(text) returns the new file text, or throws
+  function saveChange(change, message, tries) {
+    tries = tries || 0;
+    return getFile().then(function (f) {
+      var next = change(f.text);
+      return gh("PUT", { message: message, content: b64(enc.encode(next)), sha: f.sha, branch: BRANCH }).then(function () { return next; });
+    }).catch(function (e) {
+      if ((e.status === 409 || e.status === 422) && tries < 1) return saveChange(change, message, tries + 1);
+      throw e;
+    });
+  }
+  function explain(e) {
+    if (e.message === "gone") return "That word was changed on GitHub since this page loaded. The list has been refreshed – try again.";
+    if (e.status === 401) return "GitHub didn't accept the key. It may have expired: tap Edit, then Remove key, and add a new one.";
+    if (e.status === 403 || e.status === 404) return "The key can't write to the word list. Check it has Contents set to Read and write for Scots-dictionary-.";
+    return "Couldn't reach GitHub. Check you're online and try again.";
+  }
+
+  // Edit mode on / off
+  function setEditing(on) {
+    editing = on;
+    $editBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    $editBtn.textContent = on ? "Done" : "Edit";
+    $addBtn.hidden = !on;
+    if (on) showTab("words");
+    renderList();
+  }
+  function hasKey() { return !!store.get("ghKey", ""); }
+  function showKeyDialog() {
+    var has = hasKey();
+    document.getElementById("keySetup").hidden = has;
+    document.getElementById("keyUnlock").hidden = !has;
+    document.getElementById("keyForget").hidden = !has;
+    document.getElementById("keyTitle").textContent = has ? "Unlock editing" : "Turn on editing";
+    document.getElementById("keyOk").textContent = has ? "Unlock" : "Turn on editing";
+    var m = document.getElementById("keyMsg"); m.textContent = ""; m.className = "msg";
+    ["keyToken", "keyPass1", "keyPass2", "keyPass"].forEach(function (id) { document.getElementById(id).value = ""; });
+    openDlg($dlgKey);
+    document.getElementById(has ? "keyPass" : "keyToken").focus();
+  }
+  $editBtn.addEventListener("click", function () {
+    if (editing) { setEditing(false); token = null; toast("Editing off"); return; }
+    showKeyDialog();
+  });
+  document.getElementById("keyCancel").addEventListener("click", function () { closeDlg($dlgKey); });
+  document.getElementById("keyForget").addEventListener("click", function () {
+    if (!confirm("Remove your GitHub key from this phone? You can add it again later.")) return;
+    try { localStorage.removeItem("ghKey"); } catch (e) {}
+    token = null; showKeyDialog();
+  });
+  document.getElementById("keyForm").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var msg = document.getElementById("keyMsg"), ok = document.getElementById("keyOk");
+    function fail(t) { msg.textContent = t; msg.className = "msg err"; ok.disabled = false; }
+    if (!window.crypto || !crypto.subtle) return fail("This browser can't lock the key safely. Open the site in Safari or Chrome.");
+    ok.disabled = true; msg.className = "msg"; msg.textContent = "Checking…";
+    var p;
+    if (hasKey()) {
+      p = unlockToken(document.getElementById("keyPass").value);
+    } else {
+      var tok = document.getElementById("keyToken").value.trim();
+      var p1 = document.getElementById("keyPass1").value, p2 = document.getElementById("keyPass2").value;
+      if (!tok) return fail("Paste your GitHub key.");
+      if (p1.length < 4) return fail("Choose a password of at least 4 characters.");
+      if (p1 !== p2) return fail("The two passwords don't match.");
+      token = tok;
+      // check the key works before saving it
+      p = getFile().then(function () { return lockToken(tok, p1); }).then(function () { return tok; });
+    }
+    p.then(function (tok) { token = tok; return getFile(); })
+      .then(function (f) {
+        loadWords(f.text);       // freshest copy, straight from GitHub
+        ok.disabled = false; closeDlg($dlgKey);
+        setEditing(true); toast("Editing on");
+      })
+      .catch(function (e) {
+        token = null;
+        if (e.message === "badpass") return fail("That password isn't right.");
+        if (e.status === 401 && !hasKey()) return fail("GitHub didn't accept that key. Check you copied all of it – it starts with github_pat_.");
+        fail(explain(e));
+      });
+  });
+
+  // Add / edit form
+  var current = null;   // the entry being edited, or null when adding
+  function clean(s) { return String(s).replace(/\|/g, "/").replace(/\s+/g, " ").trim(); }
+  function openEditor(e) {
+    current = e || null;
+    document.getElementById("editTitle").textContent = e ? "Edit word" : "Add a word";
+    document.getElementById("editDelete").hidden = !e;
+    document.getElementById("fEn").value = e ? e.en : ($q.value && mode === "en" ? $q.value.trim() : "");
+    document.getElementById("fSc").value = e ? e.scots.join(", ") : "";
+    document.getElementById("fSay").value = e ? e.say.join(", ") : "";
+    document.getElementById("fNote").value = e ? e.note : "";
+    var m = document.getElementById("editMsg"); m.textContent = ""; m.className = "msg";
+    openDlg($dlgEdit);
+    document.getElementById(e ? "fSc" : "fEn").focus();
+  }
+  $addBtn.addEventListener("click", function () { openEditor(null); });
+  $list.addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-edit]");
+    if (b) openEditor(entries[+b.getAttribute("data-edit")]);
+  });
+  document.getElementById("editCancel").addEventListener("click", function () { closeDlg($dlgEdit); });
+
+  function commit(oldRaw, newRaw, message, done) {
+    var msg = document.getElementById("editMsg");
+    var btns = ["editSave", "editDelete", "editCancel"].map(function (id) { return document.getElementById(id); });
+    btns.forEach(function (b) { b.disabled = true; });
+    msg.className = "msg"; msg.textContent = "Saving to GitHub…";
+    saveChange(function (text) {
+      var lines = text.replace(/\s+$/, "").split("\n");
+      if (oldRaw == null) lines.push(newRaw);
+      else {
+        var i = lines.findIndex(function (l) { return l.trim() === oldRaw; });
+        if (i < 0) throw new Error("gone");
+        if (newRaw == null) lines.splice(i, 1); else lines[i] = newRaw;
+      }
+      return lines.join("\n") + "\n";
+    }, message).then(function (text) {
+      loadWords(text);
+      btns.forEach(function (b) { b.disabled = false; });
+      closeDlg($dlgEdit); toast(done);
+    }).catch(function (e) {
+      btns.forEach(function (b) { b.disabled = false; });
+      msg.className = "msg err"; msg.textContent = explain(e);
+      if (e.message === "gone") getFile().then(function (f) { loadWords(f.text); }).catch(function () {});
+    });
+  }
+  document.getElementById("editForm").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var en = clean(document.getElementById("fEn").value), sc = clean(document.getElementById("fSc").value);
+    var say = clean(document.getElementById("fSay").value), note = clean(document.getElementById("fNote").value);
+    var msg = document.getElementById("editMsg");
+    if (!en || !sc) { msg.className = "msg err"; msg.textContent = "Fill in the English and the Scots."; return; }
+    if (!say) say = sc;
+    var line = en + " | " + sc + " | " + say + (note ? " | " + note : "");
+    if (current && line === current.raw) { closeDlg($dlgEdit); return; }
+    if (!current && entries.some(function (e) { return norm(e.en) === norm(en); }) &&
+        !confirm("“" + en + "” is already in the list. Add another line for it anyway?")) return;
+    commit(current ? current.raw : null, line, (current ? "Edit: " : "Add: ") + en + " → " + sc, current ? "Saved" : "Added");
+  });
+  document.getElementById("editDelete").addEventListener("click", function () {
+    if (!current || !confirm("Delete “" + current.en + "” from the dictionary?")) return;
+    commit(current.raw, null, "Delete: " + current.en, "Deleted");
+  });
+
   /* ---------------- Load ---------------- */
+  function loadWords(text) { entries = parse(text); buildDict(); renderList(); setDir(trDir); }
   fetch("words.txt", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(function (t) { entries = parse(t); buildDict(); renderList(); setDir(trDir); })
+    .then(loadWords)
     .catch(function () { $list.innerHTML = '<p class="empty">Couldn\'t load the word list. Check you\'re online, then reopen the app.</p>'; });
 
   if ("serviceWorker" in navigator) window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });

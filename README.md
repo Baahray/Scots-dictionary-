@@ -12,6 +12,17 @@ It works offline once you've saved it to your phone.
 
 ## Adding or fixing words
 
+### In the app (easiest)
+
+1. Tap **Edit** at the top of the app.
+2. The first time, follow the steps on screen: make a GitHub key (Contents: Read and write, for this repository only), paste it in, and choose a password. The key is kept only on your phone, locked with your password.
+3. Each word now has a pencil button to edit or delete it, and there's a **+** button to add a word. Changes save straight to `words.txt` on GitHub.
+4. Tap **Done** when you're finished. Next time, **Edit** just asks for your password.
+
+Forgot the password? Tap **Edit → Remove key** and set it up again with a new key.
+
+### On GitHub
+
 All the words are in **`words.txt`**. To change them:
 
 1. Open `words.txt` on GitHub and tap the pencil ✏️ icon.
