@@ -963,7 +963,7 @@ weight | wecht | wekht
 well | weel | weel
 well-off | bien, weel-aff | bien, weel-aff
 went | gaed | gayd
-were | wur | wur
+were | wur, wir | wur, wir
 weren't | wurnae | wur-nay
 west | wast | wast
 wet | weet, wat | weet, wat
