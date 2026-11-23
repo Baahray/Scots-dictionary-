@@ -438,9 +438,13 @@ for l in open(os.path.join(HERE, "extra-scots-senses.txt"), encoding="utf-8"):
 user_lines = {}
 try:
     log = subprocess.run(["git", "-C", os.path.dirname(os.path.abspath(WORDS)), "log", "--reverse", "--grep=^Edit", "-p",
-                          "--unified=0", "--format=format:@@COMMIT", "--", "words.txt"], capture_output=True, text=True).stdout
-    for chunk in log.split("@@COMMIT"):
-        minus = [x[1:] for x in chunk.splitlines() if x.startswith("-") and not x.startswith("---") and "Wiktionary" in x]
+                          "--unified=0", "--format=format:@@COMMIT %H", "--", "words.txt"], capture_output=True, text=True).stdout
+    repo = os.path.dirname(os.path.abspath(WORDS))
+    for chunk in log.split("@@COMMIT ")[1:]:
+        sha = chunk.split("\n", 1)[0].strip()
+        before = subprocess.run(["git", "-C", repo, "show", sha + "^:words.txt"], capture_output=True, text=True).stdout
+        gen = before.split("# ---------- More Scots words", 1)[1] if "# ---------- More Scots words" in before else ""
+        minus = [x[1:] for x in chunk.splitlines() if x.startswith("-") and not x.startswith("---") and x[1:] in gen]
         plus = [x[1:] for x in chunk.splitlines() if x.startswith("+") and not x.startswith("+++")]
         for a, b in zip(minus, plus):
             old = a.split("|")[1].strip().lower(); user_lines[old] = b
