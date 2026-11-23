@@ -270,7 +270,7 @@ dirty | clarty, mawkit, manky
 disappointed | disjaskit
 disgust | scunner, ug
 disgusted | scunnert
-disgusting | mingin, boggin, ugsome
+disgusting | mingin, boggin, bowfin, ugsome | bowfin = horrible, rank – Glasgow
 dish | ashet
 dismal | dreich, dowie
 ditch | sheuch
@@ -478,6 +478,7 @@ hollow | howe
 home | hame
 homesick | hamesick
 hook | cleek
+horrible | bowfin, mingin, boggin | bowfin – Glasgow
 horse (small) / donkey | cuddy
 hot | het
 hour | oor
