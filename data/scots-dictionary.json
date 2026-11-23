@@ -3184,8 +3184,8 @@
     "example_scots": "Lean it again the wa.",
     "example_en": "Lean it against the wall.",
     "cross_references": [
-      "agane",
-      "agin"
+      "agin",
+      "agane"
     ]
   },
   {
@@ -13411,9 +13411,9 @@
     "example_en": "A bruise on his shin.",
     "cross_references": [
       "snod",
+      "trig",
       "dunt",
-      "clour",
-      "trig"
+      "clour"
     ]
   },
   {
@@ -14550,8 +14550,8 @@
     "example_en": "In grief and sorrow.",
     "cross_references": [
       "dowie",
-      "wae",
-      "dool"
+      "dool",
+      "wae"
     ]
   },
   {
@@ -18151,10 +18151,10 @@
     "example_en": "He's a cheeky, confident wee guy.",
     "cross_references": [
       "bauld",
-      "impident",
-      "coorse",
       "stoot",
-      "crouse"
+      "crouse",
+      "impident",
+      "coorse"
     ]
   },
   {
@@ -18833,8 +18833,8 @@
       "gowk",
       "dafty",
       "donnert",
-      "daft",
-      "stupit"
+      "stupit",
+      "daft"
     ]
   },
   {
@@ -21361,7 +21361,8 @@
     "example_en": "You're talking nonsense!",
     "cross_references": [
       "havers",
-      "blethers"
+      "blethers",
+      "shite"
     ]
   },
   {
@@ -27390,9 +27391,9 @@
       "aggle",
       "clarty",
       "muckit",
+      "sharn",
       "mawkit",
-      "manky",
-      "sharn"
+      "manky"
     ]
   },
   {
@@ -34143,11 +34144,11 @@
     "example_en": "You're looking very smart.",
     "cross_references": [
       "dink",
-      "redd",
       "trig",
       "cosie",
       "bien",
-      "cozie"
+      "cozie",
+      "redd"
     ]
   },
   {
@@ -37007,8 +37008,8 @@
     "example_scots": "Thon's the hoose.",
     "example_en": "That's the house over there.",
     "cross_references": [
-      "thae",
-      "yon"
+      "yon",
+      "thae"
     ]
   },
   {
@@ -37253,10 +37254,10 @@
     "example_scots": "He's that thrawn.",
     "example_en": "He's so stubborn.",
     "cross_references": [
+      "fouterie",
       "dour",
       "onstaandin",
-      "thraward",
-      "fouterie"
+      "thraward"
     ]
   },
   {
@@ -37775,7 +37776,9 @@
     "usage_notes": "A piece of poo (rude).",
     "example_scots": "A tollie on the pavement.",
     "example_en": "A dog poo on the pavement.",
-    "cross_references": []
+    "cross_references": [
+      "shite"
+    ]
   },
   {
     "headword": "too-meill",
@@ -39240,9 +39243,9 @@
     "cross_references": [
       "dowie",
       "disjaskit",
+      "waefu",
       "dool",
-      "dule",
-      "waefu"
+      "dule"
     ]
   },
   {
@@ -39858,8 +39861,8 @@
     "example_scots": "Gey wat last nicht.",
     "example_en": "Very drunk last night.",
     "cross_references": [
-      "dampt",
-      "weet"
+      "weet",
+      "dampt"
     ]
   },
   {
