@@ -1457,9 +1457,9 @@
     "cross_references": [
       "dae",
       "wirth",
+      "dee",
       "stushie",
-      "steer",
-      "dee"
+      "steer"
     ]
   },
   {
@@ -3184,8 +3184,8 @@
     "example_scots": "Lean it again the wa.",
     "example_en": "Lean it against the wall.",
     "cross_references": [
-      "agin",
-      "agane"
+      "agane",
+      "agin"
     ]
   },
   {
@@ -11399,8 +11399,8 @@
       "malky",
       "ding",
       "dunch",
-      "dink",
-      "dad"
+      "dad",
+      "dink"
     ]
   },
   {
@@ -14550,8 +14550,8 @@
     "example_en": "In grief and sorrow.",
     "cross_references": [
       "dowie",
-      "dool",
-      "wae"
+      "wae",
+      "dool"
     ]
   },
   {
@@ -18151,10 +18151,10 @@
     "example_en": "He's a cheeky, confident wee guy.",
     "cross_references": [
       "bauld",
-      "stoot",
-      "crouse",
       "impident",
-      "coorse"
+      "coorse",
+      "stoot",
+      "crouse"
     ]
   },
   {
@@ -18493,8 +18493,8 @@
       "guid",
       "unco",
       "verra",
-      "awfy",
-      "fair"
+      "fair",
+      "awfy"
     ]
   },
   {
@@ -22265,7 +22265,7 @@
     "phonetic": "hoor",
     "pos": "Noun",
     "register": [
-      "Traditional/Literary"
+      "Everyday/Spoken"
     ],
     "region": [
       "General Scots"
@@ -22275,11 +22275,20 @@
     "keywords": [
       "hour"
     ],
-    "usage_notes": "Mostly found in traditional writing, poems and older speech; it can sound old-fashioned in everyday chat.",
-    "example_scots": "In an hoor.",
-    "example_en": "In an hour.",
+    "usage_notes": "Rude: a whore; in Glasgow \"a hoor ae a day\" means a nightmare of a day. Careful – it's a strong word.",
+    "example_scots": "It wis a hoor ae a day.",
+    "example_en": "It was a hell of a day.",
     "cross_references": [
-      "oor"
+      "oor",
+      "shite",
+      "bawbag",
+      "fud",
+      "fanny",
+      "fannyin aboot",
+      "fannybaws",
+      "roaster",
+      "walloper",
+      "dobber"
     ]
   },
   {
@@ -27696,8 +27705,8 @@
     "example_scots": "Nae bother.",
     "example_en": "No trouble.",
     "cross_references": [
-      "naw",
-      "no"
+      "no",
+      "naw"
     ]
   },
   {
@@ -33596,8 +33605,8 @@
       "ding",
       "clour",
       "dunch",
-      "touk",
-      "scone"
+      "scone",
+      "touk"
     ]
   },
   {
@@ -34144,11 +34153,11 @@
     "example_en": "You're looking very smart.",
     "cross_references": [
       "dink",
-      "trig",
       "cosie",
       "bien",
       "cozie",
-      "redd"
+      "redd",
+      "trig"
     ]
   },
   {
@@ -35175,10 +35184,10 @@
     "example_scots": "Whit a steer!",
     "example_en": "What a fuss!",
     "cross_references": [
-      "din",
-      "stramash",
       "stushie",
-      "adae"
+      "adae",
+      "din",
+      "stramash"
     ]
   },
   {
@@ -39243,9 +39252,9 @@
     "cross_references": [
       "dowie",
       "disjaskit",
-      "waefu",
       "dool",
-      "dule"
+      "dule",
+      "waefu"
     ]
   },
   {
@@ -39515,8 +39524,8 @@
     "cross_references": [
       "ae",
       "body",
-      "peely-wally",
-      "yin"
+      "yin",
+      "peely-wally"
     ]
   },
   {

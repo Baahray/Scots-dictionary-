@@ -1012,7 +1012,7 @@
       if (/[()\/]/.test(e.en)) return;           // skip "row (line)" style entries – too ambiguous in a sentence
       var k = tokenizeWords(e.en).join(" ");
       if (!k || k.indexOf(" ") >= 0) return;   // single English words only, so "going to the house" isn't read as "gonnae"
-      if (!isOld(e)) {
+      if (!isOld(e) && !/\brude\b/i.test(e.note)) {      // the translator never swears unless you do
         if (!dict.en[k]) dict.en[k] = e.scots.slice();
         else if (/glasgow/i.test(e.note)) dict.en[k] = e.scots.concat(dict.en[k].filter(function (x) { return e.scots.indexOf(x) < 0; }));   // Glasgow form first
         maxLen.en = Math.max(maxLen.en, k.split(" ").length);
