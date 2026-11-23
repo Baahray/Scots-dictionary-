@@ -3,6 +3,7 @@
 A Scots pocket dictionary with a Glasgow flavour, built for your phone:
 
 - **Words**: every English word shows its most common Scots word; tap it to see all the Scots options, how to say each one, where it's used and an example. Searching shows every linked word and phrase. There's a word of the day too.
+- **Search by meaning**: type *hit*, *slap* or *punch* and you get every Scots word for hitting – *skelp, dunt, clout, blooter, malky…* – each with what makes it different, how to say it and an example. This works for any word: similar English meanings (from WordNet) are shown too.
 - **Phrases**: sayings like *haud yer wheesht* and *gonnae no*.
 - **Test**: you're shown an English sentence – pick the right Scots, or type it.
 - **Translate**: type a sentence and it's swapped into Scots (or back), word by word. Tap an underlined word to try another Scots option.
@@ -52,6 +53,18 @@ All the words are in **`words.txt`**. To change them:
 | `words.txt` | The word list, the only file you need to edit |
 | `index.html` | The dictionary page |
 | `manifest.json`, `sw.js`, `icon-*.png` | Let it install on your phone and work offline |
+
+## Topics
+
+`topics.txt` lists groups of Scots words that share a meaning (hitting, crying, drunk, tired…):
+
+```
+id | title | English words that bring it up in search | short intro
+```
+
+To put a word in a topic, add `topic: id` to the note of its line in `words.txt`.
+
+`meanings.json` links English words with similar meanings so search can find related entries. It's made from [WordNet](https://wordnet.princeton.edu/) (Princeton University, free licence) and rebuilt when the word list changes a lot.
 
 ## Sources and credits
 

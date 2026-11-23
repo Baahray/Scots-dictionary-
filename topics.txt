@@ -1,0 +1,35 @@
+# Topics: groups of Scots words that share a meaning (e.g. all the ways to say "hit").
+#
+# ONE TOPIC PER LINE:   id | title | English words that bring it up in search | short intro
+#
+# To put a word in a topic, add  "topic: id"  to the note of its line in words.txt, e.g.
+#   smack, slap | skelp | skelp | verb & noun – topic: hitting | Ah skelped him wi ma shoe. (I hit him with my shoe.)
+# Words show in the topic in the order they appear in words.txt.
+
+hitting | Scots words for hitting | hit, hitting, slap, smack, punch, thump, bump, knock, strike, whack, wallop, belt, kick, beat, blow, cuff, bash, bang, clobber, thwack, shove, nudge | Scots picks a different word depending on how something is struck.
+crying | Scots words for crying and moaning | cry, crying, weep, sob, whine, whinge, moan, complain, grumble, wail, blub, sulk | Greet is the everyday word; the others say how someone's crying or complaining.
+talking | Scots words for talking and gossip | talk, talking, chat, chatter, gossip, natter, speak, ramble, prattle, chatterbox, conversation, news | Scots has plenty of words for a good talk – and for too much of one.
+nonsense | Scots words for nonsense | nonsense, rubbish, rot, drivel, tosh, twaddle, waffle, rambling | Talking nonsense is havering.
+drunk | Scots words for drunk | drunk, tipsy, wasted, hammered, sloshed, plastered, pissed, merry, intoxicated | From a wee bit merry to completely blootered.
+tired | Scots words for tired | tired, exhausted, worn, knackered, weary, shattered, sleepy, fatigued, drained | Wabbit is the one everybody knows.
+angry | Scots words for angry and grumpy | angry, furious, cross, mad, raging, livid, annoyed, irritated, grumpy, bad-tempered, irritable, crabby, fuming, temper | From a bit crabbit to absolutely bealin.
+disgusting | Scots words for disgusting and smelly | disgusting, gross, horrible, rank, smelly, stink, stinking, smell, revolting, foul, vile, yuck, nasty | Glasgow is especially rich in these.
+dirty | Scots words for dirty and messy | dirty, filthy, messy, mud, muddy, mess, untidy, grubby, grimy, muck, mucky, chaos | For mud, mess and general clartiness.
+idiot | Scots words for an idiot | stupid, idiot, fool, daft, silly, dumb, twit, eejit, numpty, dope, dimwit, clown, nutter | No shortage of these.
+small | Scots words for small | small, little, tiny, wee, bit, amount, few, scrap, bitty | Wee is the word – but there are others.
+big | Scots words for big | big, large, huge, enormous, great, giant, massive, extraordinary | For anything muckle.
+children | Scots words for children and young people | child, children, kid, kids, baby, boy, girl, teenager, youngster, lad, lass, toddler | Which word depends a lot on where in Scotland you are.
+looking | Scots words for looking | look, looking, see, glance, peek, peep, stare, glare, watch, gaze, glimpse, scowl, frown | From a quick keek to a long glower.
+walking | Scots words for walking | walk, walking, stroll, wander, limp, stagger, hike, roam, saunter, dawdle, amble, wobble | Different words for different ways of getting about.
+rain | Scots words for rain and dreich weather | rain, raining, drizzle, wet, weather, dull, grey, gloomy, fog, mist, downpour, soaked, storm, shower, damp, flood | Scotland has a word for every kind of wet.
+cold | Scots words for cold | cold, freezing, chilly, frosty, shiver, shivering, icy, bitter, nippy | For when it's bitter oot.
+fight | Scots words for fights and rows | fight, fighting, argument, row, brawl, quarrel, scuffle, commotion, rumpus, uproar, scrap, punch-up, squabble | From a wee stushie to a full rammy.
+worry | Scots words for worry and bother | worry, worried, bother, bothered, annoy, annoying, trouble, troublesome, fuss, hassle, nuisance, pest, stress | Fash is the key word.
+scared | Scots words for scared | scared, afraid, frightened, fear, frighten, scare, terrified, nervous, coward | Feart is the everyday word.
+happy | Scots words for happy | happy, cheerful, glad, pleased, merry, joyful, content, cheery, jolly | For good moods.
+sad | Scots words for sad | sad, miserable, gloomy, unhappy, depressed, down, sorrowful, glum, dejected | For low days.
+good | Scots words for good and lovely | good, great, nice, lovely, fine, excellent, beautiful, brilliant, smashing, pretty, gorgeous, handsome | Braw covers a lot of it.
+face | Scots words for the face, mouth and head | face, mouth, head, gob, lips, nose, ear, ears | Body words used every day.
+money | Scots words for money | money, cash, coins, coin, penny, pennies, wealth, rich, poor, broke | Old coins live on in sayings.
+quiet | Scots words for quiet | quiet, silence, silent, hush, shush, shut, peaceful, calm, still | Wheesht!
+leave | Scots ways to tell someone to go away | go, away, leave, get lost, clear off, buzz off, shoo | Some politer than others.
