@@ -236,7 +236,7 @@ got | goat, got
 grandfather | grandda, granpa
 grandmother | granny, gran, nana
 grass | gress, gerss
-great | great, braw, magic, pure dead brilliant
+great | great, braw, magic
 greedy | greedy, gutsy
 groan | grane
 grumpy | crabbit
@@ -614,7 +614,6 @@ it's disgusting | it's mingin, it's boggin
 it's raining hard | it's pishin doon
 no problem | nae bother
 not likely | nae danger, aye right | "aye right" = sarcastic no
-very good | pure dead brilliant
 a little bit | a wee bit, a wee tait
 I'm starving | Ah'm starvin
 come on | c'moan
