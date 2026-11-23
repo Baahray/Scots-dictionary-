@@ -146,7 +146,12 @@
       list = list.filter(function (r) {
         return r.search.some(function (s) { return norm(s).indexOf(q) >= 0; });
       }).map(function (r) {
-        var f = norm(r.from), score = f === q ? 0 : f.indexOf(q) === 0 ? 1 : f.indexOf(q) >= 0 ? 2 : 3;
+        var score = 9;
+        r.search.forEach(function (s, i) {
+          var t = norm(s), side = i === 0 ? 0 : 1;
+          var sc = t === q ? 0 : t.indexOf(q) === 0 ? 2 : t.indexOf(q) >= 0 ? 4 : 9;
+          if (sc < 9) score = Math.min(score, sc + side);
+        });
         return { r: r, score: score };
       }).sort(function (a, b) {
         return a.score - b.score || sortKey(a.r.from).localeCompare(sortKey(b.r.from));
