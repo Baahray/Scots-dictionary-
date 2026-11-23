@@ -75,7 +75,7 @@ English → Scots translation works in this order, Glasgow / West Central speech
 3. **The word list** (`words.txt`), with Glasgow lines preferred.
 4. **The dictionary's English keywords** (`data/scots-dictionary.json`), e.g. archway → *pend*.
 
-Words in `never_use` (cuppa, shoosh, yon…) are never given. To add an idiom, add a rule to `rules`: rules are tried top to bottom, so put specific patterns above general ones.
+Where more than one form is right, list them all (`"say": ["Ah dunno", "Ah dinny ken"]`): the first shows, and tapping the word in the translation cycles through the others. Words in `never_use` (cuppa, shoosh, yon…) are never given. To add an idiom, add a rule to `rules`: rules are tried top to bottom, so put specific patterns above general ones.
 
 ## Structured dataset (`data/scots-dictionary.json`)
 

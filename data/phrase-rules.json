@@ -1,5 +1,5 @@
 {
-  "about": "English → Scots translator rules (Glasgow / West Central by default). Rules are tried in order, before word-by-word translation; the first one that matches wins, so put specific patterns above general ones. In 'match', {name} is a slot that takes one to three words. 'cases' pick an answer from what is in the slot; 'otherwise' is used when no case fits, and {name} in it is replaced by the slot, translated. A rule with just 'say' replaces the words as they are. 'words' are single-word choices that beat the word list. 'never_use' words are never given as a translation.",
+  "about": "English → Scots translator rules (Glasgow / West Central by default). Rules are tried in order, before word-by-word translation; the first one that matches wins, so put specific patterns above general ones. In 'match', {name} is a slot that takes one to three words. 'cases' pick an answer from what is in the slot; 'otherwise' is used when no case fits, and {name} in it is replaced by the slot, translated. A rule with just 'say' replaces the words as they are. 'words' are single-word choices that beat the word list. 'never_use' words are never given as a translation. Any 'say', 'otherwise' or word can be a list when more than one form is right – the first is shown and you tap the word in the translation to see the others.",
   "never_use": [
     "cuppa",
     "shoosh",
@@ -33,7 +33,10 @@
           "when": [
             "water"
           ],
-          "say": "gies a drap ae watter"
+          "say": [
+            "gies a drap ae watter",
+            "gies a drink ae watter"
+          ]
         },
         {
           "when": [
@@ -41,7 +44,10 @@
             "whiskey",
             "scotch"
           ],
-          "say": "gies a dram"
+          "say": [
+            "gies a dram",
+            "gies a wee dram"
+          ]
         },
         {
           "when": [
@@ -50,7 +56,10 @@
             "liquor",
             "drink"
           ],
-          "say": "gies a swally"
+          "say": [
+            "gies a swally",
+            "gies a bevvy"
+          ]
         },
         {
           "when": [
@@ -63,16 +72,25 @@
             "cola",
             "coke"
           ],
-          "say": "gies a drink ae ginger"
+          "say": [
+            "gies a drink ae ginger",
+            "gies some ginger"
+          ]
         },
         {
           "when": [
             "tea"
           ],
-          "say": "gies a mug ae tea"
+          "say": [
+            "gies a mug ae tea",
+            "gies a cup ae tea"
+          ]
         }
       ],
-      "otherwise": "gies a drink ae {drink}"
+      "otherwise": [
+        "gies a drink ae {drink}",
+        "gies a drink o {drink}"
+      ]
     },
     {
       "name": "That thing over there",
@@ -81,7 +99,10 @@
         "that {thing} over yonder",
         "those {thing} over there"
       ],
-      "otherwise": "that {thing} ower there"
+      "otherwise": [
+        "that {thing} ower there",
+        "thon {thing} ower there"
+      ]
     },
     {
       "name": "Over there",
@@ -90,7 +111,10 @@
         "over yonder",
         "yonder"
       ],
-      "say": "ower there"
+      "say": [
+        "ower there",
+        "o'er there"
+      ]
     },
     {
       "name": "Give me",
@@ -99,7 +123,11 @@
         "gimme",
         "give us"
       ],
-      "say": "gies"
+      "say": [
+        "gies",
+        "gie's",
+        "gimme"
+      ]
     },
     {
       "name": "Going to a place",
@@ -112,7 +140,10 @@
         "going to her",
         "going to our"
       ],
-      "say": "gaun tae",
+      "say": [
+        "gaun tae",
+        "gawn tae"
+      ],
       "keep_last": true
     },
     {
@@ -121,7 +152,11 @@
         "going to",
         "gonna"
       ],
-      "say": "gonnae"
+      "say": [
+        "gonnae",
+        "gonny",
+        "gaun tae"
+      ]
     },
     {
       "name": "Don't know",
@@ -130,7 +165,12 @@
         "i dont know",
         "i do not know"
       ],
-      "say": "Ah dinnae ken"
+      "say": [
+        "Ah dunno",
+        "Ah dinny ken",
+        "Ah dinnae ken",
+        "Ah don't know"
+      ]
     },
     {
       "name": "Will you not",
@@ -139,7 +179,11 @@
         "would you not",
         "please don't"
       ],
-      "say": "gonnae no"
+      "say": [
+        "gonnae no",
+        "gonny no",
+        "will ye no"
+      ]
     },
     {
       "name": "Be quiet",
@@ -148,7 +192,11 @@
         "shut up",
         "keep quiet"
       ],
-      "say": "haud yer wheesht"
+      "say": [
+        "haud yer wheesht",
+        "wheesht",
+        "shut it"
+      ]
     },
     {
       "name": "A lot of",
@@ -156,14 +204,22 @@
         "a lot of",
         "lots of"
       ],
-      "say": "loads ae"
+      "say": [
+        "loads ae",
+        "hunners ae",
+        "a load ae",
+        "a pile ae"
+      ]
     },
     {
       "name": "Out of",
       "match": [
         "out of"
       ],
-      "say": "oot ae"
+      "say": [
+        "oot ae",
+        "oot o"
+      ]
     },
     {
       "name": "Cup of tea",
@@ -171,7 +227,10 @@
         "cup of tea",
         "a cup of tea"
       ],
-      "say": "a cup ae tea"
+      "say": [
+        "a cup ae tea",
+        "a cup o tea"
+      ]
     },
     {
       "name": "Right now",
@@ -179,26 +238,37 @@
         "right now",
         "just now"
       ],
-      "say": "the noo"
+      "say": [
+        "the noo",
+        "right noo"
+      ]
     },
     {
       "name": "Today / tonight / tomorrow",
       "match": [
         "today"
       ],
-      "say": "the day"
+      "say": [
+        "the day"
+      ]
     },
     {
       "match": [
         "tonight"
       ],
-      "say": "the nicht"
+      "say": [
+        "the nicht",
+        "the night"
+      ]
     },
     {
       "match": [
         "tomorrow"
       ],
-      "say": "the morra"
+      "say": [
+        "the morra",
+        "the morn"
+      ]
     },
     {
       "name": "You (more than one)",
@@ -208,11 +278,18 @@
         "you guys",
         "all of you"
       ],
-      "say": "yous"
+      "say": [
+        "yous",
+        "yiz",
+        "yeez"
+      ]
     }
   ],
   "words": {
-    "of": "ae",
+    "of": [
+      "ae",
+      "o"
+    ],
     "find": "fun",
     "found": "fun",
     "round": "roon",
@@ -220,15 +297,33 @@
     "through": "throu",
     "above": "abune",
     "over": "ower",
-    "from": "fae",
-    "with": "wae",
+    "from": [
+      "fae",
+      "frae"
+    ],
+    "with": [
+      "wae",
+      "wi"
+    ],
     "give": "gie",
-    "gave": "gied",
-    "given": "gied",
+    "gave": [
+      "gied",
+      "gave"
+    ],
+    "given": [
+      "gied",
+      "gien"
+    ],
     "yonder": "ower there",
     "can": "kin",
-    "were": "wur",
-    "going": "gaun",
+    "were": [
+      "wur",
+      "wir"
+    ],
+    "going": [
+      "gaun",
+      "gawn"
+    ],
     "my": "ma",
     "myself": "masel",
     "yourself": "yersel",
@@ -238,36 +333,101 @@
     "house": "hoose",
     "down": "doon",
     "now": "noo",
-    "don't": "dinnae",
-    "dont": "dinnae",
-    "didn't": "didnae",
-    "can't": "cannae",
-    "cant": "cannae",
-    "won't": "willnae",
-    "isn't": "isnae",
-    "wasn't": "wisnae",
-    "doesn't": "disnae",
-    "couldn't": "couldnae",
-    "wouldn't": "widnae",
-    "shouldn't": "shouldnae",
-    "haven't": "huvnae",
+    "don't": [
+      "dinnae",
+      "dinny",
+      "don't"
+    ],
+    "dont": [
+      "dinnae",
+      "dinny",
+      "don't"
+    ],
+    "didn't": [
+      "didnae",
+      "didny"
+    ],
+    "can't": [
+      "cannae",
+      "canny"
+    ],
+    "cant": [
+      "cannae",
+      "canny"
+    ],
+    "won't": [
+      "willnae",
+      "winnae",
+      "wullnae"
+    ],
+    "isn't": [
+      "isnae",
+      "isny"
+    ],
+    "wasn't": [
+      "wisnae",
+      "wisny"
+    ],
+    "doesn't": [
+      "disnae",
+      "disny"
+    ],
+    "couldn't": [
+      "couldnae",
+      "couldny"
+    ],
+    "wouldn't": [
+      "widnae",
+      "widny"
+    ],
+    "shouldn't": [
+      "shouldnae",
+      "shouldny"
+    ],
+    "haven't": [
+      "huvnae",
+      "huvny"
+    ],
     "have": "huv",
     "to": "tae",
     "yes": "aye",
     "small": "wee",
     "little": "wee",
-    "child": "wean",
-    "children": "weans",
-    "kids": "weans",
-    "what": "whit",
+    "child": [
+      "wean",
+      "bairn"
+    ],
+    "children": [
+      "weans",
+      "bairns"
+    ],
+    "kids": [
+      "weans",
+      "bairns"
+    ],
+    "what": [
+      "whit",
+      "whut"
+    ],
     "i": "Ah",
     "i'm": "Ah'm",
     "i'll": "Ah'll",
     "i've": "Ah've",
     "i'd": "Ah'd",
-    "mum": "maw",
+    "mum": [
+      "maw",
+      "mammy",
+      "ma"
+    ],
     "mummy": "mammy",
-    "dad": "da",
-    "daddy": "daddy"
+    "dad": [
+      "da",
+      "faither"
+    ],
+    "daddy": "daddy",
+    "you": [
+      "ye",
+      "you"
+    ]
   }
 }

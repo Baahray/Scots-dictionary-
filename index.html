@@ -1090,29 +1090,30 @@
       if (!m) continue;
       var rule = R.rule, out, end = m.end, slotNames = Object.keys(m.slots);
       if (rule.say) {
-        out = rule.say;
+        out = asList(rule.say);
         if (rule.keep_last) end--;
       } else {
         var c = slotNames.length === 1 && caseFor(rule, keyOf(toks, m.slots[slotNames[0]].i, m.slots[slotNames[0]].n));
-        out = c ? c.say : (rule.otherwise || "").replace(/\{(\w+)\}/g, function (_, nm) {
-          var sl = m.slots[nm]; return sl ? plainEN(toks, sl.i, sl.n) : "";
+        out = c ? asList(c.say) : asList(rule.otherwise).map(function (t) {
+          return t.replace(/\{(\w+)\}/g, function (_, nm) { var sl = m.slots[nm]; return sl ? plainEN(toks, sl.i, sl.n) : ""; });
         });
       }
-      return { n: end - i, alts: [out], rule: true };
+      return { n: end - i, alts: out, rule: true };
     }
     return null;
   }
+  function asList(x) { return Array.isArray(x) ? x : x ? [x] : []; }
   function okAlts(list) { return (list || []).filter(function (s) { return !PR.never[norm(s)]; }); }
   function lookupEN(toks, i, to) {
     var max = Math.min(Math.max(maxLen.en, jsonMax), to - i);
     for (var n = max; n >= 1; n--) {
       if (!joinedOk(toks, i, n)) continue;
       var key = keyOf(toks, i, n), alts = [];
-      if (n === 1 && PR.words[key]) alts.push(PR.words[key]);
+      if (n === 1) asList(PR.words[key]).forEach(function (s) { alts.push(s); });
       okAlts(dict.en[key]).forEach(function (s) { if (alts.indexOf(s) < 0) alts.push(s); });
       okAlts(jsonIndex[key]).forEach(function (s) { if (alts.indexOf(s) < 0) alts.push(s); });
       if (!alts.length && n === 1 && key.length > 3 && /[^s']s$/.test(key)) {          // plural: hooses, weans
-        var sg = key.slice(0, -1), base = (PR.words[sg] ? [PR.words[sg]] : []).concat(okAlts(dict.en[sg]), okAlts(jsonIndex[sg]));
+        var sg = key.slice(0, -1), base = asList(PR.words[sg]).concat(okAlts(dict.en[sg]), okAlts(jsonIndex[sg]));
         alts = base.filter(function (s, k, a) { return a.indexOf(s) === k && !/\s/.test(s); }).map(function (s) { return s + "s"; });
       }
       if (alts.length) return { n: n, alts: alts };
