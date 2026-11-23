@@ -846,15 +846,22 @@
   });
 
   /* ---------------- Word of the day ---------------- */
+  var wotdWords = {};   // data/word-of-the-day.txt: traditional Scots words only
   function renderWotd(show) {
     if (!show) { $wotd.hidden = true; return; }
-    var pool = groups.filter(function (g) {
-      var e = g.first && g.first.e;
-      return e && !g.onlyPhrase && !g.said && !g.old && e.example && !/wiktionary/i.test(e.note);
+    var pool = [], seen = {};
+    groups.forEach(function (g) {
+      if (g.said || g.old) return;
+      g.words.forEach(function (it) {
+        var k = norm(it.s);
+        if (!wotdWords[k] || seen[k] || it.old || isSaid(it.e)) return;
+        seen[k] = 1; pool.push({ g: g, it: it });
+      });
     });
     if (!pool.length) { $wotd.hidden = true; return; }
     var day = Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
-    var g = pool[(day * 7919) % pool.length], it = g.first, ex = splitExample(it.e.example);
+    var pick = pool[(day * 7919) % pool.length], g = pick.g, it = pick.it, ex = splitExample(it.e.example);
+    if (ex && words(ex.sc).every(function (w) { return w.indexOf(norm(it.s).split(" ")[0].slice(0, 4)) !== 0; })) ex = null;   // example must use the word
     $wotd.innerHTML = '<div class="wotd-label">Word of the day</div>' +
       '<div class="wotd-row" data-g="' + esc(g.key) + '" role="button" tabindex="0">' +
       '<div><div class="wotd-sc">' + esc(it.s) + '</div><div class="wotd-en">' + esc(g.en) + " · say <b>" + esc(it.say) + "</b></div></div>" +
@@ -1484,6 +1491,11 @@
     .then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { buildJsonIndex(d); translate(); }).catch(function () {});
   fetch("data/test-sentences.txt", { cache: "no-cache" }).then(function (r) { return r.ok ? r.text() : ""; })
     .then(function (t) { parseTestSentences(t); if (testSentences.length >= 4) nextQuestion(); }).catch(function () {});
+  fetch("data/word-of-the-day.txt", { cache: "no-cache" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) {
+    wotdWords = {};
+    t.split(/\r?\n/).forEach(function (l) { l = l.trim(); if (l && l.charAt(0) !== "#") wotdWords[norm(l)] = 1; });
+    if (!norm($q.value)) renderWotd(true);
+  }).catch(function () {});
   fetch("data/usage-notes.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { usageNotes = m || {}; if ($dlgWord.open) renderDetail(); }).catch(function () {});
   fetch("meanings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { meanings = m || {}; if (norm($q.value)) renderList(); }).catch(function () {});
   fetch("words.txt", { cache: "no-cache" })
