@@ -507,6 +507,8 @@
     return out;
   }
   function isPhrase(s) { return /\s/.test(String(s).trim()); }
+  // A name for a thing made of two words (jeely piece, toorie bunnet) is a word, not a phrase: its note says "noun"
+  function isThing(e) { return String(e.note || "").split(/\s*–\s*/).some(function (p) { return /^noun$/i.test(p.trim()); }); }
   var SAID_RE = /^no separate scots word[^–-]*[–-]\s*this is how it's said\s*[–-]?\s*/i;
   function isSaid(e) { return /^no separate scots word/i.test(e.note); }
   // Words no longer in everyday use: an "old" / "archaic" label in the note. Kept out of the first search results.
@@ -529,7 +531,7 @@
       if (!g) { g = { key: k, en: e.en, items: [], order: groups.length }; groupByKey[k] = g; groups.push(g); }
       e.scots.forEach(function (s, j) {
         if (g.items.some(function (it) { return norm(it.s) === norm(s); })) return;   // same Scots word already listed
-        g.items.push({ s: s, say: e.say[j], e: e, phrase: isPhrase(s), firstOfLine: j === 0, old: isOld(e) });
+        g.items.push({ s: s, say: e.say[j], e: e, phrase: isPhrase(s) && !isThing(e), firstOfLine: j === 0, old: isOld(e) });
       });
     });
     groups.forEach(function (g) {

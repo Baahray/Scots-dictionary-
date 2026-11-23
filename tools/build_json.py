@@ -637,7 +637,7 @@ if "--words" in sys.argv:
         says = [e["phonetic"].split(" / ")[0]] + [pronounce(v)[0] for v in vs]
         tags_ = [r for r in e["region"] if r != "General Scots"] + [r for r in e["register"] if r != "Everyday/Spoken"]
         for pos, gl, d, xs, xe in e["_senses"]:
-            note = " – ".join([("phrase – " if " " in e["headword"] else "") + pos.lower()] + tags_ +
+            note = " – ".join([("phrase – " if " " in e["headword"] and pos not in ("Noun", "Numeral") else "") + pos.lower()] + tags_ +
                               ([e["etymology"].rstrip(".")] if e["etymology"] and not e["etymology"].startswith("Origin uncertain") else []))
             ex = f"{xs} ({xe})" if xs else ""
             out.append(" | ".join([tidy(gl), ", ".join(tidy(w) for w in words), ", ".join(tidy(s) for s in says), tidy(note), tidy(ex)]))
