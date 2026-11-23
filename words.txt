@@ -2025,7 +2025,7 @@ family | faimlie | FAYM-lee | noun – Traditional/Literary – Scots form of fa
 rush | faird | fayrd | noun – Archaic | He came in wi a faird. (He rushed in.)
 swift | fairdy | FAYR-dee | adjective – Archaic – From faird 'rush' | A fairdy wee horse. (A swift little horse.)
 flashy | fantoush | FAN-toosh | adjective – Traditional/Literary – Probably from French fantoche 'puppet' | A fantoush hat. (A flashy hat.)
--natured | farrand | FAR-rand | adjective – Traditional/Literary – From fare 'go, behave' | A weel-farrand lad. (A well-behaved lad.)
+natured | farrand | FAR-rand | adjective – Traditional/Literary – From fare 'go, behave' | A weel-farrand lad. (A well-behaved lad.)
 annoyingly | fashiously | FASH-i-oos-lee | adverb – Traditional/Literary – From fashious | He girned fashiously. (He moaned peevishly.)
 bothered | fasht | fasht | adjective – Traditional/Literary – Past participle of fash | Ah'm no fasht. (I'm not bothered.)
 fallow land | fauch | fawkh | noun – Archaic – From Old English fealh | The fauch by the burn. (The fallow field by the stream.)
