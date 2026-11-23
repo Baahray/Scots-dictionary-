@@ -1,7 +1,7 @@
 {
   "name": "Scots Dictionary",
   "short_name": "Scots",
-  "description": "English to Scots dictionary – Glasgow words and phrases",
+  "description": "English to Scots dictionary – Scots words only, Glasgow flavour",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
