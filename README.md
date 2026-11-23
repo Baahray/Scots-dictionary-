@@ -2,7 +2,9 @@
 
 A Scots pocket dictionary with a Glasgow flavour, built for your phone:
 
-- **Words**: search over 1,000 Scots words and phrases, English → Scots or Scots → English, with a play button to hear each one.
+- **Words**: every English word shows its most common Scots word; tap it to see all the Scots options, how to say each one, where it's used and an example. Searching shows every linked word and phrase. There's a word of the day too.
+- **Phrases**: sayings like *haud yer wheesht* and *gonnae no*.
+- **Test**: you're shown an English sentence – pick the right Scots, or type it.
 - **Translate**: type a sentence and it's swapped into Scots (or back), word by word. Tap an underlined word to try another Scots option.
 - **Say it**: a guide to how Scots spelling sounds (ch, ae, oo, ui, -nae and more).
 
@@ -29,7 +31,7 @@ All the words are in **`words.txt`**. To change them:
 2. Edit or add lines in this format:
 
    ```
-   english | scots | note
+   english | scots | how to say it | note | example
    ```
 
    - Separate several Scots words with commas: `child | wean, bairn`
