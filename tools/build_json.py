@@ -415,11 +415,13 @@ for key in list(entries):
         e["example_scots"], e["example_en"] = exs, exe
 
 # words Scots shares with English, kept only for their own Scots meanings
+EXTRA_HEADS = set()
 for l in open(os.path.join(HERE, "extra-scots-senses.txt"), encoding="utf-8"):
     if l.startswith("#") or not l.strip():
         continue
     h, var, pos, reg, rgn, gl, df, et, exs, exe = [x.strip() for x in l.rstrip("\n").split("|")]
     key = (h.lower(), pos)
+    EXTRA_HEADS.add(h.lower())
     if key in entries:
         e = entries[key]
         if df not in e["_defs"]: e["_defs"].append(df)
@@ -472,7 +474,7 @@ SAY_FIX.update({"abye": ("a-BY", "/əˈbae/"), "acre-a-bung": ("AY-kur-a-bung", 
     "menseless": ("MENSS-liss", "/ˈmɛnsləs/"), "mirligoes": ("MIR-lee-gohz", "/ˈmɪrliɡoz/"), "on one's groof": ("on wunz groof", "/ɔn wʌnz ɡruf/"),
     "preses": ("PREE-seez", "/ˈprisiz/"), "prettikin": ("PRET-tee-kin / PRE'-ee-kin", "/ˈprɛtɪkɪn/"),
     "rickle o banes": ("RIK-ul o baynz", "/ˈrɪkəl o benz/"), "sassenach": ("SAS-sen-akh", "/ˈsasənax/"),
-    "whiffinger": ("WHIF-fin-jur", "/ˈʍɪfɪndʒər/"), "whiles": ("whylz", "/ʍaelz/"), "whilk": ("whilk", "/ʍɪlk/")})
+    "whiffinger": ("WHIF-fin-jur", "/ˈʍɪfɪndʒər/"), "whiles": ("whylz", "/ʍaelz/"), "whilk": ("whilk", "/ʍɪlk/"), "weirdfu": ("WEERD-foo", "/ˈwirdfu/")})
 
 # ---------------------------------------------------------------- merge spelling variants into one headword
 def gl_close(a, b):
@@ -490,7 +492,7 @@ def find(h):
 def rank(h):                                       # which spelling leads: on the hand-checked list, everyday, mainstream
     es = groups[h]
     regs = {r for e in es for r in e["register"]}; rgns = {r for e in es for r in e["region"]}
-    return (h in CHECKED, "Everyday/Spoken" in regs, "General Scots" in rgns or "West Central/Glasgow" in rgns,
+    return (h in CHECKED, h in EXTRA_HEADS, "Everyday/Spoken" in regs, "General Scots" in rgns or "West Central/Glasgow" in rgns,
             "Archaic" not in regs, -len(h), h)
 def union(a, b, lead=None):
     ra, rb = find(a), find(b)
@@ -562,6 +564,12 @@ for lead, members in clusters.items():
                    "etymology": (form_ety if (not ety or ety.startswith("Origin uncertain")) and form_ety else ety) or "Origin uncertain.", "definition": definition,
                    "example_scots": ex[3] if ex else "", "example_en": ex[4] if ex else "",
                    "cross_references": [], "_senses": senses, "_members": members})
+
+# words no longer in everyday use (data/old-words.txt): register Archaic
+OLD_WORDS = {l.strip().lower() for l in open(os.path.join(HERE, "old-words.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")}
+for e in merged:
+    if e["headword"].lower() in OLD_WORDS:
+        e["register"] = ["Archaic"] + [r for r in e["register"] if r not in ("Archaic", "Everyday/Spoken")]
 
 # a spelling that is a headword of its own is not listed as a variant of another word
 heads_now = {e["headword"].lower() for e in merged}

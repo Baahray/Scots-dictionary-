@@ -9,7 +9,9 @@
     "ipa": "/a b brɔd/",
     "phonetic": "a b brod",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -125,7 +127,9 @@
     "ipa": "/a b abs/",
     "phonetic": "a b abs",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -143,7 +147,9 @@
     "ipa": "/a b bʌf/",
     "phonetic": "a b buf",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -275,8 +281,7 @@
       "aback o'",
       "ahint",
       "behint",
-      "ahin",
-      "behoochie"
+      "ahin"
     ]
   },
   {
@@ -299,7 +304,8 @@
     "cross_references": [
       "aback",
       "ahint",
-      "behint"
+      "behint",
+      "ahin"
     ]
   },
   {
@@ -390,8 +396,7 @@
     "example_scots": "Aber the fire afore ye gang tae bed.",
     "example_en": "Poke up the fire before you go to bed.",
     "cross_references": [
-      "gleg",
-      "aiker"
+      "gleg"
     ]
   },
   {
@@ -505,7 +510,9 @@
     "ipa": "/abˈit/",
     "phonetic": "ab-EET",
     "pos": "Conjunction",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -530,7 +537,9 @@
     "ipa": "/abˈɪr/",
     "phonetic": "ab-IR",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "Insular"
     ],
@@ -622,7 +631,8 @@
     "example_en": "The stars shone above.",
     "cross_references": [
       "abufe",
-      "abuin"
+      "abuin",
+      "abune"
     ]
   },
   {
@@ -745,7 +755,8 @@
     "example_en": "The room above.",
     "cross_references": [
       "aboon",
-      "abuin"
+      "abuin",
+      "abune"
     ]
   },
   {
@@ -757,7 +768,9 @@
     "ipa": "/abˈɪljimɛnts/",
     "phonetic": "ab-IL-yee-ments",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -765,9 +778,7 @@
     "definition": "Clothes and gear; equipment.",
     "example_scots": "He came in his Sunday abuilyiements.",
     "example_en": "He came in his Sunday clothes.",
-    "cross_references": [
-      "boulyiements"
-    ]
+    "cross_references": []
   },
   {
     "headword": "abuin",
@@ -1158,7 +1169,8 @@
     "example_scots": "Adeed, it's true.",
     "example_en": "Indeed, it's true.",
     "cross_references": [
-      "deed"
+      "deed",
+      "atweel"
     ]
   },
   {
@@ -1352,7 +1364,9 @@
     "ipa": "/ˈefaldnɛs/",
     "phonetic": "AY-fal-dnes",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -1377,7 +1391,9 @@
     "ipa": "/ˈefɑːld/",
     "phonetic": "AY-fawld",
     "pos": "Noun / Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -1385,12 +1401,7 @@
     "definition": "(noun) A single layer or fold. (adjective) Single; honest, sincere.",
     "example_scots": "Wrap it in an aefauld o claith.",
     "example_en": "Wrap it in a single fold of cloth.",
-    "cross_references": [
-      "wan",
-      "ae",
-      "yin",
-      "body"
-    ]
+    "cross_references": []
   },
   {
     "headword": "aefauldlie",
@@ -1398,7 +1409,9 @@
     "ipa": "/ˈefɑːldli/",
     "phonetic": "AY-fawl-dlee",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -1510,7 +1523,9 @@
     "ipa": "/afˈɑːld/",
     "phonetic": "af-AWLD",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -1555,7 +1570,9 @@
     "definition": "Afraid, frightened.",
     "example_scots": "Dinnae be afeard o the dark.",
     "example_en": "Don't be afraid of the dark.",
-    "cross_references": []
+    "cross_references": [
+      "feart"
+    ]
   },
   {
     "headword": "aff",
@@ -1712,7 +1729,9 @@
     "definition": "Inclined to put things off.",
     "example_scots": "An aff-settin kind o body.",
     "example_en": "A procrastinating sort of person.",
-    "cross_references": []
+    "cross_references": [
+      "slaw"
+    ]
   },
   {
     "headword": "affcast",
@@ -1778,7 +1797,9 @@
     "ipa": "/afˈir/",
     "phonetic": "af-FEER",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -1933,7 +1954,9 @@
     "definition": "To spoil the look of something.",
     "example_scots": "The rain afflude the new paint.",
     "example_en": "The rain spoiled the new paint.",
-    "cross_references": []
+    "cross_references": [
+      "spile"
+    ]
   },
   {
     "headword": "affpit",
@@ -2017,7 +2040,9 @@
     "ipa": "/afˈrɔntlɛs/",
     "phonetic": "af-RON-tles",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -2293,7 +2318,8 @@
     "example_scots": "There wis meat afouth.",
     "example_en": "There was food in plenty.",
     "cross_references": [
-      "routh"
+      "routh",
+      "rowth"
     ]
   },
   {
@@ -2302,7 +2328,9 @@
     "ipa": "/afˈrɪst/",
     "phonetic": "af-RIST",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -2454,7 +2482,10 @@
     "definition": "(preposition) Against; opposite. (conjunction) By the time that, ready for when. (adverb) Again.",
     "example_scots": "Lean it again the wa.",
     "example_en": "Lean it against the wall.",
-    "cross_references": []
+    "cross_references": [
+      "agane",
+      "agin"
+    ]
   },
   {
     "headword": "agairy",
@@ -2464,7 +2495,9 @@
     "ipa": "/aɡˈeri/",
     "phonetic": "ag-AY-ree",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "Insular"
     ],
@@ -2626,7 +2659,9 @@
       "guddle",
       "clarty",
       "muck",
-      "muckit"
+      "muckit",
+      "mawkit",
+      "manky"
     ]
   },
   {
@@ -2683,7 +2718,9 @@
     "definition": "Shivering, shuddering.",
     "example_scots": "The tale left me agrue.",
     "example_en": "The story left me shuddering.",
-    "cross_references": []
+    "cross_references": [
+      "chitterin"
+    ]
   },
   {
     "headword": "agyaun",
@@ -2701,7 +2738,11 @@
     "definition": "Going, in motion.",
     "example_scots": "Get the engine agyaun.",
     "example_en": "Get the engine going.",
-    "cross_references": []
+    "cross_references": [
+      "gaun",
+      "gawn",
+      "gon"
+    ]
   },
   {
     "headword": "ahame",
@@ -2815,8 +2856,7 @@
       "aback",
       "aback o'",
       "behint",
-      "efter",
-      "behoochie"
+      "efter"
     ]
   },
   {
@@ -2855,7 +2895,8 @@
     "example_scots": "The cairt lay ahomel in the ditch.",
     "example_en": "The cart lay upside down in the ditch.",
     "cross_references": [
-      "awhummle"
+      "awhummle",
+      "tapsalteerie"
     ]
   },
   {
@@ -2957,9 +2998,7 @@
     "definition": "An ear of corn; a stalk with the ear still on.",
     "example_scots": "The hens picked at the aichers.",
     "example_en": "The hens pecked at the ears of corn.",
-    "cross_references": [
-      "lug"
-    ]
+    "cross_references": []
   },
   {
     "headword": "aicherd",
@@ -3151,9 +3190,7 @@
     "example_scots": "Gaither the aikers.",
     "example_en": "Gather the ears of barley.",
     "cross_references": [
-      "aichan",
-      "gleg",
-      "aber"
+      "aichan"
     ]
   },
   {
@@ -3213,8 +3250,7 @@
     "example_en": "What's wrong with you?",
     "cross_references": [
       "pilget",
-      "fash",
-      "kauch"
+      "fash"
     ]
   },
   {
@@ -3356,9 +3392,7 @@
     "definition": "One's own self.",
     "example_scots": "He did it his ainsell.",
     "example_en": "He did it himself.",
-    "cross_references": [
-      "sel"
-    ]
+    "cross_references": []
   },
   {
     "headword": "aint",
@@ -3415,7 +3449,9 @@
     "definition": "Apple.",
     "example_scots": "An aipple a day.",
     "example_en": "An apple a day.",
-    "cross_references": []
+    "cross_references": [
+      "aiple"
+    ]
   },
   {
     "headword": "aippleringie",
@@ -3456,7 +3492,9 @@
     "definition": "Early.",
     "example_scots": "Up air the morn.",
     "example_en": "Up early tomorrow.",
-    "cross_references": []
+    "cross_references": [
+      "airly"
+    ]
   },
   {
     "headword": "air-yesterday",
@@ -3561,7 +3599,8 @@
     "example_scots": "It's a bit airish the nicht.",
     "example_en": "It's a bit chilly tonight.",
     "cross_references": [
-      "cauldrife"
+      "cauldrife",
+      "snell"
     ]
   },
   {
@@ -3857,6 +3896,7 @@
     "phonetic": "AYTH-ken",
     "pos": "Noun",
     "register": [
+      "Archaic",
       "Traditional/Literary"
     ],
     "region": [
@@ -3874,7 +3914,9 @@
     "ipa": "/ˈetlɪf krap/",
     "phonetic": "AYT-lif krap",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -3890,7 +3932,9 @@
     "ipa": "/ˈetramɛnt/",
     "phonetic": "AYT-ram-ent",
     "pos": "Interjection",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "Insular"
     ],
@@ -3937,9 +3981,7 @@
     "definition": "(noun) Cold, bleak weather. (adjective) Cold, bleak and bitter (of weather).",
     "example_scots": "We've had a week o aittrie.",
     "example_en": "We've had a week of bleak weather.",
-    "cross_references": [
-      "cauld"
-    ]
+    "cross_references": []
   },
   {
     "headword": "aizan",
@@ -3976,7 +4018,9 @@
     "ipa": "/akˈami/",
     "phonetic": "ak-AM-ee",
     "pos": "Noun / Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "Insular"
     ],
@@ -4039,7 +4083,9 @@
     "definition": "Along.",
     "example_scots": "We walked alangst the shore.",
     "example_en": "We walked along the shore.",
-    "cross_references": []
+    "cross_references": [
+      "alang"
+    ]
   },
   {
     "headword": "allevoly",
@@ -4049,7 +4095,9 @@
     "ipa": "/alˈɛvɔli/",
     "phonetic": "al-L-ev-olee",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -4097,7 +4145,9 @@
     "definition": "Also.",
     "example_scots": "Alswa we went hame.",
     "example_en": "And so we went home.",
-    "cross_references": []
+    "cross_references": [
+      "forby"
+    ]
   },
   {
     "headword": "alsweill",
@@ -4270,7 +4320,8 @@
     "example_en": "The house opposite.",
     "cross_references": [
       "foreanent",
-      "hereanent"
+      "hereanent",
+      "forenent"
     ]
   },
   {
@@ -4306,8 +4357,7 @@
     "example_scots": "An antrin visit fae his son.",
     "example_en": "An occasional visit from his son.",
     "cross_references": [
-      "daimen",
-      "unco"
+      "daimen"
     ]
   },
   {
@@ -4418,7 +4468,9 @@
     "ipa": "/aθˈɪl/",
     "phonetic": "ath-IL",
     "pos": "Adjective / Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -4486,7 +4538,9 @@
     "ipa": "/ɑːxt/",
     "phonetic": "awkht",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -4571,7 +4625,9 @@
     "ipa": "/ˈɑːnsint/",
     "phonetic": "AWN-seent",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -4708,7 +4764,8 @@
     "example_scots": "The boat lay awhummle.",
     "example_en": "The boat lay upside down.",
     "cross_references": [
-      "ahomel"
+      "ahomel",
+      "tapsalteerie"
     ]
   },
   {
@@ -4726,7 +4783,9 @@
     "ipa": "/ɑːˈkɪr/",
     "phonetic": "aw-KIR",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -5215,8 +5274,7 @@
     "cross_references": [
       "gallus",
       "crouse",
-      "stoot",
-      "fechtie"
+      "stoot"
     ]
   },
   {
@@ -5273,8 +5331,7 @@
     "example_en": "Not worth a penny.",
     "cross_references": [
       "siller",
-      "wing",
-      "maik"
+      "wing"
     ]
   },
   {
@@ -5314,8 +5371,7 @@
       "crabbit",
       "scunnert",
       "carnaptious",
-      "radge",
-      "fasht"
+      "radge"
     ]
   },
   {
@@ -5378,7 +5434,9 @@
     "ipa": "/bɛhˈɛxt/",
     "phonetic": "beh-EKHT",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -5408,8 +5466,7 @@
       "aback",
       "aback o'",
       "ahint",
-      "ahin",
-      "behoochie"
+      "ahin"
     ]
   },
   {
@@ -5431,10 +5488,8 @@
     "cross_references": [
       "doup",
       "erse",
-      "ahint",
-      "ahin",
-      "aback",
-      "behint"
+      "bahookie",
+      "dowp"
     ]
   },
   {
@@ -5479,7 +5534,8 @@
     "example_en": "Come through into the house.",
     "cross_references": [
       "throwe",
-      "inby"
+      "inby",
+      "inower"
     ]
   },
   {
@@ -5538,7 +5594,9 @@
     "ipa": "/bɛθˈankɪt/",
     "phonetic": "beth-AN-kit",
     "pos": "Idiom",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -5562,9 +5620,7 @@
     "definition": "A branch; a limb.",
     "example_scots": "A beuch o the aik.",
     "example_en": "A branch of the oak.",
-    "cross_references": [
-      "grayn"
-    ]
+    "cross_references": []
   },
   {
     "headword": "bide",
@@ -5669,7 +5725,8 @@
     "example_scots": "A bightsome lass at the dancin.",
     "example_en": "A lively girl at the dance.",
     "cross_references": [
-      "birkie"
+      "birkie",
+      "cantie"
     ]
   },
   {
@@ -5741,8 +5798,7 @@
     "example_scots": "A birken wid.",
     "example_en": "A birch wood.",
     "cross_references": [
-      "birk",
-      "firren"
+      "birk"
     ]
   },
   {
@@ -5877,7 +5933,9 @@
     "definition": "(adjective) Very dirty, grimy. (adverb) Used before a word to make it stronger: utterly, completely (mostly with affrontit).",
     "example_scots": "Yer hauns are black!",
     "example_en": "Your hands are filthy!",
-    "cross_references": []
+    "cross_references": [
+      "manky"
+    ]
   },
   {
     "headword": "black affrontit",
@@ -6146,7 +6204,8 @@
       "yatter",
       "clash",
       "claik",
-      "bletherskate"
+      "bletherskate",
+      "taak"
     ]
   },
   {
@@ -6497,7 +6556,9 @@
     "ipa": "/ˈbuɪn/",
     "phonetic": "BOO-in",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -6521,7 +6582,9 @@
     "ipa": "/ˈbuljimɛnts/",
     "phonetic": "BOOL-yee-ments",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -6529,9 +6592,7 @@
     "definition": "Clothes, often shabby or odd.",
     "example_scots": "In his auld boulyiements.",
     "example_en": "In his old rags.",
-    "cross_references": [
-      "abuilyiements"
-    ]
+    "cross_references": []
   },
   {
     "headword": "boun",
@@ -6614,7 +6675,9 @@
     "ipa": "/ˈbʌuat/",
     "phonetic": "BOW-at",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -6980,7 +7043,9 @@
     "definition": "(noun) A rush; a blow; a fit of temper. (verb) To rush headlong; to barge.",
     "example_scots": "He made a breenge for the door.",
     "example_en": "He made a rush for the door.",
-    "cross_references": []
+    "cross_references": [
+      "faird"
+    ]
   },
   {
     "headword": "breid",
@@ -7205,7 +7270,9 @@
     "ipa": "/ˈbrʌudɛn/",
     "phonetic": "BROW-den",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -7251,9 +7318,7 @@
     "definition": "Brittle; unsettled.",
     "example_scots": "Bruckle times.",
     "example_en": "Uncertain times.",
-    "cross_references": [
-      "frush"
-    ]
+    "cross_references": []
   },
   {
     "headword": "bruiky",
@@ -7488,7 +7553,10 @@
     "definition": "(noun) The outer room of a two-roomed cottage (the but an ben). (preposition) Outside of; without.",
     "example_scots": "Bide in the but.",
     "example_en": "Wait in the front room.",
-    "cross_references": []
+    "cross_references": [
+      "withoot",
+      "wi'oot"
+    ]
   },
   {
     "headword": "bydand",
@@ -7619,7 +7687,9 @@
     "ipa": "/ˈbispɛl/",
     "phonetic": "BEES-pel",
     "pos": "Noun / Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -7627,13 +7697,7 @@
     "definition": "(noun) Something or someone exceptional. (adverb) Exceptionally, very.",
     "example_scots": "He's a byspel, that yin.",
     "example_en": "He's one of a kind, that one.",
-    "cross_references": [
-      "awfy",
-      "gey",
-      "unco",
-      "dooms",
-      "verra"
-    ]
+    "cross_references": []
   },
   {
     "headword": "bytime",
@@ -7668,8 +7732,7 @@
     "example_scots": "Whit dae ye cry yer dug?",
     "example_en": "What do you call your dog?",
     "cross_references": [
-      "cry",
-      "caa"
+      "cry"
     ]
   },
   {
@@ -7726,10 +7789,7 @@
     "definition": "To call; to hit.",
     "example_scots": "He caa'd me a liar.",
     "example_en": "He called me a liar.",
-    "cross_references": [
-      "cry",
-      "ca"
-    ]
+    "cross_references": []
   },
   {
     "headword": "cahill",
@@ -7857,7 +7917,9 @@
     "definition": "To argue.",
     "example_scots": "They're aye cammelin.",
     "example_en": "They're always arguing.",
-    "cross_references": []
+    "cross_references": [
+      "threap"
+    ]
   },
   {
     "headword": "camsteary",
@@ -7953,9 +8015,7 @@
     "definition": "Bad-tempered and touchy.",
     "example_scots": "A capernoity auld man.",
     "example_en": "A crabby old man.",
-    "cross_references": [
-      "capernoitie"
-    ]
+    "cross_references": []
   },
   {
     "headword": "carfuffle",
@@ -8018,10 +8078,7 @@
     "example_en": "An old woman with a stick.",
     "cross_references": [
       "auld wife",
-      "cailleach",
-      "wifie",
-      "wumman",
-      "deem"
+      "cailleach"
     ]
   },
   {
@@ -8132,8 +8189,7 @@
       "snell",
       "jeelin",
       "cauldrife",
-      "chitter",
-      "aittrie"
+      "chitter"
     ]
   },
   {
@@ -8192,7 +8248,10 @@
     "definition": "(noun) A car or tram. (adjective) Left, left-handed; awkward.",
     "example_scots": "Tak the caur intae toon.",
     "example_en": "Take the tram into town.",
-    "cross_references": []
+    "cross_references": [
+      "kerr-handit",
+      "corrie-fistit"
+    ]
   },
   {
     "headword": "'cause",
@@ -8218,7 +8277,9 @@
     "ipa": "/ˈtʃaldər/",
     "phonetic": "CHAL-dur",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "Insular"
     ],
@@ -8376,8 +8437,7 @@
     "cross_references": [
       "knidge",
       "thrimmle",
-      "birze",
-      "knuse"
+      "birze"
     ]
   },
   {
@@ -8604,8 +8664,8 @@
       "glaur",
       "guddle",
       "midden",
-      "glaurie",
-      "trachly"
+      "throwither",
+      "kyufset"
     ]
   },
   {
@@ -8623,7 +8683,7 @@
     "example_scots": "Tak a claught o the rope.",
     "example_en": "Take a grip of the rope.",
     "cross_references": [
-      "haud"
+      "grup"
     ]
   },
   {
@@ -8758,7 +8818,8 @@
     "example_scots": "A cliver wee horse.",
     "example_en": "A quick little horse.",
     "cross_references": [
-      "fairdy"
+      "gleg",
+      "swith"
     ]
   },
   {
@@ -8842,8 +8903,8 @@
       "malky",
       "ding",
       "dunch",
-      "dad",
-      "dink"
+      "dink",
+      "dad"
     ]
   },
   {
@@ -8995,7 +9056,9 @@
     "ipa": "/ˈkɔɡnos/",
     "phonetic": "KOG-nohs",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -9203,7 +9266,9 @@
     "ipa": "/ˈkɔrbi ˈmɛsɪndʒər/",
     "phonetic": "KOR-bee MES-sin-jur",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -9255,7 +9320,9 @@
     "ipa": "/ˈkusər/",
     "phonetic": "KOO-sur",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -9321,8 +9388,7 @@
       "bealin",
       "scunnert",
       "carnaptious",
-      "radge",
-      "fasht"
+      "radge"
     ]
   },
   {
@@ -9340,8 +9406,7 @@
     "example_scots": "Up the craig.",
     "example_en": "Up the cliff.",
     "cross_references": [
-      "hause",
-      "swire"
+      "hause"
     ]
   },
   {
@@ -9559,8 +9624,7 @@
     "example_scots": "Whit dae ye cry yer dug?",
     "example_en": "What do you call your dog?",
     "cross_references": [
-      "ca",
-      "caa"
+      "ca"
     ]
   },
   {
@@ -9779,7 +9843,8 @@
       "glaikit",
       "gowk",
       "donnert",
-      "sumph"
+      "sumph",
+      "numpty"
     ]
   },
   {
@@ -9840,8 +9905,7 @@
       "traiket",
       "wabbit",
       "forfochen",
-      "puggled",
-      "forfouchten"
+      "puggled"
     ]
   },
   {
@@ -9868,7 +9932,9 @@
     "ipa": "/dalt/",
     "phonetic": "dalt",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -9986,9 +10052,7 @@
     "definition": "To scare or discourage.",
     "example_scots": "Dinnae let it daunton ye.",
     "example_en": "Don't let it put you off.",
-    "cross_references": [
-      "fleg"
-    ]
+    "cross_references": []
   },
   {
     "headword": "daur",
@@ -10025,8 +10089,7 @@
     "cross_references": [
       "derk",
       "mirk",
-      "swart",
-      "sootie"
+      "swart"
     ]
   },
   {
@@ -10121,7 +10184,8 @@
     "example_scots": "Deed aye!",
     "example_en": "Indeed yes!",
     "cross_references": [
-      "adeed"
+      "adeed",
+      "atweel"
     ]
   },
   {
@@ -10141,8 +10205,7 @@
     "cross_references": [
       "wife",
       "wifie",
-      "wumman",
-      "carline"
+      "wumman"
     ]
   },
   {
@@ -10252,9 +10315,7 @@
     "definition": "The devil.",
     "example_scots": "The deil's in that wean.",
     "example_en": "That child is full of mischief.",
-    "cross_references": [
-      "warlock"
-    ]
+    "cross_references": []
   },
   {
     "headword": "deil's buckie",
@@ -10388,8 +10449,7 @@
       "blooter",
       "malky",
       "clour",
-      "dunch",
-      "whank"
+      "dunch"
     ]
   },
   {
@@ -10409,7 +10469,8 @@
     "cross_references": [
       "snod",
       "dunt",
-      "clour"
+      "clour",
+      "trig"
     ]
   },
   {
@@ -10444,9 +10505,7 @@
     "definition": "Blame; a telling-off; a fuss.",
     "example_scots": "He got the dirdum for it.",
     "example_en": "He got the blame for it.",
-    "cross_references": [
-      "wyte"
-    ]
+    "cross_references": []
   },
   {
     "headword": "dirl",
@@ -10486,7 +10545,9 @@
     "ipa": "/ˈdɪsabɪs/",
     "phonetic": "DIS-ab-is",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -10504,7 +10565,9 @@
     "ipa": "/ˈdɪsadvəis/",
     "phonetic": "DIS-ad-vys",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -10523,7 +10586,9 @@
     "ipa": "/ˈdɪsdʒun/",
     "phonetic": "DIS-joon",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -10821,8 +10886,7 @@
       "guid",
       "unco",
       "verra",
-      "awfy",
-      "byspel"
+      "awfy"
     ]
   },
   {
@@ -10897,7 +10961,9 @@
     "example_scots": "A dour face.",
     "example_en": "A stern face.",
     "cross_references": [
-      "thrawn"
+      "thrawn",
+      "onstaandin",
+      "thraward"
     ]
   },
   {
@@ -10934,11 +11000,7 @@
     "definition": "Dull, spiritless.",
     "example_scots": "A dowfart lad.",
     "example_en": "A dull lad.",
-    "cross_references": [
-      "glaikit",
-      "gowkit",
-      "stupit"
-    ]
+    "cross_references": []
   },
   {
     "headword": "dowie",
@@ -11081,8 +11143,8 @@
       "haar",
       "drookit",
       "spate",
-      "dowf",
-      "dowie"
+      "dowie",
+      "dowf"
     ]
   },
   {
@@ -11170,9 +11232,7 @@
     "definition": "Thirst; a drunkard.",
     "example_scots": "A drooth on him.",
     "example_en": "A thirst on him.",
-    "cross_references": [
-      "drouth"
-    ]
+    "cross_references": []
   },
   {
     "headword": "drouk",
@@ -11289,8 +11349,8 @@
     "example_en": "In grief and sorrow.",
     "cross_references": [
       "dowie",
-      "wae",
-      "dool"
+      "dool",
+      "wae"
     ]
   },
   {
@@ -11316,8 +11376,7 @@
       "blooter",
       "malky",
       "ding",
-      "clour",
-      "stap"
+      "clour"
     ]
   },
   {
@@ -11512,7 +11571,9 @@
     "definition": "Afternoon.",
     "example_scots": "In the efternin.",
     "example_en": "In the afternoon.",
-    "cross_references": []
+    "cross_references": [
+      "efternuin"
+    ]
   },
   {
     "headword": "eild",
@@ -11565,7 +11626,8 @@
     "example_scots": "Eit o them.",
     "example_en": "Eight of them.",
     "cross_references": [
-      "aicht"
+      "aicht",
+      "echt"
     ]
   },
   {
@@ -11603,7 +11665,8 @@
     "example_scots": "He hurt his elbi.",
     "example_en": "He hurt his elbow.",
     "cross_references": [
-      "elbuck"
+      "elbuck",
+      "elby"
     ]
   },
   {
@@ -11649,7 +11712,9 @@
     "ipa": "/im/",
     "phonetic": "eem",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -11803,7 +11868,9 @@
     "ipa": "/ˈɛvɪn/",
     "phonetic": "EV-in",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -11811,9 +11878,7 @@
     "definition": "Matter; means.",
     "example_scots": "Nae evin in it.",
     "example_en": "No substance to it.",
-    "cross_references": [
-      "maitter"
-    ]
+    "cross_references": []
   },
   {
     "headword": "evite",
@@ -11985,7 +12050,9 @@
     "definition": "A family.",
     "example_scots": "The hale faimlie.",
     "example_en": "The whole family.",
-    "cross_references": []
+    "cross_references": [
+      "faimly"
+    ]
   },
   {
     "headword": "fair",
@@ -12014,7 +12081,9 @@
     "ipa": "/ferd/",
     "phonetic": "fayrd",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -12022,7 +12091,9 @@
     "definition": "Force, impetus; a rush.",
     "example_scots": "He came in wi a faird.",
     "example_en": "He rushed in.",
-    "cross_references": []
+    "cross_references": [
+      "breenge"
+    ]
   },
   {
     "headword": "fairdy",
@@ -12030,7 +12101,9 @@
     "ipa": "/ˈferdi/",
     "phonetic": "FAYR-dee",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -12038,9 +12111,7 @@
     "definition": "Swift, quick.",
     "example_scots": "A fairdy wee horse.",
     "example_en": "A swift little horse.",
-    "cross_references": [
-      "cliver"
-    ]
+    "cross_references": []
   },
   {
     "headword": "faither",
@@ -12142,11 +12213,10 @@
     "cross_references": [
       "fashious",
       "scunner",
-      "ail",
-      "kauch",
-      "pilget",
       "cark",
-      "hatter"
+      "kauch",
+      "ail",
+      "pilget"
     ]
   },
   {
@@ -12200,11 +12270,7 @@
     "definition": "Worried, annoyed.",
     "example_scots": "Ah'm no fasht.",
     "example_en": "I'm not bothered.",
-    "cross_references": [
-      "bealin",
-      "crabbit",
-      "radge"
-    ]
+    "cross_references": []
   },
   {
     "headword": "fauch",
@@ -12222,10 +12288,7 @@
     "definition": "(noun) Fallow ground. (verb) To break up fallow ground; to toil. (adjective) Pale reddish-brown.",
     "example_scots": "The fauch by the burn.",
     "example_en": "The fallow field by the stream.",
-    "cross_references": [
-      "pleuch",
-      "pleugh"
-    ]
+    "cross_references": []
   },
   {
     "headword": "fause",
@@ -12302,7 +12365,8 @@
     "cross_references": [
       "frichtit",
       "fleg",
-      "feartie"
+      "feartie",
+      "afeard"
     ]
   },
   {
@@ -12388,11 +12452,7 @@
     "definition": "Brave.",
     "example_scots": "A fechtie wee dug.",
     "example_en": "A plucky little dog.",
-    "cross_references": [
-      "gallus",
-      "bauld",
-      "stoot"
-    ]
+    "cross_references": []
   },
   {
     "headword": "fechtin",
@@ -12430,7 +12490,9 @@
       "ramfeezled",
       "to-worne",
       "traiket",
-      "feuchten"
+      "wabbit",
+      "forfochen",
+      "puggled"
     ]
   },
   {
@@ -12502,7 +12564,9 @@
     "definition": "Far.",
     "example_scots": "It's no fer.",
     "example_en": "It's not far.",
-    "cross_references": []
+    "cross_references": [
+      "faur"
+    ]
   },
   {
     "headword": "ferly",
@@ -12664,8 +12728,7 @@
     "example_scots": "A feuch o his pipe.",
     "example_en": "A puff of his pipe.",
     "cross_references": [
-      "gads",
-      "reek"
+      "gads"
     ]
   },
   {
@@ -12682,10 +12745,7 @@
     "definition": "Beaten, exhausted.",
     "example_scots": "Ah'm feuchten.",
     "example_en": "I'm done in.",
-    "cross_references": [
-      "fechtit",
-      "fochten"
-    ]
+    "cross_references": []
   },
   {
     "headword": "fey",
@@ -12772,9 +12832,7 @@
     "definition": "Made of fir.",
     "example_scots": "A firren table.",
     "example_en": "A fir table.",
-    "cross_references": [
-      "birken"
-    ]
+    "cross_references": []
   },
   {
     "headword": "first-fit",
@@ -12935,11 +12993,7 @@
     "definition": "(noun) A flight; a flock; a flash; a hurry. (verb) To flutter; to interweave. (adverb) Spread-eagled.",
     "example_scots": "A flaucht o geese.",
     "example_en": "A flight of geese.",
-    "cross_references": [
-      "shak",
-      "shoogle",
-      "flaucht-braid"
-    ]
+    "cross_references": []
   },
   {
     "headword": "flaucht-braid",
@@ -12959,9 +13013,7 @@
     "definition": "Spread out flat.",
     "example_scots": "He fell flaucht-braid.",
     "example_en": "He fell spread-eagled.",
-    "cross_references": [
-      "flaucht"
-    ]
+    "cross_references": []
   },
   {
     "headword": "flaucht-spade",
@@ -13058,7 +13110,6 @@
       "feart",
       "frichtit",
       "feartie",
-      "daunton",
       "frichten"
     ]
   },
@@ -13184,7 +13235,9 @@
       "ramfeezled",
       "to-worne",
       "traiket",
-      "feuchten"
+      "wabbit",
+      "forfochen",
+      "puggled"
     ]
   },
   {
@@ -13296,7 +13349,9 @@
     "ipa": "/fɔrˈbisnɪŋ/",
     "phonetic": "for-BEES-ning",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13343,7 +13398,8 @@
     "example_scots": "The kirk stauns foreanent.",
     "example_en": "The church stands opposite.",
     "cross_references": [
-      "anent"
+      "anent",
+      "forenent"
     ]
   },
   {
@@ -13352,7 +13408,9 @@
     "ipa": "/ˈfɔrɛɡɛŋ/",
     "phonetic": "FOR-eg-eng",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "Insular"
     ],
@@ -13372,7 +13430,9 @@
     "ipa": "/ˈfɔrɛnel/",
     "phonetic": "FOR-en-ayl",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13415,9 +13475,7 @@
     "cross_references": [
       "wabbit",
       "forfochen",
-      "puggled",
-      "daiskit",
-      "ramfeezled"
+      "puggled"
     ]
   },
   {
@@ -13444,7 +13502,9 @@
     "ipa": "/fɔrˈhu/",
     "phonetic": "for-HOO",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13452,9 +13512,7 @@
     "definition": "To abandon (of a bird leaving its nest).",
     "example_scots": "The hen forhooed her nest.",
     "example_en": "The hen deserted her nest.",
-    "cross_references": [
-      "forleet"
-    ]
+    "cross_references": []
   },
   {
     "headword": "forjeskit",
@@ -13487,7 +13545,9 @@
     "ipa": "/fɔrˈlit/",
     "phonetic": "for-LEET",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13495,9 +13555,7 @@
     "definition": "To forsake; to forget.",
     "example_scots": "Dinnae forleet yer freends.",
     "example_en": "Don't abandon your friends.",
-    "cross_references": [
-      "forhoo"
-    ]
+    "cross_references": []
   },
   {
     "headword": "forritsome",
@@ -13543,7 +13601,9 @@
     "ipa": "/fɔrˈspik/",
     "phonetic": "for-SPEEK",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13559,7 +13619,9 @@
     "ipa": "/fɔrˈstand/",
     "phonetic": "for-STAND",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13630,8 +13692,7 @@
       "verra",
       "blootered",
       "fleein",
-      "fu",
-      "waulk"
+      "fu"
     ]
   },
   {
@@ -13676,7 +13737,9 @@
     "ipa": "/fren/",
     "phonetic": "frayn",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13694,7 +13757,9 @@
     "ipa": "/ˈfrenɪŋ/",
     "phonetic": "FRAY-ning",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -13841,9 +13906,7 @@
     "definition": "Brittle, crumbly; rotten.",
     "example_scots": "Frush wid.",
     "example_en": "Rotten wood.",
-    "cross_references": [
-      "bruckle"
-    ]
+    "cross_references": []
   },
   {
     "headword": "fummle",
@@ -13884,8 +13947,7 @@
     "example_en": "Outside Scotland.",
     "cross_references": [
       "ootside",
-      "ootby",
-      "ootwi"
+      "ootby"
     ]
   },
   {
@@ -14074,8 +14136,7 @@
       "crouse",
       "impident",
       "coorse",
-      "stoot",
-      "fechtie"
+      "stoot"
     ]
   },
   {
@@ -14119,8 +14180,7 @@
     "example_scots": "Up tae his ganspels.",
     "example_en": "Up to his tricks.",
     "cross_references": [
-      "shavie",
-      "cantrip"
+      "shavie"
     ]
   },
   {
@@ -14177,7 +14237,9 @@
     "definition": "A way, road or street.",
     "example_scots": "Gang yer ain gate.",
     "example_en": "Go your own way.",
-    "cross_references": []
+    "cross_references": [
+      "wey"
+    ]
   },
   {
     "headword": "gaucie",
@@ -14340,8 +14402,7 @@
       "unco",
       "verra",
       "fair",
-      "awfy",
-      "byspel"
+      "awfy"
     ]
   },
   {
@@ -14422,7 +14483,9 @@
     "ipa": "/ˈɡɪltɛus/",
     "phonetic": "GIL-te-oos",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -14606,7 +14669,7 @@
       "dafty",
       "donnert",
       "daft",
-      "nipperty-tipperty"
+      "stupit"
     ]
   },
   {
@@ -14625,11 +14688,7 @@
     "definition": "A spell that changes how things look.",
     "example_scots": "The glamer o the fairies.",
     "example_en": "The fairies' spell.",
-    "cross_references": [
-      "din",
-      "stramash",
-      "steer"
-    ]
+    "cross_references": []
   },
   {
     "headword": "gled",
@@ -14686,9 +14745,9 @@
     "example_en": "She's very sharp.",
     "cross_references": [
       "aber",
-      "wice",
       "swith",
-      "aiker"
+      "cliver",
+      "wice"
     ]
   },
   {
@@ -14813,7 +14872,8 @@
     "example_scots": "He gied me a glunch.",
     "example_en": "He gave me a scowl.",
     "cross_references": [
-      "glower"
+      "glower",
+      "dorty"
     ]
   },
   {
@@ -14838,7 +14898,9 @@
     "ipa": "/ɡom/",
     "phonetic": "gohm",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -14998,9 +15060,7 @@
     "cross_references": [
       "glaikit",
       "gypit",
-      "stupit",
-      "dowfart",
-      "gype"
+      "stupit"
     ]
   },
   {
@@ -15059,7 +15119,9 @@
     "ipa": "/ɡren/",
     "phonetic": "grayn",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -15067,9 +15129,7 @@
     "definition": "A branch.",
     "example_scots": "A grayn o the tree.",
     "example_en": "A branch of the tree.",
-    "cross_references": [
-      "beuch"
-    ]
+    "cross_references": []
   },
   {
     "headword": "gree",
@@ -15154,10 +15214,7 @@
     "definition": "A pig or piglet.",
     "example_scots": "The grice in the sty.",
     "example_en": "The piglet in the sty.",
-    "cross_references": [
-      "soo",
-      "grumphie"
-    ]
+    "cross_references": []
   },
   {
     "headword": "grime",
@@ -15501,7 +15558,9 @@
     "ipa": "/ˈɡɪdabli/",
     "phonetic": "GID-ab-lee",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -15517,7 +15576,9 @@
     "ipa": "/ˈɡɪdem/",
     "phonetic": "GID-daym",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -15610,7 +15671,9 @@
     "ipa": "/ˈɡɪdsəir/",
     "phonetic": "GID-syr",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -15707,8 +15770,10 @@
     "example_scots": "Ye big gype!",
     "example_en": "You big fool!",
     "cross_references": [
-      "glaikit",
-      "gowkit"
+      "gowk",
+      "eejit",
+      "numptie",
+      "bampot"
     ]
   },
   {
@@ -15727,9 +15792,7 @@
     "example_en": "A silly grin.",
     "cross_references": [
       "glaikit",
-      "gowkit",
-      "daft",
-      "nipperty-tipperty"
+      "gowkit"
     ]
   },
   {
@@ -15899,7 +15962,10 @@
     "definition": "Has not.",
     "example_scots": "He haesna a clue.",
     "example_en": "He hasn't a clue.",
-    "cross_references": []
+    "cross_references": [
+      "hasnae",
+      "hisnae"
+    ]
   },
   {
     "headword": "haet",
@@ -15933,11 +15999,7 @@
     "example_en": "You halfwit!",
     "cross_references": [
       "haiverel",
-      "staumrel",
-      "gowk",
-      "eejit",
-      "numptie",
-      "bampot"
+      "staumrel"
     ]
   },
   {
@@ -16100,8 +16162,7 @@
     "example_scots": "Talkin haivers.",
     "example_en": "Talking nonsense.",
     "cross_references": [
-      "blethers",
-      "oorick"
+      "blethers"
     ]
   },
   {
@@ -16287,7 +16348,9 @@
     "ipa": "/ˈhamɛlt/",
     "phonetic": "HAM-elt",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16337,7 +16400,9 @@
     "ipa": "/ˈhamɪt/",
     "phonetic": "HAM-it",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16355,7 +16420,9 @@
     "ipa": "/ˈhaməl/",
     "phonetic": "HAM-ul",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16381,9 +16448,7 @@
     "definition": "(noun) A hassle. (verb) To bother.",
     "example_scots": "Whit a hatter.",
     "example_en": "What a hassle.",
-    "cross_references": [
-      "fash"
-    ]
+    "cross_references": []
   },
   {
     "headword": "haud",
@@ -16405,9 +16470,7 @@
     "definition": "(noun) A hold. (verb) To hold.",
     "example_scots": "Haud this for me.",
     "example_en": "Hold this for me.",
-    "cross_references": [
-      "claught"
-    ]
+    "cross_references": []
   },
   {
     "headword": "hauf",
@@ -16433,7 +16496,9 @@
     "ipa": "/hɑːf a tel ɪs ˈɛnjux fɔr a wəis man/",
     "phonetic": "hawf a tayl is EN-yookh for a wys man",
     "pos": "Idiom",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16530,8 +16595,7 @@
     "example_scots": "A sair hause.",
     "example_en": "A sore throat.",
     "cross_references": [
-      "craig",
-      "swire"
+      "craig"
     ]
   },
   {
@@ -16568,8 +16632,7 @@
     "example_en": "You're talking nonsense!",
     "cross_references": [
       "havers",
-      "blethers",
-      "aits"
+      "blethers"
     ]
   },
   {
@@ -16578,7 +16641,9 @@
     "ipa": "/ˈhavɛrpok/",
     "phonetic": "HAV-er-pohk",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16602,7 +16667,9 @@
     "definition": "Behaviour, manners.",
     "example_scots": "Mind yer havings.",
     "example_en": "Mind your manners.",
-    "cross_references": []
+    "cross_references": [
+      "mainners"
+    ]
   },
   {
     "headword": "Hawick gill",
@@ -16652,7 +16719,8 @@
     "example_en": "A sigh of relief.",
     "cross_references": [
       "pech",
-      "ach"
+      "ach",
+      "sich"
     ]
   },
   {
@@ -16828,7 +16896,9 @@
     "ipa": "/ˈhɛmpi/",
     "phonetic": "HEM-pee",
     "pos": "Noun / Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16860,7 +16930,9 @@
     "ipa": "/ˈhɛrinɛnt/",
     "phonetic": "HER-ee-nent",
     "pos": "Preposition",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -16886,7 +16958,9 @@
     "definition": "Herself.",
     "example_scots": "She did it hersell.",
     "example_en": "She did it herself.",
-    "cross_references": []
+    "cross_references": [
+      "hersel"
+    ]
   },
   {
     "headword": "hert",
@@ -17008,7 +17082,9 @@
     "ipa": "/həim/",
     "phonetic": "hym",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -17110,10 +17186,7 @@
     "definition": "A corner; a hiding place.",
     "example_scots": "In a hirn o the hoose.",
     "example_en": "In a corner of the house.",
-    "cross_references": [
-      "neuk",
-      "coarner"
-    ]
+    "cross_references": []
   },
   {
     "headword": "hirple",
@@ -17247,7 +17320,9 @@
     "example_scots": "A hoodock auld miser.",
     "example_en": "A stingy old miser.",
     "cross_references": [
-      "near the bane"
+      "near the bane",
+      "grippy",
+      "mingy"
     ]
   },
   {
@@ -17334,7 +17409,9 @@
     "definition": "However.",
     "example_scots": "Houaniver, we went.",
     "example_en": "However, we went.",
-    "cross_references": []
+    "cross_references": [
+      "howsomever"
+    ]
   },
   {
     "headword": "houghmagandie",
@@ -17435,7 +17512,9 @@
     "ipa": "/ˈhʌutʌudi/",
     "phonetic": "HOW-tow-dee",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -17497,7 +17576,9 @@
     "definition": "(noun) The hip or haunch. (verb) To huddle or crouch.",
     "example_scots": "He sat on his hurkles.",
     "example_en": "He sat on his haunches.",
-    "cross_references": []
+    "cross_references": [
+      "hench"
+    ]
   },
   {
     "headword": "hurkle-bane",
@@ -17585,7 +17666,9 @@
     "ipa": "/ɪk/",
     "phonetic": "ik",
     "pos": "Pronoun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -17593,7 +17676,10 @@
     "definition": "I (emphatic).",
     "example_scots": "Ik will dae it.",
     "example_en": "I will do it.",
-    "cross_references": []
+    "cross_references": [
+      "ah",
+      "a"
+    ]
   },
   {
     "headword": "ilk",
@@ -17789,7 +17875,9 @@
     "ipa": "/ˈɪŋəiv/",
     "phonetic": "ING-yv",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -17849,7 +17937,10 @@
     "definition": "Within, inside.",
     "example_scots": "Come inower.",
     "example_en": "Come inside.",
-    "cross_references": []
+    "cross_references": [
+      "ben",
+      "inby"
+    ]
   },
   {
     "headword": "intil",
@@ -17875,7 +17966,9 @@
     "ipa": "/ɪʃ/",
     "phonetic": "ish",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -18013,9 +18106,7 @@
     "definition": "A piece of excrement; any thing (rude).",
     "example_scots": "Mind the dug's jobbie.",
     "example_en": "Watch the dog poo.",
-    "cross_references": [
-      "tollie"
-    ]
+    "cross_references": []
   },
   {
     "headword": "jotter",
@@ -18148,9 +18239,7 @@
     "definition": "To join.",
     "example_scots": "Jyne us.",
     "example_en": "Join us.",
-    "cross_references": [
-      "souder"
-    ]
+    "cross_references": []
   },
   {
     "headword": "jyntlie",
@@ -18204,9 +18293,7 @@
     "example_en": "In a state.",
     "cross_references": [
       "cark",
-      "fash",
-      "ail",
-      "pilget"
+      "fash"
     ]
   },
   {
@@ -18371,7 +18458,9 @@
     "definition": "A brand or distinguishing mark.",
     "example_scots": "The kenmark on the yowe.",
     "example_en": "The mark on the ewe.",
-    "cross_references": []
+    "cross_references": [
+      "merk"
+    ]
   },
   {
     "headword": "kenspeckle",
@@ -18496,7 +18585,9 @@
     "ipa": "/ˈkɪnɛn/",
     "phonetic": "KIN-nen",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -18513,6 +18604,7 @@
     "phonetic": "KIN-rik",
     "pos": "Noun",
     "register": [
+      "Archaic",
       "Traditional/Literary"
     ],
     "region": [
@@ -18540,9 +18632,7 @@
     "definition": "A country.",
     "example_scots": "Oor ain kintra.",
     "example_en": "Our own country.",
-    "cross_references": [
-      "thede"
-    ]
+    "cross_references": []
   },
   {
     "headword": "kirk",
@@ -18620,7 +18710,9 @@
     "ipa": "/ˈkɪrkləik/",
     "phonetic": "KIR-klyk",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -18636,7 +18728,9 @@
     "ipa": "/ˈkɪrkward/",
     "phonetic": "KIR-kward",
     "pos": "Adjective / Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -18678,7 +18772,9 @@
     "definition": "Proper, decent; fit to eat or wear.",
     "example_scots": "Kirsen meat.",
     "example_en": "Decent food.",
-    "cross_references": []
+    "cross_references": [
+      "dacent"
+    ]
   },
   {
     "headword": "kist o' whistles",
@@ -18702,7 +18798,9 @@
     "ipa": "/kəiθ/",
     "phonetic": "kyth",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -18840,7 +18938,8 @@
     "example_en": "A squeeze of the hand.",
     "cross_references": [
       "chirt",
-      "thrimmle"
+      "thrimmle",
+      "birze"
     ]
   },
   {
@@ -18882,10 +18981,7 @@
     "definition": "To press down; to bruise; to cuddle.",
     "example_scots": "Knuse the dough.",
     "example_en": "Knead the dough.",
-    "cross_references": [
-      "birze",
-      "chirt"
-    ]
+    "cross_references": []
   },
   {
     "headword": "kwilk",
@@ -18971,8 +19067,7 @@
     "cross_references": [
       "groof",
       "wame",
-      "gebbie",
-      "kytie"
+      "gebbie"
     ]
   },
   {
@@ -18999,7 +19094,9 @@
     "ipa": "/kiθ/",
     "phonetic": "keeth",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -19025,10 +19122,7 @@
     "definition": "The belly.",
     "example_scots": "A sair kytie.",
     "example_en": "A sore tummy.",
-    "cross_references": [
-      "wame",
-      "kyte"
-    ]
+    "cross_references": []
   },
   {
     "headword": "kyucker",
@@ -19079,10 +19173,7 @@
     "definition": "A policeman.",
     "example_scots": "The labdicks are here.",
     "example_en": "The police are here.",
-    "cross_references": [
-      "polis",
-      "polisman"
-    ]
+    "cross_references": []
   },
   {
     "headword": "lacklicht",
@@ -19091,6 +19182,7 @@
     "phonetic": "LAK-likht",
     "pos": "Noun",
     "register": [
+      "Archaic",
       "Traditional/Literary"
     ],
     "region": [
@@ -19202,7 +19294,9 @@
     "definition": "Last.",
     "example_scots": "The laist bus.",
     "example_en": "The last bus.",
-    "cross_references": []
+    "cross_references": [
+      "hinmaist"
+    ]
   },
   {
     "headword": "lammer",
@@ -19463,7 +19557,9 @@
     "ipa": "/ˈlɛkɛrsten/",
     "phonetic": "LEK-er-stayn",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -19539,7 +19635,9 @@
     "definition": "Active, nimble.",
     "example_scots": "A leish young fella.",
     "example_en": "A nimble young man.",
-    "cross_references": []
+    "cross_references": [
+      "souple"
+    ]
   },
   {
     "headword": "lettergae",
@@ -19617,7 +19715,9 @@
     "ipa": "/lif/",
     "phonetic": "leef",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -19633,7 +19733,9 @@
     "ipa": "/ˈlisom/",
     "phonetic": "LEE-sohm",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -19723,7 +19825,9 @@
     "ipa": "/lɪθ/",
     "phonetic": "lith",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -19731,9 +19835,7 @@
     "definition": "(noun) A joint; a segment (of an orange). (verb) To dislocate; to wring a neck.",
     "example_scots": "A lith o an orange.",
     "example_en": "A segment of an orange.",
-    "cross_references": [
-      "spaul"
-    ]
+    "cross_references": []
   },
   {
     "headword": "littlin",
@@ -19813,9 +19915,7 @@
     "definition": "(noun) A sound; tone; mood. (adjective) Loud.",
     "example_scots": "In a guid lood.",
     "example_en": "In a good mood.",
-    "cross_references": [
-      "luid"
-    ]
+    "cross_references": []
   },
   {
     "headword": "loon",
@@ -19985,10 +20085,7 @@
     "definition": "(noun) A sound; a whimper; a whim. (verb) To whimper; to chatter.",
     "example_scots": "No a luid.",
     "example_en": "Not a sound.",
-    "cross_references": [
-      "lood",
-      "nyurl"
-    ]
+    "cross_references": []
   },
   {
     "headword": "luif",
@@ -20021,7 +20118,9 @@
     "example_scots": "A luiffu o meal.",
     "example_en": "A handful of meal.",
     "cross_references": [
-      "nievefu"
+      "nievefu",
+      "haunfu",
+      "gowpen"
     ]
   },
   {
@@ -20178,9 +20277,7 @@
     "definition": "A halfpenny; money; a mate or spouse.",
     "example_scots": "No a maik left.",
     "example_en": "Not a penny left.",
-    "cross_references": [
-      "bawbee"
-    ]
+    "cross_references": []
   },
   {
     "headword": "maiks",
@@ -20294,8 +20391,7 @@
     "example_scots": "Maist folk ken that.",
     "example_en": "Most people know that.",
     "cross_references": [
-      "near-haun",
-      "maistly"
+      "near-haun"
     ]
   },
   {
@@ -20719,8 +20815,7 @@
     "cross_references": [
       "bra",
       "grit",
-      "muckle",
-      "sture"
+      "muckle"
     ]
   },
   {
@@ -20840,11 +20935,7 @@
     "definition": "Mum, mummy.",
     "example_scots": "Where's yer minnie?",
     "example_en": "Where's your mum?",
-    "cross_references": [
-      "mither",
-      "maw",
-      "mammy"
-    ]
+    "cross_references": []
   },
   {
     "headword": "mirk",
@@ -20865,8 +20956,7 @@
     "cross_references": [
       "daurk",
       "derk",
-      "swart",
-      "sootie"
+      "swart"
     ]
   },
   {
@@ -20945,8 +21035,7 @@
     "cross_references": [
       "moder",
       "maw",
-      "mammy",
-      "minnie"
+      "mammy"
     ]
   },
   {
@@ -21013,7 +21102,9 @@
     "definition": "(noun) A matter. (verb) To matter.",
     "example_scots": "Nae mitter.",
     "example_en": "No matter.",
-    "cross_references": []
+    "cross_references": [
+      "maitter"
+    ]
   },
   {
     "headword": "moder",
@@ -21032,7 +21123,9 @@
     "example_scots": "His auld moder.",
     "example_en": "His old mother.",
     "cross_references": [
-      "mither"
+      "mither",
+      "maw",
+      "mammy"
     ]
   },
   {
@@ -21066,7 +21159,8 @@
     "example_scots": "Whit, mon?",
     "example_en": "What, man?",
     "cross_references": [
-      "gome"
+      "gome",
+      "mannie"
     ]
   },
   {
@@ -21231,10 +21325,9 @@
       "aggle",
       "clarty",
       "muckit",
-      "sharn",
       "mawkit",
       "manky",
-      "trachly"
+      "sharn"
     ]
   },
   {
@@ -21256,8 +21349,7 @@
       "clarty",
       "muck",
       "mawkit",
-      "manky",
-      "trachly"
+      "manky"
     ]
   },
   {
@@ -21387,7 +21479,9 @@
     "ipa": "/ˈmʌrmɛl/",
     "phonetic": "MUR-mel",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -21588,7 +21682,9 @@
     "ipa": "/nem ˈfeθər/",
     "phonetic": "naym FAY-thur",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -21651,7 +21747,9 @@
     "definition": "Nearby.",
     "example_scots": "A naurby shop.",
     "example_en": "A nearby shop.",
-    "cross_references": []
+    "cross_references": [
+      "near-haun"
+    ]
   },
   {
     "headword": "near the bane",
@@ -21671,7 +21769,9 @@
     "example_scots": "He's gey near the bane.",
     "example_en": "He's very stingy.",
     "cross_references": [
-      "hoodock"
+      "hoodock",
+      "grippy",
+      "mingy"
     ]
   },
   {
@@ -21751,7 +21851,9 @@
     "ipa": "/ˈnɛθmɔst/",
     "phonetic": "NETH-most",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -21872,11 +21974,7 @@
     "definition": "Silly, fussy, frivolous.",
     "example_scots": "Nipperty-tipperty wey o walkin.",
     "example_en": "A fussy way of walking.",
-    "cross_references": [
-      "glaikit",
-      "daft",
-      "gypit"
-    ]
+    "cross_references": []
   },
   {
     "headword": "niver",
@@ -22030,7 +22128,12 @@
     "definition": "A fool.",
     "example_scots": "Ya numpty!",
     "example_en": "You idiot!",
-    "cross_references": []
+    "cross_references": [
+      "eejit",
+      "bampot",
+      "dafty",
+      "sumph"
+    ]
   },
   {
     "headword": "nyaff",
@@ -22066,7 +22169,7 @@
     "example_en": "Stop whining.",
     "cross_references": [
       "yirm",
-      "luid"
+      "yammer"
     ]
   },
   {
@@ -22273,7 +22376,9 @@
     "example_scots": "An onstaandin coo.",
     "example_en": "A stubborn cow.",
     "cross_references": [
-      "thraward"
+      "thraward",
+      "thrawn",
+      "dour"
     ]
   },
   {
@@ -22290,7 +22395,9 @@
     "definition": "Onto.",
     "example_scots": "Lowp onti the waw.",
     "example_en": "Jump onto the wall.",
-    "cross_references": []
+    "cross_references": [
+      "ontae"
+    ]
   },
   {
     "headword": "onybody",
@@ -22444,11 +22551,7 @@
     "definition": "Nonsense, rubbish.",
     "example_scots": "Spikkin oorick.",
     "example_en": "Talking nonsense.",
-    "cross_references": [
-      "havers",
-      "blethers",
-      "haivers"
-    ]
+    "cross_references": []
   },
   {
     "headword": "oot",
@@ -22508,11 +22611,7 @@
     "definition": "Outside of, beyond.",
     "example_scots": "Ootwi the toon.",
     "example_en": "Outside the town.",
-    "cross_references": [
-      "ootside",
-      "ootby",
-      "furth"
-    ]
+    "cross_references": []
   },
   {
     "headword": "otherways",
@@ -22570,7 +22669,9 @@
     "ipa": "/ˈutɡaŋ/",
     "phonetic": "OOT-gang",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -22701,7 +22802,9 @@
     "ipa": "/ˈʌurɛɡen/",
     "phonetic": "OW-reg-ayn",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -22877,7 +22980,9 @@
     "ipa": "/ˈpapɪŋɔ/",
     "phonetic": "PAP-ing-o",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -22937,9 +23042,7 @@
     "definition": "Proud, haughty.",
     "example_scots": "A paughty wife.",
     "example_en": "A haughty woman.",
-    "cross_references": [
-      "prood"
-    ]
+    "cross_references": []
   },
   {
     "headword": "pech",
@@ -23201,8 +23304,7 @@
     "example_en": "In bad trouble.",
     "cross_references": [
       "ail",
-      "fash",
-      "kauch"
+      "fash"
     ]
   },
   {
@@ -23273,11 +23375,7 @@
     "definition": "Drunk.",
     "example_scots": "Pished oot his heid.",
     "example_en": "Very drunk.",
-    "cross_references": [
-      "fou",
-      "blootered",
-      "fleein"
-    ]
+    "cross_references": []
   },
   {
     "headword": "pit",
@@ -23388,8 +23486,7 @@
     "example_scots": "Behind the pleuch.",
     "example_en": "Behind the plough.",
     "cross_references": [
-      "pleugh",
-      "fauch"
+      "pleugh"
     ]
   },
   {
@@ -23479,9 +23576,7 @@
     "example_scots": "Somebody phone the polis!",
     "example_en": "Somebody phone the police!",
     "cross_references": [
-      "polisman",
-      "labdick",
-      "busies"
+      "polisman"
     ]
   },
   {
@@ -23490,7 +23585,9 @@
     "ipa": "/ˈpurtɪθ/",
     "phonetic": "POOR-tith",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -23516,7 +23613,9 @@
     "definition": "Power.",
     "example_scots": "Nae pouer.",
     "example_en": "No power.",
-    "cross_references": []
+    "cross_references": [
+      "pooer"
+    ]
   },
   {
     "headword": "pouther",
@@ -23653,7 +23752,9 @@
     "definition": "To prove; to taste.",
     "example_scots": "Preif it.",
     "example_en": "Prove it.",
-    "cross_references": []
+    "cross_references": [
+      "pruve"
+    ]
   },
   {
     "headword": "prejink",
@@ -23713,7 +23814,9 @@
     "ipa": "/ˈprisiz/",
     "phonetic": "PREE-seez",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -23997,7 +24100,9 @@
     "definition": "Whether (old spelling).",
     "example_scots": "Quhether or no.",
     "example_en": "Whether or not.",
-    "cross_references": []
+    "cross_references": [
+      "whither"
+    ]
   },
   {
     "headword": "quhile",
@@ -24033,7 +24138,10 @@
     "definition": "Whose (old spelling).",
     "example_scots": "Quhose is it?",
     "example_en": "Whose is it?",
-    "cross_references": []
+    "cross_references": [
+      "wha's",
+      "whase"
+    ]
   },
   {
     "headword": "radgie",
@@ -24108,8 +24216,7 @@
       "traiket",
       "wabbit",
       "forfochen",
-      "puggled",
-      "forfouchten"
+      "puggled"
     ]
   },
   {
@@ -24146,9 +24253,7 @@
     "definition": "Rough, sturdy; bold.",
     "example_scots": "A raucle tongue.",
     "example_en": "A rough tongue.",
-    "cross_references": [
-      "rouch"
-    ]
+    "cross_references": []
   },
   {
     "headword": "real MacKay",
@@ -24200,7 +24305,9 @@
     "definition": "To tidy, clear; to sort out; to comb.",
     "example_scots": "Redd up the room.",
     "example_en": "Tidy up the room.",
-    "cross_references": []
+    "cross_references": [
+      "snod"
+    ]
   },
   {
     "headword": "reek",
@@ -24221,9 +24328,7 @@
     "definition": "(noun) Smoke; steam; mist. (verb) To smoke; to stink.",
     "example_scots": "Reek fae the lum.",
     "example_en": "Smoke from the chimney.",
-    "cross_references": [
-      "feuch"
-    ]
+    "cross_references": []
   },
   {
     "headword": "reekie",
@@ -24269,7 +24374,9 @@
     "ipa": "/rif/",
     "phonetic": "reef",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -24403,7 +24510,9 @@
     "definition": "(noun) A kingdom; the powerful. (adjective) Rich; mighty.",
     "example_scots": "The rik o heaven.",
     "example_en": "The kingdom of heaven.",
-    "cross_references": []
+    "cross_references": [
+      "bien"
+    ]
   },
   {
     "headword": "rin",
@@ -24423,9 +24532,7 @@
     "definition": "To run.",
     "example_scots": "Rin for the bus!",
     "example_en": "Run for the bus!",
-    "cross_references": [
-      "scoup"
-    ]
+    "cross_references": []
   },
   {
     "headword": "rinabout",
@@ -24457,7 +24564,9 @@
     "definition": "Rather.",
     "example_scots": "Ah'd rither no.",
     "example_en": "I'd rather not.",
-    "cross_references": []
+    "cross_references": [
+      "raither"
+    ]
   },
   {
     "headword": "rizzer",
@@ -24523,9 +24632,7 @@
     "definition": "A rowan tree; a sheep track.",
     "example_scots": "Roddins on the tree.",
     "example_en": "Rowan berries on the tree.",
-    "cross_references": [
-      "rodden"
-    ]
+    "cross_references": []
   },
   {
     "headword": "rone",
@@ -24542,7 +24649,9 @@
     "example_scots": "The rone's burst.",
     "example_en": "The gutter's burst.",
     "cross_references": [
-      "strawn"
+      "strawn",
+      "syver",
+      "sivver"
     ]
   },
   {
@@ -24796,7 +24905,9 @@
     "ipa": "/sen/",
     "phonetic": "sayn",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -24812,7 +24923,9 @@
     "ipa": "/ˈsenɪŋ/",
     "phonetic": "SAY-ning",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -24946,7 +25059,9 @@
     "ipa": "/ˈsamɪn/",
     "phonetic": "SAM-in",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -25025,7 +25140,9 @@
     "ipa": "/ˈsasəin/",
     "phonetic": "SAS-yn",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -25084,7 +25201,9 @@
     "ipa": "/sɑːxt/",
     "phonetic": "sawkht",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -25131,7 +25250,8 @@
     "example_scots": "Saurless soup.",
     "example_en": "Tasteless soup.",
     "cross_references": [
-      "wairsh"
+      "wairsh",
+      "wersh"
     ]
   },
   {
@@ -25239,7 +25359,9 @@
     "definition": "(noun) A scone; a slap. (verb) To slap flat.",
     "example_scots": "Tea an a scone.",
     "example_en": "Tea and a scone.",
-    "cross_references": []
+    "cross_references": [
+      "skelp"
+    ]
   },
   {
     "headword": "scoogie",
@@ -25274,9 +25396,7 @@
     "definition": "To run off quickly.",
     "example_scots": "Scoupin aboot.",
     "example_en": "Scampering about.",
-    "cross_references": [
-      "rin"
-    ]
+    "cross_references": []
   },
   {
     "headword": "scouth",
@@ -25358,9 +25478,7 @@
     "definition": "To screech.",
     "example_scots": "Stop scraughin!",
     "example_en": "Stop screeching!",
-    "cross_references": [
-      "skreigh"
-    ]
+    "cross_references": []
   },
   {
     "headword": "scrieve",
@@ -25432,9 +25550,7 @@
     "definition": "Blessed, lucky; of the good fairies.",
     "example_scots": "The seelie court.",
     "example_en": "The good fairies.",
-    "cross_references": [
-      "seil"
-    ]
+    "cross_references": []
   },
   {
     "headword": "seestem",
@@ -25478,7 +25594,9 @@
     "ipa": "/sil/",
     "phonetic": "seel",
     "pos": "Noun / Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -25486,9 +25604,7 @@
     "definition": "(noun) Happiness, good fortune. (adjective) Happy, blessed.",
     "example_scots": "Seil an luck.",
     "example_en": "Happiness and luck.",
-    "cross_references": [
-      "seelie"
-    ]
+    "cross_references": []
   },
   {
     "headword": "seiven",
@@ -25527,9 +25643,7 @@
     "definition": "Self.",
     "example_scots": "Masel.",
     "example_en": "Myself.",
-    "cross_references": [
-      "ainsell"
-    ]
+    "cross_references": []
   },
   {
     "headword": "selch",
@@ -25800,8 +25914,7 @@
     "example_scots": "A shooglie table.",
     "example_en": "A wobbly table.",
     "cross_references": [
-      "wankle",
-      "shoogly"
+      "wankle"
     ]
   },
   {
@@ -25818,7 +25931,9 @@
     "definition": "Should not.",
     "example_scots": "Ye shoudna dae that.",
     "example_en": "You shouldn't do that.",
-    "cross_references": []
+    "cross_references": [
+      "shouldnae"
+    ]
   },
   {
     "headword": "shrei",
@@ -25961,7 +26076,9 @@
     "ipa": "/ˈsɪnsin/",
     "phonetic": "SIN-seen",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -26035,7 +26152,8 @@
       "ding",
       "clour",
       "dunch",
-      "whank"
+      "touk",
+      "scone"
     ]
   },
   {
@@ -26124,7 +26242,9 @@
     "definition": "A big snowflake.",
     "example_scots": "Skovins fawin.",
     "example_en": "Big snowflakes falling.",
-    "cross_references": []
+    "cross_references": [
+      "flichan"
+    ]
   },
   {
     "headword": "skreigh",
@@ -26143,7 +26263,7 @@
     "cross_references": [
       "skirl",
       "spraich",
-      "scraugh"
+      "skelloch"
     ]
   },
   {
@@ -26248,7 +26368,8 @@
     "example_en": "A small thing.",
     "cross_references": [
       "peerie",
-      "wee"
+      "wee",
+      "sma"
     ]
   },
   {
@@ -26349,7 +26470,10 @@
     "definition": "Flying dust or dirt.",
     "example_scots": "Smush everywhere.",
     "example_en": "Dust everywhere.",
-    "cross_references": []
+    "cross_references": [
+      "stour",
+      "stoor"
+    ]
   },
   {
     "headword": "snaip",
@@ -26425,7 +26549,9 @@
     "ipa": "/ˈsniʃɪŋ/",
     "phonetic": "SNEE-shing",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -26453,10 +26579,11 @@
     "example_en": "You're looking very smart.",
     "cross_references": [
       "dink",
+      "trig",
+      "redd",
       "cosie",
       "bien",
-      "cozie",
-      "trig"
+      "cozie"
     ]
   },
   {
@@ -26596,9 +26723,7 @@
     "example_scots": "A sootie lum.",
     "example_en": "A sooty chimney.",
     "cross_references": [
-      "bruiky",
-      "daurk",
-      "mirk"
+      "bruiky"
     ]
   },
   {
@@ -26631,9 +26756,7 @@
     "definition": "To solder; to join.",
     "example_scots": "Souder the pipe.",
     "example_en": "Solder the pipe.",
-    "cross_references": [
-      "jyne"
-    ]
+    "cross_references": []
   },
   {
     "headword": "souk in",
@@ -26704,7 +26827,9 @@
     "definition": "A soul.",
     "example_scots": "Puir sowel.",
     "example_en": "Poor soul.",
-    "cross_references": []
+    "cross_references": [
+      "sowl"
+    ]
   },
   {
     "headword": "sowp",
@@ -26766,7 +26891,9 @@
     "ipa": "/ˈspeman/",
     "phonetic": "SPAY-man",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -26830,9 +26957,7 @@
     "definition": "A shoulder; a limb.",
     "example_scots": "A spaul o lamb.",
     "example_en": "A shoulder of lamb.",
-    "cross_references": [
-      "lith"
-    ]
+    "cross_references": []
   },
   {
     "headword": "spaul-bane",
@@ -26856,7 +26981,9 @@
     "ipa": "/spe/",
     "phonetic": "spay",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -27033,7 +27160,9 @@
     "definition": "(noun) Chat, patter. (verb) To chatter on.",
     "example_scots": "Guid spraff.",
     "example_en": "Good patter.",
-    "cross_references": []
+    "cross_references": [
+      "yatter"
+    ]
   },
   {
     "headword": "spraich",
@@ -27061,7 +27190,9 @@
     "ipa": "/ˈsprɪŋhid/",
     "phonetic": "SPRING-heed",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -27183,9 +27314,7 @@
     "definition": "To cram or stuff.",
     "example_scots": "Stap it in the bag.",
     "example_en": "Stuff it in the bag.",
-    "cross_references": [
-      "dunch"
-    ]
+    "cross_references": []
   },
   {
     "headword": "starn",
@@ -27245,11 +27374,10 @@
     "example_scots": "Whit a steer!",
     "example_en": "What a fuss!",
     "cross_references": [
-      "stushie",
-      "adae",
       "din",
       "stramash",
-      "glamer"
+      "stushie",
+      "adae"
     ]
   },
   {
@@ -27258,7 +27386,9 @@
     "ipa": "/ˈstivɛli/",
     "phonetic": "STEE-vel-ee",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -27489,9 +27619,7 @@
     "definition": "To cut off, crop.",
     "example_scots": "Stow the hedge.",
     "example_en": "Crop the hedge.",
-    "cross_references": [
-      "sned"
-    ]
+    "cross_references": []
   },
   {
     "headword": "stowlins",
@@ -27570,8 +27698,7 @@
       "collieshangie",
       "flyte",
       "din",
-      "steer",
-      "glamer"
+      "steer"
     ]
   },
   {
@@ -27712,7 +27839,9 @@
     "ipa": "/stur/",
     "phonetic": "stoor",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -27720,10 +27849,7 @@
     "definition": "Big, sturdy; stern.",
     "example_scots": "A sture chiel.",
     "example_en": "A sturdy fellow.",
-    "cross_references": [
-      "muckle",
-      "mickle"
-    ]
+    "cross_references": []
   },
   {
     "headword": "sundoun",
@@ -27859,7 +27985,9 @@
     "ipa": "/swats/",
     "phonetic": "swats",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -27939,10 +28067,7 @@
     "definition": "The neck; a hollow between hills.",
     "example_scots": "Ower the swire.",
     "example_en": "Over the pass.",
-    "cross_references": [
-      "craig",
-      "hause"
-    ]
+    "cross_references": []
   },
   {
     "headword": "swither",
@@ -27996,7 +28121,10 @@
     "definition": "To talk.",
     "example_scots": "Taak tae me.",
     "example_en": "Talk to me.",
-    "cross_references": []
+    "cross_references": [
+      "blether",
+      "crack"
+    ]
   },
   {
     "headword": "tack",
@@ -28159,9 +28287,7 @@
     "definition": "Confused, muddled.",
     "example_scots": "Fair taivert.",
     "example_en": "Totally confused.",
-    "cross_references": [
-      "bumbazed"
-    ]
+    "cross_references": []
   },
   {
     "headword": "tak",
@@ -28301,7 +28427,10 @@
     "definition": "Upside down, in a muddle.",
     "example_scots": "The hale place wis tapsalteerie.",
     "example_en": "The whole place was upside down.",
-    "cross_references": []
+    "cross_references": [
+      "ahomel",
+      "awhummle"
+    ]
   },
   {
     "headword": "tarrow",
@@ -28502,7 +28631,9 @@
     "ipa": "/ˈθarinɛnt/",
     "phonetic": "THAR-ee-nent",
     "pos": "Adverb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -28528,9 +28659,7 @@
     "definition": "A nation; a people.",
     "example_scots": "The Scots thede.",
     "example_en": "The Scots nation.",
-    "cross_references": [
-      "kintra"
-    ]
+    "cross_references": []
   },
   {
     "headword": "thegither",
@@ -28566,7 +28695,10 @@
     "definition": "Themselves.",
     "example_scots": "They did it thersel.",
     "example_en": "They did it themselves.",
-    "cross_references": []
+    "cross_references": [
+      "thirsels",
+      "thaimsels"
+    ]
   },
   {
     "headword": "thir",
@@ -28594,7 +28726,9 @@
     "ipa": "/ˈθɪrldɔm/",
     "phonetic": "THIR-ldom",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -28680,7 +28814,9 @@
     "ipa": "/ˈθɔrsde/",
     "phonetic": "THOR-sday",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -28749,7 +28885,9 @@
     "definition": "The sill of a doorway.",
     "example_scots": "Staunin on the thrashel.",
     "example_en": "Standing on the doorstep.",
-    "cross_references": []
+    "cross_references": [
+      "doorstane"
+    ]
   },
   {
     "headword": "thratch",
@@ -28800,7 +28938,9 @@
     "example_scots": "A thraward bairn.",
     "example_en": "A stubborn child.",
     "cross_references": [
-      "onstaandin"
+      "onstaandin",
+      "thrawn",
+      "dour"
     ]
   },
   {
@@ -28821,6 +28961,8 @@
     "example_en": "He's so stubborn.",
     "cross_references": [
       "dour",
+      "onstaandin",
+      "thraward",
       "fouterie"
     ]
   },
@@ -28895,7 +29037,8 @@
     "cross_references": [
       "fummle",
       "chirt",
-      "knidge"
+      "knidge",
+      "birze"
     ]
   },
   {
@@ -29070,7 +29213,9 @@
     "ipa": "/tɔ kliv/",
     "phonetic": "to kleev",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29086,7 +29231,9 @@
     "ipa": "/tɔ ˈwɔrnɛ/",
     "phonetic": "to WOR-ne",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29113,7 +29260,9 @@
     "ipa": "/tɔ wrjɛ/",
     "phonetic": "to wrye",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29131,7 +29280,9 @@
     "ipa": "/ˈtɔxeŋ/",
     "phonetic": "TOKH-ayng",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29174,7 +29325,9 @@
     "ipa": "/ˈtɔkom/",
     "phonetic": "TOK-ohm",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29192,7 +29345,9 @@
     "ipa": "/ˈtɔkɔmɪŋ/",
     "phonetic": "TOK-om-ing",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29220,9 +29375,7 @@
     "definition": "A lump of excrement (rude).",
     "example_scots": "A tollie on the pavement.",
     "example_en": "A dog poo on the pavement.",
-    "cross_references": [
-      "jobbie"
-    ]
+    "cross_references": []
   },
   {
     "headword": "too-meill",
@@ -29230,7 +29383,9 @@
     "ipa": "/tu mil/",
     "phonetic": "too meel",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29270,7 +29425,9 @@
     "definition": "Twenty.",
     "example_scots": "Toonty pund.",
     "example_en": "Twenty pounds.",
-    "cross_references": []
+    "cross_references": [
+      "twinty"
+    ]
   },
   {
     "headword": "toor",
@@ -29339,7 +29496,7 @@
     "example_en": "The beat of the drum.",
     "cross_references": [
       "ding",
-      "whauk"
+      "skelp"
     ]
   },
   {
@@ -29406,13 +29563,7 @@
     "definition": "Slovenly; tiring.",
     "example_scots": "A trachly road.",
     "example_en": "A tiring road.",
-    "cross_references": [
-      "clarty",
-      "mawkit",
-      "manky",
-      "muck",
-      "muckit"
-    ]
+    "cross_references": []
   },
   {
     "headword": "traik",
@@ -29561,7 +29712,9 @@
     "definition": "Truth.",
     "example_scots": "Tell the trith.",
     "example_en": "Tell the truth.",
-    "cross_references": []
+    "cross_references": [
+      "trowth"
+    ]
   },
   {
     "headword": "troaking",
@@ -29569,7 +29722,9 @@
     "ipa": "/ˈtrokɪŋ/",
     "phonetic": "TROH-king",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29654,7 +29809,9 @@
     "ipa": "/ˈtɪlji/",
     "phonetic": "TIL-yee",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29663,7 +29820,9 @@
     "example_scots": "A tuilyie in the street.",
     "example_en": "A scuffle in the street.",
     "cross_references": [
-      "collie-shangie"
+      "collie-shangie",
+      "rammy",
+      "flyte"
     ]
   },
   {
@@ -29859,7 +30018,9 @@
     "ipa": "/ˈʌmbɛθɪnk/",
     "phonetic": "UM-beth-ink",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29909,7 +30070,8 @@
     "example_scots": "He did it umsel.",
     "example_en": "He did it himself.",
     "cross_references": [
-      "himsel"
+      "himsel",
+      "hissel"
     ]
   },
   {
@@ -29951,9 +30113,7 @@
       "gey",
       "guid",
       "verra",
-      "antrin",
-      "awfy",
-      "byspel"
+      "awfy"
     ]
   },
   {
@@ -29980,7 +30140,9 @@
     "ipa": "/ʌnkt/",
     "phonetic": "unkt",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -29996,7 +30158,9 @@
     "ipa": "/ʌnˈfɔrhɔldɛn/",
     "phonetic": "un-FOR-hol-den",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30116,7 +30280,9 @@
     "ipa": "/vek/",
     "phonetic": "vayk",
     "pos": "Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30181,8 +30347,7 @@
       "gey",
       "guid",
       "unco",
-      "awfy",
-      "byspel"
+      "awfy"
     ]
   },
   {
@@ -30200,7 +30365,8 @@
     "example_scots": "Tak a visie.",
     "example_en": "Have a look.",
     "cross_references": [
-      "luik"
+      "luik",
+      "leuk"
     ]
   },
   {
@@ -30276,10 +30442,12 @@
       "puggled",
       "forfochen",
       "forjeskit",
-      "to-worne",
-      "traiket",
       "daiskit",
-      "ramfeezled"
+      "fechtit",
+      "fochten",
+      "ramfeezled",
+      "to-worne",
+      "traiket"
     ]
   },
   {
@@ -30343,8 +30511,8 @@
       "dowie",
       "disjaskit",
       "dool",
-      "waefu",
-      "dule"
+      "dule",
+      "waefu"
     ]
   },
   {
@@ -30521,8 +30689,7 @@
     "cross_references": [
       "groof",
       "kyte",
-      "gebbie",
-      "kytie"
+      "gebbie"
     ]
   },
   {
@@ -30559,7 +30726,6 @@
       "ae",
       "body",
       "yin",
-      "aefauld",
       "peely-wally"
     ]
   },
@@ -30587,7 +30753,9 @@
     "ipa": "/ˈwanrɛst/",
     "phonetic": "WAN-rest",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30603,7 +30771,9 @@
     "ipa": "/ˈwanθrɪft/",
     "phonetic": "WAN-thrift",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30619,7 +30789,9 @@
     "ipa": "/ˈwanwird/",
     "phonetic": "WAN-weerd",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30635,7 +30807,9 @@
     "ipa": "/ˈwanwirdli/",
     "phonetic": "WAN-weer-dlee",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30651,7 +30825,9 @@
     "ipa": "/ˈwanwɔrθ/",
     "phonetic": "WAN-worth",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30667,7 +30843,9 @@
     "ipa": "/ˈwapɛnskɑːɪŋ/",
     "phonetic": "WAP-pe-nsk-awing",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -30746,9 +30924,7 @@
     "definition": "A wizard; the Devil.",
     "example_scots": "A warlock on the moor.",
     "example_en": "A wizard on the moor.",
-    "cross_references": [
-      "deil"
-    ]
+    "cross_references": []
   },
   {
     "headword": "wast",
@@ -30820,8 +30996,8 @@
     "example_scots": "Gey wat last nicht.",
     "example_en": "Very drunk last night.",
     "cross_references": [
-      "dampt",
-      "weet"
+      "weet",
+      "dampt"
     ]
   },
   {
@@ -30892,7 +31068,10 @@
     "definition": "To waddle, stagger.",
     "example_scots": "Wauchlin hame.",
     "example_en": "Staggering home.",
-    "cross_references": []
+    "cross_references": [
+      "stoiter",
+      "stotter"
+    ]
   },
   {
     "headword": "wauken",
@@ -30944,10 +31123,7 @@
     "definition": "To shrink and thicken cloth.",
     "example_scots": "Waulkin the tweed.",
     "example_en": "Fulling the tweed.",
-    "cross_references": [
-      "fou",
-      "fu"
-    ]
+    "cross_references": []
   },
   {
     "headword": "waulk-mill",
@@ -31164,12 +31340,34 @@
     "cross_references": []
   },
   {
+    "headword": "weird",
+    "variants": [
+      "wierd"
+    ],
+    "ipa": "/wird/",
+    "phonetic": "weerd",
+    "pos": "Noun",
+    "register": [
+      "Traditional/Literary"
+    ],
+    "region": [
+      "General Scots"
+    ],
+    "etymology": "Old English wyrd.",
+    "definition": "Fate, destiny (dree yer weird = suffer your fate).",
+    "example_scots": "Dree yer weird.",
+    "example_en": "Put up with your lot.",
+    "cross_references": []
+  },
+  {
     "headword": "weirdfu",
     "variants": [],
-    "ipa": "/ˈwirdfʌ/",
-    "phonetic": "WEER-dfu",
+    "ipa": "/ˈwirdfu/",
+    "phonetic": "WEERD-foo",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31201,7 +31399,9 @@
     "ipa": "/ˈwirdlɛs/",
     "phonetic": "WEER-dles",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31209,9 +31409,7 @@
     "definition": "Unlucky; useless.",
     "example_scots": "A weirdless craitur.",
     "example_en": "An unlucky creature.",
-    "cross_references": [
-      "misfortunate"
-    ]
+    "cross_references": []
   },
   {
     "headword": "weirdly",
@@ -31219,7 +31417,9 @@
     "ipa": "/ˈwirdli/",
     "phonetic": "WEER-dlee",
     "pos": "Adjective",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31237,7 +31437,9 @@
     "ipa": "/ˈwirdman/",
     "phonetic": "WEER-dman",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31253,7 +31455,9 @@
     "ipa": "/ˈwirdri/",
     "phonetic": "WEER-dree",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31352,10 +31556,7 @@
     "definition": "(noun) A blow; a big chunk. (verb) To thrash; to hack off.",
     "example_scots": "A whank o cheese.",
     "example_en": "A hunk of cheese.",
-    "cross_references": [
-      "ding",
-      "skelp"
-    ]
+    "cross_references": []
   },
   {
     "headword": "whatreck",
@@ -31389,9 +31590,7 @@
     "definition": "(noun) A whack. (verb) To whack.",
     "example_scots": "A whauk on the heid.",
     "example_en": "A whack on the head.",
-    "cross_references": [
-      "touk"
-    ]
+    "cross_references": []
   },
   {
     "headword": "whaup",
@@ -31613,24 +31812,6 @@
     "cross_references": []
   },
   {
-    "headword": "wierd",
-    "variants": [
-      "weird"
-    ],
-    "ipa": "/wird/",
-    "phonetic": "weerd",
-    "pos": "Noun",
-    "register": [],
-    "region": [
-      "General Scots"
-    ],
-    "etymology": "From Old English wyrd.",
-    "definition": "Fate, destiny.",
-    "example_scots": "It's his weird.",
-    "example_en": "It's his fate.",
-    "cross_references": []
-  },
-  {
     "headword": "wife",
     "variants": [],
     "ipa": "/wəif/",
@@ -31647,7 +31828,9 @@
     "example_scots": "Thon auld wife next door.",
     "example_en": "That old woman next door.",
     "cross_references": [
-      "deem"
+      "deem",
+      "wifie",
+      "wumman"
     ]
   },
   {
@@ -31856,7 +32039,8 @@
     "example_scots": "It disnae wirk.",
     "example_en": "It doesn't work.",
     "cross_references": [
-      "wark"
+      "wark",
+      "wurk"
     ]
   },
   {
@@ -31899,7 +32083,9 @@
     "ipa": "/ˈwɪtʃɛri/",
     "phonetic": "WICH-er-ee",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31915,7 +32101,9 @@
     "ipa": "/ˈwɪθɡaŋ/",
     "phonetic": "WITH-gang",
     "pos": "Noun / Verb",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -31990,7 +32178,9 @@
     "ipa": "/wrɛŋθ/",
     "phonetic": "wrength",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -32105,9 +32295,7 @@
     "definition": "To blame.",
     "example_scots": "Dinnae wyte me.",
     "example_en": "Don't blame me.",
-    "cross_references": [
-      "dirdum"
-    ]
+    "cross_references": []
   },
   {
     "headword": "yaff",
@@ -32189,7 +32377,9 @@
       "girn",
       "sab",
       "grummle",
-      "greetin-face"
+      "greetin-face",
+      "nyurl",
+      "yirm"
     ]
   },
   {
@@ -32274,7 +32464,9 @@
     "ipa": "/ˈjirhʌndər/",
     "phonetic": "YEER-hun-dur",
     "pos": "Noun",
-    "register": [],
+    "register": [
+      "Archaic"
+    ],
     "region": [
       "General Scots"
     ],
@@ -32513,7 +32705,8 @@
     "example_scots": "Stop yirmin.",
     "example_en": "Stop whining.",
     "cross_references": [
-      "nyurl"
+      "nyurl",
+      "yammer"
     ]
   },
   {
@@ -32622,9 +32815,7 @@
     "definition": "A throw; a small stone for throwing.",
     "example_scots": "Gie it a yuck.",
     "example_en": "Give it a throw.",
-    "cross_references": [
-      "hoy"
-    ]
+    "cross_references": []
   },
   {
     "headword": "yuggle",

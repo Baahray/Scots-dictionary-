@@ -123,6 +123,7 @@
   @media (prefers-color-scheme: dark) { .az a { color: var(--scots); } }
   .az a.off { opacity: .25; pointer-events: none; }
   .empty { padding: 40px 8px; color: var(--muted); }
+  .old-btn { display: block; margin: 18px auto 8px; }
 
   /* ---------- Translate ---------- */
   .tr h2, .guide h2 { font: 800 1.6rem/1.15 var(--display); margin: 22px 0 6px; letter-spacing: -0.015em; }
@@ -508,6 +509,9 @@
   function isPhrase(s) { return /\s/.test(String(s).trim()); }
   var SAID_RE = /^no separate scots word[^–-]*[–-]\s*this is how it's said\s*[–-]?\s*/i;
   function isSaid(e) { return /^no separate scots word/i.test(e.note); }
+  // Words no longer in everyday use: an "old" / "archaic" label in the note. Kept out of the first search results.
+  function isOld(e) { return String(e.note || "").split(/\s*–\s*/).some(function (p) { return /^(old|archaic|obsolete)$/i.test(p.trim()); }); }
+  var showOld = false;
   function cleanNote(n) { return String(n || "").replace(/\s*[–-]?\s*topic:\s*[a-z-]+/i, "").replace(SAID_RE, "").replace(/^No separate Scots word[^–]*–\s*/i, "").replace(/\s*–\s*/g, " · ").replace(/^phrase( · )?/i, "").trim(); }
   function splitExample(x) {
     if (!x) return null;
@@ -525,13 +529,16 @@
       if (!g) { g = { key: k, en: e.en, items: [], order: groups.length }; groupByKey[k] = g; groups.push(g); }
       e.scots.forEach(function (s, j) {
         if (g.items.some(function (it) { return norm(it.s) === norm(s); })) return;   // same Scots word already listed
-        g.items.push({ s: s, say: e.say[j], e: e, phrase: isPhrase(s), firstOfLine: j === 0 });
+        g.items.push({ s: s, say: e.say[j], e: e, phrase: isPhrase(s), firstOfLine: j === 0, old: isOld(e) });
       });
     });
     groups.forEach(function (g) {
+      var cur = g.items.filter(function (it) { return !it.old; }), olds = g.items.filter(function (it) { return it.old; });
+      g.old = !cur.length;                                      // every word for this meaning is old
+      g.items = cur.concat(olds);                               // words still in use come first
       g.words = g.items.filter(function (it) { return !it.phrase; });
       g.phrases = g.items.filter(function (it) { return it.phrase; });
-      g.first = g.words[0] || g.phrases[0];
+      g.first = g.words.filter(function (it) { return !it.old; })[0] || g.phrases.filter(function (it) { return !it.old; })[0] || g.words[0] || g.phrases[0];
       g.onlyPhrase = !g.words.length;
       g.said = g.items.every(function (it) { return isSaid(it.e); });
     });
@@ -585,7 +592,7 @@
     return '<section class="topic"><h3 class="topic-h">' + esc(t.title) + "</h3>" + (t.intro ? '<p class="topic-intro">' + esc(t.intro) + "</p>" : "") +
       '<ul class="entries">' + t.items.map(function (e) {
         var s = e.scots[0], say = e.say[0], ex = splitExample(e.example), note = cleanNote(e.note);
-        return '<li class="entry topic-row" data-g="' + esc(norm(e.en)) + '" tabindex="0" role="button">' +
+        return isOld(e) ? "" : '<li class="entry topic-row" data-g="' + esc(norm(e.en)) + '" tabindex="0" role="button">' +
           '<span class="sc">' + hl(s, q) + "</span>" +
           '<span class="en">' + hl(e.en, q) + (note ? ' <i>· ' + esc(note) + "</i>" : "") + "</span>" +
           '<span class="sl">Say: <b>' + esc(say) + "</b></span>" +
@@ -599,7 +606,7 @@
     queryWords(q).forEach(function (w) {
       (meanings[w] || []).forEach(function (h) {
         var g = groupByKey[norm(h)];
-        if (g && !have[g.key]) { have[g.key] = 1; out.push(g); }
+        if (g && !have[g.key] && !g.old) { have[g.key] = 1; out.push(g); }
       });
     });
     return out;
@@ -612,13 +619,14 @@
     function inPhrase(ws, g) { return g.phrases.some(function (it) { var pw = words(it.s); return ws.some(function (w) { return w.length > 3 && pw.indexOf(w) >= 0; }); }); }
     return inPhrase(aw, b) || inPhrase(bw, a);
   }
-  function scoreGroup(g, q) {
+  function scoreGroup(g, q, withOld) {
     var best = 99, en = norm(g.en), ew = words(g.en);
     if (en === q) best = 0;
     else if (ew.indexOf(q) >= 0) best = 1;
     else if (ew.some(function (w) { return w.indexOf(q) === 0; })) best = 4;
     else if (q.length >= 5 && en.indexOf(q) >= 0) best = 7;
     g.items.forEach(function (it) {
+      if (it.old && !withOld && !g.old) return;
       var s = norm(it.s), sw = words(it.s);
       var sc = s === q ? 1 : sw.indexOf(q) >= 0 ? 2 : s.indexOf(q) === 0 ? 3 : sw.some(function (w) { return w.indexOf(q) === 0; }) ? 5 : (q.length >= 5 && s.indexOf(q) >= 0) ? 6 : 99;
       if (sc < best) best = sc;
@@ -629,11 +637,14 @@
     var t = "";
     if (it.phrase) t += '<span class="tag">phrase</span>';
     if (isSaid(it.e)) t += '<span class="tag said">how it\'s said</span>';
+    if (it.old) t += '<span class="tag said">old – no longer used</span>';
     return t;
   }
   function rowHtml(g, q, showAll) {
     var it = g.first, more = g.items.length - 1;
-    var main = showAll ? g.items.map(function (x) { return x.s; }).join(", ") : it.s;
+    var shown = (g.old || showAll === "all") ? g.items : g.items.filter(function (x) { return !x.old; });
+    var main = showAll ? shown.map(function (x) { return x.s; }).join(", ") : it.s;
+    more = shown.length - 1;
     return '<li class="entry" data-g="' + esc(g.key) + '" tabindex="0" role="button" aria-label="' + esc(g.en + ": " + it.s) + '">' +
       '<span class="en">' + hl(g.en, q) + "</span>" +
       '<span class="sc">' + hl(main, q) + (!showAll && more > 0 ? '<span class="more">+' + more + "</span>" : "") + tagHtml(it) + "</span>" +
@@ -645,6 +656,7 @@
     var map = {}, out = [];
     groups.forEach(function (g) {
       g.words.forEach(function (it) {
+        if (it.old && !showOld) return;
         var k = norm(it.s);
         if (!map[k]) { map[k] = { s: it.s, say: it.say, ens: [], g: g, e: it.e }; out.push(map[k]); }
         if (map[k].ens.indexOf(g.en) < 0) map[k].ens.push(g.en);
@@ -666,14 +678,19 @@
     var q = norm($q.value);
     renderWotd(!q);
     if (q) {
+      var oldHits = [];
       var hits = groups.map(function (g) { return { g: g, s: scoreGroup(g, q) }; })
-        .filter(function (x) { return x.s < 99; })
+        .filter(function (x) {
+          if (x.g.old) { if (x.s < 99) oldHits.push(x); return false; }
+          if (x.s === 99 && scoreGroup(x.g, q, true) < 99) oldHits.push(x);   // matched only by an old word
+          return x.s < 99;
+        })
         .sort(function (a, b) { return a.s - b.s || a.g.order - b.g.order; });
       var top = hits.filter(function (x) { return x.s <= 2; }).map(function (x) { return x.g; });
       if (top.length && top.length <= 6) {
         var have = {}; hits.forEach(function (x) { have[x.g.key] = 1; });
         groups.forEach(function (o) {
-          if (have[o.key]) return;
+          if (have[o.key] || o.old) return;
           if (top.some(function (g) { return sharesScots(g, o); })) { hits.push({ g: o, s: 50 }); have[o.key] = 1; }
         });
         hits.sort(function (a, b) { return a.s - b.s || a.g.order - b.g.order; });
@@ -684,8 +701,15 @@
       tps.forEach(function (t) { t.items.forEach(function (e) { seen[norm(e.en)] = 1; }); });
       hits = hits.filter(function (x) { return !tps.some(function (t) { return t.items.some(function (e) { return norm(e.en) === x.g.key; }); }); });
       var sim = similarGroups(q, seen);
-      var n = hits.length + sim.length + tps.reduce(function (a, t) { return a + t.items.length; }, 0);
+      var n = hits.length + sim.length + tps.reduce(function (a, t) { return a + t.items.filter(function (e) { return !isOld(e); }).length; }, 0);
       $count.textContent = n + (n === 1 ? " match" : " matches");
+      var oldHtml = !oldHits.length ? "" : showOld
+        ? '<h3 class="sim-h">Old words – no longer in everyday use</h3><ul class="entries">' + oldHits.map(function (x) { return rowHtml(x.g, q, "all"); }).join("") + "</ul>"
+        : '<button class="btn old-btn" type="button" data-show-old="1">Show ' + oldHits.length + " old word" + (oldHits.length === 1 ? "" : "s") + " no longer in use</button>";
+      if (!n && oldHits.length) {
+        $list.innerHTML = '<div class="empty"><p><b>Only old words match “' + esc($q.value) + '”.</b></p><p>They\'re no longer in everyday use.</p></div>' + oldHtml;
+        return;
+      }
       if (!n) {
         $list.innerHTML = '<div class="empty"><p><b>No Scots word for “' + esc($q.value) + '” in the dictionary.</b></p>' +
           "<p>Scots often just uses the English word for this – or it hasn't been added yet.</p>" +
@@ -694,12 +718,14 @@
       }
       $list.innerHTML = tps.map(function (t) { return topicCardHtml(t, q); }).join("") +
         (hits.length ? (tps.length ? '<h3 class="sim-h">Other matches</h3>' : "") + '<ul class="entries">' + hits.map(function (x) { return rowHtml(x.g, q, true); }).join("") + "</ul>" : "") +
-        (sim.length ? '<h3 class="sim-h">Similar meaning</h3><ul class="entries">' + sim.map(function (g) { return rowHtml(g, "", true); }).join("") + "</ul>" : "");
+        (sim.length ? '<h3 class="sim-h">Similar meaning</h3><ul class="entries">' + sim.map(function (g) { return rowHtml(g, "", true); }).join("") + "</ul>" : "") +
+        oldHtml;
       return;
     }
     var list, keyOf, html = "", used = {}, cur = null;
     if (mode === "en") {
-      list = groups.filter(function (g) { return !g.onlyPhrase; });
+      var nOld = groups.filter(function (g) { return !g.onlyPhrase && g.old; }).length;
+      list = groups.filter(function (g) { return !g.onlyPhrase && (showOld || !g.old); });
       list.sort(function (a, b) { return sortKey(a.en).localeCompare(sortKey(b.en)); });
       keyOf = function (g) { return g.en; };
     } else {
@@ -715,13 +741,14 @@
       html += mode === "en" ? rowHtml(r, "", false) : scRowHtml(r, "");
     });
     html += "</ul>";
+    if (mode === "en" && nOld) html += '<button class="btn old-btn" type="button" data-show-old="1">' + (showOld ? "Hide" : "Show") + " the " + nOld + " old words no longer in use</button>";
     $list.innerHTML = html;
     $az.innerHTML = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function (L) {
       return '<a href="#L-' + L + '"' + (used[L] ? "" : ' class="off" aria-hidden="true" tabindex="-1"') + ">" + L + "</a>";
     }).join("");
   }
   $swap.addEventListener("click", function () { mode = mode === "en" ? "sc" : "en"; store.set("mode", mode); renderList(); });
-  $q.addEventListener("input", function () { renderList(); });
+  $q.addEventListener("input", function () { showOld = false; renderList(); });
 
   // Tap a row to open it (buttons inside the row do their own thing)
   function rowClicks(container) {
@@ -738,6 +765,10 @@
     });
   }
   rowClicks($list);
+  $list.addEventListener("click", function (ev) {
+    if (!ev.target.closest("[data-show-old]")) return;
+    showOld = !showOld; renderList();
+  });
 
   /* ---------------- Word detail ---------------- */
   var $dlgWord = document.getElementById("dlgWord"), $wdBody = document.getElementById("wdBody"), openKey = null;
@@ -746,7 +777,7 @@
     var keys = words(g.en.replace(/\([^)]*\)/g, " ")).filter(function (w) { return !STOP[w] && w.length > 2; });
     var out = [];
     groups.forEach(function (o) {
-      if (o === g || out.length >= 12) return;
+      if (o === g || out.length >= 12 || (o.old && !g.old)) return;
       var ow = words(o.en);
       if (keys.some(function (w) { return ow.indexOf(w) >= 0; }) || sharesScots(g, o)) out.push(o);
     });
@@ -780,7 +811,7 @@
     g.items.forEach(function (it) {
       var id = topicOf(it.e), tp = id && topicById[id];
       if (!tp || tseen[id]) return; tseen[id] = 1;
-      var others = tp.items.filter(function (e) { return norm(e.en) !== g.key; });
+      var others = tp.items.filter(function (e) { return norm(e.en) !== g.key && !isOld(e); });
       if (!others.length) return;
       html += '<h3 class="rel-h">' + esc(tp.title) + '</h3><div class="chips">' + others.map(function (e) {
         return '<button type="button" class="chip" data-open="' + esc(norm(e.en)) + '"><span>' + esc(e.scots[0]) + "</span> " + esc(e.en) + "</button>";
@@ -813,7 +844,7 @@
     if (!show) { $wotd.hidden = true; return; }
     var pool = groups.filter(function (g) {
       var e = g.first && g.first.e;
-      return e && !g.onlyPhrase && !g.said && e.example && !/wiktionary/i.test(e.note);
+      return e && !g.onlyPhrase && !g.said && !g.old && e.example && !/wiktionary/i.test(e.note);
     });
     if (!pool.length) { $wotd.hidden = true; return; }
     var day = Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
@@ -856,7 +887,7 @@
     var out = [];
     entries.forEach(function (e) {
       var ex = splitExample(e.example);
-      if (ex && ex.en && ex.sc && ex.sc !== ex.en) out.push({ sc: ex.sc, en: ex.en, e: e });
+      if (ex && ex.en && ex.sc && ex.sc !== ex.en && !isOld(e)) out.push({ sc: ex.sc, en: ex.en, e: e });
     });
     return out;
   }
@@ -948,7 +979,7 @@
       if (/[()\/]/.test(e.en)) return;           // skip "row (line)" style entries – too ambiguous in a sentence
       var k = tokenizeWords(e.en).join(" ");
       if (!k || k.indexOf(" ") >= 0) return;   // single English words only, so "going to the house" isn't read as "gonnae"
-      if (!dict.en[k]) { dict.en[k] = e.scots.slice(); maxLen.en = Math.max(maxLen.en, k.split(" ").length); }
+      if (!dict.en[k] && !isOld(e)) { dict.en[k] = e.scots.slice(); maxLen.en = Math.max(maxLen.en, k.split(" ").length); }
       e.scots.forEach(function (s) {
         var sk = tokenizeWords(s).join(" ");
         if (!sk) return;
