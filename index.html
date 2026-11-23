@@ -3,93 +3,215 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Scots Dictionary</title>
-<meta name="description" content="English to Scots dictionary – Scots words only, Glasgow flavour">
-<meta name="theme-color" content="#16325c">
+<title>Scots – Glasgow pocket dictionary</title>
+<meta name="description" content="English to Scots dictionary, sentence translator and pronunciation guide, with a Glasgow flavour">
+<meta name="theme-color" content="#13453a">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Scots">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f6f4ef; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70;
-    --accent: #16325c; --accent-ink: #ffffff; --line: #e4e0d8; --scots: #0b5a3a;
+    --green: #13453a;      /* wally close tile */
+    --green-2: #1d5c4d;
+    --ochre: #d9a441;      /* dado rail */
+    --stone: #f1f3ef;      /* cool sandstone-washed white */
+    --surface: #ffffff;
+    --ink: #17221e;
+    --muted: #5d6b65;
+    --line: #dde3dd;
+    --scots: #13453a;
+    --hl: #f6e3b4;
+    --display: "Bricolage Grotesque", ui-rounded, system-ui, sans-serif;
+    --body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --tabh: 64px;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #121417; --card: #1c1f24; --ink: #ececec; --muted: #9a9aa2;
-      --accent: #2c5aa0; --accent-ink: #ffffff; --line: #2c3036; --scots: #6fd3a3;
+      --stone: #0f1714; --surface: #16211d; --ink: #e9efe9; --muted: #93a39b;
+      --line: #24332d; --scots: #8fd6b9; --hl: #5a4718;
     }
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--ink);
-    font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  header { position: sticky; top: 0; z-index: 5; background: var(--accent); color: var(--accent-ink);
-    padding: calc(env(safe-area-inset-top) + 12px) 16px 12px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
-  h1 { margin: 0 0 10px; font-size: 1.25rem; font-weight: 700; letter-spacing: .01em; }
-  h1 small { font-weight: 400; opacity: .75; font-size: .8rem; margin-left: 6px; }
-  .row { display: flex; gap: 8px; }
-  input[type=search] { flex: 1; min-width: 0; font-size: 1rem; padding: 10px 12px; border-radius: 10px;
-    border: 0; outline: none; background: #fff; color: #111; }
-  button.dir { flex: none; font-size: .85rem; font-weight: 600; padding: 0 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.4);
-    background: transparent; color: inherit; cursor: pointer; white-space: nowrap; }
-  nav { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px 10px; background: var(--card); border-bottom: 1px solid var(--line); }
-  nav:empty { display: none; }
-  nav a { flex: 1 0 auto; min-width: 26px; text-align: center; padding: 4px 0; font-size: .85rem; font-weight: 600;
-    color: var(--accent); text-decoration: none; border-radius: 6px; }
-  @media (prefers-color-scheme: dark) { nav a { color: #9fc0f5; } }
-  nav a.off { color: var(--line); pointer-events: none; }
-  main { max-width: 720px; margin: 0 auto; padding: 4px 12px calc(env(safe-area-inset-bottom) + 40px); }
-  .letter { margin: 18px 4px 6px; font-weight: 800; color: var(--muted); font-size: .9rem; letter-spacing: .08em;
-    scroll-margin-top: 130px; }
-  ul { list-style: none; margin: 0; padding: 0; background: var(--card); border-radius: 12px; border: 1px solid var(--line); overflow: hidden; }
-  li { padding: 10px 14px; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(90px, 38%) 1fr; gap: 12px; }
-  li:first-child { border-top: 0; }
-  .from { font-weight: 600; word-break: break-word; }
-  .to { color: var(--scots); font-weight: 600; word-break: break-word; }
-  .note { display: block; color: var(--muted); font-weight: 400; font-size: .85rem; margin-top: 2px; }
-  .count { color: var(--muted); font-size: .85rem; margin: 12px 4px 0; }
-  .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
-  footer { text-align: center; font-size: .85rem; color: var(--muted); margin-top: 28px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--stone); color: var(--ink); font: 16px/1.5 var(--body); }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; border-radius: 6px; }
+
+  /* ---------- Header with tile band ---------- */
+  header { position: sticky; top: 0; z-index: 10; background: var(--green); color: #fff;
+    padding-top: env(safe-area-inset-top); }
+  .masthead { max-width: 680px; margin: 0 auto; padding: 14px 20px 12px; display: flex; align-items: baseline; gap: 10px; }
+  .masthead h1 { margin: 0; font: 800 1.9rem/1 var(--display); letter-spacing: -0.02em; }
+  .masthead p { margin: 0; font-size: .9rem; opacity: .75; }
+  .tiles { height: 22px; position: relative;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0) 45%, rgba(0,0,0,.12)),
+      repeating-linear-gradient(90deg, #1f6a58 0 20px, #0c3a30 20px 22px, #2a7a66 22px 42px, #0c3a30 42px 44px);
+    border-top: 4px solid var(--ochre); box-shadow: 0 1px 0 rgba(0,0,0,.25); }
+
+  /* ---------- Panels ---------- */
+  main { max-width: 680px; margin: 0 auto; padding: 0 16px calc(var(--tabh) + env(safe-area-inset-bottom) + 28px); }
+  .panel[hidden] { display: none; }
+
+  .search { position: sticky; top: calc(env(safe-area-inset-top) + 82px); z-index: 5; background: var(--stone); padding: 16px 0 10px; display: flex; gap: 8px; }
+  .field { flex: 1; display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1.5px solid var(--line);
+    border-radius: 14px; padding: 0 12px; }
+  .field:focus-within { border-color: var(--green-2); }
+  .field svg { flex: none; color: var(--muted); }
+  .field input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; color: var(--ink); font-size: 1.05rem; padding: 12px 0; }
+  .swap { flex: none; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 0 14px; font-weight: 600; font-size: .9rem; cursor: pointer; }
+  .meta { color: var(--muted); font-size: .85rem; margin: 4px 2px 6px; }
+
+  .letter { font: 800 1.6rem/1 var(--display); color: var(--ochre); margin: 22px 2px 4px; scroll-margin-top: 170px; }
+  .entries { list-style: none; margin: 0; padding: 0; }
+  .entry { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 12px 2px; border-bottom: 1px solid var(--line); align-items: center; }
+  .entry .en { color: var(--muted); font-size: .9rem; grid-column: 1; }
+  .entry .sc { font: 600 1.35rem/1.2 var(--display); color: var(--scots); grid-column: 1; letter-spacing: -0.005em; }
+  .entry .note { grid-column: 1; font-size: .85rem; color: var(--muted); font-style: italic; }
+  .entry .say { grid-column: 2; grid-row: 1 / span 3; }
+  mark { background: var(--hl); color: inherit; border-radius: 3px; }
+
+  .say { width: 40px; height: 40px; border-radius: 50%; border: 0; background: transparent; color: var(--green-2); display: grid; place-items: center; cursor: pointer; }
+  @media (prefers-color-scheme: dark) { .say { color: var(--scots); } }
+  .say:active, .say.on { background: var(--hl); }
+
+  .az { display: grid; grid-template-columns: repeat(13, 1fr); gap: 2px; margin: 4px 0 2px; }
+  .az a { padding: 4px 0; text-align: center; color: var(--green-2); font: 600 .9rem var(--display); text-decoration: none; border-radius: 8px; }
+  @media (prefers-color-scheme: dark) { .az a { color: var(--scots); } }
+  .az a.off { opacity: .25; pointer-events: none; }
+  .empty { padding: 40px 8px; color: var(--muted); }
+
+  /* ---------- Translate ---------- */
+  .tr h2, .guide h2 { font: 800 1.6rem/1.15 var(--display); margin: 22px 0 6px; letter-spacing: -0.015em; }
+  .tr p.lede, .guide p.lede { margin: 0 0 16px; color: var(--muted); max-width: 60ch; }
+  .dir { display: inline-flex; background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 3px; margin-bottom: 12px; }
+  .dir button { border: 0; background: transparent; padding: 8px 12px; border-radius: 9px; font-weight: 600; font-size: .9rem; cursor: pointer; color: var(--muted); }
+  .dir button[aria-pressed="true"] { background: var(--green); color: #fff; }
+  textarea { width: 100%; min-height: 110px; resize: vertical; border: 1.5px solid var(--line); border-radius: 14px; background: var(--surface);
+    color: var(--ink); font: 1.1rem/1.45 var(--body); padding: 14px; outline: none; }
+  textarea:focus { border-color: var(--green-2); }
+  .out { margin-top: 14px; background: var(--green); color: #fff; border-radius: 18px; padding: 18px 18px 14px; position: relative; overflow: hidden; min-height: 96px; }
+  .out::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px;
+    background: repeating-linear-gradient(90deg, #1f6a58 0 20px, #0c3a30 20px 22px, #2a7a66 22px 42px, #0c3a30 42px 44px); border-top: 2px solid var(--ochre); }
+  .out .text { font: 600 1.5rem/1.35 var(--display); letter-spacing: -0.01em; margin: 0 48px 12px 0; word-wrap: break-word; }
+  .out .text .w { border-bottom: 2px dotted rgba(217,164,65,.9); cursor: pointer; border-radius: 2px; }
+  .out .text .w:hover { background: rgba(255,255,255,.08); }
+  .out .placeholder { opacity: .6; font-weight: 400; }
+  .out .say { position: absolute; top: 12px; right: 10px; color: #fff; }
+  .out .say:active, .out .say.on { background: rgba(255,255,255,.15); }
+  .hint { color: var(--muted); font-size: .85rem; margin: 10px 2px 0; }
+  .examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .examples button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: .9rem; cursor: pointer; }
+
+  /* ---------- Say it ---------- */
+  .sounds { list-style: none; margin: 0; padding: 0; }
+  .sound { display: grid; grid-template-columns: 76px 1fr auto; gap: 2px 14px; align-items: center; padding: 14px 2px; border-bottom: 1px solid var(--line); }
+  .sound .spell { font: 800 1.7rem/1 var(--display); color: var(--scots); grid-row: 1 / span 2; }
+  .sound .how { font-weight: 600; }
+  .sound .eg { color: var(--muted); font-size: .9rem; grid-column: 2; }
+  .sound .eg b { color: var(--ink); font-weight: 600; }
+  .sound .say { grid-column: 3; grid-row: 1 / span 2; }
+  .voice-note { background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; padding: 12px 14px; font-size: .9rem; color: var(--muted); margin: 18px 0 0; }
+
+  /* ---------- Tab bar ---------- */
+  nav.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line);
+    padding-bottom: env(safe-area-inset-bottom); }
+  nav.tabs .inner { max-width: 680px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); height: var(--tabh); }
+  nav.tabs button { border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    font-size: .75rem; font-weight: 600; color: var(--muted); cursor: pointer; position: relative; }
+  nav.tabs button[aria-selected="true"] { color: var(--green-2); }
+  @media (prefers-color-scheme: dark) { nav.tabs button[aria-selected="true"] { color: var(--scots); } }
+  nav.tabs button[aria-selected="true"]::before { content: ""; position: absolute; top: 0; left: 30%; right: 30%; height: 3px; background: var(--ochre); border-radius: 0 0 3px 3px; }
+
+  footer { color: var(--muted); font-size: .85rem; margin: 30px 2px 0; }
   footer a { color: inherit; }
-  mark { background: #ffe58a; color: #111; border-radius: 3px; padding: 0 1px; }
+  @media (prefers-reduced-motion: no-preference) { .out .text { transition: opacity .15s; } }
 </style>
 </head>
 <body>
 <header>
-  <h1>Scots Dictionary <small id="modeLabel">English → Scots</small></h1>
-  <div class="row">
-    <input id="q" type="search" placeholder="Search English or Scots…" autocomplete="off" autocapitalize="off" spellcheck="false">
-    <button class="dir" id="dir" type="button" title="Switch direction">⇄ Swap</button>
-  </div>
+  <div class="masthead"><h1>Scots</h1><p>Glasgow pocket dictionary</p></div>
+  <div class="tiles" aria-hidden="true"></div>
 </header>
-<nav id="letters"></nav>
+
 <main>
-  <div class="count" id="count"></div>
-  <div id="list"><p class="empty">Loading words…</p></div>
-  <footer>
-    <p>Spotted something wrang? <a id="editLink" href="https://github.com/Baahray/Scots-dictionary-/edit/main/words.txt">Edit the word list on GitHub</a></p>
-  </footer>
+  <!-- ===== WORDS ===== -->
+  <section class="panel" id="p-words" role="tabpanel" aria-labelledby="t-words">
+    <div class="search">
+      <label class="field">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search English or Scots" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search">
+      </label>
+      <button class="swap" id="swap" type="button" aria-label="Switch dictionary direction">EN → SC</button>
+    </div>
+    <nav class="az" id="az" aria-label="Jump to letter"></nav>
+    <div class="meta" id="count"></div>
+    <div id="list"><p class="empty">Loading words…</p></div>
+    <footer>
+      <p>Spotted something wrang, or got a word to add? <a id="editLink" href="https://github.com/Baahray/Scots-dictionary-/edit/main/words.txt">Edit the word list on GitHub</a>.</p>
+    </footer>
+  </section>
+
+  <!-- ===== TRANSLATE ===== -->
+  <section class="panel tr" id="p-tr" role="tabpanel" aria-labelledby="t-tr" hidden>
+    <h2>Translate a sentence</h2>
+    <p class="lede">Type a sentence and the words are swapped for their Scots. Tap an underlined word to try another Scots option.</p>
+    <div class="dir" role="group" aria-label="Translation direction">
+      <button type="button" id="d-en" aria-pressed="true">English → Scots</button>
+      <button type="button" id="d-sc" aria-pressed="false">Scots → English</button>
+    </div>
+    <textarea id="src" placeholder="I don't know where the children went, it's too cold to go out" aria-label="Sentence to translate"></textarea>
+    <div class="out" aria-live="polite">
+      <p class="text" id="dst"><span class="placeholder">Your translation shows here</span></p>
+      <button class="say" id="sayOut" type="button" aria-label="Hear the translation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+      </button>
+    </div>
+    <p class="hint">It swaps word by word, so the grammar won't always come out the way a Glaswegian would say it.</p>
+    <div class="examples" id="examples"></div>
+  </section>
+
+  <!-- ===== SAY IT ===== -->
+  <section class="panel guide" id="p-say" role="tabpanel" aria-labelledby="t-say" hidden>
+    <h2>How to say it</h2>
+    <p class="lede">Scots spelling follows how it's said. Learn these sounds and you can read any word in the dictionary out loud.</p>
+    <ul class="sounds" id="sounds"></ul>
+    <p class="voice-note" id="voiceNote">The play buttons use your phone's built-in voice. On an iPhone, a Scottish voice gives the best result: Settings → Accessibility → Spoken Content → Voices → English → Fiona (Scotland).</p>
+  </section>
 </main>
+
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <div class="inner">
+    <button role="tab" id="t-words" aria-controls="p-words" aria-selected="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2.5"/><path d="M6 21h13"/></svg>
+      Words</button>
+    <button role="tab" id="t-tr" aria-controls="p-tr" aria-selected="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11M8 4v3M6 7c0 4 3 7 7 8"/><path d="M12 7c-1 4-4 7-8 8"/><path d="m14 21 4-9 4 9M15.5 18h5"/></svg>
+      Translate</button>
+    <button role="tab" id="t-say" aria-controls="p-say" aria-selected="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+      Say it</button>
+  </div>
+</nav>
+
 <script>
 (function () {
-  var entries = [];          // {en, scots:[...], note}
-  var mode = "en";           // "en" = English → Scots, "sc" = Scots → English
-  try { mode = localStorage.getItem("mode") || "en"; } catch (e) {}
+  "use strict";
+  var SPEAKER = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>';
+  var entries = [];
+  var store = {
+    get: function (k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
 
-  var $q = document.getElementById("q");
-  var $list = document.getElementById("list");
-  var $letters = document.getElementById("letters");
-  var $count = document.getElementById("count");
-  var $mode = document.getElementById("modeLabel");
-
-  function esc(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-    });
-  }
-  function norm(s) { return s.toLowerCase().replace(/[’‘]/g, "'").trim(); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function norm(s) { return String(s).toLowerCase().replace(/[’‘]/g, "'").trim(); }
   function sortKey(s) { return norm(s).replace(/^['"(]+/, ""); }
   function hl(text, q) {
     if (!q) return esc(text);
@@ -98,126 +220,275 @@
     return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
   }
 
+  /* ---------------- Speech ---------------- */
+  var voice = null;
+  function pickVoice() {
+    if (!("speechSynthesis" in window)) return;
+    var vs = speechSynthesis.getVoices();
+    voice = vs.find(function (v) { return /fiona/i.test(v.name) || /sct|scot/i.test(v.lang) || /scot/i.test(v.name); })
+      || vs.find(function (v) { return /en[-_]GB/i.test(v.lang); })
+      || vs.find(function (v) { return /^en/i.test(v.lang); }) || null;
+  }
+  if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+  // Respell Scots so a standard English voice gets closer to the real sound
+  function forVoice(t) {
+    return t.replace(/['’]/g, "")
+      .replace(/nae\b/gi, "nay")
+      .replace(/ae\b/gi, "ay")
+      .replace(/\bwean/gi, "wayn")
+      .replace(/\bauld\b/gi, "awld").replace(/\bcauld\b/gi, "cawld")
+      .replace(/\bguid\b/gi, "gid");
+  }
+  function speak(text, btn) {
+    if (!("speechSynthesis" in window) || !text) return;
+    speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(forVoice(text));
+    if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = "en-GB"; }
+    u.rate = 0.9;
+    if (btn) { btn.classList.add("on"); u.onend = u.onerror = function () { btn.classList.remove("on"); }; }
+    speechSynthesis.speak(u);
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-say]");
+    if (b) speak(b.getAttribute("data-say"), b);
+  });
+
+  /* ---------------- Tabs ---------------- */
+  var tabs = ["words", "tr", "say"];
+  function showTab(id) {
+    tabs.forEach(function (t) {
+      document.getElementById("t-" + t).setAttribute("aria-selected", t === id ? "true" : "false");
+      document.getElementById("p-" + t).hidden = t !== id;
+    });
+    store.set("tab", id);
+    window.scrollTo(0, 0);
+  }
+  tabs.forEach(function (t) { document.getElementById("t-" + t).addEventListener("click", function () { showTab(t); }); });
+  showTab(store.get("tab", "words"));
+
+  /* ---------------- Word list ---------------- */
   function parse(txt) {
     var out = [];
     txt.split(/\r?\n/).forEach(function (line) {
       line = line.trim();
       if (!line || line.charAt(0) === "#") return;
-      var parts = line.split("|");
-      if (parts.length < 2) return;
-      var en = parts[0].trim();
-      var scots = parts[1].split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-      var note = parts.slice(2).join("|").trim();
+      var p = line.split("|");
+      if (p.length < 2) return;
+      var en = p[0].trim();
+      var scots = p[1].split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      var note = p.slice(2).join("|").trim();
       if (en && scots.length) out.push({ en: en, scots: scots, note: note });
     });
     return out;
   }
 
-  // Rows for the current direction
+  /* ---------------- Dictionary view ---------------- */
+  var mode = store.get("mode", "en");
+  var $q = document.getElementById("q"), $list = document.getElementById("list"),
+      $az = document.getElementById("az"), $count = document.getElementById("count"), $swap = document.getElementById("swap");
+
   function rows() {
-    if (mode === "en") {
-      return entries.map(function (e) {
-        return { from: e.en, to: e.scots.join(", "), note: e.note, search: [e.en].concat(e.scots) };
-      });
-    }
-    // Scots → English: one row per Scots word, merging duplicates
+    if (mode === "en") return entries.map(function (e) {
+      return { top: e.en, main: e.scots.join(", "), say: e.scots[0], note: e.note, search: [e.en].concat(e.scots), key: e.en };
+    });
     var map = {};
     entries.forEach(function (e) {
       e.scots.forEach(function (s) {
         var k = norm(s);
-        if (!map[k]) map[k] = { from: s, en: [], notes: [] };
+        if (!map[k]) map[k] = { s: s, en: [], notes: [] };
         if (map[k].en.indexOf(e.en) < 0) map[k].en.push(e.en);
         if (e.note && map[k].notes.indexOf(e.note) < 0) map[k].notes.push(e.note);
       });
     });
     return Object.keys(map).map(function (k) {
       var m = map[k];
-      return { from: m.from, to: m.en.join(", "), note: m.notes.join(" · "), search: [m.from].concat(m.en) };
+      return { top: m.en.join(", "), main: m.s, say: m.s, note: m.notes.join("; "), search: [m.s].concat(m.en), key: m.s };
     });
   }
 
-  function render() {
-    $mode.textContent = mode === "en" ? "English → Scots" : "Scots → English";
-    $q.placeholder = mode === "en" ? "Search English or Scots…" : "Search Scots or English…";
-    var q = norm($q.value);
-    var list = rows();
-
+  function renderList() {
+    $swap.textContent = mode === "en" ? "EN → SC" : "SC → EN";
+    var q = norm($q.value), list = rows();
     if (q) {
-      list = list.filter(function (r) {
-        return r.search.some(function (s) { return norm(s).indexOf(q) >= 0; });
-      }).map(function (r) {
+      list = list.map(function (r) {
         var score = 9;
         r.search.forEach(function (s, i) {
-          var t = norm(s), side = i === 0 ? 0 : 1;
+          var t = norm(s), side = (mode === "en" ? i === 0 : i !== 0) ? 0 : 1;
           var sc = t === q ? 0 : t.indexOf(q) === 0 ? 2 : t.indexOf(q) >= 0 ? 4 : 9;
           if (sc < 9) score = Math.min(score, sc + side);
         });
         return { r: r, score: score };
-      }).sort(function (a, b) {
-        return a.score - b.score || sortKey(a.r.from).localeCompare(sortKey(b.r.from));
-      }).map(function (x) { return x.r; });
+      }).filter(function (x) { return x.score < 9; })
+        .sort(function (a, b) { return a.score - b.score || sortKey(a.r.key).localeCompare(sortKey(b.r.key)); })
+        .map(function (x) { return x.r; });
     } else {
-      list.sort(function (a, b) { return sortKey(a.from).localeCompare(sortKey(b.from)); });
+      list.sort(function (a, b) { return sortKey(a.key).localeCompare(sortKey(b.key)); });
     }
-
-    $count.textContent = q ? list.length + " match" + (list.length === 1 ? "" : "es") : list.length + " entries";
-
+    $count.textContent = q ? list.length + (list.length === 1 ? " match" : " matches") : list.length + " words and phrases";
     if (!list.length) {
-      $list.innerHTML = '<p class="empty">Nae luck – nothing found for “' + esc($q.value) + '”.</p>';
-      $letters.innerHTML = "";
-      return;
+      $list.innerHTML = '<p class="empty">Nothing found for “' + esc($q.value) + '”. Check the spelling, or switch direction with the button above.</p>';
+      $az.innerHTML = ""; return;
     }
-
+    function li(r) {
+      return '<li class="entry"><span class="en">' + hl(r.top, q) + '</span><span class="sc">' + hl(r.main, q) + "</span>" +
+        (r.note ? '<span class="note">' + esc(r.note) + "</span>" : "") +
+        '<button class="say" type="button" data-say="' + esc(r.say) + '" aria-label="Hear ' + esc(r.say) + '">' + SPEAKER + "</button></li>";
+    }
     var html = "", used = {};
-    if (q) {
-      html = "<ul>" + list.map(li).join("") + "</ul>";
-    } else {
-      var cur = null, open = false;
+    if (q) html = '<ul class="entries">' + list.map(li).join("") + "</ul>";
+    else {
+      var cur = null;
       list.forEach(function (r) {
-        var L = sortKey(r.from).charAt(0).toUpperCase();
+        var L = sortKey(r.key).charAt(0).toUpperCase();
         if (!/[A-Z]/.test(L)) L = "#";
-        if (L !== cur) {
-          if (open) html += "</ul>";
-          html += '<div class="letter" id="L-' + L + '">' + L + "</div><ul>";
-          cur = L; open = true; used[L] = true;
-        }
+        if (L !== cur) { if (cur) html += "</ul>"; html += '<h3 class="letter" id="L-' + L + '">' + L + '</h3><ul class="entries">'; cur = L; used[L] = 1; }
         html += li(r);
       });
-      if (open) html += "</ul>";
+      html += "</ul>";
     }
     $list.innerHTML = html;
-
-    function li(r) {
-      return '<li><span class="from">' + hl(r.from, q) + '</span><span class="to">' + hl(r.to, q) +
-        (r.note ? '<span class="note">' + esc(r.note) + "</span>" : "") + "</span></li>";
-    }
-
-    // A–Z bar
-    if (q) { $letters.innerHTML = ""; return; }
-    var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-    $letters.innerHTML = abc.map(function (L) {
-      return '<a href="#L-' + L + '"' + (used[L] ? "" : ' class="off"') + ">" + L + "</a>";
+    $az.innerHTML = q ? "" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(function (L) {
+      return '<a href="#L-' + L + '"' + (used[L] ? "" : ' class="off" aria-hidden="true" tabindex="-1"') + ">" + L + "</a>";
     }).join("");
   }
+  $swap.addEventListener("click", function () { mode = mode === "en" ? "sc" : "en"; store.set("mode", mode); renderList(); });
+  $q.addEventListener("input", function () { renderList(); });
 
-  document.getElementById("dir").addEventListener("click", function () {
-    mode = mode === "en" ? "sc" : "en";
-    try { localStorage.setItem("mode", mode); } catch (e) {}
-    render();
-    window.scrollTo(0, 0);
+  /* ---------------- Translator ---------------- */
+  var dict = { en: {}, sc: {} }, maxLen = { en: 1, sc: 1 };
+  var trDir = store.get("trDir", "en");
+  var choice = {};   // index -> which alternative is showing
+  var $src = document.getElementById("src"), $dst = document.getElementById("dst");
+
+  function tokenizeWords(s) { return norm(s).replace(/[?!.,]/g, "").split(/\s+/).filter(Boolean); }
+  function buildDict() {
+    dict = { en: {}, sc: {} }; maxLen = { en: 1, sc: 1 };
+    entries.forEach(function (e) {
+      if (/[()\/]/.test(e.en)) return;           // skip "row (line)" style entries – too ambiguous in a sentence
+      var k = tokenizeWords(e.en).join(" ");
+      if (!k) return;
+      if (!dict.en[k]) { dict.en[k] = e.scots.slice(); maxLen.en = Math.max(maxLen.en, k.split(" ").length); }
+      e.scots.forEach(function (s) {
+        var sk = tokenizeWords(s).join(" ");
+        if (!sk) return;
+        if (!dict.sc[sk]) dict.sc[sk] = [];
+        if (dict.sc[sk].indexOf(e.en) < 0) dict.sc[sk].push(e.en);
+        maxLen.sc = Math.max(maxLen.sc, sk.split(" ").length);
+      });
+    });
+  }
+
+  function matchCase(src, out) {
+    if (src === src.toUpperCase() && src.length > 1 && /[A-Z]/.test(src)) return out.toUpperCase();
+    if (/^[A-Z]/.test(src)) return out.charAt(0).toUpperCase() + out.slice(1);
+    return out;
+  }
+
+  // Split into word tokens and the gaps between them
+  function lex(text) {
+    var re = /[A-Za-zÀ-ɏ]+(?:['’][A-Za-z]+)*'?/g, toks = [], last = 0, m;
+    while ((m = re.exec(text))) {
+      toks.push({ gap: text.slice(last, m.index), word: m[0] });
+      last = m.index + m[0].length;
+    }
+    return { toks: toks, tail: text.slice(last) };
+  }
+
+  function translate() {
+    var text = $src.value;
+    if (!text.trim()) { $dst.innerHTML = '<span class="placeholder">Your translation shows here</span>'; $dst.dataset.plain = ""; return; }
+    var L = lex(text), toks = L.toks, d = dict[trDir], max = maxLen[trDir];
+    var html = "", plain = "", i = 0;
+    while (i < toks.length) {
+      var hit = null;
+      for (var n = Math.min(max, toks.length - i); n >= 1; n--) {
+        var okGap = true;
+        for (var j = 1; j < n; j++) if (!/^\s+$/.test(toks[i + j].gap)) { okGap = false; break; }
+        if (!okGap) continue;
+        var key = toks.slice(i, i + n).map(function (t) { return norm(t.word); }).join(" ");
+        if (d[key]) { hit = { n: n, alts: d[key] }; break; }
+      }
+      var gap = toks[i].gap;
+      html += esc(gap); plain += gap;
+      if (hit) {
+        var orig = toks.slice(i, i + hit.n).map(function (t) { return t.word; }).join(" ");
+        var c = (choice[i] || 0) % hit.alts.length;
+        var word = hit.alts[c];
+        if (trDir === "en" && norm(orig) === "i") word = hit.alts[c];
+        else word = matchCase(orig, word);
+        if (i === 0 || /[.!?]\s*$/.test(plain.trimEnd())) word = word.charAt(0).toUpperCase() + word.slice(1);
+        html += hit.alts.length > 1
+          ? '<span class="w" role="button" tabindex="0" data-i="' + i + '" title="Tap for another option (' + (c + 1) + " of " + hit.alts.length + ')">' + esc(word) + "</span>"
+          : esc(word);
+        plain += word;
+        i += hit.n;
+      } else {
+        html += esc(toks[i].word); plain += toks[i].word; i++;
+      }
+    }
+    html += esc(L.tail); plain += L.tail;
+    $dst.innerHTML = html;
+    $dst.dataset.plain = plain;
+  }
+  function cycle(el) {
+    var i = +el.getAttribute("data-i");
+    choice[i] = (choice[i] || 0) + 1;
+    translate();
+  }
+  $dst.addEventListener("click", function (e) { var w = e.target.closest(".w"); if (w) cycle(w); });
+  $dst.addEventListener("keydown", function (e) { var w = e.target.closest(".w"); if (w && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); cycle(w); } });
+  $src.addEventListener("input", function () { choice = {}; translate(); });
+  document.getElementById("sayOut").addEventListener("click", function () { speak($dst.dataset.plain, this); });
+
+  var EXAMPLES = {
+    en: ["I don't know where the children went", "Don't worry, it's too cold to go out", "What are you doing tonight?", "I can't find my jacket"],
+    sc: ["Ah dinnae ken whaur the weans went", "Gonnae no dae that", "It's awfy dreich the day", "Ah'm drookit an wabbit"]
+  };
+  function setDir(dir) {
+    trDir = dir; store.set("trDir", dir); choice = {};
+    document.getElementById("d-en").setAttribute("aria-pressed", dir === "en");
+    document.getElementById("d-sc").setAttribute("aria-pressed", dir === "sc");
+    $src.placeholder = EXAMPLES[dir][0];
+    document.getElementById("examples").innerHTML = EXAMPLES[dir].map(function (x) { return '<button type="button">' + esc(x) + "</button>"; }).join("");
+    translate();
+  }
+  document.getElementById("d-en").addEventListener("click", function () { setDir("en"); });
+  document.getElementById("d-sc").addEventListener("click", function () { setDir("sc"); });
+  document.getElementById("examples").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    $src.value = b.textContent; choice = {}; translate();
   });
-  $q.addEventListener("input", function () { render(); window.scrollTo(0, 0); });
 
+  /* ---------------- Say it guide ---------------- */
+  var SOUNDS = [
+    ["ch", "Breathy, from the back of the throat, like clearing it gently. Never “tch”.", ["loch", "nicht", "bricht"]],
+    ["ae", "Like “ay” in day.", ["nae", "dae", "hame"]],
+    ["ee", "Long “ee”, often where English has “o” or “oo”.", ["ee (eye)", "deid", "heid"]],
+    ["oo", "Long “oo”, where English has “ow” or “ou”.", ["hoose", "oot", "doon"]],
+    ["ui", "In Glasgow, a short “i” as in bit: guid sounds like “gid”.", ["guid", "fit", "schuil"]],
+    ["au / aw", "Like “aw” in awful, where English has “al” or “all”.", ["auld", "cauld", "aw"]],
+    ["r", "Always said, wherever it falls, and often rolled or tapped.", ["fur", "wur", "hert"]],
+    ["-nae", "Sounds like “neh” or “nay”. It's how Scots says “not”.", ["cannae", "dinnae", "wisnae"]],
+    ["t", "In Glasgow the t in the middle or at the end of a word is often swallowed (a glottal stop).", ["watter", "bu'er", "lo' o' folk"]],
+    ["wh", "Breathy “hw” sound, not plain “w”.", ["whit", "whaur", "wha"]],
+    ["ow", "Like “ow” in cow.", ["howk", "cowp", "fower"]],
+    ["ei / ey", "Like “ee” or “ay” depending on the word.", ["deid", "heich", "wey"]]
+  ];
+  document.getElementById("sounds").innerHTML = SOUNDS.map(function (s) {
+    var eg = s[2].map(function (w) { return "<b>" + esc(w) + "</b>"; }).join(", ");
+    var spoken = s[2].map(function (w) { return w.replace(/\s*\(.*\)/, ""); }).join(", ");
+    return '<li class="sound"><span class="spell">' + esc(s[0]) + '</span><span class="how">' + esc(s[1]) + '</span><span class="eg">' + eg + "</span>" +
+      '<button class="say" type="button" data-say="' + esc(spoken) + '" aria-label="Hear examples for ' + esc(s[0]) + '">' + SPEAKER + "</button></li>";
+  }).join("");
+  if (!("speechSynthesis" in window)) document.getElementById("voiceNote").textContent = "This browser can't play speech, so the play buttons won't make a sound here.";
+
+  /* ---------------- Load ---------------- */
   fetch("words.txt", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(function (t) { entries = parse(t); render(); })
-    .catch(function () {
-      $list.innerHTML = '<p class="empty">Couldnae load the word list. Check your connection and try again.</p>';
-    });
+    .then(function (t) { entries = parse(t); buildDict(); renderList(); setDir(trDir); })
+    .catch(function () { $list.innerHTML = '<p class="empty">Couldn\'t load the word list. Check you\'re online, then reopen the app.</p>'; });
 
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
-  }
+  if ("serviceWorker" in navigator) window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
 })();
 </script>
 </body>

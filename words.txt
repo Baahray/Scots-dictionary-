@@ -174,6 +174,7 @@ calf | cauf
 call | cry, ca
 called | cried, ca'd | "whit's he cried?" = what's he called?
 calm | lown | = sheltered, still
+came | cam
 can | kin | "Aye, A kin dae that"
 can't | cannae, canna
 candle | caunle
@@ -211,6 +212,8 @@ climb | sclim, speel
 clothes | claes, duds
 cloth | claith
 clumsy | haunless, cack-hannit
+cold | cauld
+cobbled street | causey
 cool (fresh) | caller
 corner | neuk
 cosy | cosie, bien, snod

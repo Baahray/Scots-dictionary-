@@ -1,6 +1,12 @@
 # Scots Dictionary
 
-An English ⇄ Scots dictionary, Scots words only, with a Glasgow flavour. You can search it, flip it between English → Scots and Scots → English, and it still works offline once you've saved it to your phone.
+A Scots pocket dictionary with a Glasgow flavour, built for your phone:
+
+- **Words**: search over 1,000 Scots words and phrases, English → Scots or Scots → English, with a play button to hear each one.
+- **Translate**: type a sentence and it's swapped into Scots (or back), word by word. Tap an underlined word to try another Scots option.
+- **Say it**: a guide to how Scots spelling sounds (ch, ae, oo, ui, -nae and more).
+
+It works offline once you've saved it to your phone.
 
 **Live site:** https://baahray.github.io/Scots-dictionary-/
 
