@@ -58,7 +58,7 @@ argue | threap | threap | threap = argue stubbornly
 argument | rammy, stushie, collieshangie | ram-ee, stoo-shee, kol-ee-shang-ee |  | There wis a big rammy ootside the pub. (There was a big fight outside the pub.)
 arm | airm | erm |  | He broke his airm. (He broke his arm.)
 armful | oxterfu | oak stir foo
-armpit | oxter | ox-ter |  | Pit the thermometer under yer oxter. (Put the thermometer under your armpit.)
+armpit | oxter | oak-stir |  | Pit the thermometer under yer oxter. (Put the thermometer under your armpit.)
 around | aroon, roon | a-roon, roon |  | We'll take a walk roon the park. (We'll take a walk around the park.)
 ashamed | affrontit | a-frun-tit | "black affrontit" = mortified | Ah wis that affrontit. (I was so embarrassed.)
 ask | speir | speer |  | Speir at him whaur he's gaun. (Ask him where he's going.)
