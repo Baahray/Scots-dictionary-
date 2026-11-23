@@ -39,3 +39,10 @@ All the words are in **`words.txt`**. To change them:
 | `words.txt` | The word list, the only file you need to edit |
 | `index.html` | The dictionary page |
 | `manifest.json`, `sw.js`, `icon-*.png` | Let it install on your phone and work offline |
+
+## Sources and credits
+
+Most words were written for this dictionary. Some come from:
+
+- **Wiktionary** (Scots entries, via [kaikki.org](https://kaikki.org)), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Under that licence, the word list (`words.txt`) is also shared under CC BY-SA 4.0.
+- **Alexander Warrack, *A Scots Dialect Dictionary*** (W. & R. Chambers, 1911), [on the Internet Archive](https://archive.org/details/cu31924026538813). Public domain. Words from it are marked "Warrack 1911".

@@ -931,7 +931,7 @@ uncommon | unco | unco
 under | unner | unner
 understand | understaun | understawn
 unhappy | wae | way
-unlucky | unchancy | unchancee
+unlucky | unchancy, donsie | unchancee, don-see
 untidy | throwither, clarty | throwither, clartee | throwither = messy, disorganised
 until | tae, till | tay, till
 upside down | tapsalteerie | tap-sal-tee-ree
@@ -1126,3 +1126,149 @@ gold | gowd | gowd
 scaredy-cat | feartie | feer-tee
 moaning person | greetin-face | greet-in-face | Glasgow
 coffin | kist | kist
+
+# ---------- From Wiktionary (CC BY-SA) and Warrack's Scots Dialect Dictionary (1911, public domain) ----------
+absent | awa | a-waw
+all right | a'richt | aw-rikht
+already | a'ready | aw-red-ee
+alongside | alangside | alangside
+amber | lammer | lam-er
+appear | kythe | kyth
+archway (through a building) | pend | pend | Glasgow tenements
+arrow | flane | flayn
+dither | swither | swith-er
+bounce | stot | stot | Glasgow
+brother-in-law | guid-brither | gid-brith-er
+buried | yirdit | yir-dit
+childhood | bairnheid | bairn-heed
+cliff | heuch | hyookh
+daisy | gowan | gow-an
+daughter-in-law | guid-dochter | gid-dokh-ter
+waste away | dwine | dwyne
+dowry | tocher | tokh-er | old
+conspicuous | kenspeckle | ken-spek-ul
+elder tree | bourtree | boor-tree
+endure | dree | dree
+everyday | ilkaday | il-ka-day
+exercise book | jotter | jot-er
+alas | waesucks | way-suks
+extraordinary | byordinar | by-or-din-ar
+father-in-law | guid-faither | gid-fay-ther
+mother-in-law | guid-mither | gid-mith-er
+sister-in-law | guid-sister | gid-sis-ter
+son-in-law | guid-son | gid-son
+foreign | fremmit | frem-it
+fortune-teller | spaewife | spay-wife
+fumble | fummle | fum-ul
+golf | gowf | gowf
+gosh | losh | losh
+gosling | gaislin | gays-lin
+adolescent | hafflin | haf-lin
+half-wit | haiverel | hay-ver-ul
+hare | maukin | maw-kin
+hatch | cleck | klek
+hoop | girr | gir
+ill-bred | misleared | mis-leerd
+ill-tempered | capernoitie | cap-er-noy-tee
+irritable | carnaptious | car-nap-shus
+language | leid | leed
+last year | fernyear | fern-yeer
+lullaby | baloo | ba-loo
+lump | daud | dawd
+loyal | leal | leel
+midnight | midnicht | mid-nikht
+mishap | mischanter | mis-chan-ter
+rabble | clanjamfrie | clan-jam-free
+moonlight | munelicht | moon-likht
+outcome | ootcome | oot-cum
+paddle (in water) | paidle | pay-dul
+partridge | paitrick | pay-trik
+perverse | camsteerie | cam-steer-ee
+plump | gawsie | gaw-see
+poverty | puirtith | peer-tith
+powder | pouther | poo-ther
+rare | daimen | day-men
+reckless | ramstam | ram-stam
+rowan tree | rodden | rod-en
+shrivel | crine | kryne
+prim | mim | mim
+slant | sklent | sklent
+spinning top | peerie | peer-ee
+sunset | sundoun | sun-doon
+tantrum | tirrivee | tir-ee-vee
+tear-stained | begrutten | be-grut-en
+toad | taid | tayd
+troublesome | fashious | fash-us
+weasel | whitterick | whit-er-ik
+whooping cough | kinkhoast | kink-hoast
+wildcat | wullcat | wul-cat
+woe | wae | way
+young woman | quean | kween
+young ewe | gimmer | gim-er
+tired out | forjeskit | for-jes-kit
+daze | donner | don-er
+dazed | donnert | don-ert
+barren (of a cow) | yeld | yeld
+abroad | abraid | a-brayd | Warrack 1911
+allow | alloo | a-loo | Warrack 1911
+ashes | ase | ays | Warrack 1911
+blame | wyte | wite | Warrack 1911
+china (crockery) | cheenie | chee-nee | Warrack 1911
+creature | craitur | kray-tur | Warrack 1911
+decent | dacent | day-sent | Warrack 1911
+forgive | forgie | for-ghee | Warrack 1911
+late (dead) | umquhile | um-whyle | old – Warrack 1911
+giant | ettin | et-in | old – Warrack 1911
+holly | hollin | hol-in | Warrack 1911
+honey | hinny | hin-ee | also a term of endearment – Warrack 1911
+hope | howp | howp | Warrack 1911
+however | howsomever | how-sum-ev-er | Warrack 1911
+immediately | bedeen | be-deen | old – Warrack 1911
+impossible | unpossible | un-pos-i-bul | Warrack 1911
+indeed | atweel | a-tweel | Warrack 1911
+harm | skaith | skayth | Warrack 1911
+innocent | saikless | sayk-less | Warrack 1911
+knight | knicht | nikht | Warrack 1911
+lame person | lameter | lay-me-ter | Warrack 1911
+last | hinmaist | hin-mayst | Warrack 1911
+matter | maitter | may-ter | Warrack 1911
+nature | naitur | nay-tur | Warrack 1911
+nurse | nourice | noo-ris | old – Warrack 1911
+ordinary | ordinar | or-din-ar | Warrack 1911
+ounce | unce | unss | Warrack 1911
+past | bygane | by-gayn | Warrack 1911
+perfect | perfeck | per-fek | Warrack 1911
+pin | preen | preen | Warrack 1911
+place | steid | steed | Warrack 1911
+pony | powny | pow-nee | Warrack 1911
+possibly | ablins | ay-blins | old – Warrack 1911
+power | pooer | poo-er | Warrack 1911
+print | prent | prent | Warrack 1911
+promise | hecht | hekht | Warrack 1911
+proof | preef | preef | Warrack 1911
+prove | pruve | proov | Warrack 1911
+reason | rizzen | riz-en | Warrack 1911
+shade | scug | skug | Warrack 1911
+share | skair | skair | Warrack 1911
+sheriff | shirra | shir-a | Warrack 1911
+slate | sclate | sklayt | Warrack 1911
+slaughter | slauchter | slawkh-ter | Warrack 1911
+slight | slicht | slikht | Warrack 1911
+slow | slaw | slaw | Warrack 1911
+slowly | slawly | slaw-lee | Warrack 1911
+spirit | speerit | speer-it | Warrack 1911
+stiff | stieve | steev | Warrack 1911
+sting | stang | stang | Warrack 1911
+stroke | straik | strayk | Warrack 1911
+struggle | strauchle | strawkh-ul | Warrack 1911
+sunshine | sunsheen | sun-sheen | Warrack 1911
+third | thrid | thrid | Warrack 1911
+thirteen | thretteen | thret-een | Warrack 1911
+thirty | thretty | thret-ee | Warrack 1911
+truth | trowth | trowth | Warrack 1911
+unfortunate | misfortunate | mis-for-tun-it | Warrack 1911
+unknown | unkent | un-kent | Warrack 1911
+knock over | whummle | whum-ul | Warrack 1911
+visit | veesit | vee-zit | Warrack 1911
+warn | wairn | wairn | Warrack 1911
+wave (of the hand) | waff | waff | Warrack 1911
