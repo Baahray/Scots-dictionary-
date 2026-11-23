@@ -73,8 +73,10 @@
   .entry { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 12px 2px; border-bottom: 1px solid var(--line); align-items: center; }
   .entry .en { color: var(--muted); font-size: .9rem; grid-column: 1; }
   .entry .sc { font: 600 1.35rem/1.2 var(--display); color: var(--scots); grid-column: 1; letter-spacing: -0.005em; }
+  .entry .sl { grid-column: 1; font-size: .9rem; color: var(--muted); }
+  .entry .sl b { color: var(--ink); font-weight: 600; letter-spacing: .01em; }
   .entry .note { grid-column: 1; font-size: .85rem; color: var(--muted); font-style: italic; }
-  .entry .say { grid-column: 2; grid-row: 1 / span 3; }
+  .entry .say { grid-column: 2; grid-row: 1 / span 4; }
   mark { background: var(--hl); color: inherit; border-radius: 3px; }
 
   .say { width: 40px; height: 40px; border-radius: 50%; border: 0; background: transparent; color: var(--green-2); display: grid; place-items: center; cursor: pointer; }
@@ -239,10 +241,10 @@
       .replace(/\bauld\b/gi, "awld").replace(/\bcauld\b/gi, "cawld")
       .replace(/\bguid\b/gi, "gid");
   }
-  function speak(text, btn) {
+  function speak(text, btn, plain) {
     if (!("speechSynthesis" in window) || !text) return;
     speechSynthesis.cancel();
-    var u = new SpeechSynthesisUtterance(forVoice(text));
+    var u = new SpeechSynthesisUtterance(plain ? text.replace(/-/g, "") : forVoice(text));
     if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = "en-GB"; }
     u.rate = 0.9;
     if (btn) { btn.classList.add("on"); u.onend = u.onerror = function () { btn.classList.remove("on"); }; }
@@ -250,7 +252,7 @@
   }
   document.addEventListener("click", function (e) {
     var b = e.target.closest("[data-say]");
-    if (b) speak(b.getAttribute("data-say"), b);
+    if (b) speak(b.getAttribute("data-say"), b, b.hasAttribute("data-plain"));
   });
 
   /* ---------------- Tabs ---------------- */
@@ -276,8 +278,10 @@
       if (p.length < 2) return;
       var en = p[0].trim();
       var scots = p[1].split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-      var note = p.slice(2).join("|").trim();
-      if (en && scots.length) out.push({ en: en, scots: scots, note: note });
+      var say = (p[2] || "").split(",").map(function (s) { return s.trim(); });
+      var note = p.slice(3).join("|").trim();
+      scots.forEach(function (s, i) { if (!say[i]) say[i] = s; });
+      if (en && scots.length) out.push({ en: en, scots: scots, say: say.slice(0, scots.length), note: note });
     });
     return out;
   }
@@ -289,20 +293,21 @@
 
   function rows() {
     if (mode === "en") return entries.map(function (e) {
-      return { top: e.en, main: e.scots.join(", "), say: e.scots[0], note: e.note, search: [e.en].concat(e.scots), key: e.en };
+      var sl = []; e.say.forEach(function (x) { if (sl.indexOf(x) < 0) sl.push(x); });
+      return { top: e.en, main: e.scots.join(", "), sayLine: sl.join(", "), speak: e.say[0], note: e.note, search: [e.en].concat(e.scots), key: e.en };
     });
     var map = {};
     entries.forEach(function (e) {
-      e.scots.forEach(function (s) {
+      e.scots.forEach(function (s, i) {
         var k = norm(s);
-        if (!map[k]) map[k] = { s: s, en: [], notes: [] };
+        if (!map[k]) map[k] = { s: s, say: e.say[i], en: [], notes: [] };
         if (map[k].en.indexOf(e.en) < 0) map[k].en.push(e.en);
         if (e.note && map[k].notes.indexOf(e.note) < 0) map[k].notes.push(e.note);
       });
     });
     return Object.keys(map).map(function (k) {
       var m = map[k];
-      return { top: m.en.join(", "), main: m.s, say: m.s, note: m.notes.join("; "), search: [m.s].concat(m.en), key: m.s };
+      return { top: m.en.join(", "), main: m.s, sayLine: m.say, speak: m.say, note: m.notes.join("; "), search: [m.s].concat(m.en), key: m.s };
     });
   }
 
@@ -324,15 +329,16 @@
     } else {
       list.sort(function (a, b) { return sortKey(a.key).localeCompare(sortKey(b.key)); });
     }
-    $count.textContent = q ? list.length + (list.length === 1 ? " match" : " matches") : list.length + " words and phrases";
+    $count.textContent = q ? list.length + (list.length === 1 ? " match" : " matches") : list.length + " words";
     if (!list.length) {
       $list.innerHTML = '<p class="empty">Nothing found for “' + esc($q.value) + '”. Check the spelling, or switch direction with the button above.</p>';
       $az.innerHTML = ""; return;
     }
     function li(r) {
       return '<li class="entry"><span class="en">' + hl(r.top, q) + '</span><span class="sc">' + hl(r.main, q) + "</span>" +
+        '<span class="sl">Say: <b>' + esc(r.sayLine) + "</b></span>" +
         (r.note ? '<span class="note">' + esc(r.note) + "</span>" : "") +
-        '<button class="say" type="button" data-say="' + esc(r.say) + '" aria-label="Hear ' + esc(r.say) + '">' + SPEAKER + "</button></li>";
+        '<button class="say" type="button" data-say="' + esc(r.speak) + '" data-plain="1" aria-label="Hear ' + esc(r.main) + '">' + SPEAKER + "</button></li>";
     }
     var html = "", used = {};
     if (q) html = '<ul class="entries">' + list.map(li).join("") + "</ul>";

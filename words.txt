@@ -1,1103 +1,1027 @@
-# English – Scots word list (Scots words only, Glasgow flavour)
+# English – Scots dictionary (Scots words only, Glasgow flavour)
 #
-# ONE ENTRY PER LINE:   english | scots | note
-#   - put several Scots words in the middle, separated by commas
+# ONE WORD PER LINE:   english | scots | how to say it | note
+#   - several Scots words go in the second part, separated by commas
+#   - "how to say it" is spelled out the way an English reader would sound it,
+#     one for each Scots word, in the same order, separated by commas
 #   - the note is optional (e.g. Glasgow, East, old)
-#   - lines starting with # are ignored, so you can leave yourself comments
+#   - lines starting with # are ignored
 #   - the site sorts everything A–Z itself, so new lines can go anywhere
 #
-# Rule for this list: Scots words only. No English words, no British slang,
-# and no English words just spelled the way they sound.
+# Example:   cold | cauld | cawld
 #
-# Edit this file on GitHub (pencil icon), press "Commit changes", and the site updates in a minute or two.
+# Edit this file on GitHub (pencil icon), press "Commit changes", and the site updates in a few minutes.
 
 # ---------- A ----------
-one (before a noun) | ae | "ae day" = one day
-able | fit | "are ye fit?" = are you able?
-about | aboot
-above | abune, abuin
-absent-minded | dwaumy
-ache | stound | old
-across | athort, ower
-afraid | feart
-after | efter
-afternoon | efternuin
-afterwards | efterhin
-again | agane, agin
-against | agin
-ago | syne | "lang syne" = long ago
-all | aw, a'
-almost | near-haun, maist
-alone | alane, lane | "his lane" / "yer lane" = on his / your own
-along | alang
-also | an aw, forby
-altogether | awthegither
-always | aye, ayeweys
-am | um | "Ah um" – Glasgow
-among | amang
-and | an
-angry | bealin, crabbit, radge | bealin = furious; radge is East
-animal | beast, baist
-ankle | cuit, queet
-annoy | fash, scunner
-annoyed | scunnert, fashed
-another | anither
-any | ony
-anybody | onybody
-anyhow | onyhoo, onywey
-anything | onythin, ocht
-anyway | onywey
-anywhere | onywhere
-apart | apairt
-apple | aiple
-apron | aipron, peenie
-are | ur | "ur ye comin?" – Glasgow
-aren't | urnae, arenae
-argue | cast oot, threap | threap = argue stubbornly
-argument | rammy, stushie, collieshangie
-arm | airm
-armful | oxterfu
-armpit | oxter
-around | aroon, roon
-ashamed | affrontit | "black affrontit" = mortified
-ask | speir
-asleep | sleepin
-at all | ava | "nae money ava" = no money at all
-at once | at wance
-attic | laft
-autumn | hairst, back-end | hairst = harvest
-avoid | jouk, jink
-awake | waukin
-away | awa
-awful | awfy, awfu
-awkward | fouterie, thrawn | thrawn = contrary, stubborn
-axe | aix
+one (before a noun) | ae | ay | "ae day" = one day
+about | aboot | a-boot
+above | abune, abuin | a-boon, a-bin
+absent-minded | dwaumy | dwawmee
+ache | stound | stoond | old
+across | athort, ower | a-thort, ow-er
+afraid | feart | feart
+after | efter | ef-ter
+afternoon | efternuin | ef-ter-nin
+afterwards | efterhin | ef-ter-hin
+again | agane, agin | a-gayn, a-gin
+against | agin | a-gin
+ago | syne | syne | "lang syne" = long ago
+all | aw, a' | aw, aw
+almost | near-haun, maist | near-hawn, mayst
+alone | alane, lane | a-layn, layn | "his lane" / "yer lane" = on his / your own
+along | alang | a-lang
+also | forby | forbee
+altogether | awthegither | aw-the-gither
+always | aye, ayeweys | eye, ayeweys
+am | um | um | "Ah um" – Glasgow
+among | amang | a-mang
+and | an | an
+angry | bealin, crabbit, radge | bee-lin, crab-it, radge | bealin = furious; radge is East
+animal | beast, baist | beast, bayst
+ankle | cuit, queet | cit, queet
+annoy | fash, scunner | fash, skun-er
+annoyed | scunnert, fashed | skun-ert, fasht
+another | anither | a-nither
+any | ony | on-ee
+anybody | onybody | on-ee-bod-ee
+anyhow | onyhoo, onywey | on-ee-hoo, on-ee-way
+anything | onythin, ocht | on-ee-thin, okht
+anyway | onywey | on-ee-way
+anywhere | onywhere | on-ee-whair
+apart | apairt | a-pairt
+apple | aiple | ay-pul
+apron | aipron, peenie | ay-pron, peenee
+are | ur | ur | "ur ye comin?" – Glasgow
+aren't | urnae, arenae | ur-nay, ar-nay
+argue | threap | threap | threap = argue stubbornly
+argument | rammy, stushie, collieshangie | ram-ee, stoo-shee, kol-ee-shang-ee
+arm | airm | erm
+armful | oxterfu | oxterfoo
+armpit | oxter | ox-ter
+around | aroon, roon | a-roon, roon
+ashamed | affrontit | affrontit | "black affrontit" = mortified
+ask | speir | speer
+asleep | sleepin | sleepin
+at all | ava | a-vaw | "nae money ava" = no money at all
+attic | laft | laft
+autumn | hairst, back-end | hairst, back-end | hairst = harvest
+avoid | jouk, jink | jook, jink
+awake | waukin | wawkin
+away | awa | a-waw
+awful | awfy, awfu | aw-fee, aw-foo
+awkward | fouterie, thrawn | footeree, thrawn | thrawn = contrary, stubborn
+axe | aix | aix
 
 # ---------- B ----------
-baby | wean, bairn | wean is West / Glasgow, bairn is East
-backside | erse, bahookie, dowp, doup
-bad | nae guid, ill
-bad-tempered | crabbit
-bag (paper) | poke
-bake | baik
-baker | baxter | old
-ball | ba, baw
-ballad | ballant
-bang | dunt, dad, clour
-bark (of a dog) | yowf
-barley | bere
-basket | creel, skep | creel = fish basket
-be quiet | wheesht, whisht, haud yer wheesht
-beach | shore
-beak | neb
-beard | baird
-beat | ding, skelp
-beautiful | bonnie, braw
-because | acause, 'cause
-bedroom | ben the hoose
-bee (bumblebee) | bummer
-beehive | skep
-beer | yill
-beetle | clock
-before | afore
-beggar | gaberlunzie | old – a wandering beggar
-begin | stert
-behind | ahint, ahin
-believe | lippen | lippen = trust, rely on
-belly | wame, kyte
-belong | belang
-below | ablow, ablo
-bench | bink
-bend | boo
-beneath | aneath
-beside | aside, forenent | forenent = opposite, in front of
-besides | forby, forbye
-beware | tak tent | = pay heed
-big | muckle, mickle
-bird | burd
-bit (small amount) | bittie, tait
-bitter | wersh | = tasteless, sour
-blackbird | blackie, merle
-blaze | bleeze, low | low = flame
-blind | blin
-blood | bluid
-bloody | bluidy
-blow | blaw
-blue-grey | blae
-boast | blaw, craw
-body | bouk
-bog | moss, flow
-bogeyman | bogle
-boil | bile
-bold | gallus, bauld, crouse
-bone | bane
-bonfire | bale-fire
-book | buik
-boot | buit
-border | mairch
-bored | scunnert
-both | baith
-bother | fash
-bottom | boddom, dowp
-bought | bocht
-bow | boo
-bowl | bicker, cog
-boy | laddie, loon, callant | loon is NE, callant is Borders
-brave | bauld, gallus, stoot
-bread | breid
-break | brek, brak
-breath | breith, pech
-breathless | pechin
-bridge | brig
-bright | bricht
-broken | brokken
-broom | besom
-brother | brither
-brought | brocht
-brown | broon
-bruise | clour, dunt
-build | big
-building | biggin
-bump | dunt, clour
-burden | birn
-burst | birst
-bury | yird
-bush | buss
-busy | thrang
-butcher | flesher
-buttocks | hurdies, dowp
-buy | coff | old
+baby | wean, bairn | wayn, bairn | wean is West / Glasgow, bairn is East
+backside | erse, bahookie, dowp, doup | erse, ba-hook-ee, dowp, doop
+bad | ill | ill
+bad-tempered | crabbit | crab-it
+bag (paper) | poke | poke
+bake | baik | baik
+baker | baxter | baxter | old
+ball | ba, baw | baw, baw
+ballad | ballant | ballant
+bang | dunt, dad, clour | dunt, dad, cloor
+bark (of a dog) | yowf | yowf
+barley | bere | bere
+basket | creel, skep | creel, skep | creel = fish basket
+be quiet | wheesht, whisht | wheesht, whisht
+beach | shore | shore
+beak | neb | neb
+beard | baird | baird
+beat | ding, skelp | ding, skelp
+beautiful | bonnie, braw | bon-ee, braw
+because | acause, 'cause | a-cawz, cawse
+bee (bumblebee) | bummer | bummer
+beehive | skep | skep
+beer | yill | yill
+beetle | clock | clock
+before | afore | a-fore
+beggar | gaberlunzie | gaberlunzee | old – a wandering beggar
+begin | stert | stert
+behind | ahint, ahin | a-hint, a-hin
+believe | lippen | lippen | lippen = trust, rely on
+belly | wame, kyte | waym, kite
+belong | belang | belang
+below | ablow, ablo | a-blow, a-blow
+bench | bink | bink
+bend | boo | boo
+beneath | aneath | a-neeth
+beside | aside, forenent | a-side, forenent | forenent = opposite, in front of
+besides | forby, forbye | forbee, forbye
+big | muckle, mickle | muk-ul, mik-ul
+bird | burd | burd
+bit (small amount) | bittie, tait | bittee, tait
+bitter | wersh | wersh | = tasteless, sour
+blackbird | blackie, merle | blackee, merle
+blaze | bleeze, low | bleeze, low | low = flame
+blind | blin | blin
+blood | bluid | blid
+bloody | bluidy | blidee
+blow | blaw | blaw
+blue-grey | blae | blay
+boast | blaw, craw | blaw, kraw
+body | bouk | book
+bog | moss, flow | moss, flow
+bogeyman | bogle | boh-gul
+boil | bile | bile
+bold | gallus, bauld, crouse | gal-us, bawld, croose
+bone | bane | bayn
+bonfire | bale-fire | bale-fire
+book | buik | bik
+boot | buit | bit
+border | mairch | mairch
+bored | scunnert | skun-ert
+both | baith | bayth
+bother | fash | fash
+bottom | boddom, dowp | boddom, dowp
+bought | bocht | bokht
+bow | boo | boo
+bowl | bicker, cog | bicker, cog
+boy | laddie, loon, callant | lad-ee, loon, callant | loon is NE, callant is Borders
+brave | bauld, gallus, stoot | bawld, gal-us, stoot
+bread | breid | breed
+break | brek, brak | brek, brak
+breath | breith, pech | breeth, pekh
+breathless | pechin | pekh-in
+bridge | brig | brig
+bright | bricht | brikht
+broken | brokken | brokken
+broom | besom | besom
+brother | brither | brither
+brought | brocht | brokht
+brown | broon | broon
+bruise | clour, dunt | cloor, dunt
+build | big | big
+building | biggin | biggin
+bump | dunt, clour | dunt, cloor
+burden | birn | birn
+burst | birst | birst
+bury | yird | yird
+bush | buss | buss
+busy | thrang | thrang
+butcher | flesher | flesher
+buttocks | hurdies, dowp | hurdies, dowp
+buy | coff | coff | old
 
 # ---------- C ----------
-cabbage | kail
-calf | cauf
-call | cry, ca
-called | cried, ca'd | "whit's he cried?" = what's he called?
-calm | lown | = sheltered, still
-came | cam
-can | kin | "Aye, A kin dae that"
-can't | cannae, canna
-candle | caunle
-cap | bunnet | = flat cap
-careful | canny
-carry | cairry
-cart | cairt
-cat | baudrons | old – puss
-catch | kep | = catch something falling
-cattle | kye, nowt
-celebration | splore, hoolie
-certain | shair
-chair | cheer
-change | chynge, cheenge
-chap | chiel, chield
-chat | blether, crack | crack = good conversation
-chatterbox | blether, bletherskate
-cheat | swick
-cheeks | chafts
-cheeky | gallus, impident
-cheerful | cantie, blythe
-chest (body) | breist
-chest (box) | kist
-chew | chaw
-chilly | snell, cauldrife
-child | wean, bairn
-children | weans, bairns
-chimney | lum
-choke | chowk
-choose | wale
-church | kirk
-churchyard | kirkyaird
-clever | gleg, wice
-climb | sclim, speel
-clothes | claes, duds
-cloth | claith
-clumsy | haunless, cack-hannit
-cold | cauld
-cobbled street | causey
-cool (fresh) | caller
-corner | neuk
-cosy | cosie, bien, snod
-cottage (two rooms) | but an ben
-cough | hoast
-could | cud
-couldn't | couldnae, cuddnae
-counter | coonter
-country | kintra
-courage | smeddum, spunk, gumption
-court (go out with) | coort, winch
-cover up warm | hap
-cow | coo
-cowshed | byre
-crab | partan
-cradle | creddle
-crazy | gyte, aff yer heid
-cream | ream
-crooked | squint, agley | "gang agley" = go wrong
-cross (angry) | crabbit
-crow | craw, corbie | corbie = raven
-crowd | thrang
-crumpled | runkled
-cry | greet
-crying | greetin, bubblin | bubblin – Glasgow
-cuddle | bosie, coorie in | bosie is NE
-cup | tassie
-cupboard | press, aumrie
-cut off | sned
+cabbage | kail | kayl
+calf | cauf | cawf
+call | cry, ca | cry, caw
+called | cried, ca'd | cried, cawd | "whit's he cried?" = what's he called?
+calm | lown | lown | = sheltered, still
+came | cam | kam
+can | kin | kin | "Aye, A kin dae that"
+can't | cannae, canna | can-ay, can-na
+candle | caunle | cawnle
+cap | bunnet | bun-it | = flat cap
+careful | canny | cannee
+carry | cairry | cair-ee
+cart | cairt | cairt
+cat | baudrons | bawdrons | old – puss
+catch | kep | kep | = catch something falling
+cattle | kye, nowt | kye, nowt
+celebration | splore, hoolie | splore, hoolee
+certain | shair | shair
+chair | cheer | cheer
+change | chynge, cheenge | chynge, cheenge
+chap | chiel, chield | cheel, cheeld
+chat | blether, crack | bleth-er, crack | crack = good conversation
+chatterbox | blether, bletherskate | bleth-er, bletherskate
+cheat | swick | swick
+cheeks | chafts | chafts
+cheeky | gallus, impident | gal-us, impident
+cheerful | cantie, blythe | cantee, blythe
+chest (body) | breist | breest
+chest (box) | kist | kist
+chew | chaw | chaw
+chilly | snell, cauldrife | snell, cawldrife
+child | wean, bairn | wayn, bairn
+children | weans, bairns | waynz, bairnz
+chimney | lum | lum
+choke | chowk | chowk
+choose | wale | wayl
+church | kirk | kirk
+churchyard | kirkyaird | kirkyaird
+clever | gleg, wice | gleg, wice
+climb | sclim, speel | sklim, speel
+clothes | claes, duds | clays, duds
+cloth | claith | klayth
+clumsy | haunless, cack-hannit | hawnless, cack-hannit
+cold | cauld | cawld
+cobbled street | causey | caw-zee
+cool (fresh) | caller | caller
+corner | neuk | nyook
+cosy | cosie, bien, snod | cosee, bien, snod
+cough | hoast | hoast
+could | cud | cud
+couldn't | couldnae, cuddnae | cood-nay, cud-nay
+counter | coonter | coonter
+country | kintra | kintra
+courage | smeddum, spunk, gumption | smed-um, spunk, gumption
+court (go out with) | coort, winch | coort, winch
+cover up warm | hap | hap
+cow | coo | koo
+cowshed | byre | byre
+crab | partan | partan
+cradle | creddle | creddle
+crazy | gyte | gite
+cream | ream | ream
+crooked | squint, agley | squint, a-glay | "gang agley" = go wrong
+cross (angry) | crabbit | crab-it
+crow | craw, corbie | kraw, corbee | corbie = raven
+crowd | thrang | thrang
+crumpled | runkled | runkled
+cry | greet | greet
+crying | greetin, bubblin | greet-in, bubblin | bubblin – Glasgow
+cuddle | bosie | bosee | bosie is NE
+cup | tassie | tassee
+cupboard | press, aumrie | press, awmree
+cut off | sned | sned
 
 # ---------- D ----------
-dad | da, faither, paw | paw – Glasgow
-damp | dampt, wat
-dare | daur
-dark | daurk, mirk
-darkness | mirk
-darling | dearie, jo | jo = sweetheart (old)
-dash (rush) | breenge
-dawdle | daidle, dauner
-dawn | daw, skreich o day
-daylight | daylicht
-dead | deid
-deaf | deif
-death | deith, daith
-deceive | begowk
-hollow (in land) | howe
-devil | deil, Auld Nick, Auld Hornie
-did | done | "Ah done it" – Glasgow
-didn't | didnae, didna
-die | dee
-died | dee'd
-dig | howk
-dinner | denner
-dip | dook
-dirt | glaur, clart
-dirty | clarty, mawkit, manky
-disappointed | disjaskit
-disgust | scunner, ug
-disgusted | scunnert
-disgusting | mingin, boggin, bowfin, ugsome | bowfin = horrible, rank – Glasgow
-dish | ashet
-dismal | dreich, dowie
-ditch | sheuch
-dive | dook
-dizzy | licht-heidit
-do | dae, dee | dee is NE
-does | dis
-doesn't | disnae, disna
-dog | dug
-done | din
-don't | dinnae, dinna
-door | dure
-doubt | doot
-dove | doo
-down | doon
-downstairs | doon the stair
-dozen | dizzen
-drag | harl
-drain (in the street) | stank, syver
-draught | draucht
-dream | dwam | = daydream, swoon
-dress | goon
-dribble | slaver
-drink (of whisky) | dram
-drip | drap
-drizzle | smirr
-drop | drap
-drown | droon
-drowned | droont
-drunk | fou, blootered, fleein
-dry (thirsty) | drouthy
-duck | deuk
-duck (dodge) | jouk, jink
-dull | dreich, dowf
-dung | sharn
-dusk | gloamin
-dust | stour, stoor
-dusty | stourie
-dwell | bide
+dad | da, faither, paw | dah, fay-ther, paw | paw – Glasgow
+damp | dampt, wat | dampt, wat
+dare | daur | dawr
+dark | daurk, mirk | dawrk, mirk
+darkness | mirk | mirk
+darling | dearie, jo | dearee, jo | jo = sweetheart (old)
+dash (rush) | breenge | breenge
+dawdle | daidle, dauner | daidle, dawner
+dawn | daw | daw
+daylight | daylicht | daylikht
+dead | deid | deed
+deaf | deif | deef
+death | deith, daith | deeth, daith
+deceive | begowk | begowk
+hollow (in land) | howe | howe
+devil | deil | deel
+did | done | done | "Ah done it" – Glasgow
+didn't | didnae, didna | did-nay, did-na
+die | dee | dee
+died | dee'd | deed
+dig | howk | howk
+dinner | denner | denner
+dip | dook | dook
+dirt | glaur, clart | glawr, clart
+dirty | clarty, mawkit, manky | clartee, mawkit, mankee
+disappointed | disjaskit | disjaskit
+disgust | scunner, ug | skun-er, ug
+disgusted | scunnert | skun-ert
+disgusting | mingin, boggin, bowfin, ugsome | ming-in, bog-in, bow-fin, ugsome | bowfin = horrible, rank – Glasgow
+dish | ashet | ashet
+dismal | dreich, dowie | dreekh, dowee
+ditch | sheuch | shyookh
+dive | dook | dook
+dizzy | licht-heidit | likht-heedit
+do | dae, dee | day, dee | dee is NE
+does | dis | diz
+doesn't | disnae, disna | diz-nay, diz-na
+dog | dug | dug
+done | din | din
+don't | dinnae, dinna | din-ay, din-na
+door | dure | dure
+doubt | doot | doot
+dove | doo | doo
+down | doon | doon
+dozen | dizzen | dizzen
+drag | harl | harl
+drain (in the street) | stank, syver | stank, syver
+draught | draucht | drawkht
+dream | dwam | dwam | = daydream, swoon
+dress | goon | goon
+dribble | slaver | slaver
+drink (of whisky) | dram | dram
+drip | drap | drap
+drizzle | smirr | smirr
+drop | drap | drap
+drown | droon | droon
+drowned | droont | droont
+drunk | fou, blootered, fleein | foo, bloo-terd, flee-in
+dry (thirsty) | drouthy | droothee
+duck | deuk | dyook
+duck (dodge) | jouk, jink | jook, jink
+dull | dreich, dowf | dreekh, dowf
+dung | sharn | sharn
+dusk | gloamin | gloamin
+dust | stour, stoor | stoor, stoor
+dusty | stourie | stooree
+dwell | bide | bide
 
 # ---------- E ----------
-each | ilka, ilk
-ear | lug
-early | airly
-earth (soil) | yird
-easy | eith | old
-eaten | etten
-eight | aicht, echt
-eighteen | aichteen
-either | aither
-elbow | elby
-eleven | eleeven
-ember | gleed
-empty | toom
-enough | eneuch
-evening | forenicht, e'en
-ever | ivver
-every | ilka
-everybody | awbody
-everything | awthing
-everywhere | aw ower
-ewe | yowe
-exhausted | wabbit, forfochen, puggled, deid done
-eye | ee
-eyes | een
-eyebrow | ee-bree
+each | ilka, ilk | ilka, ilk
+ear | lug | lug
+early | airly | airlee
+earth (soil) | yird | yird
+easy | eith | eeth | old
+eaten | etten | et-en
+eight | aicht, echt | aikht, ekht
+eighteen | aichteen | aikhteen
+either | aither | ay-ther
+elbow | elby | el-bee
+eleven | eleeven | eleeven
+ember | gleed | gleed
+empty | toom | toom
+enough | eneuch | enyookh
+evening | forenicht, e'en | forenikht, een
+ever | ivver | ivver
+every | ilka | ilka
+everybody | awbody | aw-bod-ee
+everything | awthing | aw-thing
+ewe | yowe | yow
+exhausted | wabbit, forfochen, puggled | wab-it, for-fokh-en, pug-uld
+eye | ee | ee
+eyes | een | een
+eyebrow | ee-bree | ee-bree
 
 # ---------- F ----------
-face | coupon, fizzog | coupon – Glasgow
-faint (swoon) | dwam
-fall | faw, fa
-fall over | cowp
-false | fause
-family | faimly
-far | faur
-farm | ferm
-farmer | fermer
-fault | faut
-fed up | scunnert
-fellow | chiel, chield
-fetch | fesh
-fever | fivver
-few | puckle | "a puckle" = a few
-fidget | fidge, fyke
-fiddle about | footer, fouter
-field | park
-fight | fecht, rammy, stramash
-fireplace | ingle
-fireside | ingleneuk
-flat (tenement home) | hoose
-flea | flech
-flicker | flichter
-flight | flicht
-flood (river) | spate | "the burn's in spate" = the stream's flooded
-floor | flair
-flower | flooer, flouer
-flutter | flichter
-fly | flee
-fog (from the sea) | haar
-fold (for sheep) | fauld
-fool | gowk, eejit, numptie, bampot
-foolish | glaikit, gowkit
-foot | fit
-football | fitba
-for | fur, fir
-forehead | broo
-fortnight | fortnicht
-forward | forrit
-found | fun, foon
-four | fower
-fourteen | fowerteen
-fox | tod
-freeze (set like jelly) | jeel
-fresh | caller
-friend | freend, billie
-frighten | fleg, frichten
-frightened | feart, frichtit
-frog | puddock
-from | fae, frae
-frown | glower
-frozen | jeelt
-full | fu, fou
-full (of food) | stappit fu
-fun | daffin
-fuss | stushie, steer
-fussy | pernickety, fykie
+face | coupon, fizzog | koo-pon, fizzog | coupon – Glasgow
+faint (swoon) | dwam | dwam
+fall | faw, fa | faw, faw
+fall over | cowp | kowp
+false | fause | fawse
+family | faimly | faym-lee
+far | faur | fawr
+farm | ferm | ferm
+farmer | fermer | fermer
+fault | faut | fawt
+fed up | scunnert | skun-ert
+fellow | chiel, chield | cheel, cheeld
+fetch | fesh | fesh
+fever | fivver | fivver
+few | puckle | puk-ul | "a puckle" = a few
+fidget | fidge, fyke | fidge, fyke
+fiddle about | footer, fouter | footer, footer
+field | park | park
+fight | fecht, rammy, stramash | fekht, ram-ee, stra-mash
+fireplace | ingle | ingle
+fireside | ingleneuk | inglenyook
+flat (tenement home) | hoose | hooss
+flea | flech | flekh
+flicker | flichter | flikhter
+flight | flicht | flikht
+flood (river) | spate | spayt | "the burn's in spate" = the stream's flooded
+floor | flair | flair
+flower | flooer, flouer | floo-er, floo-er
+flutter | flichter | flikhter
+fly | flee | flee
+fog (from the sea) | haar | haar
+fold (for sheep) | fauld | fawld
+fool | gowk, eejit, numptie, bampot | gowk, ee-jit, nump-tee, bam-pot
+foolish | glaikit, gowkit | glay-kit, gowk-it
+foot | fit | fit
+football | fitba | fit-baw
+for | fur, fir | fur, fir
+forehead | broo | broo
+fortnight | fortnicht | fortnikht
+forward | forrit | forrit
+found | fun, foon | fun, foon
+four | fower | fow-er
+fourteen | fowerteen | fowerteen
+fox | tod | tod
+freeze (set like jelly) | jeel | jeel
+fresh | caller | caller
+friend | freend, billie | freend, billee
+frighten | fleg, frichten | fleg, frikhten
+frightened | feart, frichtit | feart, frikhtit
+frog | puddock | pud-ok
+from | fae, frae | fay, fray
+frown | glower | glow-er
+frozen | jeelt | jeelt
+full | fu, fou | foo, foo
+fun | daffin | daffin
+fuss | stushie, steer | stoo-shee, steer
+fussy | pernickety, fykie | pernicketee, fykee
 
 # ---------- G ----------
-gable | gavel
-garden | gairden, yaird
-gate | yett
-gather | gaither
-gave | gied
-ghost | ghaist, bogle
-girl | lassie, quine | quine is NE
-give | gie
-given | gien
-glad | gled
-glance | glisk, keek
-gleam | glent
-go | gang, gae
-go away | awa an bile yer heid, awa ye go
-goes | gangs, gaes
-going | gaun
-going to | gonnae
-gone | gane, went | "he's went" – Glasgow
-good | guid, gid
-good-looking | weel-faured
-goodbye | see ye efter
-goose | guse
-gossip | clash, claik
-grab | cleek, glaum
-grandchild | oy | old
-grandfather | granda
-grasp | glaum
-grass | gress, gerss
-grave (plot) | lair
-graveyard | kirkyaird
-greasy | creeshie
-greedy | greedy-guts
-grip | grup
-groan | grane
-ground | grun, grund
-grow | growe
-grumble | girn, grummle
-grumpy | crabbit
-guess | jalouse | = suspect, work out
-guts | thairms, painches
-gutter | syver, sivver
+gable | gavel | gavel
+garden | gairden, yaird | gair-den, yaird
+gate | yett | yett
+gather | gaither | gay-ther
+gave | gied | gheed
+ghost | ghaist, bogle | gayst, boh-gul
+girl | lassie, quine | las-ee, kwine | quine is NE
+give | gie | ghee
+given | gien | gheen
+glad | gled | gled
+glance | glisk, keek | glisk, keek
+gleam | glent | glent
+go | gang, gae | gang, gay
+goes | gangs, gaes | gangs, gays
+going | gaun | gawn
+going to | gonnae | gon-ay
+gone | gane, went | gayn, went | "he's went" – Glasgow
+good | guid, gid | gid, gid
+good-looking | weel-faured | weel-fawred
+goose | guse | guse
+gossip | clash, claik | clash, claik
+grab | cleek, glaum | cleek, glawm
+grandchild | oy | oy | old
+grandfather | granda | gran-da
+grasp | glaum | glawm
+grass | gress, gerss | gress, gerss
+grave (plot) | lair | lair
+graveyard | kirkyaird | kirkyaird
+greasy | creeshie | creeshee
+greedy | greedy-guts | greedy-guts
+grip | grup | grup
+groan | grane | grayn
+ground | grun, grund | grun, grund
+grow | growe | growe
+grumble | girn, grummle | girn, grummle
+grumpy | crabbit | crab-it
+guess | jalouse | ja-looz | = suspect, work out
+guts | thairms, painches | thairms, painches
+gutter | syver, sivver | syver, sivver
 
 # ---------- H ----------
-had | hud, haed
-hadn't | hudnae
-half | hauf
-halfpenny | bawbee
-hall | ha
-hand | haun
-handful | haunfu, gowpen
-handle | haunle
-hang | hing
-happy | cantie, blythe
-harvest | hairst
-hasn't | hasnae, hisnae
-have | hae, huv, hiv
-haven't | huvnae, hivnae, hinnae, haena
-head | heid
-headache | sair heid
-heart | hert
-heather | hether
-heavy | hivvy, wechtie
-hedgehog | hurcheon
-her | hur
-herself | hersel
-hiccup | yesk
-hide (something) | plank | Glasgow
-high | heich
-hill | brae
-hillside | brae-face
-himself | hissel
-hit | skelp, dunt
-hoarse | roupit, roopy
-hold | haud
-hold on | haud oan
-hollow | howe
-home | hame
-homesick | hamesick
-hook | cleek
-horrible | bowfin, mingin, boggin | bowfin – Glasgow
-horse (small) / donkey | cuddy
-hot | het
-hour | oor
-house | hoose
-houses | hooses
-how | hoo
-how much | hoo muckle
-howl | yowl
-hug | bosie | NE
-carry (something heavy) | humph
-hundred | hunner
-hungry | hungert, yaup
-hurt | sair
-husband | guidman
-hush | wheesht, whisht
+had | hud, haed | hud, hayd
+hadn't | hudnae | hud-nay
+half | hauf | hawf
+halfpenny | bawbee | bawbee
+hall | ha | haw
+hand | haun | hawn
+handful | haunfu, gowpen | hawnfoo, gowpen
+handle | haunle | hawnle
+hang | hing | hing
+happy | cantie, blythe | cantee, blythe
+harvest | hairst | hairst
+hasn't | hasnae, hisnae | haz-nay, hiz-nay
+have | hae, huv, hiv | hay, huv, hiv
+haven't | huvnae, hivnae, hinnae, haena | huv-nay, hiv-nay, hin-ay, hayna
+head | heid | heed
+heart | hert | hert
+heather | hether | hether
+heavy | hivvy, wechtie | hivvee, wekhtee
+hedgehog | hurcheon | hur-chun
+her | hur | hur
+herself | hersel | her-sel
+hiccup | yesk | yesk
+hide (something) | plank | plank | Glasgow
+high | heich | heekh
+hill | brae | bray
+hillside | brae-face | bray-face
+himself | hissel | hiz-sel
+hit | skelp, dunt | skelp, dunt
+hoarse | roupit, roopy | roopit, roopee
+hold | haud | hawd
+hollow | howe | howe
+home | hame | haym
+homesick | hamesick | hamesick
+hook | cleek | cleek
+horrible | bowfin, mingin, boggin | bow-fin, ming-in, bog-in | bowfin – Glasgow
+horse (small) / donkey | cuddy | kud-ee
+hot | het | het
+hour | oor | oor
+house | hoose | hooss
+houses | hooses | hoo-ziz
+how | hoo | hoo
+howl | yowl | yowl
+hug | bosie | bosee | NE
+carry (something heavy) | humph | humph
+hundred | hunner | hunner
+hungry | hungert, yaup | hungert, yawp
+hurt | sair | sair
+husband | guidman | gidman
+hush | wheesht, whisht | wheesht, whisht
 
 # ---------- I ----------
-I | Ah, A
-I'm | Ah'm, A'm
-I'm not | Ah'm no
-I will | Ah'll
-I won't | Ah'll no, Ah wullnae
-idiot | eejit, bampot, numptie, dafty, sumph
-if | gin | old
-ill | no weel, seik
-in front of | forenent
-inside | ben, inby | "ben the hoose" = through in the inner room
-instead of | insteid o
-into | intae, intil
-isn't | isnae, isna
-itch | yeuk, youk
-itchy | yeuky
-itself | itsel
+I | Ah, A | ah, ah
+I'm | Ah'm, A'm | ahm, ahm
+I will | Ah'll | ahl
+idiot | eejit, bampot, numptie, dafty, sumph | ee-jit, bam-pot, nump-tee, daftee, sumph
+if | gin | gin | old
+ill | seik | seek
+in front of | forenent | forenent
+inside | ben, inby | ben, inbee | "ben the hoose" = through in the inner room
+into | intae, intil | in-tay, intil
+isn't | isnae, isna | iz-nay, iz-na
+itch | yeuk, youk | yook, yook
+itchy | yeuky | yook-ee
+itself | itsel | it-sel
 
 # ---------- J ----------
-jacket | jaicket
-jail | jile
-jam | jeely
-jam sandwich | jeely piece
-jelly | jeely
-jump | lowp, loup
-jumper | gansey
-just | jist, juist
+jacket | jaicket | jay-kit
+jail | jile | jile
+jam | jeely | jee-lee
+jelly | jeely | jee-lee
+jump | lowp, loup | lowp, lowp
+jumper | gansey | gansay
+just | jist, juist | jist, jist
 
 # ---------- K ----------
-kind | couthy
-kindling | kinnlin
-kitten | kittlin
-knife (large) | gully
-knock | chap | "chap the door" = knock on the door
-know | ken
-knowing | kennin
-knew | kent
-known | kent
+kind | couthy | coothee
+kindling | kinnlin | kinnlin
+kitten | kittlin | kittlin
+knife (large) | gully | gullee
+knock | chap | chap | "chap the door" = knock on the door
+know | ken | ken
+knowing | kennin | ken-in
+knew | kent | kent
+known | kent | kent
 
 # ---------- L ----------
-lad | laddie, loon, callant | loon is NE, callant is Borders
-lady | wifie, leddy
-lake | loch
-lamb | lammie
-lane | wynd, vennel | vennel = narrow alley
-large | muckle, mickle
-lark (bird) | laverock
-last night | yestreen | old
-laugh | lauch
-laughed | leuch
-laughter | lauchter
-lazy | sweir, idle | sweir = reluctant
-lead (metal) | leid
-learning | lear
-leave | lea
-leave it alone | lea it alane
-left-handed | kerr-handit, corrie-fistit
-leg | shank
-lend | len
-let | lat
-lift (hoist) | heeze
-light | licht
-lightning | fire-flaucht
-limp | hirple
-little | wee, sma
-live | bide
-lively | birkie, cantie
-loaf | laif
-loft | laft
-long | lang
-long ago | lang syne
-look | luik, leuk
-loose | lowse
-loosen | lowsen
-lose | tine
-lost | tint
-lot | hantle
-low | laich, laigh
-lunch (packed) | piece
+lad | laddie, loon, callant | lad-ee, loon, callant | loon is NE, callant is Borders
+lady | wifie, leddy | wif-ee, leddee
+lake | loch | lokh
+lamb | lammie | lammee
+lane | wynd, vennel | wynd, vennel | vennel = narrow alley
+large | muckle, mickle | muk-ul, mik-ul
+lark (bird) | laverock | lav-er-ok
+last night | yestreen | yestreen | old
+laugh | lauch | lawkh
+laughed | leuch | lyookh
+laughter | lauchter | lawkhter
+lazy | sweir, idle | sweer, idle | sweir = reluctant
+lead (metal) | leid | leed
+learning | lear | lear
+leave | lea | lea
+left-handed | kerr-handit, corrie-fistit | kerr-handit, corrie-fistit
+leg | shank | shank
+lend | len | len
+let | lat | lat
+lift (hoist) | heeze | heeze
+light | licht | likht
+lightning | fire-flaucht | fire-flawkht
+limp | hirple | hirple
+little | wee, sma | wee, smaw
+live | bide | bide
+lively | birkie, cantie | birkee, cantee
+loaf | laif | layf
+loft | laft | laft
+long | lang | lang
+look | luik, leuk | lik, lyook
+loose | lowse | lowse
+loosen | lowsen | lowsen
+lose | tine | tine
+lost | tint | tint
+lot | hantle | han-tul
+low | laich, laigh | laikh, laikh
+lunch (packed) | piece | peess
 
 # ---------- M ----------
-mad | gyte, wud, aff yer heid
-magpie | pyot, piet
-make | mak
-making | makkin
-man | mannie
-manage | manish
-manners | mainners
-many | mony
-marbles (game) | bools, jauries
-mark | merk
-market | mercat
-marry | mairry
-married | mairrit
-marsh | moss
-master | maister
-match (for lighting) | spunk
-mean (stingy) | grippy, near
-measles | mizzles
-meat | mait
-meddle | middle | "dinnae middle" = don't meddle
-meeting (arranged) | tryst
-melt | thowe
-might | micht
-mightn't | michtnae
-mighty | michty | "michty me!" = goodness me!
-mine | mines | "it's mines" – Glasgow
-minister | meenister
-minute | meenit
-miserable | dowie, wae
-mist | haar | sea mist (East)
-mistake | mistak
-moan | girn, mump
-mole (animal) | mowdie, moudiewort
-money | siller
-moon | mune, muin
-moor | muir
-more | mair
-morning | morn | "the morn's morn" = tomorrow morning
-most | maist
-mostly | maistly
-mother | mither, maw, mammy
-mountain | ben
-mouse | moose
-mouth | mooth, gub, geggie
-move house | flit
-much | muckle
-mud | glaur, clart
-muddy | glaurie, clarty
-mumble | mummle
-murder | murther
-must | maun
-mustn't | maunna
-my | ma
-myself | masel
+mad | gyte, wud | gite, wud
+magpie | pyot, piet | pyot, piet
+make | mak | mak
+making | makkin | makkin
+man | mannie | man-ee
+manage | manish | manish
+manners | mainners | mayn-ers
+many | mony | monee
+marbles (game) | bools, jauries | bools, jawries
+mark | merk | merk
+market | mercat | mercat
+marry | mairry | mair-ee
+married | mairrit | mair-it
+marsh | moss | moss
+master | maister | may-ster
+match (for lighting) | spunk | spunk
+mean (stingy) | grippy, near | grippee, near
+measles | mizzles | mizzles
+meat | mait | mayt
+meddle | middle | middle | "dinnae middle" = don't meddle
+meeting (arranged) | tryst | tryst
+melt | thowe | thowe
+might | micht | mikht
+mightn't | michtnae | mikht-nay
+mighty | michty | mikhtee | "michty me!" = goodness me!
+mine | mines | mines | "it's mines" – Glasgow
+minister | meenister | meenister
+minute | meenit | meenit
+miserable | dowie, wae | dowee, way
+mist | haar | haar | sea mist (East)
+mistake | mistak | mistak
+moan | girn, mump | girn, mump
+mole (animal) | mowdie, moudiewort | mow-dee, moo-dee-wort
+money | siller | siller
+moon | mune, muin | mune, min
+moor | muir | myoor
+more | mair | mair
+morning | morn | morn | "the morn's morn" = tomorrow morning
+most | maist | mayst
+mostly | maistly | mayst-lee
+mother | mither, maw, mammy | mither, maw, mammee
+mountain | ben | ben
+mouse | moose | mooss
+mouth | mooth, gub, geggie | mooth, gub, geg-ee
+move house | flit | flit
+much | muckle | muk-ul
+mud | glaur, clart | glawr, clart
+muddy | glaurie, clarty | glawree, clartee
+mumble | mummle | mummle
+murder | murther | murther
+must | maun | mawn
+mustn't | maunna | mawn-a
+my | ma | maw
+myself | masel | ma-sel
 
 # ---------- N ----------
-naked | in the scud, nakit
-narrow | narra
-nasty | nesty
-naughty | ill-trickit
-nearby | near-haun
-nearly | near-haun, maist
-neat | snod, trig
-neck | craig, hause
-neighbour | neebur
-neither | naither
-nephew | nevoy
-never | niver, nivver
-next | neist
-night | nicht
-no | naw, nae
-nobody | naebody
-noise | din, steer, stramash
-none | nane
-nonsense | havers, blethers
-noon | twal-oors
-nose | neb
-nosy | nebby
-not | no, nae
-nothing | naethin, nocht, hee-haw | hee-haw = nothing at all (slang)
-now | noo
-now (just now) | the noo
-nowhere | naewhere
-number | nummer
+naked | nakit | nakit
+narrow | narra | narra
+nasty | nesty | nestee
+naughty | ill-trickit | ill-trickit
+nearby | near-haun | near-hawn
+nearly | near-haun, maist | near-hawn, mayst
+neat | snod, trig | snod, trig
+neck | craig, hause | craig, hawse
+neighbour | neebur | neebur
+neither | naither | nay-ther
+nephew | nevoy | nevoy
+never | niver, nivver | niver, nivver
+next | neist | neest
+night | nicht | nikht
+no | naw, nae | naw, nay
+nobody | naebody | nay-bod-ee
+noise | din, steer, stramash | din, steer, stra-mash
+none | nane | nayn
+nonsense | havers, blethers | hay-verz, bleth-erz
+noon | twal-oors | twal-oors
+nose | neb | neb
+nosy | nebby | nebbee
+not | no, nae | no, nay
+nothing | naethin, nocht, hee-haw | nay-thin, nokht, hee-haw | hee-haw = nothing at all (slang)
+now | noo | noo
+nowhere | naewhere | nay-whair
+number | nummer | nummer
 
 # ---------- O ----------
-oath | aith
-oats | aits
-odd (spare) | orra
-of | o, o'
-off | aff
-often | aften, aft
-oh dear | help ma boab, crivvens, michty me
-oh well | och
-old | auld
-old man | auld yin
-once | wance, aince, yince
-one | wan, ane, yin
-onto | ontae
-open | apen
-opposite | forenent, fornent
-other | ither
-our | oor
-ours | oors
-ourselves | oorsels
-out | oot
-outside | ootside, ootby
-over | ower
-overturn | cowp
-owl | hoolet, houlet
-own | ain
+oath | aith | ayth
+oats | aits | ayts
+odd (spare) | orra | orra
+of | o, o' | uh, uh
+off | aff | aff
+often | aften, aft | aften, aft
+oh dear | crivvens | crivvens
+oh well | och | okh
+old | auld | awld
+once | wance, aince, yince | wanss, aynss, yinss
+one | wan, ane, yin | wan, ayn, yin
+onto | ontae | on-tay
+open | apen | apen
+opposite | forenent, fornent | forenent, fornent
+other | ither | ith-er
+our | oor | oor
+ours | oors | oors
+ourselves | oorsels | oor-selz
+out | oot | oot
+outside | ootside, ootby | ootside, ootbee
+over | ower | ow-er
+overturn | cowp | kowp
+owl | hoolet, houlet | hoo-let, hoo-let
+own | ain | ayn
 
 # ---------- P ----------
-pale | peely-wally, wan
-patch | clout
-pay | pey
-paid | peyed
-peaceful | quate, lown
-peek | keek
-penny | wing | Glasgow slang
-people | folk, fowk
-perhaps | mibbe, mebbe
-person | body | "a wee body" = a small person
-pet (darling) | dautie
-pick (choose) | wale
-pig | soo, grumphie
-pigeon | doo
-pile | rickle, heap
-pinch | nip
-pity | peety
-plenty | rowth, routh
-plough | pleuch, pleugh
-plum | ploom
-pocket | pooch
-poison | pushion
-pole | caber
-police | polis
-policeman | polis, polisman
-pool (puddle) | dub
-poor | puir
-porridge | parritch
-pot | pat
-potato | tattie
-pour | poor
-pout | pet lip | "dinnae pit yer pet lip oot"
-pretend | kid oan, mak on
-pretty | bonnie
-prison | jile
-proud | prood
-pudding | puddin
-pull | pu
-pulled | pu'd
-push | dunch
-put | pit
-put up with | thole
+pale | peely-wally, wan | pee-lee-wal-ee, wan
+patch | clout | cloot
+pay | pey | pay
+paid | peyed | peyed
+peaceful | quate, lown | kwayt, lown
+peek | keek | keek
+penny | wing | wing | Glasgow slang
+people | folk, fowk | folk, fowk
+perhaps | mibbe, mebbe | mib-ee, meb-ee
+person | body | bodee | "a wee body" = a small person
+pet (darling) | dautie | dawtee
+pick (choose) | wale | wayl
+pig | soo, grumphie | soo, grumphee
+pigeon | doo | doo
+pile | rickle, heap | rickle, heap
+pinch | nip | nip
+pity | peety | peetee
+plenty | rowth, routh | rowth, rooth
+plough | pleuch, pleugh | plyookh, plyookh
+plum | ploom | ploom
+pocket | pooch | pootch
+poison | pushion | pushion
+pole | caber | caber
+police | polis | poh-liss
+policeman | polis, polisman | poh-liss, poh-liss-man
+pool (puddle) | dub | dub
+poor | puir | peer
+porridge | parritch | par-itch
+pot | pat | pat
+potato | tattie | tat-ee
+pour | poor | poor
+pretty | bonnie | bon-ee
+prison | jile | jile
+proud | prood | prood
+pudding | puddin | puddin
+pull | pu | poo
+pulled | pu'd | pood
+push | dunch | dunsh
+put | pit | pit
+put up with | thole | thole
 
 # ---------- Q ----------
-quarrel | cast oot, rammy, flyte
-quick | gleg, swith
-quiet | quate, lown
-quite | gey, fair | "fair dumfoonert" = quite astonished
+quarrel | rammy, flyte | ram-ee, flyte
+quick | gleg, swith | gleg, swith
+quiet | quate, lown | kwayt, lown
+quite | gey, fair | guy, fair | "fair dumfoonert" = quite astonished
 
 # ---------- R ----------
-rag | clout, cloot
-raid (cattle) | reive | reiver = Borders raider
-rather | raither
-reach | rax
-real | rael
-really | rale
-red | reid
-remember | mind | "dae ye mind?" = do you remember?
-rich | bien
-ridge | rig
-ring (of a bell) | jow
-rinse | synd
-roof | ruif
-room (bedroom) | chaumer
-rope | raip
-rough | rouch
-round | roond
-row (line) | raw
-row (quarrel) | rammy, stushie
-rubbish heap | midden
-rude | impident
-run | rin
-running | rinnin
-rush | breenge
+rag | clout, cloot | cloot, cloot
+raid (cattle) | reive | reeve | reiver = Borders raider
+rather | raither | ray-ther
+reach | rax | rax
+real | rael | rayl
+really | rale | rayl
+red | reid | reed
+remember | mind | mind | "dae ye mind?" = do you remember?
+rich | bien | bien
+ridge | rig | rig
+ring (of a bell) | jow | jow
+rinse | synd | synd
+roof | ruif | rif
+room (bedroom) | chaumer | chawmer
+rope | raip | rayp
+rough | rouch | rookh
+round | roond | roond
+row (line) | raw | raw
+row (quarrel) | rammy, stushie | ram-ee, stoo-shee
+rubbish heap | midden | mid-en
+rude | impident | impident
+run | rin | rin
+running | rinnin | rinnin
+rush | breenge | breenge
 
 # ---------- S ----------
-sad | dowie, wae
-safe | sauf
-salt | saut
-salty | sauty
-sandwich | piece
-scare | fleg
-scared | feart
-school | schuil, skuil
-scold | flyte
-scorch | scowder, scouther
-scowl | glower
-scrape | scart
-scratch | scart
-scream | skelloch, skirl
-search (pockets) | ripe
-see you later | see ye efter
-seldom | seendil
-self | sel
-seven | seeven
-seventeen | seeventeen
-shake | shak, shoogle
-shaky | shoogly
-shall | sall, sal
-sharp | gleg
-shelf | bink
-shelter | bield
-shepherd | herd
-shirt | sark
-shiver | chitter
-shivering | chitterin
-shoe | shae
-shoes | shoon, shuin
-short (stumpy) | cutty
-shoulder | shooder, shouther
-shouldn't | shouldnae
-shriek | skirl, skelloch
-shove | dunch
-shovel | shool, shuil
-show | shaw
-shut | steek
-shut up | haud yer wheesht
-shy | blate
-sick (ill) | no weel, seik
-sick (vomit) | boak
-sigh | sich
-sight | sicht
-silly | glaikit, daft
-silver | siller
-since | syne
-six | sax
-sixteen | saxteen
-sky | lift | old
-slap | skelp
-slice | sclice
-slide | slidder
-slope | brae
-sly | sleekit | "wee sleekit cowrin tim'rous beastie"
-small | wee, sma
-smart (clever) | gleg
-smell (bad) | ming
-smelly | mingin, boggin
-smoke | reek
-smoky | reekie | "Auld Reekie" = Edinburgh
-snooze | dover
-snow | snaw
-snowflake | flichan | flichan = to fall in flakes
-so | sae
-soaked | drookit, droukit
-soap | saip
-sob | sab
-soft | saft
-soldier | sodger
-sometimes | whiles
-song | sang
-soon | suin, sune
-sorrow | wae, dool
-sorrowful | waefu
-sore | sair
-soul | sowl
-sour | soor
-south | sooth
-sow (pig) | soo
-spare | orra
-spark | spunk
-spider | ettercap
-spill | skail
-splash about in water | plowter
-splinter | skelf
-spoil | spile
-spoon | spune, spuin
-squint | skelly
-stagger | stoiter, stotter
-staircase | stair
-stand | staun
-star | starn
-stare | glower, gove
-start | stert
-starve | sterve
-stay | bide
-steal | pauchle
-steep | stey
-stingy | grippy, mingy
-stir | steer
-stomach | wame, kyte
-stone | stane
-stony | stany
-stool | stuil, creepie
-storm | blatter
-straight | stracht, straucht
-strange | unco
-straw | strae
-wander | stravaig
-stretch | rax, streetch
-strong | strang, stoot
-stubborn | thrawn, dour
-stuck | stickit
-belongings | gear
-stumble | stummle, stoiter
-stupid | stupit, glaikit, gowkit
-such | sic, siccan
-suck | sook
-summer | simmer
-sure | shair
-surely | shairly
-swallow | swally
-sweat | swite, sweit
-sweep | soop
-swing | swee, shuggie | shuggie – Glasgow
+sad | dowie, wae | dowee, way
+safe | sauf | sawf
+salt | saut | sawt
+salty | sauty | sawtee
+sandwich | piece | peess
+scare | fleg | fleg
+scared | feart | feart
+school | schuil, skuil | skil, skil
+scold | flyte | flyte
+scorch | scowder, scouther | skowder, skoother
+scowl | glower | glow-er
+scrape | scart | skart
+scratch | scart | skart
+scream | skelloch, skirl | skel-okh, skirl
+search (pockets) | ripe | ripe
+seldom | seendil | seendil
+self | sel | sel
+seven | seeven | seeven
+seventeen | seeventeen | seeventeen
+shake | shak, shoogle | shak, shoo-gul
+shaky | shoogly | shoog-lee
+shall | sall, sal | sall, sal
+sharp | gleg | gleg
+shelf | bink | bink
+shelter | bield | beeld
+shepherd | herd | herd
+shirt | sark | sark
+shiver | chitter | chitter
+shivering | chitterin | chitterin
+shoe | shae | shay
+shoes | shoon, shuin | shoon, shin
+short (stumpy) | cutty | cuttee
+shoulder | shooder, shouther | shooder, shoother
+shouldn't | shouldnae | shood-nay
+shriek | skirl, skelloch | skirl, skel-okh
+shove | dunch | dunsh
+shovel | shool, shuil | shool, shil
+show | shaw | shaw
+shut | steek | steek
+shy | blate | blayt
+sick (ill) | seik | seek
+sick (vomit) | boak | boke
+sigh | sich | sikh
+sight | sicht | sikht
+silly | glaikit, daft | glay-kit, daft
+silver | siller | siller
+since | syne | syne
+six | sax | sax
+sixteen | saxteen | saxteen
+sky | lift | lift | old
+slap | skelp | skelp
+slice | sclice | sklice
+slide | slidder | slidder
+slope | brae | bray
+sly | sleekit | slee-kit | "wee sleekit cowrin tim'rous beastie"
+small | wee, sma | wee, smaw
+smart (clever) | gleg | gleg
+smell (bad) | ming | ming
+smelly | mingin, boggin | ming-in, bog-in
+smoke | reek | reek
+smoky | reekie | reekee | "Auld Reekie" = Edinburgh
+snooze | dover | dover
+snow | snaw | snaw
+snowflake | flichan | flikhan | flichan = to fall in flakes
+so | sae | say
+soaked | drookit, droukit | drook-it, drook-it
+soap | saip | sayp
+sob | sab | sab
+soft | saft | saft
+soldier | sodger | soj-er
+sometimes | whiles | whiles
+song | sang | sang
+soon | suin, sune | sin, sune
+sorrow | wae, dool | way, dool
+sorrowful | waefu | wayfoo
+sore | sair | sair
+soul | sowl | sowl
+sour | soor | soor
+south | sooth | sooth
+sow (pig) | soo | soo
+spare | orra | orra
+spark | spunk | spunk
+spider | ettercap | ettercap
+spill | skail | skayl
+splash about in water | plowter | plowter
+splinter | skelf | skelf
+spoil | spile | spile
+spoon | spune, spuin | spune, spin
+squint | skelly | skellee
+stagger | stoiter, stotter | stoiter, stotter
+staircase | stair | stair
+stand | staun | stawn
+star | starn | starn
+stare | glower, gove | glow-er, gove
+start | stert | stert
+starve | sterve | sterve
+stay | bide | bide
+steal | pauchle | pawkh-ul
+steep | stey | stay
+stingy | grippy, mingy | grippee, mingee
+stir | steer | steer
+stomach | wame, kyte | waym, kite
+stone | stane | stayn
+stony | stany | stanee
+stool | stuil, creepie | stil, creepee
+storm | blatter | blatter
+straight | stracht, straucht | strakht, strawkht
+strange | unco | unco
+straw | strae | stray
+wander | stravaig | stra-vayg
+stretch | rax, streetch | rax, streetch
+strong | strang, stoot | strang, stoot
+stubborn | thrawn, dour | thrawn, door
+stuck | stickit | stickit
+belongings | gear | gear
+stumble | stummle, stoiter | stummle, stoiter
+stupid | stupit, glaikit, gowkit | stupit, glay-kit, gowk-it
+such | sic, siccan | sic, siccan
+suck | sook | sook
+summer | simmer | simmer
+sure | shair | shair
+surely | shairly | shairlee
+swallow | swally | swal-ee
+sweat | swite, sweit | swite, sweet
+sweep | soop | soop
+swing | swee, shuggie | swee, shug-ee | shuggie – Glasgow
 
-scarecrow | tattie-bogle
+scarecrow | tattie-bogle | tattie-bogle
 # ---------- T ----------
-take | tak
-taken | taen
-talk | blether, crack
-tall | lang
-tangle | fankle, taigle
-teaspoon | teaspune
-than | nor | "bigger nor me"
-that (over there) | thon, yon
-them | thaim
-themselves | thirsels, thaimsels
-then | syne
-these | thir, thae
-thin (puny) | shilpit
-thirsty | drouthy
-those | thae, thon
-thought | thocht
-thousand | thoosand
-thread | threid
-throat | thrapple
-through | throu, thro
-thumb | thoomb
-thump | dunt, clour
-thunder | thunner
-tickle | kittle
-tidy | snod, redd up | "redd up" = tidy up
-tight | ticht
-tiny | wee
-tired | wabbit, puggled, forfochen
-to | tae
-today | the day
-toe | tae
-together | thegither
-toilet | cludgie
-told | telt
-tomorrow | the morra
-tonight | the nicht
-too | tae, ower | "ower big" = too big
-tooth | tuith
-top | tap
-tough | teuch
-town | toon
-trick | cantrip | cantrip = spell, trick
-trouble | fash
-trousers | troosers, breeks
-trust | lippen
-try | ettle | ettle = try, intend
-turnip | neep
-turnips and potatoes | neeps an tatties
-twelve | twal
-twenty | twinty
-twist | thraw
-twisted | thrawn
-two | twa
+take | tak | tak
+taken | taen | tayn
+talk | blether, crack | bleth-er, crack
+tall | lang | lang
+tangle | fankle, taigle | fankle, taigle
+teaspoon | teaspune | teaspune
+than | nor | nor | "bigger nor me"
+that (over there) | thon, yon | thon, yon
+them | thaim | thaim
+themselves | thirsels, thaimsels | thirsels, thaimsels
+then | syne | syne
+these | thir, thae | thir, thay
+thin (puny) | shilpit | shilpit
+thirsty | drouthy | droothee
+those | thae, thon | thay, thon
+thought | thocht | thokht
+thousand | thoosand | thoosand
+thread | threid | threed
+throat | thrapple | thrap-ul
+through | throu, thro | throo, thro
+thumb | thoomb | thoomb
+thump | dunt, clour | dunt, cloor
+thunder | thunner | thunner
+tickle | kittle | kittle
+tidy | snod | snod | "redd up" = tidy up
+tight | ticht | tikht
+tiny | wee | wee
+tired | wabbit, puggled, forfochen | wab-it, pug-uld, for-fokh-en
+to | tae | tay
+toe | tae | tay
+together | thegither | the-gither
+toilet | cludgie | clud-jee
+told | telt | telt
+too | tae, ower | tay, ow-er | "ower big" = too big
+tooth | tuith | tith
+top | tap | tap
+tough | teuch | tyookh
+town | toon | toon
+trick | cantrip | cantrip | cantrip = spell, trick
+trouble | fash | fash
+trousers | troosers, breeks | troo-zerz, breeks
+trust | lippen | lippen
+try | ettle | ettle | ettle = try, intend
+turnip | neep | neep
+twelve | twal | twal
+twenty | twinty | twintee
+twist | thraw | thraw
+twisted | thrawn | thrawn
+two | twa | twaw
 
 # ---------- U ----------
-ugly | hackit, ugsome | hackit – Glasgow
-uncommon | unco
-under | unner
-understand | understaun
-unhappy | wae
-unlucky | unchancy
-untidy | throwither, clarty | throwither = messy, disorganised
-until | tae, till
-upside down | heels ower heid, tapsalteerie
-upstairs | up the stair
-use | uise
-used | uised
-useless | uiseless, hopeless
+ugly | hackit, ugsome | hak-it, ugsome | hackit – Glasgow
+uncommon | unco | unco
+under | unner | unner
+understand | understaun | understawn
+unhappy | wae | way
+unlucky | unchancy | unchancee
+untidy | throwither, clarty | throwither, clartee | throwither = messy, disorganised
+until | tae, till | tay, till
+upside down | tapsalteerie | tap-sal-tee-ree
+use | uise | ise
+used | uised | ised
+useless | uiseless, hopeless | iseless, hopeless
 
 # ---------- V ----------
-very | gey, awfy, unco
-village | clachan, toon
+very | gey, awfy, unco | guy, aw-fee, unco
+village | clachan, toon | klakh-an, toon
 
 # ---------- W ----------
-wager | wad
-wake | wauk, wauken
-walk | traivel
-walk (stroll) | dander, dauner
-wall | wa
-wall (of stones) | dyke
-was | wis
-wasn't | wisnae, wusnae
-water | watter
-waterfall | linn
-way | wey
-weak | shilpit, peely-wally
-weary | forfochen
-wedding | waddin
-week | ouk
-weep | greet
-weight | wecht
-well | weel
-well-off | bien, weel-aff
-went | gaed
-were | wur, wis
-weren't | wurnae
-west | wast
-wet | weet, wat
-wet through | drookit
-what | whit
-whatever | whitever
-wheelbarrow | barra
-when | whan
-where | whaur
-whether | whither
-which | whilk, whit
-white | fite | fite is NE
-who | wha
-whole | hale, haill
-whose | wha's, whase
-why | how, whit wey | "how no?" = why not?
-wide | braid
-widow | weedae, widda
-will | wull
-willing | willin, fain
-wind | win, wund
-window | windae, winnock
-wipe | dicht
-with | wi
-without | withoot, wi'oot
-woke | waukit
-woman | wumman, wifie
-women | weemin
-won't | willnae, wullnae, winnae
-wonder | wunner, ferlie
-wonderful | wunnerfu
-wood | wid, wuid
-wool | oo, woo
-work | wark, wurk
-world | warld, wurld
-worn out | forfochen, wabbit
-worry | fash
-worse | waur
-worst | warst
-would | wid, wad
-wouldn't | widnae, wouldnae
-wrap up warm | hap
-wrestle | warstle
-wretched | wretchit
-wrinkle | runkle
-write | scrieve
-writer | scriever
-wrong | wrang
+wager | wad | wad
+wake | wauk, wauken | wawk, wawken
+walk | traivel | tray-vel
+walk (stroll) | dander, dauner | dander, dawner
+wall | wa | waw
+wall (of stones) | dyke | dyke
+was | wis | wiz
+wasn't | wisnae, wusnae | wiz-nay, wuz-nay
+water | watter | watter
+waterfall | linn | linn
+way | wey | way
+weak | shilpit, peely-wally | shilpit, pee-lee-wal-ee
+weary | forfochen | for-fokh-en
+wedding | waddin | waddin
+week | ouk | ook
+weep | greet | greet
+weight | wecht | wekht
+well | weel | weel
+well-off | bien, weel-aff | bien, weel-aff
+went | gaed | gayd
+were | wur, wis | wur, wiz
+weren't | wurnae | wur-nay
+west | wast | wast
+wet | weet, wat | weet, wat
+wet through | drookit | drook-it
+what | whit | whit
+whatever | whitever | whitever
+wheelbarrow | barra | barra
+when | whan | whan
+where | whaur | whar
+whether | whither | whither
+which | whilk, whit | whilk, whit
+white | fite | fyte | fite is NE
+who | wha | whaw
+whole | hale, haill | hayl, haill
+whose | wha's, whase | whaws, whase
+why | how | how | "how no?" = why not?
+wide | braid | braid
+widow | weedae, widda | weeday, widda
+will | wull | wull
+willing | willin, fain | willin, fain
+wind | win, wund | win, wund
+window | windae, winnock | winday, winnock
+wipe | dicht | dikht
+with | wi | wih
+without | withoot, wi'oot | wih-oot, wih-oot
+woke | waukit | wawkit
+woman | wumman, wifie | wum-an, wif-ee
+women | weemin | wee-min
+won't | willnae, wullnae, winnae | wil-nay, wul-nay, win-ay
+wonder | wunner, ferlie | wunner, ferlee
+wonderful | wunnerfu | wunnerfoo
+wood | wid, wuid | wid, wid
+wool | oo, woo | oo, woo
+work | wark, wurk | wark, wurk
+world | warld, wurld | warld, wurld
+worn out | forfochen, wabbit | for-fokh-en, wab-it
+worry | fash | fash
+worse | waur | wawr
+worst | warst | warst
+would | wid, wad | wid, wad
+wouldn't | widnae, wouldnae | wid-nay, wood-nay
+wrap up warm | hap | hap
+wrestle | warstle | warstle
+wretched | wretchit | wretchit
+wrinkle | runkle | runkle
+write | scrieve | skrieve
+writer | scriever | skriever
+wrong | wrang | wrang
 
 # ---------- Y ----------
-yard | yaird
-yell | skelloch
-yellow | yella, yalla
-yes | aye
-you | ye
-you (more than one) | youse, yous, yiz
-your | yer
-you're | ye're, yer
-yourself | yersel
-yourselves | yersels
-
-# ---------- PHRASES ----------
-how are you? | how's it gaun?, hoo's it gaun?
-are you all right? | ur ye awright?
-I don't know | Ah dinnae ken, Ah dunno
-I can't | Ah cannae
-I can do that | Aye, A kin dae that
-I didn't | Ah didnae
-I'm tired | Ah'm wabbit, Ah'm puggled
-I'm fed up | Ah'm scunnert
-don't do that | gonnae no dae that
-will you not do that? | gonnae no?
-why not? | how no?
-what's wrong with you? | whit's up wi ye?
-what are you doing? | whit ur ye daein?
-where are you going? | whaur ur ye gaun?
-I'm going home | Ah'm gaun hame
-it's disgusting | it's mingin, it's boggin
-no problem | nae bother
-go on then / well done | gaun yersel
-don't worry | dinnae fash yersel
-the weather's dull and wet | it's dreich
-it's raining lightly | it's smirrin
-come in | come awa in, come ben
-come here | c'mere tae me
-just now | the noo
-goodbye for now | cheerio the noo
-look at that | get a look at that, see thon
-I'm frightened | Ah'm feart
-I'm soaked | Ah'm drookit
-a small whisky | a wee dram, a wee hauf
-a jam sandwich | a jeely piece
-it'll be fine | it'll be awright
-what's your name? | whit dae they cry ye?
-do you remember? | dae ye mind?
-do you know? | dae ye ken?
-you know | ye ken
-I'm starving | Ah'm stervin
-I'm going to | Ah'm gonnae
-it's mine | it's mines
-she's crying | she's greetin
-you're mad | ye're aff yer heid
-all over the place | aw ower the shop
-very good | awfy guid, gey guid
-very small | wee, teeny-wee
-not at all | no ava
-oh my goodness | michty me, help ma boab
+yard | yaird | yaird
+yell | skelloch | skel-okh
+yellow | yella, yalla | yella, yalla
+yes | aye | eye
+you | ye | yi
+you (more than one) | youse, yous, yiz | yeez, yiz, yiz
+your | yer | yer
+you're | ye're, yer | yer, yer
+yourself | yersel | yer-sel
+yourselves | yersels | yer-sels
