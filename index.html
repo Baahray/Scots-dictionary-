@@ -391,14 +391,14 @@
     entries.forEach(function (e) {
       e.scots.forEach(function (s, i) {
         var k = norm(s);
-        if (!map[k]) map[k] = { s: s, say: e.say[i], en: [], notes: [] };
+        if (!map[k]) map[k] = { s: s, say: e.say[i], en: [], notes: [], idx: entries.indexOf(e) };
         if (map[k].en.indexOf(e.en) < 0) map[k].en.push(e.en);
         if (e.note && map[k].notes.indexOf(e.note) < 0) map[k].notes.push(e.note);
       });
     });
     return Object.keys(map).map(function (k) {
       var m = map[k];
-      return { top: m.en.join(", "), main: m.s, sayLine: m.say, speak: m.say, note: m.notes.join("; "), search: [m.s].concat(m.en), key: m.s };
+      return { top: m.en.join(", "), main: m.s, sayLine: m.say, speak: m.say, note: m.notes.join("; "), search: [m.s].concat(m.en), key: m.s, idx: m.idx };
     });
   }
 
