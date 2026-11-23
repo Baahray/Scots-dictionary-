@@ -66,6 +66,22 @@ To put a word in a topic, add `topic: id` to the note of its line in `words.txt`
 
 `meanings.json` links English words with similar meanings so search can find related entries. It's made from [WordNet](https://wordnet.princeton.edu/) (Princeton University, free licence) and rebuilt when the word list changes a lot.
 
+## Structured dataset (`data/scots-dictionary.json`)
+
+Every authentic Scots entry from the Wiktionary file (via kaikki.org), as JSON:
+
+```
+headword, variants, ipa, phonetic, pos, register, region, etymology, definition, example_scots, example_en, cross_references
+```
+
+- **Kept:** genuine Scots words and idioms. **Left out:** names, symbols, numbers, contractions, grammar forms (past tense of…), English words used with their English meaning, made-up respellings of English, and slurs.
+- **phonetic:** CAPITALS = stress; `a` as in cat, `aw` as in law/braw, `o` as in clock, `oo` as in hoose, `kh` as in loch, `'` = Glasgow glottal stop (e.g. `WAT-tur / WA'-ur`). Words in the app's word list use its checked pronunciations; the rest are generated from the spelling, so treat them – and the broad IPA – as a guide, not gospel.
+- **register / region:** from Wiktionary's labels (archaic, Shetland, South Scots…) and the app's notes; *General Scots* when nothing more specific is known.
+- **example_scots / example_en / cross_references:** from the app's examples, topics and shared meanings.
+- **etymology:** empty – the source file has none.
+
+The app itself still reads `words.txt`. Rebuild the JSON with `python3 tools/build_json.py <kaikki-scots.tsv> words.txt topics.txt data/scots-dictionary.json` (needs `wordfreq` and `nltk` with WordNet).
+
 ## Sources and credits
 
 Most words were written for this dictionary. Some come from:
