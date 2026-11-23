@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scots Dictionary</title>
+<meta name="description" content="English to Scots dictionary – Glasgow words and phrases">
+<meta name="theme-color" content="#16325c">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scots">
+<style>
+  :root {
+    --bg: #f6f4ef; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70;
+    --accent: #16325c; --accent-ink: #ffffff; --line: #e4e0d8; --scots: #0b5a3a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121417; --card: #1c1f24; --ink: #ececec; --muted: #9a9aa2;
+      --accent: #2c5aa0; --accent-ink: #ffffff; --line: #2c3036; --scots: #6fd3a3;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; background: var(--accent); color: var(--accent-ink);
+    padding: calc(env(safe-area-inset-top) + 12px) 16px 12px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+  h1 { margin: 0 0 10px; font-size: 1.25rem; font-weight: 700; letter-spacing: .01em; }
+  h1 small { font-weight: 400; opacity: .75; font-size: .8rem; margin-left: 6px; }
+  .row { display: flex; gap: 8px; }
+  input[type=search] { flex: 1; min-width: 0; font-size: 1rem; padding: 10px 12px; border-radius: 10px;
+    border: 0; outline: none; background: #fff; color: #111; }
+  button.dir { flex: none; font-size: .85rem; font-weight: 600; padding: 0 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.4);
+    background: transparent; color: inherit; cursor: pointer; white-space: nowrap; }
+  nav { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px 10px; background: var(--card); border-bottom: 1px solid var(--line); }
+  nav:empty { display: none; }
+  nav a { flex: 1 0 auto; min-width: 26px; text-align: center; padding: 4px 0; font-size: .85rem; font-weight: 600;
+    color: var(--accent); text-decoration: none; border-radius: 6px; }
+  @media (prefers-color-scheme: dark) { nav a { color: #9fc0f5; } }
+  nav a.off { color: var(--line); pointer-events: none; }
+  main { max-width: 720px; margin: 0 auto; padding: 4px 12px calc(env(safe-area-inset-bottom) + 40px); }
+  .letter { margin: 18px 4px 6px; font-weight: 800; color: var(--muted); font-size: .9rem; letter-spacing: .08em;
+    scroll-margin-top: 130px; }
+  ul { list-style: none; margin: 0; padding: 0; background: var(--card); border-radius: 12px; border: 1px solid var(--line); overflow: hidden; }
+  li { padding: 10px 14px; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(90px, 38%) 1fr; gap: 12px; }
+  li:first-child { border-top: 0; }
+  .from { font-weight: 600; word-break: break-word; }
+  .to { color: var(--scots); font-weight: 600; word-break: break-word; }
+  .note { display: block; color: var(--muted); font-weight: 400; font-size: .85rem; margin-top: 2px; }
+  .count { color: var(--muted); font-size: .85rem; margin: 12px 4px 0; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+  footer { text-align: center; font-size: .85rem; color: var(--muted); margin-top: 28px; }
+  footer a { color: inherit; }
+  mark { background: #ffe58a; color: #111; border-radius: 3px; padding: 0 1px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Scots Dictionary <small id="modeLabel">English → Scots</small></h1>
+  <div class="row">
+    <input id="q" type="search" placeholder="Search English or Scots…" autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button class="dir" id="dir" type="button" title="Switch direction">⇄ Swap</button>
+  </div>
+</header>
+<nav id="letters"></nav>
+<main>
+  <div class="count" id="count"></div>
+  <div id="list"><p class="empty">Loading words…</p></div>
+  <footer>
+    <p>Spotted something wrang? <a id="editLink" href="https://github.com/Baahray/scots-dictionary-/edit/main/words.txt">Edit the word list on GitHub</a></p>
+  </footer>
+</main>
+<script>
+(function () {
+  var entries = [];          // {en, scots:[...], note}
+  var mode = "en";           // "en" = English → Scots, "sc" = Scots → English
+  try { mode = localStorage.getItem("mode") || "en"; } catch (e) {}
+
+  var $q = document.getElementById("q");
+  var $list = document.getElementById("list");
+  var $letters = document.getElementById("letters");
+  var $count = document.getElementById("count");
+  var $mode = document.getElementById("modeLabel");
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function norm(s) { return s.toLowerCase().replace(/[’‘]/g, "'").trim(); }
+  function sortKey(s) { return norm(s).replace(/^['"(]+/, ""); }
+  function hl(text, q) {
+    if (!q) return esc(text);
+    var i = norm(text).indexOf(q);
+    if (i < 0) return esc(text);
+    return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
+  }
+
+  function parse(txt) {
+    var out = [];
+    txt.split(/\r?\n/).forEach(function (line) {
+      line = line.trim();
+      if (!line || line.charAt(0) === "#") return;
+      var parts = line.split("|");
+      if (parts.length < 2) return;
+      var en = parts[0].trim();
+      var scots = parts[1].split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      var note = parts.slice(2).join("|").trim();
+      if (en && scots.length) out.push({ en: en, scots: scots, note: note });
+    });
+    return out;
+  }
+
+  // Rows for the current direction
+  function rows() {
+    if (mode === "en") {
+      return entries.map(function (e) {
+        return { from: e.en, to: e.scots.join(", "), note: e.note, search: [e.en].concat(e.scots) };
+      });
+    }
+    // Scots → English: one row per Scots word, merging duplicates
+    var map = {};
+    entries.forEach(function (e) {
+      e.scots.forEach(function (s) {
+        var k = norm(s);
+        if (!map[k]) map[k] = { from: s, en: [], notes: [] };
+        if (map[k].en.indexOf(e.en) < 0) map[k].en.push(e.en);
+        if (e.note && map[k].notes.indexOf(e.note) < 0) map[k].notes.push(e.note);
+      });
+    });
+    return Object.keys(map).map(function (k) {
+      var m = map[k];
+      return { from: m.from, to: m.en.join(", "), note: m.notes.join(" · "), search: [m.from].concat(m.en) };
+    });
+  }
+
+  function render() {
+    $mode.textContent = mode === "en" ? "English → Scots" : "Scots → English";
+    $q.placeholder = mode === "en" ? "Search English or Scots…" : "Search Scots or English…";
+    var q = norm($q.value);
+    var list = rows();
+
+    if (q) {
+      list = list.filter(function (r) {
+        return r.search.some(function (s) { return norm(s).indexOf(q) >= 0; });
+      }).map(function (r) {
+        var f = norm(r.from), score = f === q ? 0 : f.indexOf(q) === 0 ? 1 : f.indexOf(q) >= 0 ? 2 : 3;
+        return { r: r, score: score };
+      }).sort(function (a, b) {
+        return a.score - b.score || sortKey(a.r.from).localeCompare(sortKey(b.r.from));
+      }).map(function (x) { return x.r; });
+    } else {
+      list.sort(function (a, b) { return sortKey(a.from).localeCompare(sortKey(b.from)); });
+    }
+
+    $count.textContent = q ? list.length + " match" + (list.length === 1 ? "" : "es") : list.length + " entries";
+
+    if (!list.length) {
+      $list.innerHTML = '<p class="empty">Nae luck – nothing found for “' + esc($q.value) + '”.</p>';
+      $letters.innerHTML = "";
+      return;
+    }
+
+    var html = "", used = {};
+    if (q) {
+      html = "<ul>" + list.map(li).join("") + "</ul>";
+    } else {
+      var cur = null, open = false;
+      list.forEach(function (r) {
+        var L = sortKey(r.from).charAt(0).toUpperCase();
+        if (!/[A-Z]/.test(L)) L = "#";
+        if (L !== cur) {
+          if (open) html += "</ul>";
+          html += '<div class="letter" id="L-' + L + '">' + L + "</div><ul>";
+          cur = L; open = true; used[L] = true;
+        }
+        html += li(r);
+      });
+      if (open) html += "</ul>";
+    }
+    $list.innerHTML = html;
+
+    function li(r) {
+      return '<li><span class="from">' + hl(r.from, q) + '</span><span class="to">' + hl(r.to, q) +
+        (r.note ? '<span class="note">' + esc(r.note) + "</span>" : "") + "</span></li>";
+    }
+
+    // A–Z bar
+    if (q) { $letters.innerHTML = ""; return; }
+    var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    $letters.innerHTML = abc.map(function (L) {
+      return '<a href="#L-' + L + '"' + (used[L] ? "" : ' class="off"') + ">" + L + "</a>";
+    }).join("");
+  }
+
+  document.getElementById("dir").addEventListener("click", function () {
+    mode = mode === "en" ? "sc" : "en";
+    try { localStorage.setItem("mode", mode); } catch (e) {}
+    render();
+    window.scrollTo(0, 0);
+  });
+  $q.addEventListener("input", function () { render(); window.scrollTo(0, 0); });
+
+  fetch("words.txt", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (t) { entries = parse(t); render(); })
+    .catch(function () {
+      $list.innerHTML = '<p class="empty">Couldnae load the word list. Check your connection and try again.</p>';
+    });
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+  }
+})();
+</script>
+</body>
+</html>
