@@ -904,7 +904,8 @@
       if (!l.trim() || l.charAt(0) === "#") return;
       var p = l.split("|").map(function (x) { return x.trim(); });
       if (p.length < 2 || !p[0] || !p[1]) return;
-      testSentences.push({ en: p[0], sc: p[1], alts: (p[2] || "").split(";").map(function (x) { return x.trim(); }).filter(Boolean), look: p[3] || "" });
+      testSentences.push({ en: p[0], sc: p[1], alts: (p[2] || "").split(";").map(function (x) { return x.trim(); }).filter(Boolean), look: p[3] || "",
+        wrong: (p[4] || "").split(";").map(function (x) { return x.trim(); }).filter(Boolean) });
     });
   }
   function testPool() {
@@ -953,10 +954,15 @@
     $qFb.innerHTML = ""; $qFb.className = "fb";
     $qNext.hidden = true;
     if (testMode === "pick") {
-      var opts = [qCur.sc], guard = 0;
-      while (opts.length < 4 && guard++ < 200) {
-        var o = pool[Math.floor(Math.random() * pool.length)].sc;
-        if (opts.indexOf(o) < 0) opts.push(o);
+      // Wrong answers look like the right one: hand-written look-alikes first, then the most similar other sentences
+      var right = [qCur.sc].concat(qCur.alts || []).map(simplify);
+      var opts = [qCur.sc];
+      shuffle((qCur.wrong || []).slice()).forEach(function (o) { if (opts.length < 4 && right.indexOf(simplify(o)) < 0 && opts.indexOf(o) < 0) opts.push(o); });
+      if (opts.length < 4) {
+        pool.filter(function (x) { return x !== qCur && right.indexOf(simplify(x.sc)) < 0; })
+          .map(function (x) { return { o: x.sc, c: closeness(x.sc, qCur.sc) }; })
+          .sort(function (a, b) { return b.c - a.c; })
+          .forEach(function (x) { if (opts.length < 4 && opts.indexOf(x.o) < 0) opts.push(x.o); });
       }
       $qPick.innerHTML = shuffle(opts).map(function (o) { return '<button type="button" class="choice">' + esc(o) + "</button>"; }).join("");
       $qPick.hidden = false; $qType.hidden = true;

@@ -1,155 +1,156 @@
 # Everyday sentences for the Test tab. Written for this dictionary.
-# English | Scots | other right ways to say it (separated by ;) | a word to look up afterwards
-I don't know. | Ah dinnae ken. | Ah dunno.; Ah dinny ken. | ken
-Where are you going? | Where ye gaun? | Whaur ye gaun?; Where ur ye gaun? | gaun
-I'm going home. | Ah'm gaun hame. | Am gawn hame. | hame
-What are you doing? | Whit ur ye daein? | Whit ye daein? | daein
-Are you all right? | Ur ye awright? | You awright? | awright
-I'm exhausted. | Ah'm wabbit. | Ah'm pure wabbit.; Am wabbit. | wabbit
-It's freezing today. | It's jeelin the day. | It's Baltic the day.; It's richt cauld the day.; It's pure jeelin the day.; It's freezin the day. | jeelin
-It's raining again. | It's rainin again. | It's pishin doon again.; It's chuckin it doon again. | rain
-The weather's horrible today. | It's dreich the day. | It's mingin the day.; It's bowfin the day. | dreich
-I'm soaked. | Ah'm drookit. | Am drookit. | drookit
-Don't worry about it. | Dinnae worry aboot it. | Dinnae fash yersel.; Dinny worry aboot it. | fash
-Be quiet! | Haud yer wheesht! | Wheesht!; Shut it! | wheesht
-Put the kettle on. | Pit the kettle oan. | Stick the kettle oan. | pit
-Do you want a cup of tea? | Dae ye want a cup ae tea? | Dae ye want a cup o tea?; Ye want a cup ae tea? | tea
-I can't be bothered. | Ah cannae be bothered. | Ah canny be bothered.; Cannae be arsed. | cannae
-Look at the state of you! | Look at the state ae ye! | Luik at the state o ye!; Look at the nick ae ye! | state
-That's disgusting. | That's mingin. | That's bowfin.; That's boggin. | mingin
-The children are playing outside. | The weans are playin ootside. | The weans ur playin ootside. | wean
-The baby's crying. | The wean's greetin. | The baby's greetin. | greet
-Stop crying. | Stop greetin. | Stop yer greetin. | greet
-I'm starving. | Ah'm stervin. | Ah'm starvin.; Am stervin. | sterve
-I feel sick. | Ah feel seek. | Ah'm no weel.; Ah'm gonnae boak.; That gies me the boak. | boak
-Give me that. | Gies that. | Gie's that.; Gimme that. | gies
-Give me a drink of water. | Gies a drap ae watter. | Gies a drink ae watter. | watter
-I'm going to the shops. | Ah'm gaun tae the shoaps. | Am gawn tae the shoaps.; Ah'm gaun fur the messages. | messages
-I need to get the shopping. | Ah need tae get the messages. | Ah huv tae get the messages. | messages
-Where's my jacket? | Where's ma jaicket? | Whaur's ma jaicket? | jaicket
-I can't find my keys. | Ah cannae fun ma keys. | Ah canny fun ma keys. | fun
-Can I come too? | Kin Ah come tae? | Kin Ah come an aw?; Can Ah come tae? | kin
-We were going to the house. | We wur gaun tae the hoose. | We wir gaun tae the hoose.; We wur gon tae the hoose. | hoose
-Were you there? | Wur ye there? | Wir ye there? | wur
-Are you all coming? | Ur yous comin? | Ur yiz comin?; Ur yeez comin? | yous
-I'll see you later. | Ah'll see ye efter. | See ye efter.; Ah'll see ye later. | efter
-See you tomorrow. | See ye the morra. | See ye the morn. | the morra
-See you tonight. | See ye the nicht. | See ye the night. | the nicht
-Goodbye for now. | Cheerio the noo. | See ye the noo. | the noo
-I'm just coming. | Ah'm jist comin. | Am jist comin.; Ah'm comin the noo. | jist
-Wait a minute. | Haud oan a minute. | Gie's a minute.; Hing oan a minute. | haud
-Hold on. | Haud oan. | Hing oan. | haud
-Come in. | Come awa in. | Come in.; Come ben. | ben
-Sit down. | Sit doon. | Take a seat. | doon
-Get out! | Get oot! | Oot! | oot
-Go away! | Awa ye go! | Bolt!; Get tae! | awa
-Please don't do that. | Gonnae no dae that. | Gonny no dae that. | gonnae no
-Why not? | How no? | Whit fur no? | how
-What's wrong with you? | Whit's up wi ye? | Whit's wrang wi ye?; Whit's up wae ye? | wrang
-He's a fool. | He's an eejit. | He's a numpty.; He's a bampot. | eejit
-Don't be stupid. | Dinnae be daft. | Dinnae be stupit.; Dinny be daft. | daft
-She's really annoyed. | She's bealin. | She's ragin.; She's fumin. | bealin
-He's in a bad mood. | He's crabbit the day. | He's in a mood. | crabbit
-He's drunk. | He's steamin. | He's blootered.; He's mortal. | steamin
-I was so embarrassed. | Ah wis black affrontit. | Ah wis pure affrontit.; Ah wis that affrontit. | affrontit
-I'm scared. | Ah'm feart. | Am feart. | feart
-Are you scared? | Ur ye feart? | Ye feart? | feart
-I'm fed up. | Ah'm scunnert. | Ah'm fed up. | scunner
-It's my fault. | It's ma fault. | It's ma faut. | faut
-It's not my fault. | It's no ma fault. | It's no ma faut. | faut
-I'm not going. | Ah'm no gaun. | Am no gawn. | gaun
-I'm not sure. | Ah'm no sure. | Ah'm in a swither. | swither
-I can't decide. | Ah cannae decide. | Ah'm switherin. | swither
-That's my house. | That's ma hoose. | That's ma hoose there. | hoose
-That house over there. | That hoose ower there. | Thon hoose ower there. | thon
-Those shoes are mine. | Thae shoes are mine. | They shoes ur mine.; Thae shoes ur mines. | thae
-This is my dog. | This is ma dug. | That's ma dug. | dug
-The dog's barking. | The dug's barkin. | The dug's yappin. | dug
-A small cup of tea. | A wee cup ae tea. | A wee cup o tea. | wee
-Just a little bit. | Jist a wee bit. | Jist a wee tate. | wee
-I've got loads. | Ah've goat loads. | Ah've goat hunners. | hunners
-There's nobody in. | There's naebody in. | Naebody's in. | naebody
-There's nothing here. | There's nothin here. | There's naethin here.; There's hee-haw here. | naethin
-I'm going to tell your mum. | Ah'm gonnae tell yer maw. | Ah'm gonny tell yer maw.; Am gonnae tell yer mammy. | maw
-My dad's at work. | Ma da's at his work. | Ma faither's at his work. | da
-My granny lives in Glasgow. | Ma granny bides in Glesga. | Ma granny stays in Glesga. | bide
-Where do you live? | Where dae ye stay? | Whaur dae ye bide? | bide
-Do you remember? | Dae ye mind? | D'ye mind? | mind
-I remember it well. | Ah mind it fine. | Ah mind it well. | mind
-I was talking to him. | Ah wis talkin tae him. | Ah wis blethrin tae him. | blether
-Stop talking rubbish. | Stop talkin mince. | Stop haverin.; Stop talkin pish. | haver
-We had a good chat. | We hud a guid blether. | We hud a good blether. | blether
-He's always moaning. | He's aye moanin. | He's aye girnin.; He's aye greetin. | girn
-She's a real gossip. | She's a right blether. | She's an awfy blether. | blether
-That's a lot of money. | That's a lot ae money. | That's a loat ae money.; That's a fair bit ae money. | money
-I've got no money. | Ah've goat nae money. | Ah'm skint. | skint
-I'm broke. | Ah'm skint. | Ah'm brassic. | skint
-It's really cold. | It's richt cauld. | It's richt cawld.; It's pure cauld.; It's awfy cauld.; It's gey cauld.; It's Baltic.; It's jeelin. | cauld
-It's really warm today. | It's roastin the day. | It's pure roastin the day. | roastin
-The house is a mess. | The hoose is a midden. | The hoose is a coup.; The hoose is in a guddle. | midden
-Tidy your room. | Tidy yer room. | Redd up yer room. | redd
-My hands are filthy. | Ma hauns ur clarty. | Ma hauns ur manky.; Ma hauns ur black. | clarty
-Wash your hands. | Wash yer hauns. | Wash yer hands. | haun
-I hurt my head. | Ah hurt ma heid. | Ah banged ma heid. | heid
-I've got a sore head. | Ah've goat a sair heid. | Ma heid's sair. | sair
-My foot's sore. | Ma fit's sair. | Ma foot's sair. | fit
-I'll smack you! | Ah'll skelp ye! | Ah'll gie ye a skelp! | skelp
-He hit me. | He skelped me. | He hit me a dunt.; He belted me. | skelp
-Do you want to fight? | Ye wantin a square go? | Ye wantin a fight? | square go
-Have a look. | Huv a look. | Gie's a keek.; Huv a keek. | keek
-Did you see that? | Did ye see that? | Did ye clock that? | see
-I saw him yesterday. | Ah seen him yesterday. | Ah saw him yesterday. | seen
-I did it. | Ah done it. | Ah did it. | done
-I've done it. | Ah've done it. | Ah've din it. | done
-I'm going out tonight. | Ah'm gaun oot the nicht. | Am gawn oot the nicht. | the nicht
-Are you going out? | Ur ye gaun oot? | Ye gaun oot? | oot
-Let's go for a walk. | Let's go fur a dander. | Let's go fur a wee walk. | dander
-I'm moving house. | Ah'm flittin. | Ah'm movin hoose. | flit
-He's always late. | He's aye late. | He's ayewis late. | aye
-Yes, that's right. | Aye, that's right. | Aye, that's richt. | aye
-No, I won't. | Naw, Ah willnae. | Naw, Ah winnae.; Naw, Ah'm no. | naw
-Yeah, right! | Aye, right! | Aye, that'll be right! | aye
-Good grief! | Help ma boab! | Michty me!; Jings! | help ma boab
-Well done! | Gaun yersel! | Well done, pal! | gaun yersel
-Mind your head. | Mind yer heid. | Watch yer heid. | mind
-Be careful. | Mind yersel. | Watch yersel.; Ca canny. | mind
-Take it easy. | Ca canny. | Take it easy. | ca canny
-Keep calm. | Keep the heid. | Keep yer heid. | heid
-Don't lose your temper. | Dinnae lose the heid. | Dinny lose the heid. | heid
-He's not right in the head. | He's no right in the heid. | He's aff his heid. | heid
-She's very pretty. | She's awfy bonnie. | She's pure bonnie. | bonnie
-What a lovely day. | Whit a braw day. | Whit a lovely day. | braw
-I'm going to bed. | Ah'm gaun tae ma bed. | Am gawn tae ma bed. | bed
-I didn't sleep last night. | Ah didnae sleep last night. | Ah didny sleep last nicht. | didnae
-I'm full. | Ah'm stappit fu. | Ah'm stuffed.; Am full up. | fu
-That was delicious. | That wis rare. | That wis pure magic.; That wis lovely. | rare
-Do you want a sandwich? | Dae ye want a piece? | Ye want a piece? | piece
-A jam sandwich. | A jeely piece. | A piece an jam. | jeely piece
-Put your coat on. | Pit yer jaicket oan. | Pit yer coat oan. | jaicket
-It's in the cupboard. | It's in the press. | It's in the cupboard. | press
-Throw it in the bin. | Fling it in the bucket. | Bin it.; Fling it in the bin. | bucket
-Throw the ball. | Fling the baw. | Chuck the baw. | baw
-Bounce the ball. | Stot the baw. | Bounce the baw. | stot
-The kids are at school. | The weans ur at the school. | The weans ur at school. | wean
-I'm not joking. | Ah'm no kiddin. | Ah'm no jokin. | no
-You're joking! | Ye're kiddin! | Away ye go! | awa
-That's not fair. | That's no fair. | That's pure no fair. | fair
-I'm not bothered. | Ah'm no bothered. | Ah couldnae care less. | bothered
-Who's that? | Wha's that? | Who's that? | wha
-What time is it? | Whit time is it? | Whit's the time? | whit
-It's half past two. | It's hauf two. | It's hauf past two. | hauf
-Just now. | The noo. | Right noo. | the noo
-In a minute. | In a meenit. | In a wee minute.; In a minute. | meenit
-He had it in his hand. | He hud it in his haun. | Ae hud it in 'eis hawn.; Ae hid it in 'eis hawn.; He hid it in his haun.; E hud it in 'is haun.; He hud it in his hawn. | haun
-She had it in her bag. | She hud it in her bag. | She hid it in her bag.; She hud it in 'er bag. | hud
-I had my dinner. | Ah hud ma dinner. | Ah hid ma dinner.; Ah've hud ma dinner. | hud
-He's got it in his pocket. | He's goat it in his poakit. | Ae's goat it in 'eis poakit.; He's goat it in 'is pocket. | goat
-I've got it. | Ah've goat it. | Av goat it.; Ah've goat it noo. | goat
-He was there. | He wis there. | Ae wis there.; E wis therr. | wis
-Give it to him. | Gie it tae him. | Gie it tae 'im.; Gie 'im it. | gie
-I'm shivering. | Ah'm chitterin. | Ah'm chitterin wi the cauld.; Am chitterin. | chitter
-There's a biting wind today. | There's a snell wind the day. | It's a snell wind the day. | snell
-I really feel the cold. | Ah'm awfy cauldrife. | Ah'm richt cauldrife.; Ah feel the cauld. | cauldrife
-It's cold outside. | It's cauld ootside. | It's cawld oot.; It's cauld oot there. | cauld
-Close the door, it's cold. | Shut the door, it's cauld. | Shut the door, it's Baltic.; Shut that door, it's freezin. | cauld
-My hands are freezing. | Ma hauns are jeelin. | Ma hauns ur jeelin.; Ma hauns ur freezin. | jeelin
+# English | Scots | other right ways to say it (;) | a word to look up afterwards | wrong answers that look alike (;)
+I don't know. | Ah dinnae ken. | Ah dunno.; Ah dinny ken. | ken | Ah dinnae care.; Ah dinnae mind.; Ah dinnae want it.
+Where are you going? | Where ye gaun? | Whaur ye gaun?; Where ur ye gaun? | gaun | Where ye been?; Where ye stayin?; Whit ye daein?
+I'm going home. | Ah'm gaun hame. | Am gawn hame. | hame | Ah'm stayin hame.; Ah'm gaun oot.; Ah'm comin hame.
+What are you doing? | Whit ur ye daein? | Whit ye daein? | daein | Whit ur ye sayin?; Whit ur ye wantin?; Where ur ye gaun?
+Are you all right? | Ur ye awright? | You awright? | awright | Ur ye awa?; Ur ye ready?; Ur ye feart?
+I'm exhausted. | Ah'm wabbit. | Ah'm pure wabbit.; Am wabbit. | wabbit | Ah'm stervin.; Ah'm drookit.; Ah'm scunnert.
+It's freezing today. | It's jeelin the day. | It's Baltic the day.; It's richt cauld the day.; It's pure jeelin the day.; It's freezin the day. | jeelin | It's dreich the day.; It's roastin the day.; It's chuckin it doon the day.
+It's raining again. | It's rainin again. | It's pishin doon again.; It's chuckin it doon again. | rain | It's snawin again.; It's dreich again.; It's blawin again.
+The weather's horrible today. | It's dreich the day. | It's mingin the day.; It's bowfin the day. | dreich | It's roastin the day.; It's jeelin the day.; It's a braw day the day.
+I'm soaked. | Ah'm drookit. | Am drookit. | drookit | Ah'm wabbit.; Ah'm jeelin.; Ah'm stappit fu.
+Don't worry about it. | Dinnae worry aboot it. | Dinnae fash yersel.; Dinny worry aboot it. | fash | Dinnae talk aboot it.; Dinnae think aboot it.; Dinnae greet aboot it.
+Be quiet! | Haud yer wheesht! | Wheesht!; Shut it! | wheesht | Haud oan!; Haud yer horses!; Hurry up!
+Put the kettle on. | Pit the kettle oan. | Stick the kettle oan. | pit | Pit the telly oan.; Pit the light aff.; Pit the kettle aff.
+Do you want a cup of tea? | Dae ye want a cup ae tea? | Dae ye want a cup o tea?; Ye want a cup ae tea? | tea | Dae ye want a piece?; Dae ye want a dram?; Dae ye want a drap ae milk?
+I can't be bothered. | Ah cannae be bothered. | Ah canny be bothered.; Cannae be arsed. | cannae | Ah cannae be fashed wi ye.; Ah cannae believe it.; Ah cannae bide here.
+Look at the state of you! | Look at the state ae ye! | Luik at the state o ye!; Look at the nick ae ye! | state | Look at the size ae ye!; Look at the face oan ye!; Look at the time!
+That's disgusting. | That's mingin. | That's bowfin.; That's boggin. | mingin | That's gallus.; That's braw.; That's rare.
+The children are playing outside. | The weans are playin ootside. | The weans ur playin ootside. | wean | The weans are greetin ootside.; The weans are fightin ootside.; The weans are in their beds.
+The baby's crying. | The wean's greetin. | The baby's greetin. | greet | The wean's sleepin.; The wean's laughin.; The wean's greetin face.
+Stop crying. | Stop greetin. | Stop yer greetin. | greet | Stop moanin.; Stop laughin.; Stop shoutin.
+I'm starving. | Ah'm stervin. | Ah'm starvin.; Am stervin. | sterve | Ah'm stappit fu.; Ah'm jeelin.; Ah'm skint.
+I feel sick. | Ah feel seek. | Ah'm no weel.; Ah'm gonnae boak.; That gies me the boak. | boak | Ah feel fine.; Ah feel wabbit.; Ah feel cauld.
+Give me that. | Gies that. | Gie's that.; Gimme that. | gies | Gie him that.; Gie's peace.; Gie it back.
+Give me a drink of water. | Gies a drap ae watter. | Gies a drink ae watter. | watter | Gies a drap ae milk.; Gies a dram.; Gies a wash.
+I'm going to the shops. | Ah'm gaun tae the shoaps. | Am gawn tae the shoaps.; Ah'm gaun fur the messages. | messages | Ah'm gaun tae the pub.; Ah'm gaun tae ma work.; Ah'm comin fae the shoaps.
+I need to get the shopping. | Ah need tae get the messages. | Ah huv tae get the messages. | messages | Ah need tae get ma messages fae ma maw.; Ah need tae get the bus.; Ah need tae get the wean.
+Where's my jacket? | Where's ma jaicket? | Whaur's ma jaicket? | jaicket | Where's ma jotter?; Where's ma piece?; Where's ma maw?
+I can't find my keys. | Ah cannae fun ma keys. | Ah canny fun ma keys. | fun | Ah cannae fun ma phone.; Ah cannae open the door.; Ah've loast ma purse.
+Can I come too? | Kin Ah come tae? | Kin Ah come an aw?; Can Ah come tae? | kin | Kin Ah go noo?; Kin Ah come in?; Kin ye come tae?
+We were going to the house. | We wur gaun tae the hoose. | We wir gaun tae the hoose.; We wur gon tae the hoose. | hoose | We wur comin fae the hoose.; We wur stayin in the hoose.; We wur gaun tae the shoaps.
+Were you there? | Wur ye there? | Wir ye there? | wur | Wur ye hame?; Wur ye feart?; Wur ye late?
+Are you all coming? | Ur yous comin? | Ur yiz comin?; Ur yeez comin? | yous | Ur yous gaun?; Ur yous ready?; Ur yous stayin?
+I'll see you later. | Ah'll see ye efter. | See ye efter.; Ah'll see ye later. | efter | Ah'll see ye the morra.; Ah'll phone ye efter.; Ah'll see ye the noo.
+See you tomorrow. | See ye the morra. | See ye the morn. | the morra | See ye the nicht.; See ye efter.; See ye next week.
+See you tonight. | See ye the nicht. | See ye the night. | the nicht | See ye the morra.; See ye the day.; See ye efter.
+Goodbye for now. | Cheerio the noo. | See ye the noo. | the noo | Haud oan the noo.; Come in the noo.; Wheesht the noo.
+I'm just coming. | Ah'm jist comin. | Am jist comin.; Ah'm comin the noo. | jist | Ah'm jist gaun.; Ah'm jist lookin.; Ah'm jist back.
+Wait a minute. | Haud oan a minute. | Gie's a minute.; Hing oan a minute. | haud | Gie's a haun.; Hurry up a minute.; Come here a minute.
+Hold on. | Haud oan. | Hing oan. | haud | Haud yer wheesht.; Hing aboot.; Get aff.
+Come in. | Come awa in. | Come in.; Come ben. | ben | Come oot.; Come doon.; Come awa hame.
+Sit down. | Sit doon. | Take a seat. | doon | Lie doon.; Get doon.; Sit up.
+Get out! | Get oot! | Oot! | oot | Get up!; Get in!; Get aff!
+Go away! | Awa ye go! | Bolt!; Get tae! | awa | Come here!; Haud oan!; Gaun yersel!
+Please don't do that. | Gonnae no dae that. | Gonny no dae that. | gonnae no | Gonnae dae that.; Gonnae gie's that.; Ah'm no gonnae dae that.
+Why not? | How no? | Whit fur no? | how | How come?; How's it gaun?; Whit no?
+What's wrong with you? | Whit's up wi ye? | Whit's wrang wi ye?; Whit's up wae ye? | wrang | Whit's up wi him?; Whit's wrang wi it?; Whit's the matter wi the wean?
+He's a fool. | He's an eejit. | He's a numpty.; He's a bampot. | eejit | He's a blether.; He's a feartie.; He's a wee nyaff.
+Don't be stupid. | Dinnae be daft. | Dinnae be stupit.; Dinny be daft. | daft | Dinnae be feart.; Dinnae be late.; Dinnae be crabbit.
+She's really annoyed. | She's bealin. | She's ragin.; She's fumin. | bealin | She's really drunk.; She's really bonnie.; She's really feart.
+He's in a bad mood. | He's crabbit the day. | He's in a mood. | crabbit | He's in a dwam the day.; He's steamin the day.; He's wabbit the day.
+He's drunk. | He's steamin. | He's blootered.; He's mortal. | steamin | He's skint.; He's bealin.; He's crabbit.
+I was so embarrassed. | Ah wis black affrontit. | Ah wis pure affrontit.; Ah wis that affrontit. | affrontit | Ah wis that feart.; Ah wis that scunnert.; Ah wis that drookit.
+I'm scared. | Ah'm feart. | Am feart. | feart | Ah'm skint.; Ah'm scunnert.; Ah'm stervin.
+Are you scared? | Ur ye feart? | Ye feart? | feart | Ur ye skint?; Ur ye sure?; Ur ye stervin?
+I'm fed up. | Ah'm scunnert. | Ah'm fed up. | scunner | Ah'm stappit fu.; Ah'm wabbit.; Ah'm bealin.
+It's my fault. | It's ma fault. | It's ma faut. | faut | It's ma turn.; It's ma shout.; It's no ma fault.
+It's not my fault. | It's no ma fault. | It's no ma faut. | faut | It's ma fault.; It's no ma turn.; It's no ma problem.
+I'm not going. | Ah'm no gaun. | Am no gawn. | gaun | Ah'm gaun.; Ah'm no stayin.; Ah'm no comin back.
+I'm not sure. | Ah'm no sure. | Ah'm in a swither. | swither | Ah'm no bothered.; Ah'm no feart.; Ah'm sure.
+I can't decide. | Ah cannae decide. | Ah'm switherin. | swither | Ah cannae dae it.; Ah cannae believe it.; Ah cannae mind.
+That's my house. | That's ma hoose. | That's ma hoose there. | hoose | That's ma maw's hoose.; That's no ma hoose.; That's ma hoose ower there.
+That house over there. | That hoose ower there. | Thon hoose ower there. | thon | That hoose doon the road.; This hoose here.; Thae hooses ower there.
+Those shoes are mine. | Thae shoes are mine. | They shoes ur mine.; Thae shoes ur mines. | thae | Thir shoes are mine.; Thae shoes are yours.; Thae shoes are new.
+This is my dog. | This is ma dug. | That's ma dug. | dug | This is ma dug's bed.; That's yer dug.; This is ma cat.
+The dog's barking. | The dug's barkin. | The dug's yappin. | dug | The dug's greetin.; The dug's sleepin.; The dug's oot.
+A small cup of tea. | A wee cup ae tea. | A wee cup o tea. | wee | A big mug ae tea.; A wee drap ae milk.; A wee cup ae coffee.
+Just a little bit. | Jist a wee bit. | Jist a wee tate. | wee | Jist a wee minute.; No a bit.; A big bit.
+I've got loads. | Ah've goat loads. | Ah've goat hunners. | hunners | Ah've goat nane.; Ah've goat a wee bit.; Ah've goat tae go.
+There's nobody in. | There's naebody in. | Naebody's in. | naebody | There's naebody oot.; There's awbody in.; There's naethin in.
+There's nothing here. | There's nothin here. | There's naethin here.; There's hee-haw here. | naethin | There's naebody here.; There's loads here.; There's nothin there.
+I'm going to tell your mum. | Ah'm gonnae tell yer maw. | Ah'm gonny tell yer maw.; Am gonnae tell yer mammy. | maw | Ah'm gonnae tell ma maw.; Ah'm gonnae phone yer maw.; Ah tellt yer maw.
+My dad's at work. | Ma da's at his work. | Ma faither's at his work. | da | Ma da's at hame.; Ma da's oot.; Ma maw's at her work.
+My granny lives in Glasgow. | Ma granny bides in Glesga. | Ma granny stays in Glesga. | bide | Ma granny works in Glesga.; Ma granny's fae Glesga.; Ma granny's gaun tae Glesga.
+Where do you live? | Where dae ye stay? | Whaur dae ye bide? | bide | Where dae ye work?; Where ye gaun?; Where ye fae?
+Do you remember? | Dae ye mind? | D'ye mind? | mind | Dae ye ken?; Dae ye care?; Dae ye mind if Ah sit?
+I remember it well. | Ah mind it fine. | Ah mind it well. | mind | Ah ken it fine.; Ah like it fine.; Ah cannae mind it.
+I was talking to him. | Ah wis talkin tae him. | Ah wis blethrin tae him. | blether | Ah wis lookin at him.; Ah wis talkin aboot him.; Ah wis waitin fur him.
+Stop talking rubbish. | Stop talkin mince. | Stop haverin.; Stop talkin pish. | haver | Stop talkin tae him.; Stop greetin.; Stop eatin rubbish.
+We had a good chat. | We hud a guid blether. | We hud a good blether. | blether | We hud a guid laugh.; We hud a guid night.; We hud a fight.
+He's always moaning. | He's aye moanin. | He's aye girnin.; He's aye greetin. | girn | He's aye laughin.; He's aye late.; He's aye skint.
+She's a real gossip. | She's a right blether. | She's an awfy blether. | blether | She's a real laugh.; She's a real feartie.; She's real bonnie.
+That's a lot of money. | That's a lot ae money. | That's a loat ae money.; That's a fair bit ae money. | money | That's nae money.; That's a lot ae weans.; That's ma money.
+I've got no money. | Ah've goat nae money. | Ah'm skint. | skint | Ah've goat nae time.; Ah've goat loads ae money.; Ah've goat nae pals.
+I'm broke. | Ah'm skint. | Ah'm brassic. | skint | Ah'm skelped.; Ah'm scunnert.; Ah'm stappit.
+It's really cold. | It's richt cauld. | It's richt cawld.; It's pure cauld.; It's awfy cauld.; It's gey cauld.; It's Baltic.; It's jeelin. | cauld | It's richt warm.; It's dreich.; It's roastin.
+It's really warm today. | It's roastin the day. | It's pure roastin the day. | roastin | It's jeelin the day.; It's dreich the day.; It's blawin a gale the day.
+The house is a mess. | The hoose is a midden. | The hoose is a coup.; The hoose is in a guddle. | midden | The hoose is a palace.; The wean's a mess.; The hoose is empty.
+Tidy your room. | Tidy yer room. | Redd up yer room. | redd | Tidy yer hair.; Leave yer room.; Clean yer teeth.
+My hands are filthy. | Ma hauns ur clarty. | Ma hauns ur manky.; Ma hauns ur black. | clarty | Ma hauns are jeelin.; Ma hauns are sair.; Ma feet are clarty.
+Wash your hands. | Wash yer hauns. | Wash yer hands. | haun | Wash yer face.; Dry yer hauns.; Haud yer haun.
+I hurt my head. | Ah hurt ma heid. | Ah banged ma heid. | heid | Ah hurt ma fit.; Ah lost the heid.; Ah hurt ma back.
+I've got a sore head. | Ah've goat a sair heid. | Ma heid's sair. | sair | Ah've goat a sair fit.; Ah've goat a big heid.; Ah've goat a sair throat.
+My foot's sore. | Ma fit's sair. | Ma foot's sair. | fit | Ma heid's sair.; Ma fit's cauld.; Ma fit's better.
+I'll smack you! | Ah'll skelp ye! | Ah'll gie ye a skelp! | skelp | Ah'll see ye!; Ah'll tell ye!; Ah'll help ye!
+He hit me. | He skelped me. | He hit me a dunt.; He belted me. | skelp | He helped me.; He telt oan me.; He kissed me.
+Do you want to fight? | Ye wantin a square go? | Ye wantin a fight? | square go | Ye wantin a piece?; Ye wantin a dram?; Ye wantin a lift?
+Have a look. | Huv a look. | Gie's a keek.; Huv a keek. | keek | Huv a seat.; Huv a laugh.; Huv a piece.
+Did you see that? | Did ye see that? | Did ye clock that? | see | Did ye hear that?; Did ye dae that?; Did ye say that?
+I saw him yesterday. | Ah seen him yesterday. | Ah saw him yesterday. | seen | Ah seen him the day.; Ah phoned him yesterday.; He seen me yesterday.
+I did it. | Ah done it. | Ah did it. | done | Ah didnae dae it.; He done it.; Ah'll dae it.
+I've done it. | Ah've done it. | Ah've din it. | done | Ah've no done it.; Ah've broke it.; Ah've loast it.
+I'm going out tonight. | Ah'm gaun oot the nicht. | Am gawn oot the nicht. | the nicht | Ah'm stayin in the nicht.; Ah'm gaun oot the morra.; Ah wis oot last nicht.
+Are you going out? | Ur ye gaun oot? | Ye gaun oot? | oot | Ur ye comin in?; Ur ye gaun hame?; Ur ye stayin in?
+Let's go for a walk. | Let's go fur a dander. | Let's go fur a wee walk. | dander | Let's go fur a pint.; Let's go fur a run.; Let's go hame.
+I'm moving house. | Ah'm flittin. | Ah'm movin hoose. | flit | Ah'm cleanin the hoose.; Ah'm buyin a hoose.; Ah'm at hame.
+He's always late. | He's aye late. | He's ayewis late. | aye | He's aye early.; He's aye skint.; He's never in.
+Yes, that's right. | Aye, that's right. | Aye, that's richt. | aye | Naw, that's wrang.; Aye, right.; Aye, that's mine.
+No, I won't. | Naw, Ah willnae. | Naw, Ah winnae.; Naw, Ah'm no. | naw | Aye, Ah will.; Naw, Ah cannae.; Naw, Ah didnae.
+Yeah, right! | Aye, right! | Aye, that'll be right! | aye | Aye, that's right.; Aye, nae bother.; Aye, gaun yersel.
+Good grief! | Help ma boab! | Michty me!; Jings! | help ma boab | Gaun yersel!; Haud oan!; Nae bother!
+Well done! | Gaun yersel! | Well done, pal! | gaun yersel | Help ma boab!; Gonnae no!; Get tae!
+Mind your head. | Mind yer heid. | Watch yer heid. | mind | Mind yer manners.; Mind the wean.; Use yer heid.
+Be careful. | Mind yersel. | Watch yersel.; Ca canny. | mind | Be quick.; Be quiet.; Behave yersel.
+Take it easy. | Ca canny. | Take it easy. | ca canny | Take it back.; Take a seat.; Take yer time.
+Keep calm. | Keep the heid. | Keep yer heid. | heid | Keep the change.; Keep goin.; Keep quiet.
+Don't lose your temper. | Dinnae lose the heid. | Dinny lose the heid. | heid | Dinnae lose yer keys.; Dinnae lose the place.; Dinnae lose the bus.
+He's not right in the head. | He's no right in the heid. | He's aff his heid. | heid | He's no right in the hoose.; He's no well.; He's got a sair heid.
+She's very pretty. | She's awfy bonnie. | She's pure bonnie. | bonnie | She's awfy crabbit.; She's awfy wee.; She's awfy shy.
+What a lovely day. | Whit a braw day. | Whit a lovely day. | braw | Whit a dreich day.; Whit a lang day.; Whit a day it's been.
+I'm going to bed. | Ah'm gaun tae ma bed. | Am gawn tae ma bed. | bed | Ah'm gettin up.; Ah'm gaun tae ma work.; Ah'm in ma bed.
+I didn't sleep last night. | Ah didnae sleep last night. | Ah didny sleep last nicht. | didnae | Ah didnae eat last night.; Ah slept fine last night.; Ah didnae go oot last night.
+I'm full. | Ah'm stappit fu. | Ah'm stuffed.; Am full up. | fu | Ah'm stervin.; Ah'm wabbit.; Ah'm skint.
+That was delicious. | That wis rare. | That wis pure magic.; That wis lovely. | rare | That wis mingin.; That wis dear.; That wis braw weather.
+Do you want a sandwich? | Dae ye want a piece? | Ye want a piece? | piece | Dae ye want a drink?; Dae ye want a cuddle?; Dae ye want a lift?
+A jam sandwich. | A jeely piece. | A piece an jam. | jeely piece | A cheese piece.; A jeely bean.; A jam jar.
+Put your coat on. | Pit yer jaicket oan. | Pit yer coat oan. | jaicket | Take yer coat aff.; Pit yer shoes oan.; Pit yer jaicket away.
+It's in the cupboard. | It's in the press. | It's in the cupboard. | press | It's in the bin.; It's in the close.; It's in the drawer.
+Throw it in the bin. | Fling it in the bucket. | Bin it.; Fling it in the bin. | bucket | Take it oot the bin.; Pit it in the press.; Fling it oot the windae.
+Throw the ball. | Fling the baw. | Chuck the baw. | baw | Catch the baw.; Kick the baw.; Stot the baw.
+Bounce the ball. | Stot the baw. | Bounce the baw. | stot | Fling the baw.; Kick the baw.; Burst the baw.
+The kids are at school. | The weans ur at the school. | The weans ur at school. | wean | The weans are aff school.; The weans are at their granny's.; The weans are in bed.
+I'm not joking. | Ah'm no kiddin. | Ah'm no jokin. | no | Ah'm no laughin.; Ah'm no feart.; Ah'm no sure.
+You're joking! | Ye're kiddin! | Away ye go! | awa | Ye're feart!; Ye're late!; Ye're aff yer heid!
+That's not fair. | That's no fair. | That's pure no fair. | fair | That's fair.; That's no mine.; That's no richt.
+I'm not bothered. | Ah'm no bothered. | Ah couldnae care less. | bothered | Ah'm bothered.; Ah'm no feart.; Ah'm no sure.
+Who's that? | Wha's that? | Who's that? | wha | Whit's that?; Whose is that?; Where's that?
+What time is it? | Whit time is it? | Whit's the time? | whit | Whit day is it?; Whit time's the bus?; Whit is it?
+It's half past two. | It's hauf two. | It's hauf past two. | hauf | It's hauf one.; It's two o'clock.; It's quarter tae two.
+Just now. | The noo. | Right noo. | the noo | The morra.; The nicht.; Efter.
+In a minute. | In a meenit. | In a wee minute.; In a minute. | meenit | Jist noo.; In an oor.; The morra.
+He had it in his hand. | He hud it in his haun. | Ae hud it in 'eis hawn.; Ae hid it in 'eis hawn.; He hid it in his haun.; E hud it in 'is haun.; He hud it in his hawn. | haun | He hud it in his poakit.; He hud his haun oot.; He hit it wi his haun.
+She had it in her bag. | She hud it in her bag. | She hid it in her bag.; She hud it in 'er bag. | hud | She hud it in her haun.; She loast her bag.; She hud a bag.
+I had my dinner. | Ah hud ma dinner. | Ah hid ma dinner.; Ah've hud ma dinner. | hud | Ah hud ma breakfast.; Ah made ma dinner.; Ah'm havin ma dinner.
+He's got it in his pocket. | He's goat it in his poakit. | Ae's goat it in 'eis poakit.; He's goat it in 'is pocket. | goat | He's goat it in his haun.; He's goat his haun in his poakit.; He's loast it oot his poakit.
+I've got it. | Ah've goat it. | Av goat it.; Ah've goat it noo. | goat | Ah've loast it.; Ah've goat tae go.; Ah've no goat it.
+He was there. | He wis there. | Ae wis there.; E wis therr. | wis | He wis here.; He wisnae there.; He'll be there.
+Give it to him. | Gie it tae him. | Gie it tae 'im.; Gie 'im it. | gie | Gie it tae me.; Gie it back.; Gie him a haun.
+I'm shivering. | Ah'm chitterin. | Ah'm chitterin wi the cauld.; Am chitterin. | chitter | Ah'm sweatin.; Ah'm stervin.; Ah'm greetin.
+There's a biting wind today. | There's a snell wind the day. | It's a snell wind the day. | snell | There's a wee smirr the day.; There's nae wind the day.; There's a haar the day.
+I really feel the cold. | Ah'm awfy cauldrife. | Ah'm richt cauldrife.; Ah feel the cauld. | cauldrife | Ah'm awfy warm.; Ah'm awfy tired.; Ah'm awfy cauld-hertit.
+It's cold outside. | It's cauld ootside. | It's cawld oot.; It's cauld oot there. | cauld | It's warm ootside.; It's cauld inside.; It's dreich ootside.
+Close the door, it's cold. | Shut the door, it's cauld. | Shut the door, it's Baltic.; Shut that door, it's freezin. | cauld | Open the door, it's roastin.; Shut the windae, it's rainin.; Close the door ahint ye.
+My hands are freezing. | Ma hauns are jeelin. | Ma hauns ur jeelin.; Ma hauns ur freezin. | jeelin | Ma hauns are clarty.; Ma feet are jeelin.; Ma hauns are roastin.
+Can I see that? | Gies a swatch. | Gies a swatch ae that.; Kin Ah see that?; Gie's a look.; Gies a deek. | swatch | Gies a tap.; Gies a shot.; Gies a haun.
